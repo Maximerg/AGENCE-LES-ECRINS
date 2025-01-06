@@ -40,8 +40,9 @@ header .divider {
 }
 
 header nav {
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    background-color: #edcf90;
 }
 
 header nav ul {
