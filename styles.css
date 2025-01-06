@@ -13,36 +13,33 @@ body {
 }
 
 /* En-tête */
-header {
+.header-top {
     background: #fff;
+    padding: 10px 0;
+    text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
-header .title-container {
-    text-align: center;
-    padding: 10px 0;
-}
-
-header .title-container h1 {
+.header-top h1 {
     margin: 0;
     font-size: 1.8rem;
     color: #333;
 }
 
-header .divider {
+.header-divider {
     height: 1px;
     background-color: #edcf90;
     margin: 0 auto;
     width: calc(100% - 20px); /* Bande légèrement en retrait */
 }
 
-header nav {
+.header-bottom {
     padding: 10px 0;
     text-align: center;
     background: #fff; /* Fond blanc pour la zone des onglets */
 }
 
-header nav ul {
+.header-bottom nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -51,11 +48,11 @@ header nav ul {
     gap: 20px;
 }
 
-header nav ul li {
+.header-bottom nav ul li {
     display: inline;
 }
 
-header nav ul li a {
+.header-bottom nav ul li a {
     text-decoration: none;
     color: #007BFF;
     font-size: 1rem;
@@ -63,9 +60,10 @@ header nav ul li a {
     transition: color 0.3s;
 }
 
-header nav ul li a:hover {
+.header-bottom nav ul li a:hover {
     color: #0056b3;
 }
+
 
 
 /* Section "Hero" */
