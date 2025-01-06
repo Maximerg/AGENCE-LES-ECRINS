@@ -19,11 +19,8 @@ header {
 }
 
 header .title-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0;
     text-align: center;
+    padding: 10px 0;
 }
 
 header .title-container h1 {
@@ -35,14 +32,14 @@ header .title-container h1 {
 header .divider {
     height: 1px;
     background-color: #edcf90;
-    margin: 0 auto 10px auto;
-    width: 95%;
+    margin: 0 auto;
+    width: calc(100% - 20px); /* Bande légèrement en retrait */
 }
 
 header nav {
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
-    background-color: #edcf90;
+    background: #fff; /* Fond blanc pour la zone des onglets */
 }
 
 header nav ul {
