@@ -46,7 +46,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
 }
 
 .header-bottom nav ul li {
