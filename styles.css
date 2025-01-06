@@ -16,21 +16,32 @@ body {
 header {
     background: #fff;
     border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-    text-align: center;
 }
 
-header h1 {
+header .title-container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+header .title-container h1 {
     margin: 0;
     font-size: 1.8rem;
     color: #333;
 }
 
-nav {
-    margin-top: 10px;
+header .divider {
+    height: 1px;
+    background-color: #edcf90;
+    margin: 0 auto;
+    width: 95%;
 }
 
-nav ul {
+header nav {
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -39,11 +50,11 @@ nav ul {
     gap: 20px;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
 }
 
-nav ul li a {
+header nav ul li a {
     text-decoration: none;
     color: #007BFF;
     font-size: 1rem;
@@ -51,7 +62,7 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     color: #0056b3;
 }
 
@@ -255,4 +266,3 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-
