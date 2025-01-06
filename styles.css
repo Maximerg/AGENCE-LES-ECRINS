@@ -27,15 +27,15 @@ body {
 }
 
 .header-divider {
-    height: 1px;
+    height: 2px;
     background-color: #edcf90;
     margin: 0 auto;
-    width: calc(100% - 40px); /* Bande légèrement en retrait des bords */
+    width: calc(100% - 200px); /* Bande avec retrait de 100px de chaque côté */
 }
 
 .header-bottom {
     padding: 15px 0;
-    background: #fff;
+    background: #fff; /* Fond blanc pour la zone sans bande */
     text-align: center;
 }
 
@@ -54,7 +54,7 @@ body {
 
 .header-bottom nav ul li a {
     text-decoration: none;
-    color: #007BFF;
+    color: #333; /* Couleur noire pour les titres des onglets */
     font-size: 1rem;
     padding: 5px 10px;
     transition: color 0.3s, background-color 0.3s;
@@ -65,6 +65,7 @@ body {
     background-color: rgba(0, 123, 255, 0.1);
     border-radius: 5px;
 }
+
 
 /* Section "Hero" */
 .hero {
