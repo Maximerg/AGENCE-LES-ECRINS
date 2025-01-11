@@ -69,7 +69,6 @@ body {
     background-color: transparent;
 }
 
-<style>
 /* Main - Section Hero */
 .main-hero {
     width: 100%;
@@ -93,7 +92,6 @@ body {
     font-size: 2.5rem;
     text-align: center;
 }
-</style>
 
 /* Pied de page */
 footer {
