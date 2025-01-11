@@ -60,7 +60,7 @@ body {
     color: #333; /* Couleur noire pour les titres des onglets */
     font-size: 1rem;
     padding: 5px 30px;
-    
+    font-family: "Poppins", sans-serif;
     transition: color 0.3s, background-color 0.3s;
 }
 
