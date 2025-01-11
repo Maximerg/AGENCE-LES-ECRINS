@@ -15,7 +15,7 @@ body {
 /* En-tête */
 .header-top {
     background: #fff;
-    padding: 25px 0;
+    padding: 30px 0;
     text-align: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -25,7 +25,6 @@ body {
     font-size: 3.5rem;
     color: #333;
     font-family: 'Cinzel', serif;
-    font-weight: 400; /* Assure l'utilisation de Regular */
 }
 
 .header-divider {
@@ -60,13 +59,13 @@ body {
     color: #333; /* Couleur noire pour les titres des onglets */
     font-size: 1rem;
     padding: 5px 10px;
+    font-family: 'Cinzel', serif; /* Ajout de la police Cinzel */
     transition: color 0.3s, background-color 0.3s;
 }
 
 .header-bottom nav ul li a:hover {
-    color: #0056b3;
-    background-color: rgba(0, 123, 255, 0.1);
-    border-radius: 5px;
+    color: #6E674A; /* Couleur de la bande du milieu */
+    background-color: transparent;
 }
 
 
