@@ -69,199 +69,31 @@ body {
     background-color: transparent;
 }
 
-
-/* Section "Hero" */
-.hero {
-    background: #f5f5f5;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1rem;
-    color: #666;
-}
-
-.hero .btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.hero .btn:hover {
-    background: #0056b3;
-}
-
-/* Section "Biens en vente" */
-.biens {
-    padding: 50px 0;
-}
-
-.biens h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.biens .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.biens .card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.biens .card img {
+<style>
+/* Main - Section Hero */
+.main-hero {
     width: 100%;
-    height: auto;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    background-image: url('path/to/your/image.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
 }
 
-.biens .card h3 {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-.biens .card p {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 0 10px 10px;
-}
-
-.biens .card .btn {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 10px 15px;
-    background: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.biens .card .btn:hover {
-    background: #0056b3;
-}
-
-/* Section "Services" */
-.services {
-    background: #f5f5f5;
-    padding: 50px 0;
-}
-
-.services h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.services ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.services ul li {
-    margin: 10px 0;
-    text-align: center;
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Section "Estimation" */
-.estimation {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.estimation h2 {
-    margin-bottom: 20px;
-}
-
-.estimation p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.estimation .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.estimation .btn:hover {
-    background: #0056b3;
-}
-
-/* Section "Contact" */
-.contact {
-    background: #f5f5f5;
-    padding: 50px 0;
-}
-
-.contact h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.contact form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact form input,
-.contact form textarea {
+.main-hero-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay sombre pour le texte */
 }
 
-.contact form button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #007BFF;
+.main-hero-overlay h2 {
     color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
+    font-size: 2.5rem;
+    text-align: center;
 }
-
-.contact form button:hover {
-    background: #0056b3;
-}
+</style>
 
 /* Pied de page */
 footer {
