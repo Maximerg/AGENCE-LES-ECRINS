@@ -31,6 +31,9 @@ body {
 .header-divider {
     height: 2px;
     background-color: #6E674A;
+    width: calc(100% - 200px); /* Retrait de 100px de chaque côté */
+    margin: 0 auto; /* Centre la ligne */
+    box-shadow: 0px 0px 0px 100px #fff; /* Ajoute des marges blanches autour de la bande */
 }
 
 .header-bottom {
@@ -69,8 +72,6 @@ body {
 .divider {
     height: 2px;
     background-color: #6E674A; /* Même couleur que la bande du header */
-    width: calc(100% - 200px); /* Retrait de 100px de chaque côté */
-    margin: 0 auto; /* Centre la ligne */
 }
 
 /* Main - Section Hero */
