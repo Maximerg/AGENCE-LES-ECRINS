@@ -25,7 +25,8 @@ body {
 }
 
 .header-top {
-    padding: 25px 0;
+    padding-top: 70px; /* Augmente la distance entre le haut et le titre */
+    padding-bottom: 30px; /* Maintient un bon espacement en bas */
     text-align: center;
     color: #fff; /* Rendre le texte lisible */
 }
