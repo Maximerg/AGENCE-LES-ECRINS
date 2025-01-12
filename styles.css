@@ -91,6 +91,10 @@ body {
     transition: width 0.3s ease-in-out;
 }
 
+.header-bottom nav ul li a:hover::after {
+    width: 100%; /* Barre sous le texte visible au hover */
+}
+
 /* Main */
 main {
     margin-top: 0; /* Aucun espace supplémentaire, continuation parfaite */
