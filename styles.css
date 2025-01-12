@@ -69,7 +69,13 @@ body {
     background-color: transparent;
 }
 
-/* Main - Section Hero */
+.divider {
+    height: 2px;
+    background-color: #6E674A; /* Même couleur que la bande du header */
+    width: calc(100% - 200px); /* Retrait de 100px de chaque côté */
+    margin: 0 auto; /* Centre la ligne */
+}
+
 /* Main - Section Hero */
 .main-hero {
     width: 100%;
