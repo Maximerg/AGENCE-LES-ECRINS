@@ -79,6 +79,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 20%; /* Positionne à 20% depuis le haut */
 }
 
 .main-hero h2 {
