@@ -71,12 +71,24 @@ body {
     font-size: 1.05rem;
     padding: 5px 30px;
     font-family: "Poppins", sans-serif;
+    position: relative; /* Nécessaire pour la barre sous le texte */
     transition: color 0.3s, background-color 0.3s;
 }
 
 .header-bottom nav ul li a:hover {
     color: #6E674A; /* Couleur de la bande du milieu */
     background-color: transparent;
+}
+
+.header-bottom nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6E674A; /* Même couleur que le texte au hover */
+    transition: width 0.3s ease-in-out;
 }
 
 /* Main */
