@@ -13,43 +13,32 @@ body {
 }
 
 /* En-tête */
-.main-hero {
-    background-image: url('https://i.imgur.com/5zt6Ty8.jpeg'); /* Une seule image pour tout l'arrière-plan */
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Couvre toute la hauteur de la fenêtre */
-    display: flex;
-    flex-direction: column; /* Empile les éléments verticalement */
-    justify-content: flex-start; /* Positionne les éléments en haut */
-    align-items: center; /* Centre horizontalement */
-}
-
 .header-top {
-    padding-top: 40px; /* Augmente la distance entre le haut et le titre */
-    padding-bottom: 20px; /* Maintient un bon espacement en bas */
+    background: #fff;
+    padding: 30px 0;
     text-align: center;
-    color: #fff; /* Rendre le texte lisible */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-top h1 {
     margin: 0;
     font-size: 3.5rem;
-    color: #000000;
+    color: #333;
     font-family: 'Cinzel', serif;
     font-weight: 400;
-    
 }
 
 .header-divider {
     height: 2px;
-    background-color: #000000;
+    background-color: #6E674A;
     width: calc(100% - 200px); /* Retrait de 100px de chaque côté */
     margin: 0 auto; /* Centre la ligne */
+    box-shadow: 0px 0px 0px 100px #fff; /* Ajoute des marges blanches autour de la bande */
 }
 
 .header-bottom {
     padding: 20px 0;
-    background: transparent; /* Transparent pour laisser apparaître l'image */
+    background: #fff; /* Fond blanc pour la zone sans bande */
     text-align: center;
 }
 
@@ -68,11 +57,10 @@ body {
 
 .header-bottom nav ul li a {
     text-decoration: none;
-    color: #000000; /* Couleur noire pour les titres des onglets */
-    font-size: 1.05rem;
+    color: #333; /* Couleur noire pour les titres des onglets */
+    font-size: 1rem;
     padding: 5px 30px;
     font-family: "Poppins", sans-serif;
-    position: relative; /* Nécessaire pour la barre sous le texte */
     transition: color 0.3s, background-color 0.3s;
 }
 
@@ -81,30 +69,28 @@ body {
     background-color: transparent;
 }
 
-.header-bottom nav ul li a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
+.divider {
     height: 2px;
-    background-color: #6E674A; /* Même couleur que le texte au hover */
-    transition: width 0.3s ease-in-out;
+    background-color: #6E674A; /* Même couleur que la bande du header */
 }
 
-.header-bottom nav ul li a:hover::after {
-    width: 100%; /* Barre sous le texte visible au hover */
-}
-
-/* Main */
-main {
-    margin-top: 0; /* Aucun espace supplémentaire, continuation parfaite */
+/* Main - Section Hero */
+.main-hero {
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    background-image: url('https://i.imgur.com/5zt6Ty8.jpeg'); /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centre verticalement */
+    position: relative;
 }
 
 /* Pied de page */
 footer {
-    background: #6E674A;
-    color: #FFF;
+    background: #333;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
 }
