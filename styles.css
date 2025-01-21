@@ -23,7 +23,7 @@ body {
 .header-top h1 {
     margin: 0;
     font-size: 3.5rem;
-    color: #333;
+    color: #6E674A;
     font-family: 'Cinzel', serif;
     font-weight: 400;
 }
@@ -57,7 +57,7 @@ body {
 
 .header-bottom nav ul li a {
     text-decoration: none;
-    color: #333; /* Couleur noire pour les titres des onglets */
+    color: #6E674A; /* Couleur noire pour les titres des onglets */
     font-size: 1rem;
     padding: 5px 30px;
     font-family: "Poppins", sans-serif;
