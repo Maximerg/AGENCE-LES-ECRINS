@@ -65,6 +65,7 @@ body {
     color: #000; /* Couleur noire pour les titres des onglets */
     font-size: 1rem;
     padding: 5px 30px;
+    position: relative; /* Nécessaire pour le positionnement du ::after */
     font-family: "Poppins", sans-serif;
     transition: color 0.3s, background-color 0.3s;
 }
