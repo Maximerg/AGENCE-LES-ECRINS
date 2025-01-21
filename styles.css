@@ -23,7 +23,7 @@ body {
 .header-top h1 {
     margin: 0;
     font-size: 3.5rem;
-    color: #6E674A;
+    color: #333;
     font-family: 'Cinzel', serif;
     font-weight: 400;
 }
@@ -57,7 +57,7 @@ body {
 
 .header-bottom nav ul li a {
     text-decoration: none;
-    color: #6E674A; /* Couleur noire pour les titres des onglets */
+    color: #333; /* Couleur noire pour les titres des onglets */
     font-size: 1rem;
     padding: 5px 30px;
     font-family: "Poppins", sans-serif;
@@ -67,11 +67,6 @@ body {
 .header-bottom nav ul li a:hover {
     color: #6E674A; /* Couleur de la bande du milieu */
     background-color: transparent;
-}
-
-.divider {
-    height: 2px;
-    background-color: #6E674A; /* Même couleur que la bande du header */
 }
 
 /* Main - Section Hero */
@@ -89,7 +84,7 @@ body {
 
 /* Pied de page */
 footer {
-    background: #333;
+    background: #6E674A;
     color: #fff;
     text-align: center;
     padding: 10px 0;
