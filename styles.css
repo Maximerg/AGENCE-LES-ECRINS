@@ -55,6 +55,11 @@ body {
     display: inline;
 }
 
+.header-bottom nav ul li a:hover {
+    color: #6E674A; /* Couleur de la bande du milieu */
+    background-color: transparent;
+}
+
 .header-bottom nav ul li a {
     text-decoration: none;
     color: #000; /* Couleur noire pour les titres des onglets */
@@ -64,9 +69,15 @@ body {
     transition: color 0.3s, background-color 0.3s;
 }
 
-.header-bottom nav ul li a:hover {
-    color: #6E674A; /* Couleur de la bande du milieu */
-    background-color: transparent;
+.header-bottom nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6E674A; /* Même couleur que le texte au hover */
+    transition: width 0.3s ease-in-out;
 }
 
 .header-bottom nav ul li a:hover::after {
