@@ -69,6 +69,10 @@ body {
     background-color: transparent;
 }
 
+.header-bottom nav ul li a:hover::after {
+    width: 100%; /* Barre sous le texte visible au hover */
+}
+
 /* Main - Section Hero */
 .main-hero {
     width: 100%;
