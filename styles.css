@@ -104,7 +104,7 @@ body {
 
 /* Section Biens Disponibles */
 .biens-disponibles {
-    padding: 50px 0;
+    padding: 20px 0;
     background-color: #fff;
     text-align: center;
 }
@@ -112,7 +112,8 @@ body {
 .biens-disponibles h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #333;
+    color: #000;
+    font-family: "Poppins", sans-serif;
 }
 
 .biens-grid {
