@@ -87,12 +87,18 @@ body {
 
 /* Main - Section Hero */
 .main-hero {
-    margin: 20px auto; /* Ajoute 20px d'espace autour de l'image */
-    width: calc(100% - 40px); /* Réduit la largeur totale pour compenser les marges */
+    margin: 20px; /* Ajoute 20px d'espace blanc autour */
+    width: calc(100% - 40px); /* Compense les marges dans la largeur */
+    height: calc(100vh - 40px); /* Compense les marges dans la hauteur */
     background-image: url('https://i.imgur.com/5zt6Ty8.jpeg');
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+
 
 /* Section Biens Disponibles */
 .biens-disponibles {
