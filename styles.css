@@ -99,7 +99,25 @@ body {
     position: relative;
 }
 
+/* Rectangles dans la section main-hero */
+.rectangle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur blanche semi-transparente */
+    width: 100px; /* Largeur des rectangles */
+    border-radius: 5px; /* Coins légèrement arrondis */
+}
 
+.rectangle-left {
+    height: 200px; /* Hauteur du rectangle gauche */
+    top: 10%; /* Position depuis le haut */
+    left: 5%; /* Position depuis la gauche */
+}
+
+.rectangle-right {
+    height: 150px; /* Hauteur du rectangle droit */
+    bottom: 10%; /* Position depuis le bas */
+    right: 5%; /* Position depuis la droite */
+}
 
 
 /* Section Biens Disponibles */
