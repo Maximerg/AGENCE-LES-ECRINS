@@ -87,22 +87,18 @@ body {
 
 /* Main - Section Hero */
 .main-hero {
-    width: calc(100% - 100px); /* Réduit la largeur totale pour compenser les marges */
-    height: calc(100vh - 40px); /* Réduit la hauteur totale */
-    background-image: url('https://i.imgur.com/5zt6Ty8.jpeg'); /* Remplacez par le chemin de votre image */
+    margin: 20px 50px 20px 50px; /* Ajoute 20px d'espace blanc autour */
+    width: calc(100% - 40px); /* Compense les marges dans la largeur */
+    height: calc(100vh - 40px); /* Compense les marges dans la hauteur */
+    background-image: url('https://i.imgur.com/5zt6Ty8.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centre verticalement */
+    align-items: center;
     position: relative;
-
-    /* Ajoutez des marges internes spécifiques */
-    padding-top: 20px; /* Espace en haut */
-    padding-right: 50px; /* Espace à droite */
-    padding-bottom: 20px; /* Espace en bas */
-    padding-left: 50px; /* Espace à gauche */
 }
+
 
 
 
