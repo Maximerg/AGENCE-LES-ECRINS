@@ -88,8 +88,8 @@ body {
 /* Main - Section Hero */
 .main-hero {
     margin: 10px 65px 0px 65px; /* Ajoute 20px d'espace blanc autour */
-    width: calc(100% - 100px); /* Compense les marges dans la largeur */
-    height: calc(100vh - 40px); /* Compense les marges dans la hauteur */
+    width: calc(100% - 130px); /* Compense les marges dans la largeur */
+    height: calc(100vh - 10px); /* Compense les marges dans la hauteur */
     background-image: url('https://i.imgur.com/5zt6Ty8.jpeg');
     background-size: cover;
     background-position: center;
