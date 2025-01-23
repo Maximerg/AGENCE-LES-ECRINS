@@ -182,7 +182,7 @@ body {
 /* Page Contact */
 
 .contact-section {
-    padding: 40px 0;
+    padding: 50px 0;
     background-color: #f8f8f8; /* Couleur de fond générale */
 }
 
@@ -190,12 +190,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1200px;
+    max-width: 1300px; /* Agrandir la largeur du cadre */
     margin: 0 auto;
     background-color: #fff; /* Fond blanc pour l'encart */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour le style */
-    padding: 20px;
-    border-radius: 8px; /* Coins arrondis */
+    padding: 30px; /* Augmenter l'espace interne */
+    border-radius: 10px; /* Coins arrondis */
     position: relative;
 }
 
@@ -216,8 +216,8 @@ body {
 
 .contact-form form input, .contact-form form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 15px; /* Augmenter l'espace interne des champs du formulaire */
+    margin-bottom: 20px; /* Ajouter plus d'espace entre les champs */
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
@@ -227,7 +227,7 @@ body {
     background-color: #6E674A;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px; /* Augmenter la taille du bouton */
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
@@ -240,7 +240,7 @@ body {
 
 .contact-info p, .contact-info a {
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Ajouter plus d'espace entre les paragraphes */
 }
 
 .contact-info a {
