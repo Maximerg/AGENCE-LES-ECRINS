@@ -91,9 +91,9 @@ body {
 
 /* Main - Section Hero */
 .main-hero {
-    margin: 10px 65px 0px 65px; /* Ajoute 20px d'espace blanc autour */
-    width: calc(100% - 130px); /* Compense les marges dans la largeur */
-    height: calc(100vh - 10px); /* Compense les marges dans la hauteur */
+    margin: 10px 75px 0px 75px; /* Ajoute 20px d'espace blanc autour */
+    width: calc(100% - 150px); /* Compense les marges dans la largeur */
+    height: calc(100vh - 100px); /* Compense les marges dans la hauteur */
     background-image: url('https://i.imgur.com/5zt6Ty8.jpeg');
     background-size: cover;
     background-position: center;
