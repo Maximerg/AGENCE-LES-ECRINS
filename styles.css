@@ -200,7 +200,7 @@ body {
 }
 
 .contact-form, .contact-info {
-    width: 48%; /* Les deux colonnes prennent 48% de la largeur */
+    width: 45%; /* Les deux colonnes prennent 48% de la largeur */
 }
 
 .contact-form h2, .contact-info h2 {
