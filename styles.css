@@ -194,8 +194,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1300px; /* Agrandir la largeur du cadre */
-    margin: 0 auto;
+    max-width: 1100px; /* Agrandir la largeur du cadre */
+    margin: 30px auto;
     background-color: #fff; /* Fond blanc pour l'encart */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour le style */
     padding: 30px; /* Augmenter l'espace interne */
@@ -204,7 +204,7 @@ body {
 }
 
 .contact-form, .contact-info {
-    width: 45%; /* Les deux colonnes prennent 48% de la largeur */
+    width: 45%; /* Les deux colonnes prennent 45% de la largeur */
 }
 
 .contact-form h2, .contact-info h2 {
