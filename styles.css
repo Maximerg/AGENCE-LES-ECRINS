@@ -85,6 +85,11 @@ body {
     width: 100%; /* Barre sous le texte visible au hover */
 }
 
+.header-bottom nav ul li a.active {
+    color: #6E674A; /* Couleur différente pour l'onglet actif */
+    font-weight: bold;
+}
+
 /* Main - Section Hero */
 .main-hero {
     margin: 10px 65px 0px 65px; /* Ajoute 20px d'espace blanc autour */
