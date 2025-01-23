@@ -87,7 +87,6 @@ body {
 
 .header-bottom nav ul li a.active {
     color: #6E674A; /* Couleur différente pour l'onglet actif */
-    font-weight: bold;
 }
 
 /* Main - Section Hero */
