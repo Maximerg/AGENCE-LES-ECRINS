@@ -66,7 +66,7 @@ body {
     font-size: 1rem;
     padding: 5px 30px;
     position: relative; /* Nécessaire pour le positionnement du ::after */
-    font-family: "Lora", serif;
+    font-family: "Poppins", sans-serif;
     transition: color 0.3s, background-color 0.3s;
 }
 
