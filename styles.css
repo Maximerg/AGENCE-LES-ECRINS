@@ -232,6 +232,7 @@ body {
 
 .contact-form, .contact-info {
     width: 45%; /* Les deux colonnes prennent 45% de la largeur */
+    font-family: "Lora", serif;
 }
 
 .contact-form h2, .contact-info h2 {
