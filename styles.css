@@ -111,6 +111,7 @@ body {
     color: #6E674A; /* Couleur du texte */
     text-align: center;
     padding: 20px 20px;
+    font-family: "Lora", serif;
 }
 
 .about-container {
