@@ -110,7 +110,7 @@ body {
     background-color: #F7F7F7;
     color: #6E674A; /* Couleur du texte */
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px 20px;
 }
 
 .about-container {
@@ -119,8 +119,9 @@ body {
 }
 
 .about-container h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
 }
 
 .about-container p {
