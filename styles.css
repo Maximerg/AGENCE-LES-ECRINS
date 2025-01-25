@@ -107,13 +107,13 @@ body {
 .about-section {
     width: 100%;
     background-color: #F7F7F7;
-    color: #fff; /* Couleur du texte */
+    color: #6E674A; /* Couleur du texte */
     text-align: center;
     padding: 40px 20px;
 }
 
 .about-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
