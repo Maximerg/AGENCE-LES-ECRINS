@@ -103,6 +103,30 @@ body {
     position: relative;
 }
 
+/* Section L'Agence */
+.about-section {
+    width: 100%;
+    background-color: #6E674A; /* Kaki utilisé pour les onglets */
+    color: #fff; /* Couleur du texte */
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
 /* Section Biens Disponibles */
 .biens-disponibles {
     padding: 30px 0;
