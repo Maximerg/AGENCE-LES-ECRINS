@@ -91,7 +91,7 @@ body {
 
 /* Main - Section Hero */
 .main-hero {
-    margin: 10px 75px 20px 75px; /* Ajoute 20px d'espace blanc autour */
+    margin: 10px 75px 60px 75px; /* Ajoute 20px d'espace blanc autour */
     width: calc(100% - 150px); /* Compense les marges dans la largeur */
     height: calc(100vh - 100px); /* Compense les marges dans la hauteur */
     background-image: url('https://i.imgur.com/5zt6Ty8.jpeg');
@@ -106,7 +106,7 @@ body {
 /* Section L'Agence */
 .about-section {
     width: 100%;
-    background-color: #6E674A; /* Kaki utilisé pour les onglets */
+    background-color: #F7F7F7;
     color: #fff; /* Couleur du texte */
     text-align: center;
     padding: 40px 20px;
