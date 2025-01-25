@@ -106,7 +106,7 @@ body {
 /* Section L'Agence */
 .about-section {
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-color: #F7F7F7;
     color: #6E674A; /* Couleur du texte */
     text-align: center;
@@ -121,6 +121,7 @@ body {
 
 .about-container h2 {
     font-size: 2.5rem;
+    letter-spacing: 2px;
     margin-bottom: 20px;
     font-family: "Lora", serif;
 }
