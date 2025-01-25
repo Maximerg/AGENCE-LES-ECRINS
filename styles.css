@@ -106,6 +106,7 @@ body {
 /* Section L'Agence */
 .about-section {
     width: 100%;
+    height: 300px;
     background-color: #F7F7F7;
     color: #6E674A; /* Couleur du texte */
     text-align: center;
@@ -113,7 +114,7 @@ body {
 }
 
 .about-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
