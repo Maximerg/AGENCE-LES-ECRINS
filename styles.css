@@ -325,7 +325,7 @@ footer {
     background: #6E674A;
     color: #fff;
     text-align: center;
-    position: relative;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100vw;
