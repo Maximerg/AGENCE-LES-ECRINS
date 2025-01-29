@@ -314,14 +314,6 @@ html, body {
     background: #6E674A;
     color: #fff;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: relative
     width: 100%;
-    padding: 10px 0;
-    transition: all 0.3s ease-in-out; /* Animation douce pour éviter un effet brusque */
-}
-
-.footer-bottom {
-    position: relative; /* Permet au footer de s'intégrer normalement */
 }
