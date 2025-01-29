@@ -313,9 +313,42 @@ html, body {
 .footer {
     background: #6E674A;
     color: #fff;
-    text-align: center;
     position: relative
     width: 100%;
     padding: 20px 0; /* Augmente l'espace en haut et en bas */
     font-family: "Lora", serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Sépare le texte et les liens */
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Aligner les liens à droite en colonne */
+.footer-links {
+    display: flex;
+    flex-direction: column; /* Place les liens l’un en dessous de l’autre */
+    align-items: flex-end; /* Aligne à droite */
+}
+
+/* Styles des liens */
+.footer-links a {
+    color: #fff; /* Garde la couleur blanche */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 0.9rem;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Empêcher le changement de couleur après un clic */
+.footer-links a:visited {
+    color: #fff; /* Garde la couleur blanche après un clic */
+}
+
+/* Effet au survol */
+.footer-links a:hover {
+    color: #6E674A; /* Effet doré élégant au survol */
 }
