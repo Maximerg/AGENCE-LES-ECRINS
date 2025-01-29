@@ -113,8 +113,6 @@ body {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* Légère transparence pour améliorer la visibilité */
-    padding: 10px 20px;
     border-radius: 5px;
     font-family: "Lora", serif;
 }
