@@ -310,10 +310,11 @@ html, body {
 
 /* Pied de page */
 
-.footer-fixed {
+.footer {
     background: #6E674A;
     color: #fff;
     text-align: center;
     position: relative
     width: 100%;
+    padding: 20px 0; /* Augmente l'espace en haut et en bas */
 }
