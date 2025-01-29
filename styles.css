@@ -104,6 +104,21 @@ body {
     background-position: center 25%; /* Décale l'image de 10 % depuis le haut */
 }
 
+.hero-text {
+    position: absolute;
+    top: 25%; /* Place le texte à 25% du haut de l'image */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Ajuste pour un centrage parfait */
+    color: #fff; /* Couleur blanche pour une bonne lisibilité */
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Légère transparence pour améliorer la visibilité */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: "Lora", serif;
+}
+
 /* Section L'Agence */
 .about-section {
     width: 100%;
