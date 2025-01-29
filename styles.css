@@ -326,6 +326,7 @@ html, body {
     justify-content: space-between; /* Sépare le texte et les liens */
     align-items: center;
     padding: 0 20px;
+    font-size: 1rem;
 }
 
 /* Aligner les liens à droite en colonne */
@@ -339,16 +340,11 @@ html, body {
 .footer-links a {
     color: #fff; /* Garde la couleur blanche */
     text-decoration: none; /* Supprime le soulignement */
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: color 0.3s ease-in-out;
 }
 
 /* Empêcher le changement de couleur après un clic */
 .footer-links a:visited {
     color: #fff; /* Garde la couleur blanche après un clic */
-}
-
-/* Effet au survol */
-.footer-links a:hover {
-    color: #6E674A; /* Effet doré élégant au survol */
 }
