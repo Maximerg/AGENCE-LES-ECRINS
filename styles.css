@@ -310,24 +310,19 @@ html, body {
 
 /* Pied de page */
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Assure que la page prend toute la hauteur de l'écran */
-    margin: 0;
-}
-
-main {
-    flex: 1;
-}
-
-footer {
+.footer-fixed {
     background: #6E674A;
     color: #fff;
     text-align: center;
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     padding: 10px 0;
+    transition: all 0.3s ease-in-out; /* Animation douce pour éviter un effet brusque */
+}
+
+.footer-bottom {
+    position: relative; /* Permet au footer de s'intégrer normalement */
+    box-shadow: none; /* Supprime l'ombre lorsqu'il est intégré */
 }
