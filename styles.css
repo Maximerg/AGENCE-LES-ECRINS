@@ -329,6 +329,11 @@ html, body {
     font-size: 1rem;
 }
 
+.footer-text {
+    flex-grow: 1; /* Permet au texte de rester centré */
+    text-align: center; /* Centre le texte */
+}
+
 /* Aligner les liens à droite en colonne */
 .footer-links {
     display: flex;
