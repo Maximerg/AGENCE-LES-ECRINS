@@ -12,6 +12,11 @@ body {
     margin: 0 auto;
 }
 
+html, body {
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    width: 100vw; /* Empêche tout dépassement de la largeur de l'écran */
+}
+
 /* En-tête */
 .header-top {
     background: #fff;
