@@ -89,6 +89,17 @@ body {
     color: #6E674A; /* Couleur différente pour l'onglet actif */
 }
 
+/* Section Intro */
+.intro-section {
+    width: 100%;
+    background-color: #F7F7F7; /* Kaki utilisé pour les onglets */
+    color: #6E674A; /* Couleur du texte */
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 /* Main - Section Hero */
 .main-hero {
     margin: 10px 75px 60px 75px; /* Ajoute 20px d'espace blanc autour */
@@ -102,19 +113,6 @@ body {
     align-items: center;
     position: relative;
     background-position: center 25%; /* Décale l'image de 10 % depuis le haut */
-}
-
-.hero-text {
-    position: absolute;
-    top: 25%; /* Place le texte à 25% du haut de l'image */
-    left: 50%; /* Centre horizontalement */
-    transform: translateX(-50%); /* Ajuste pour un centrage parfait */
-    color: #fff; /* Couleur blanche pour une bonne lisibilité */
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 5px;
-    font-family: "Lora", serif;
 }
 
 /* Section L'Agence */
