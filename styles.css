@@ -89,18 +89,6 @@ body {
     color: #6E674A; /* Couleur différente pour l'onglet actif */
 }
 
-/* Section Intro */
-.intro-section {
-    width: 100%;
-    background-color: #F7F7F7; /* Kaki utilisé pour les onglets */
-    color: #6E674A; /* Couleur du texte */
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: "Lora", serif;
-}
-
 /* Main - Section Hero */
 .main-hero {
     margin: 30px 75px 60px 75px; /* Ajoute 20px d'espace blanc autour */
