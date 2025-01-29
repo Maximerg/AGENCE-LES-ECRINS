@@ -324,5 +324,4 @@ html, body {
 
 .footer-bottom {
     position: relative; /* Permet au footer de s'intégrer normalement */
-    box-shadow: none; /* Supprime l'ombre lorsqu'il est intégré */
 }
