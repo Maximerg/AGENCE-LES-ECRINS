@@ -322,11 +322,12 @@ html, body {
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr auto; /* Le texte prend tout l'espace dispo, les liens restent à droite */    
+    display: flex;
+    justify-content: center; /* Centre le texte */   
     align-items: center;
     padding: 0 20px;
     font-size: 1rem;
+    position: relative; /* Permet de positionner les liens à droite */
 }
 
 .footer-text {
@@ -336,6 +337,8 @@ html, body {
 
 /* Aligner les liens à droite en colonne */
 .footer-links {
+    position: absolute;
+    right: 20px; /* Place les liens à droite du footer */
     display: flex;
     flex-direction: column; /* Place les liens l’un en dessous de l’autre */
     align-items: flex-end; /* Aligne à droite */
