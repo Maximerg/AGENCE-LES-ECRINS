@@ -315,6 +315,7 @@ html, body {
     color: #fff;
     position: relative
     width: 100%;
+    font-size: 1rem;
     padding: 20px 0; /* Augmente l'espace en haut et en bas */
     font-family: "Lora", serif;
 }
