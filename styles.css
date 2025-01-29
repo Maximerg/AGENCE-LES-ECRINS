@@ -98,11 +98,12 @@ body {
     padding: 20px 10px;
     font-size: 1.5rem;
     font-weight: bold;
+    font-family: "Lora", serif;
 }
 
 /* Main - Section Hero */
 .main-hero {
-    margin: 10px 75px 60px 75px; /* Ajoute 20px d'espace blanc autour */
+    margin: 30px 75px 60px 75px; /* Ajoute 20px d'espace blanc autour */
     width: calc(100% - 150px); /* Compense les marges dans la largeur */
     height: calc(100vh - 100px); /* Compense les marges dans la hauteur */
     background-image: url('https://i.imgur.com/5zt6Ty8.jpeg');
