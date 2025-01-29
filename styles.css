@@ -323,7 +323,8 @@ html, body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr auto; /* Le texte prend tout l'espace dispo, les liens restent à droite */    align-items: center;
+    grid-template-columns: 1fr auto; /* Le texte prend tout l'espace dispo, les liens restent à droite */    
+    align-items: center;
     padding: 0 20px;
     font-size: 1rem;
 }
