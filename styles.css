@@ -116,7 +116,7 @@ html, body {
     background-color: #F0F0F0;
     color: #455243; /* Couleur du texte */
     text-align: center;
-    padding: 20px 20px;
+    padding: 10px 20px;
     font-family: "Lora", serif;
 }
 
@@ -128,13 +128,13 @@ html, body {
 .about-container h2 {
     font-size: 2rem;
     letter-spacing: 2px;
-    margin-bottom: 20px;
     font-family: "Lora", serif;
 }
 
 .about-container p {
     font-size: 1.2rem;
     line-height: 1.5;
+    padding: 15px;
 }
 
 /* Section Biens Disponibles */
