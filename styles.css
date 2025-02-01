@@ -68,7 +68,7 @@ html, body {
 .header-bottom nav ul li a {
     text-decoration: none;
     color: #000; /* Couleur noire pour les titres des onglets */
-    font-size: 0.95rem;
+    font-size: 1rem;
     padding: 5px 30px;
     position: relative; /* Nécessaire pour le positionnement du ::after */
     font-family: "Poppins", sans-serif;
@@ -126,7 +126,7 @@ html, body {
 }
 
 .about-container h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     margin-bottom: 20px;
     font-family: "Lora", serif;
@@ -147,7 +147,7 @@ html, body {
 }
 
 .biens-disponibles h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     margin-bottom: 20px;
     font-family: "Lora", serif;
