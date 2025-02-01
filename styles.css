@@ -61,7 +61,7 @@ html, body {
 }
 
 .header-bottom nav ul li a:hover {
-    color: #6E674A; /* Couleur de la bande du milieu */
+    color: #455243; /* Couleur de la bande du milieu */
     background-color: transparent;
 }
 
@@ -82,7 +82,7 @@ html, body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #6E674A; /* Même couleur que le texte au hover */
+    background-color: #455243; /* Même couleur que le texte au hover */
     transition: width 0.3s ease-in-out;
 }
 
@@ -91,7 +91,7 @@ html, body {
 }
 
 .header-bottom nav ul li a.active {
-    color: #6E674A; /* Couleur différente pour l'onglet actif */
+    color: #455243; /* Couleur différente pour l'onglet actif */
 }
 
 /* Main - Section Hero */
@@ -114,7 +114,7 @@ html, body {
     width: 100%;
     height: 400px;
     background-color: #F0F0F0;
-    color: #6E674A; /* Couleur du texte */
+    color: #455243; /* Couleur du texte */
     text-align: center;
     padding: 20px 20px;
     font-family: "Lora", serif;
@@ -143,7 +143,7 @@ html, body {
     padding: 30px 0;
     background-color: #fff;
     text-align: center;
-    color: #6E674A;
+    color: #455243;
 }
 
 .biens-disponibles h2 {
@@ -190,7 +190,7 @@ html, body {
     display: inline-block;
     margin-bottom: 15px;
     padding: 10px 20px;
-    background-color: #6E674A;
+    background-color: #455243;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -204,7 +204,7 @@ html, body {
 .btn-all-biens {
     display: inline-block;
     padding: 10px 30px;
-    background-color: #6E674A;
+    background-color: #455243;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -268,7 +268,7 @@ html, body {
 }
 
 .contact-form form button {
-    background-color: #6E674A;
+    background-color: #455243;
     color: #fff;
     border: none;
     padding: 12px 25px; /* Augmenter la taille du bouton */
@@ -279,7 +279,7 @@ html, body {
 }
 
 .contact-form form button:hover {
-    background-color: #504e3a;
+    background-color: #455243;
 }
 
 .contact-info p, .contact-info a {
@@ -288,7 +288,7 @@ html, body {
 }
 
 .contact-info a {
-    color: #6E674A;
+    color: #455243;
     text-decoration: none;
 }
 
@@ -311,7 +311,7 @@ html, body {
 /* Pied de page */
 
 .footer {
-    background: #6E674A;
+    background: #455243;
     color: #fff;
     position: relative
     width: 100%;
