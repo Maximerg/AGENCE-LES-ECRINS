@@ -119,6 +119,9 @@ html, body {
     text-align: center;
     padding: 10px 20px;
     font-family: "Lora", serif;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
 }
 
 .about-container {
@@ -135,7 +138,7 @@ html, body {
 .about-container p {
     font-size: 1.2rem;
     line-height: 1.5;
-    padding: 20px;
+    padding: 15px;
 }
 
 /* Section Fondatrice */
