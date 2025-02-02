@@ -29,7 +29,6 @@ html, body {
     max-width: 300px; /* Ajuste la largeur du logo */
     height: auto; /* Garde les proportions */
     object-fit: cover; /* Ajuste l’image sans la déformer */
-    clip-path: inset(30% 20% 30% 20%); /* Coupe 10% en haut et en bas */
 }
 
 .header-divider {
