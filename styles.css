@@ -27,10 +27,12 @@ html, body {
 }
 
 .founder-logo {
-    max-width: 250px; /* Ajuste la largeur du logo */
+    max-width: 300px; /* Ajuste la largeur du logo */
     height: auto; /* Garde les proportions */
     display: block; /* Assure qu'il n'y a pas d'espace en trop */
-    margin-bottom: 10px; /* Ajoute un petit espace sous le logo */
+    margin-bottom: 0 auto;
+    object-fit: cover; /* Ajuste l’image sans la déformer */
+    clip-path: inset(20% 10% 20% 10%); /* Coupe 10% en haut et en bas */
 }
 
 .header-divider {
