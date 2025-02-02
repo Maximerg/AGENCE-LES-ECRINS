@@ -137,6 +137,43 @@ html, body {
     padding: 20px;
 }
 
+/* Section Fondatrice */
+
+.founder-section {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.founder-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.founder-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.founder-text {
+    flex: 1;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.founder-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.founder-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
 /* Section Biens Disponibles */
 
 .biens-disponibles {
