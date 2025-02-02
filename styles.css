@@ -26,7 +26,7 @@ html, body {
 }
 
 .founder-logo {
-    max-width: 400px; /* Ajuste la largeur du logo */
+    max-width: 350px; /* Ajuste la largeur du logo */
     height: auto; /* Garde les proportions */
     object-fit: cover; /* Ajuste l’image sans la déformer */
 }
