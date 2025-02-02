@@ -165,7 +165,7 @@ html, body {
 }
 
 .founder-image img {
-    width: 400px;
+    width: 350px;
     height: auto;
     border-radius: 10px;
 }
@@ -179,11 +179,13 @@ html, body {
 .founder-text h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+    padding: 20px;
 }
 
 .founder-text p {
     font-size: 1.2rem;
     line-height: 1.5;
+    padding: 20px;
 }
 
 /* Section Biens Disponibles */
