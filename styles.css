@@ -151,9 +151,17 @@ html, body {
 .founder-container {
     display: flex;
     align-items: center;
+    justify-content: center; /* Centre les éléments horizontalement */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+.founder-image {
+    display: flex;
+    justify-content: center; /* Centre l'image dans son conteneur */
+    align-items: center;
+    width: 50%; /* Occupe 50% de la largeur */
 }
 
 .founder-image img {
