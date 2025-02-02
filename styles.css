@@ -114,7 +114,7 @@ html, body {
     width: 100%;
     height: 400px;
     background-color: #F0F0F0;
-    color: #455243;; /* Couleur du texte */
+    color: #455243; /* Couleur du texte */
     text-align: center;
     padding: 10px 20px;
     font-family: "Lora", serif;
@@ -141,6 +141,7 @@ html, body {
 
 .founder-section {
     background-color: #fff;
+    color: #455243;
     padding: 50px 0;
     width: 100%
     height: 400px
