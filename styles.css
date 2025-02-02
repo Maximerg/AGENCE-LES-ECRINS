@@ -161,7 +161,7 @@ html, body {
     display: flex;
     justify-content: flex-start; /* Centre l'image dans son conteneur */
     align-items: center;
-    width: 50%; /* Occupe 50% de la largeur */
+    width: 40%; /* Occupe 50% de la largeur */
 }
 
 .founder-image img {
