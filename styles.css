@@ -157,7 +157,7 @@ html, body {
     justify-content: center; /* Centre les éléments horizontalement */
     max-width: 1400px;
     margin: 0px 100px;
-    padding: 15px;
+    padding: 20px;
 }
 
 .founder-image {
@@ -187,7 +187,7 @@ html, body {
 .founder-text p {
     font-size: 1.2rem;
     line-height: 1.5;
-    padding: 20px;
+    padding: 15px;
 }
 
 /* Section Biens Disponibles */
