@@ -21,7 +21,6 @@ html, body {
 /* En-tête */
 .header-top {
     background: #fff;
-    padding: 20px 0;
     text-align: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
