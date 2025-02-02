@@ -151,7 +151,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center; /* Centre les éléments horizontalement */
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0px 100px;
     padding: 20px;
 }
@@ -160,7 +160,7 @@ html, body {
     display: flex;
     justify-content: flex-start; /* Centre l'image dans son conteneur */
     align-items: center;
-    width: 40%; /* Occupe 50% de la largeur */
+    width: 35%; /* Occupe 50% de la largeur */
 }
 
 .founder-image img {
