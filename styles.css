@@ -30,7 +30,6 @@ html, body {
     max-width: 300px; /* Ajuste la largeur du logo */
     height: auto; /* Garde les proportions */
     display: block; /* Assure qu'il n'y a pas d'espace en trop */
-    margin-bottom: 0 auto;
     object-fit: cover; /* Ajuste l’image sans la déformer */
     clip-path: inset(20% 10% 20% 10%); /* Coupe 10% en haut et en bas */
 }
