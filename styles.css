@@ -271,6 +271,77 @@ html, body {
     background-color: #333;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Services */
+
+.services-intro {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.service-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.service-content {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.service-text {
+    flex: 1;
+    text-align: left;
+}
+
+.service-image {
+    flex: 1;
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+
+.gray-bg {
+    background-color: #f7f7f7;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #6E674A;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.services-cta {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.btn-primary {
+    background-color: black;
+}
+
+
 /* Page Contact */
 
 .contact-section {
