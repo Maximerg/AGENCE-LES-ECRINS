@@ -31,6 +31,7 @@ section:nth-of-type(even) {
 .service-diffusion,
 .service-accompagnement {
   min-height: 500px; /* Hauteur fixe de 500px */
+  padding: 2rem 0;
 }
 
 /* CONTENEUR COMMUN POUR LES SECTIONS AVEC IMAGE ET TEXTE */
@@ -38,15 +39,16 @@ section:nth-of-type(even) {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   flex-wrap: wrap; /* Pour une meilleure gestion en responsive */
 }
 
 /* ZONE TEXTE : environ 70% de la largeur */
 .service-text {
-  flex: 0 0 30%;
-  padding: 1rem;
+  flex: 0 0 70%;
+  padding: 0 2rem;   /* on ajoute ici un padding horizontal pour le texte */
   text-align: center;
 }
 
@@ -57,6 +59,8 @@ section:nth-of-type(even) {
 .service-diffusion-image,
 .service-accompagnement-image {
   flex: 0 0 30%;
+  margin: 0;
+  padding: 0;
   overflow: hidden; /* En cas de débordement, pour masquer le surplus */
 }
 
