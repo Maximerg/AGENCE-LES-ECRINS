@@ -31,6 +31,22 @@ section:nth-of-type(even) {
   background-color: var(--main-gray);
 }
 
+.service-estimation {
+  height: 500px; /* Hauteur fixe de 500px */
+}
+
+.service-photo {
+  height: 500px; /* Hauteur fixe de 500px */
+}
+
+.service-diffusion {
+  height: 500px; /* Hauteur fixe de 500px */
+}
+
+.service-accompagnement {
+  height: 500px; /* Hauteur fixe de 500px */
+}
+
 /* CONTENEUR COMMUN POUR LES SECTIONS AVEC IMAGE ET TEXTE */
 .service-content {
   display: flex;
