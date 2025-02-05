@@ -293,6 +293,8 @@ body {
     text-align: center;
     padding: 60px 20px;
     background-color: #fff;
+    font-family: "Lora", serif;
+    color: #455243;
 }
 
 .service-block {
