@@ -1,7 +1,7 @@
 /* Styles généraux */
 body {
     margin: 0;
-    font-family: "Cinzel", serif; /* Remplace par la police que tu veux */
+    font-family: "Lora", serif;
     line-height: 1.6;
     color: #000;
     user-select: none; /* Empêche la sélection du texte */
