@@ -35,7 +35,7 @@ section:nth-of-type(even) {
 .service-photo,
 .service-diffusion,
 .service-accompagnement {
-  height: 500px; /* Hauteur fixe de 500px */
+  min-height: 500px; /* Hauteur fixe de 500px */
 }
 
 /* CONTENEUR COMMUN POUR LES SECTIONS AVEC IMAGE ET TEXTE */
