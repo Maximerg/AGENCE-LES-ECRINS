@@ -41,7 +41,6 @@ section:nth-of-type(even) {
   max-width: var(--max-width);
   margin: 0 auto;
   flex-wrap: wrap; /* Pour une meilleure gestion en responsive */
-  width: 100%;
 }
 
 /* ZONE TEXTE : environ 70% de la largeur */
