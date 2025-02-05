@@ -21,11 +21,6 @@ body {
   line-height: 1.6;
 }
 
-/* STYLE DE BASE POUR LES SECTIONS */
-section {
-  padding: var(--section-padding);
-}
-
 /* ALTERNANCE DES COULEURS DE FOND : une section sur deux en gris */
 section:nth-of-type(even) {
   background-color: var(--main-gray);
