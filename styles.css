@@ -53,7 +53,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 .header-bottom nav ul li {
@@ -64,9 +64,9 @@ html, body {
 
 .header-bottom nav ul li:not(:last-child)::after {
     content: "•"; /* Ajoute un petit point */
-    color: #6E674A; /* Couleur des points */
+    color: #455243; /* Couleur des points */
     margin-left: 20px; /* Espace entre l’onglet et le point */
-    font-size: 14px; /* Ajuste la taille du point */
+    font-size: 20px; /* Ajuste la taille du point */
 }
 
 .header-bottom nav ul li a:hover {
