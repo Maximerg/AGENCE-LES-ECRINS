@@ -60,7 +60,7 @@ section:nth-of-type(even) {
 .service-photo-image,
 .service-diffusion-image,
 .service-accompagnement-image {
-  flex: 0 0 70%;
+  flex: 0 0 30%;
   padding: 1rem;
 }
 
