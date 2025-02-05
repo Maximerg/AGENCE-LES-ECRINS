@@ -41,7 +41,7 @@ section:nth-of-type(even) {
 /* CONTENEUR COMMUN POUR LES SECTIONS AVEC IMAGE ET TEXTE */
 .service-content {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -52,6 +52,7 @@ section:nth-of-type(even) {
 .service-text {
   flex: 0 0 30%;
   padding: 1rem;
+  text-align: center;
 }
 
 /* ZONE IMAGE : environ 30% de la largeur */
@@ -61,7 +62,7 @@ section:nth-of-type(even) {
 .service-diffusion-image,
 .service-accompagnement-image {
   flex: 0 0 30%;
-  padding: 1rem;
+  overflow: hidden; /* En cas de débordement, pour masquer le surplus */
 }
 
 /* Style pour les images : responsive et en bloc */
@@ -70,7 +71,8 @@ section:nth-of-type(even) {
 .service-diffusion-image img,
 .service-accompagnement-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* L'image remplira son conteneur */
   display: block;
 }
 
