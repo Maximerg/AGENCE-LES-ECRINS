@@ -1,101 +1,100 @@
-/* Variables de base */
-#page-services:root {
+/* VARIABLES DE BASE */
+:root {
   --primary-font-size: 16px;
   --section-padding: 2rem;
-  --main-gray: #f0f0f0;
+  --main-gray: #f0f0f0; /* Gris de la page principale - modifiez ici si besoin */
   --text-color: #333;
   --max-width: 1200px;
 }
 
-/* Réinitialisation */
-#page-services * {
+/* RÉINITIALISATION BASIQUE */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#page-services body,
-#page-services {
+body {
   font-size: var(--primary-font-size);
   font-family: Arial, sans-serif;
   color: var(--text-color);
   line-height: 1.6;
 }
 
-/* Style de base pour les sections */
-#page-services section {
+/* STYLE DE BASE POUR LES SECTIONS */
+section {
   padding: var(--section-padding);
 }
 
-/* Alternance de fond : une section sur deux en gris */
-#page-services section:nth-of-type(even) {
+/* ALTERNANCE DES COULEURS DE FOND : une section sur deux en gris */
+section:nth-of-type(even) {
   background-color: var(--main-gray);
 }
 
-/* Conteneur commun pour les sections avec image et texte */
-#page-services .service-content {
+/* CONTENEUR COMMUN POUR LES SECTIONS AVEC IMAGE ET TEXTE */
+.service-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: var(--max-width);
   margin: 0 auto;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Pour une meilleure gestion en responsive */
 }
 
-/* Zone texte (70%) */
-#page-services .service-text {
+/* ZONE TEXTE : environ 70% de la largeur */
+.service-text {
   flex: 0 0 70%;
   padding: 1rem;
 }
 
-/* Zone image (30%) */
-#page-services .service-estimation-image,
-#page-services .service-photo-image,
-#page-services .service-diffusion-image,
-#page-services .service-accompagnement-image {
+/* ZONE IMAGE : environ 30% de la largeur */
+/* Listez ici toutes les classes dédiées aux zones images */
+.service-estimation-image,
+.service-photo-image,
+.service-diffusion-image,
+.service-accompagnement-image {
   flex: 0 0 30%;
   padding: 1rem;
 }
 
-/* Images responsives */
-#page-services .service-estimation-image img,
-#page-services .service-photo-image img,
-#page-services .service-diffusion-image img,
-#page-services .service-accompagnement-image img {
+/* Style pour les images : responsive et en bloc */
+.service-estimation-image img,
+.service-photo-image img,
+.service-diffusion-image img,
+.service-accompagnement-image img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Sections textuelles uniquement */
-#page-services .services-vendeurs,
-#page-services .services-acquereurs {
+/* SECTIONS TEXTUELLES UNIQUEMENT (ex: vendeurs et acquéreurs) */
+.services-vendeurs,
+.services-acquereurs {
   max-width: var(--max-width);
   margin: 0 auto;
   text-align: center;
 }
 
 /* Titres et paragraphes */
-#page-services h1, #page-services h2 {
+h1, h2 {
   margin-bottom: 0.5rem;
 }
 
-#page-services p {
+p {
   margin-bottom: 1rem;
 }
 
-/* Responsive */
+/* RESPONSIVE : empilement en colonne pour les écrans étroits */
 @media (max-width: 768px) {
-  #page-services .service-content {
+  .service-content {
     flex-direction: column;
   }
-  #page-services .service-text,
-  #page-services .service-estimation-image,
-  #page-services .service-photo-image,
-  #page-services .service-diffusion-image,
-  #page-services .service-accompagnement-image {
+  .service-text,
+  .service-estimation-image,
+  .service-photo-image,
+  .service-diffusion-image,
+  .service-accompagnement-image {
     flex: 0 0 100%;
     padding: 0.5rem;
   }
 }
-
