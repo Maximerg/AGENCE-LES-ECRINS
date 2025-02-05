@@ -31,6 +31,10 @@ section:nth-of-type(even) {
   background-color: var(--main-gray);
 }
 
+.services-vendeurs {
+  height: 300px; /* Hauteur fixe de 500px */
+}
+
 .service-estimation {
   height: 500px; /* Hauteur fixe de 500px */
 }
