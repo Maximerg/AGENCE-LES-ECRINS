@@ -31,22 +31,9 @@ section:nth-of-type(even) {
   background-color: var(--main-gray);
 }
 
-.services-vendeurs {
-  height: 300px; /* Hauteur fixe de 500px */
-}
-
-.service-estimation {
-  height: 500px; /* Hauteur fixe de 500px */
-}
-
-.service-photo {
-  height: 500px; /* Hauteur fixe de 500px */
-}
-
-.service-diffusion {
-  height: 500px; /* Hauteur fixe de 500px */
-}
-
+.service-estimation,
+.service-photo,
+.service-diffusion,
 .service-accompagnement {
   height: 500px; /* Hauteur fixe de 500px */
 }
@@ -93,6 +80,7 @@ section:nth-of-type(even) {
   max-width: var(--max-width);
   margin: 0 auto;
   text-align: center;
+  height: 300px; /* Hauteur fixe de 500px */
 }
 
 /* Titres et paragraphes */
