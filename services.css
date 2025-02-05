@@ -50,7 +50,7 @@ section:nth-of-type(even) {
 
 /* ZONE TEXTE : environ 70% de la largeur */
 .service-text {
-  flex: 0 0 70%;
+  flex: 0 0 30%;
   padding: 1rem;
 }
 
@@ -60,7 +60,7 @@ section:nth-of-type(even) {
 .service-photo-image,
 .service-diffusion-image,
 .service-accompagnement-image {
-  flex: 0 0 30%;
+  flex: 0 0 70%;
   padding: 1rem;
 }
 
@@ -80,6 +80,7 @@ section:nth-of-type(even) {
   max-width: var(--max-width);
   margin: 0 auto;
   text-align: center;
+  padding: 2rem;
   height: 300px; /* Hauteur fixe de 500px */
 }
 
