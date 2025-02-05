@@ -96,8 +96,13 @@ h1, h2 {
   margin-bottom: 0.5rem;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 p {
   margin-bottom: 1rem;
+  font-size: 1.2rem
 }
 
 /* RESPONSIVE : empilement en colonne pour les écrans étroits */
