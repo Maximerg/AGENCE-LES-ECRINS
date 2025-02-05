@@ -1,1 +1,101 @@
+/* Variables de base */
+#page-services:root {
+  --primary-font-size: 16px;
+  --section-padding: 2rem;
+  --main-gray: #f0f0f0;
+  --text-color: #333;
+  --max-width: 1200px;
+}
+
+/* Réinitialisation */
+#page-services * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#page-services body,
+#page-services {
+  font-size: var(--primary-font-size);
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Style de base pour les sections */
+#page-services section {
+  padding: var(--section-padding);
+}
+
+/* Alternance de fond : une section sur deux en gris */
+#page-services section:nth-of-type(even) {
+  background-color: var(--main-gray);
+}
+
+/* Conteneur commun pour les sections avec image et texte */
+#page-services .service-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Zone texte (70%) */
+#page-services .service-text {
+  flex: 0 0 70%;
+  padding: 1rem;
+}
+
+/* Zone image (30%) */
+#page-services .service-estimation-image,
+#page-services .service-photo-image,
+#page-services .service-diffusion-image,
+#page-services .service-accompagnement-image {
+  flex: 0 0 30%;
+  padding: 1rem;
+}
+
+/* Images responsives */
+#page-services .service-estimation-image img,
+#page-services .service-photo-image img,
+#page-services .service-diffusion-image img,
+#page-services .service-accompagnement-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Sections textuelles uniquement */
+#page-services .services-vendeurs,
+#page-services .services-acquereurs {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Titres et paragraphes */
+#page-services h1, #page-services h2 {
+  margin-bottom: 0.5rem;
+}
+
+#page-services p {
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #page-services .service-content {
+    flex-direction: column;
+  }
+  #page-services .service-text,
+  #page-services .service-estimation-image,
+  #page-services .service-photo-image,
+  #page-services .service-diffusion-image,
+  #page-services .service-accompagnement-image {
+    flex: 0 0 100%;
+    padding: 0.5rem;
+  }
+}
 
