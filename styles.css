@@ -99,6 +99,11 @@ html, body {
     width: 100%; /* Barre sous le texte visible au hover */
 }
 
+/* Garder la barre sous l'onglet actif */
+.header-bottom nav ul li a.active::after {
+    opacity: 1;
+}
+
 .header-bottom nav ul li a.active {
     color: #455243; /* Couleur différente pour l'onglet actif */
 }
