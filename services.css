@@ -28,12 +28,8 @@
         }
         .section-small .content {
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         .section-small h2 {
-            margin-bottom: 0; /* Supprime l'espace entre le titre et le texte */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
         }
         .new-section {
