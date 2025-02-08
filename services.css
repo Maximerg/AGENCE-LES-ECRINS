@@ -43,7 +43,7 @@
             justify-content: center;
             align-items: center;
         }
-        .conteneur-presentation {
+        .texte-presentation {
             width: 70%; /* Ou max-width: 600px; */
             text-align: center; /* Centrer le texte */
             word-wrap: break-word;
