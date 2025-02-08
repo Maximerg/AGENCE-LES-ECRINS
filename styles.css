@@ -62,13 +62,6 @@ html, body {
     position: relative;
 }
 
-.header-bottom nav ul li:not(:last-child)::after {
-    content: "•"; /* Ajoute un petit point */
-    color: #455243; /* Couleur des points */
-    margin-left: 20px; /* Espace entre l’onglet et le point */
-    font-size: 20px; /* Ajuste la taille du point */
-}
-
 .header-bottom nav ul li a:hover {
     color: #455243; /* Couleur de la bande du milieu */
     background-color: transparent;
