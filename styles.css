@@ -53,7 +53,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
 }
 
 .header-bottom nav ul li {
