@@ -1,114 +1,43 @@
-/* VARIABLES DE BASE */
-:root {
-  --primary-font-size: 16px;
-  --section-padding: 2rem;
-  --main-gray: #f0f0f0; /* Gris de la page principale - modifiez ici si besoin */
-  --text-color: #455243;
-  --max-width: 1200px;
-}
-
-/* RÉINITIALISATION BASIQUE */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-size: var(--primary-font-size);
-  font-family: "Lora", serif;
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-/* ALTERNANCE DES COULEURS DE FOND : une section sur deux en gris */
-section:nth-of-type(even) {
-  background-color: var(--main-gray);
-}
-
-.service-estimation,
-.service-photo,
-.service-diffusion,
-.service-accompagnement {
-  min-height: 500px; /* Hauteur fixe de 500px */
-  padding: 2rem 0;
-}
-
-/* CONTENEUR COMMUN POUR LES SECTIONS AVEC IMAGE ET TEXTE */
-.service-content {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* ZONE TEXTE : environ 70% de la largeur */
-.service-text {
-  flex: 0 0 70%;
-  padding: 0 2rem;   /* on ajoute ici un padding horizontal pour le texte */
-  text-align: center;
-}
-
-/* ZONE IMAGE : environ 30% de la largeur */
-/* Listez ici toutes les classes dédiées aux zones images */
-.service-estimation-image,
-.service-photo-image,
-.service-diffusion-image,
-.service-accompagnement-image {
-  flex: 0 0 30%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* En cas de débordement, pour masquer le surplus */
-}
-
-/* Style pour les images : responsive et en bloc */
-.service-estimation-image img,
-.service-photo-image img,
-.service-diffusion-image img,
-.service-accompagnement-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* L'image remplira son conteneur */
-  display: block;
-}
-
-/* SECTIONS TEXTUELLES UNIQUEMENT (ex: vendeurs et acquéreurs) */
-.services-vendeurs,
-.services-acquereurs {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  text-align: center;
-  padding: 2rem;
-  height: 300px; /* Hauteur fixe de 500px */
-}
-
-/* Titres et paragraphes */
-h1, h2 {
-  margin-bottom: 2rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-p {
-  margin-bottom: 1rem;
-  font-size: 1.2rem
-}
-
-/* RESPONSIVE : empilement en colonne pour les écrans étroits */
-@media (max-width: 768px) {
-  .service-content {
-    flex-direction: column;
-  }
-  .service-text,
-  .service-estimation-image,
-  .service-photo-image,
-  .service-diffusion-image,
-  .service-accompagnement-image {
-    flex: 0 0 100%;
-    padding: 0.5rem;
-  }
-}
+        body {
+            font-family: "Lora", serif;
+            margin: 0;
+            padding: 0;
+            color: #455243; /* Couleur du texte */
+            overflow-x: hidden; /* Empêche le défilement horizontal */
+        }
+        .section {
+            padding: 20px;
+            min-height: 350px; /* Hauteur minimale fixée */
+            box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+            word-wrap: break-word; /* Permet de casser les mots trop longs */
+        }
+        .section-small {
+            background-color: #ffffff; /* Couleur blanche */
+            text-align: center;
+            padding: 20px;
+            min-height: 200px; /* Hauteur minimale fixée pour les petites sections */
+              background-image: url('https://i.imgur.com/5zt6Ty8.jpeg'); /* Remplacez par l'URL de votre image */
+              background-size: cover; /* L'image couvre toute la section */
+              background-position: center; /* Centre l'image */
+              color: white; /* Couleur du texte pour contraster avec l'image */
+          }
+          .service {
+              margin: 0; /* Suppression de la marge */
+              padding: 20px;
+              border-radius: 0; /* Suppression des coins arrondis */
+          }
+          .service:nth-child(odd) {
+              background-color: #F0F0F0; /* Couleur gris légère */
+          }
+          .service:nth-child(even) {
+              background-color: #ffffff; /* Couleur blanche */
+          }
+          .no-margin {
+              margin: 0;
+          }
+          h2, h3 {
+              font-size: 2rem; /* Taille des titres */
+          }
+          p {
+              font-size: 1.2rem; /* Taille du texte */
+        }
