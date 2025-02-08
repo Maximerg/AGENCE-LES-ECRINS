@@ -28,6 +28,9 @@
         }
         .section-small .content {
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .section-small h2 {
             margin-bottom: 0; /* Supprime l'espace entre le titre et le texte */
