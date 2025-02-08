@@ -99,10 +99,6 @@ html, body {
     width: 100%; /* Barre sous le texte visible au hover */
 }
 
-.header-bottom nav ul li a.active {
-    color: #455243; /* Couleur différente pour l'onglet actif */
-}
-
 /* Main - Section Hero */
 .main-hero {
     margin: 0px 75px 50px 75px; /* Ajoute 20px d'espace blanc autour */
