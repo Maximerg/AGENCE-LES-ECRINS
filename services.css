@@ -1,4 +1,4 @@
-body {
+        body {
             font-family: "Lora", serif;
             margin: 0;
             padding: 0;
@@ -16,12 +16,38 @@ body {
             background-color: #ffffff; /* Couleur blanche */
             text-align: center;
             padding: 20px;
-            min-height: 300px; /* Hauteur minimale augmentée pour les petites sections */
+            min-height: 250px; /* Hauteur minimale augmentée pour les petites sections */
             background-image: url('https://i.imgur.com/5zt6Ty8.jpeg'); /* Remplacez par l'URL de votre image */
             background-size: cover; /* L'image couvre toute la section */
             background-position: center; /* Centre l'image */
             position: relative; /* Permet de positionner le texte */
             color: white; /* Couleur du texte en blanc */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-small .content {
+            text-align: center;
+        }
+        .section-small h2 {
+            margin-bottom: 0; /* Supprime l'espace entre le titre et le texte */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
+        }
+        .new-section {
+            background-color: #ffffff; /* Couleur blanche */
+            padding: 20px;
+            text-align: center;
+            color: #455243; /* Couleur du texte */
+            height: 150px; /* Hauteur fixe */
+            width: 100%
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .conteneur-presentation {
+            width: 70%;
+            max-width: 70%;
+            text-align: center;
         }
         .service {
             margin: 0; /* Suppression de la marge */
@@ -42,10 +68,6 @@ body {
         }
         p {
             font-size: 1.2rem; /* Taille du texte */
-        }
-        .section-small h2 {
-            margin-bottom: 50px; /* Espace entre le titre et le texte */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
         }
         .section-small p {
             font-weight: bold; /* Texte en gras */
