@@ -23,6 +23,17 @@ body {
             position: relative; /* Permet de positionner le texte */
             color: white; /* Couleur du texte en blanc */
         }
+        .section-small::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Couleur noire semi-transparente */
+            z-index: 1; /* Assure que la couche est au-dessus de l'image mais en dessous du texte */
+            pointer-events: none; /* Permet de cliquer à travers la couche */
+        }
         .service {
             margin: 0; /* Suppression de la marge */
             padding: 20px;
@@ -42,6 +53,10 @@ body {
         }
         p {
             font-size: 1.2rem; /* Taille du texte */
+        }
+        .section-small h2, .section-small p {
+            position: relative;
+            z-index: 2; /* Assure que le texte est au-dessus de la couche sombre */
         }
         .section-small h2 {
             margin-bottom: 50px; /* Espace entre le titre et le texte */
