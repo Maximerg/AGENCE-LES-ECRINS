@@ -44,9 +44,10 @@
             align-items: center;
         }
         .conteneur-presentation {
-            width: 70%;
-            max-width: 70%;
-            text-align: center;
+            width: 70%; /* Ou max-width: 600px; */
+            text-align: center; /* Centrer le texte */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         .service {
             margin: 0; /* Suppression de la marge */
