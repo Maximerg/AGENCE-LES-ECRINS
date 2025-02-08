@@ -1,4 +1,4 @@
-        body {
+body {
             font-family: "Lora", serif;
             margin: 0;
             padding: 0;
@@ -7,37 +7,47 @@
         }
         .section {
             padding: 20px;
-            min-height: 350px; /* Hauteur minimale fixée */
+            min-height: 400px; /* Hauteur minimale augmentée */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
+            text-align: center; /* Centre le texte */
         }
         .section-small {
             background-color: #ffffff; /* Couleur blanche */
             text-align: center;
             padding: 20px;
-            min-height: 200px; /* Hauteur minimale fixée pour les petites sections */
-              background-image: url('https://i.imgur.com/5zt6Ty8.jpeg'); /* Remplacez par l'URL de votre image */
-              background-size: cover; /* L'image couvre toute la section */
-              background-position: center; /* Centre l'image */
-              color: white; /* Couleur du texte pour contraster avec l'image */
-          }
-          .service {
-              margin: 0; /* Suppression de la marge */
-              padding: 20px;
-              border-radius: 0; /* Suppression des coins arrondis */
-          }
-          .service:nth-child(odd) {
-              background-color: #F0F0F0; /* Couleur gris légère */
-          }
-          .service:nth-child(even) {
-              background-color: #ffffff; /* Couleur blanche */
-          }
-          .no-margin {
-              margin: 0;
-          }
-          h2, h3 {
-              font-size: 2rem; /* Taille des titres */
-          }
-          p {
-              font-size: 1.2rem; /* Taille du texte */
+            min-height: 300px; /* Hauteur minimale augmentée pour les petites sections */
+            background-image: url('https://i.imgur.com/5zt6Ty8.jpeg'); /* Remplacez par l'URL de votre image */
+            background-size: cover; /* L'image couvre toute la section */
+            background-position: center; /* Centre l'image */
+            position: relative; /* Permet de positionner le texte */
+            color: white; /* Couleur du texte en blanc */
+        }
+        .service {
+            margin: 0; /* Suppression de la marge */
+            padding: 20px;
+            border-radius: 0; /* Suppression des coins arrondis */
+        }
+        .service:nth-child(odd) {
+            background-color: #F0F0F0; /* Couleur gris légère */
+        }
+        .service:nth-child(even) {
+            background-color: #ffffff; /* Couleur blanche */
+        }
+        .no-margin {
+            margin: 0;
+        }
+        h2, h3 {
+            font-size: 2rem; /* Taille des titres */
+        }
+        p {
+            font-size: 1.2rem; /* Taille du texte */
+        }
+        .section-small h2 {
+            margin-bottom: 50px; /* Espace entre le titre et le texte */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
+        }
+        .section-small p {
+            font-weight: bold; /* Texte en gras */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
         }
