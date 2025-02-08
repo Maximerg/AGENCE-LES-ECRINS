@@ -7,7 +7,7 @@ body {
         }
         .section {
             padding: 20px;
-            min-height: 400px; /* Hauteur minimale augmentée */
+            min-height: 500px; /* Hauteur minimale augmentée */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
@@ -16,7 +16,7 @@ body {
             background-color: #ffffff; /* Couleur blanche */
             text-align: center;
             padding: 20px;
-            min-height: 300px; /* Hauteur minimale augmentée pour les petites sections */
+            min-height: 400px; /* Hauteur minimale augmentée pour les petites sections */
             background-image: url('https://i.imgur.com/5zt6Ty8.jpeg'); /* Remplacez par l'URL de votre image */
             background-size: cover; /* L'image couvre toute la section */
             background-position: center; /* Centre l'image */
