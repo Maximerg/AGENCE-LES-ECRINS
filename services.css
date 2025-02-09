@@ -35,28 +35,49 @@
             align-items: center;
         }
         
-        .section-service-gris {
+        .section-service-gris, .section-service-blanc {
             padding: 20px;
             min-height: 400px; /* Hauteur minimale */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
             margin: 0; /* Suppression de la marge */
-            padding: 20px;
             border-radius: 0; /* Suppression des coins arrondis */
+            display: flex; /* Utilisation de Flexbox */
+            justify-content: space-between; /* Espace entre les deux colonnes */
+            align-items: center; /* Centre verticalement */
+        }
+        
+        .section-service-gris {
             background-color: #F0F0F0; /* Couleur gris légère */
         }
         
         .section-service-blanc {
-            padding: 20px;
-            min-height: 400px; /* Hauteur minimale */
-            box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
-            word-wrap: break-word; /* Permet de casser les mots trop longs */
-            text-align: center; /* Centre le texte */
-            margin: 0; /* Suppression de la marge */
-            padding: 20px;
-            border-radius: 0; /* Suppression des coins arrondis */
             background-color: #ffffff; /* Couleur blanche */
+        }
+
+      .service-content {
+            display: flex;
+            width: 100%;
+        }
+      .service-content {
+            display: flex;
+            width: 100%;
+        }
+
+        .service-text {
+            flex: 1; /* Prend 50% de l'espace */
+            box-sizing: border-box;
+        }
+        
+        .service-media {
+            flex: 1; /* Prend 50% de l'espace */
+            box-sizing: border-box;
+        }
+        
+        .service-media img, .service-media video {
+            width: 100%; /* L'image ou la vidéo prend toute la largeur de la colonne */
+            height: 100%; /* Conserve les proportions */
         }
 
         .section-titre {
