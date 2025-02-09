@@ -58,10 +58,6 @@
             display: flex;
             width: 100%;
         }
-      .service-content {
-            display: flex;
-            width: 100%;
-        }
 
         .service-text {
             flex: 1; /* Prend 50% de l'espace */
