@@ -114,8 +114,11 @@
         .section-service-blanc {
             background-color: #ffffff; /* Couleur blanche */
         }
-        h2, h3 {
+        h2 {
             font-size: 2.5rem; /* Taille des titres */
+        }
+        h3 {
+            font-size: 2rem; /* Taille des titres */
         }
         p {
             font-size: 1.15rem; /* Taille du texte */
