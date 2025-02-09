@@ -1,22 +1,17 @@
-        body {
+body {
             font-family: "Lora", serif;
             margin: 0;
             padding: 0;
             color: #455243; /* Couleur du texte */
             overflow-x: hidden; /* Empêche le défilement horizontal */
         }
-        .section {
+        .section-titre {
             padding: 20px;
-            min-height: 500px; /* Hauteur minimale augmentée */
+            min-height: 150px; /* Hauteur minimale */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
-        }
-        .section-small {
             background-color: #ffffff; /* Couleur blanche */
-            text-align: center;
-            padding: 20px;
-            min-height: 250px; /* Hauteur minimale augmentée pour les petites sections */
             background-image: url('https://i.imgur.com/5zt6Ty8.jpeg'); /* Remplacez par l'URL de votre image */
             background-size: cover; /* L'image couvre toute la section */
             background-position: center; /* Centre l'image */
@@ -26,42 +21,84 @@
             justify-content: center;
             align-items: center;
         }
-        .section-small .content {
-            text-align: center;
-        }
-        .section-small h2 {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
-        }
-        .new-section {
-            background-color: #ffffff; /* Couleur blanche */
+        
+        .section-presentation {
             padding: 20px;
-            text-align: center;
+            min-height: 150px; /* Hauteur minimale */
+            box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+            word-wrap: break-word; /* Permet de casser les mots trop longs */
+            text-align: center; /* Centre le texte */
+            background-color: #ffffff; /* Couleur blanche */
             color: #455243; /* Couleur du texte */
-            height: 150px; /* Hauteur fixe */
-            width: 100%
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .texte-presentation {
-            width: 70%; /* Ou max-width: 600px; */
-            text-align: center; /* Centrer le texte */
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+        
+        .section-service-gris {
+            padding: 20px;
+            min-height: 150px; /* Hauteur minimale */
+            box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+            word-wrap: break-word; /* Permet de casser les mots trop longs */
+            text-align: center; /* Centre le texte */
+            margin: 0; /* Suppression de la marge */
+            padding: 20px;
+            border-radius: 0; /* Suppression des coins arrondis */
+            background-color: #F0F0F0; /* Couleur gris légère */
         }
-        .service {
+        
+        .section-service-blanc {
+            padding: 20px;
+            min-height: 150px; /* Hauteur minimale */
+            box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+            word-wrap: break-word; /* Permet de casser les mots trop longs */
+            text-align: center; /* Centre le texte */
+            margin: 0; /* Suppression de la marge */
+            padding: 20px;
+            border-radius: 0; /* Suppression des coins arrondis */
+            background-color: #ffffff; /* Couleur blanche */
+        }
+
+        .section-titre {
+            background-color: #ffffff; /* Couleur blanche */
+            background-image: url('https://i.imgur.com/5zt6Ty8.jpeg'); /* Remplacez par l'URL de votre image */
+            background-size: cover; /* L'image couvre toute la section */
+            background-position: center; /* Centre l'image */
+            position: relative; /* Permet de positionner le texte */
+            color: white; /* Couleur du texte en blanc */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-titre .conteneur-titre {
+            text-align: center;
+        }
+        .section-titre h2 {
+            margin-bottom: 0; /* Supprime l'espace entre le titre et le texte */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
+        }
+        .section-presentation {
+            background-color: #ffffff; /* Couleur blanche */
+            color: #455243; /* Couleur du texte */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-presentation .conteneur-presentation {
+            width: 70%;
+            max-width: 70%;
+            text-align: center;
+        }
+        .section-service-gris, .section-service-blanc {
             margin: 0; /* Suppression de la marge */
             padding: 20px;
             border-radius: 0; /* Suppression des coins arrondis */
         }
-        .service:nth-child(odd) {
+        .section-service-gris {
             background-color: #F0F0F0; /* Couleur gris légère */
         }
-        .service:nth-child(even) {
+        .section-service-blanc {
             background-color: #ffffff; /* Couleur blanche */
-        }
-        .no-margin {
-            margin: 0;
         }
         h2, h3 {
             font-size: 2rem; /* Taille des titres */
@@ -69,7 +106,6 @@
         p {
             font-size: 1.2rem; /* Taille du texte */
         }
-        .section-small p {
+        .texte-presentation {
             font-weight: bold; /* Texte en gras */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
         }
