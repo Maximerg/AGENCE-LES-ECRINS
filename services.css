@@ -78,6 +78,7 @@
         .service-media img, .service-media video {
             width: 100%; /* L'image ou la vidéo prend toute la largeur de la colonne */
             height: 100%; /* Conserve les proportions */
+            object-fit: cover;
         }
 
         .section-titre {
