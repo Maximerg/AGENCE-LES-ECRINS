@@ -109,3 +109,54 @@ body {
         .texte-presentation {
             font-weight: bold; /* Texte en gras */
         }
+
+/* Pied de page */
+
+.footer {
+    background: #455243;
+    color: #fff;
+    position: relative
+    width: 100%;
+    padding: 20px 0; /* Augmente l'espace en haut et en bas */
+    font-family: "Lora", serif;
+}
+
+.footer p {
+    font-size: 1rem; /* Assure que la taille est uniforme */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Centre le texte */   
+    align-items: center;
+    padding: 0 20px;
+    position: relative; /* Permet de positionner les liens à droite */
+}
+
+.footer-text {
+    flex-grow: 1; /* Permet au texte de rester centré */
+    text-align: center; /* Centre le texte */
+}
+
+/* Aligner les liens à droite en colonne */
+.footer-links {
+    position: absolute;
+    right: 20px; /* Place les liens à droite du footer */
+    display: flex;
+    flex-direction: column; /* Place les liens l’un en dessous de l’autre */
+    align-items: flex-end; /* Aligne à droite */
+}
+
+/* Styles des liens */
+.footer-links a {
+    color: #fff; /* Garde la couleur blanche */
+    text-decoration: none; /* Supprime le soulignement */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Empêcher le changement de couleur après un clic */
+.footer-links a:visited {
+    color: #fff; /* Garde la couleur blanche après un clic */
+}
