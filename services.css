@@ -7,7 +7,7 @@
         }
         .section-titre {
             padding: 20px;
-            min-height: 250px; /* Hauteur minimale */
+            min-height: 200px; /* Hauteur minimale */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
@@ -24,7 +24,7 @@
         
         .section-presentation {
             padding: 20px;
-            min-height: 150px; /* Hauteur minimale */
+            min-height: 100px; /* Hauteur minimale */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
