@@ -67,6 +67,7 @@
         .service-media {
             flex: 1; /* Prend 50% de l'espace */
             box-sizing: border-box;
+            object-fit: cover;
         }
         
         .service-media img, .service-media video {
