@@ -36,12 +36,10 @@
         }
         
         .section-service-gris, .section-service-blanc {
-            padding: 20px;
             min-height: 400px; /* Hauteur minimale */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
-            margin: 0; /* Suppression de la marge */
             border-radius: 0; /* Suppression des coins arrondis */
             display: flex; /* Utilisation de Flexbox */
             justify-content: space-between; /* Espace entre les deux colonnes */
