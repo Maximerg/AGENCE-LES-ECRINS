@@ -62,13 +62,17 @@
         }
 
         .service-text {
-            flex: 2; /* Prend 50% de l'espace */
+            flex: 7; /* Prend 50% de l'espace */
             box-sizing: border-box;
         }
         
         .service-media {
-            flex: 1; /* Prend 50% de l'espace */
+            flex: 3; /* Prend 50% de l'espace */
             box-sizing: border-box;
+            display: flex; /* Important pour centrer l'image */
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Coupe l’image si besoin */
         }
         
         .service-media img, .service-media video {
