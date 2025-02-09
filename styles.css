@@ -280,7 +280,7 @@ body {
 
 .contact-section {
     padding: 50px 0;
-    background-image: url('https://luberon.fr/img/article/gordes_fotolia1.jpg'); /* Remplacez par le chemin de votre image */
+    background-color: #455243; /* Remplacez par le chemin de votre image */
     background-size: cover; /* L'image couvre tout l'arrière-plan */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
