@@ -101,11 +101,7 @@
         .section-presentation .conteneur-presentation {
             text-align: center;
         }
-        .section-service-gris, .section-service-blanc {
-            margin: 0; /* Suppression de la marge */
-            padding: 20px;
-            border-radius: 0; /* Suppression des coins arrondis */
-        }
+
         .section-service-gris {
             background-color: #F0F0F0; /* Couleur gris légère */
         }
