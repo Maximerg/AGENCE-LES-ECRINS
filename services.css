@@ -37,6 +37,7 @@
         
         .section-service-gris, .section-service-blanc {
             min-height: 400px; /* Hauteur minimale */
+            max-height: 400px; /* Hauteur minimale */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
