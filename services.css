@@ -65,7 +65,7 @@
         }
         
         .service-media {
-            flex: 1; /* Prend 50% de l'espace */
+            flex: 1.5; /* Prend 50% de l'espace */
             box-sizing: border-box;
         }
         
