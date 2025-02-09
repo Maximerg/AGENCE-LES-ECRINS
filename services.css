@@ -63,12 +63,10 @@
 
         .service-text {
             flex: 7; /* Prend 50% de l'espace */
-            box-sizing: border-box;
         }
         
         .service-media {
             flex: 3; /* Prend 50% de l'espace */
-            box-sizing: border-box;
             display: flex; /* Important pour centrer l'image */
             align-items: center;
             justify-content: center;
