@@ -37,7 +37,7 @@
         
         .section-service-gris {
             padding: 20px;
-            min-height: 150px; /* Hauteur minimale */
+            min-height: 400px; /* Hauteur minimale */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
@@ -49,7 +49,7 @@
         
         .section-service-blanc {
             padding: 20px;
-            min-height: 150px; /* Hauteur minimale */
+            min-height: 400px; /* Hauteur minimale */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
