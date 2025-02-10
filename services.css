@@ -58,7 +58,7 @@
             display: flex;
             width: 100%;
             min-height: 400px;
-            align-items: stretch;
+            align-items: normal;
         }
 
         .service-text {
@@ -119,6 +119,7 @@
         }
         .service-text h3 {
             font-size: 2rem; /* Taille des titres */
+            margin-bottom: 80px;
         }
         p {
             font-size: 1.15rem; /* Taille du texte */
