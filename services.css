@@ -36,7 +36,7 @@
         }
         
         .section-service-gris, .section-service-blanc {
-            min-height: 400px; /* Hauteur minimale */
+            min-height: 500px; /* Hauteur minimale */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
@@ -63,7 +63,7 @@
 
         .service-text {
             flex: 6; /* Prend 50% de l'espace */
-            padding: 30px 60px;
+            padding: 80px;
         }
         
         .service-media {
@@ -119,7 +119,7 @@
         }
         .service-text h3 {
             font-size: 1.9rem; /* Taille des titres */
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         p {
             font-size: 1.1rem; /* Taille du texte */
