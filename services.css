@@ -63,7 +63,7 @@
 
         .service-text {
             flex: 6; /* Prend 50% de l'espace */
-            padding: 70px;
+            padding: 60px 70px 70px 70px;
         }
         
         .service-media {
@@ -119,7 +119,7 @@
         }
         .service-text h3 {
             font-size: 1.9rem; /* Taille des titres */
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         p {
             font-size: 1.1rem; /* Taille du texte */
