@@ -31,6 +31,21 @@
                 </ul>
             </nav>
     </header>
+
+<script>
+document.addEventListener("scroll", function() {
+    let fleches = document.querySelectorAll(".section-fleche");
+
+    fleches.forEach(fleche => {
+        let rect = fleche.getBoundingClientRect();
+        if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+            fleche.style.opacity = "1"; /* Affiche la flèche actuelle */
+        } else {
+            fleche.style.opacity = "0"; /* Cache les autres flèches */
+        }
+    });
+});
+</script>
     
 <body>
     <section class="section-titre">
