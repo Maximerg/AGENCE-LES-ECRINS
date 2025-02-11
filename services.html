@@ -35,17 +35,26 @@
 <script>
 document.addEventListener("scroll", function() {
     let fleches = document.querySelectorAll(".section-fleche");
+    let flecheVisible = null;
 
     fleches.forEach(fleche => {
         let rect = fleche.getBoundingClientRect();
         if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
-            fleche.style.opacity = "1"; /* Affiche la flèche actuelle */
+            flecheVisible = fleche; // On garde la dernière flèche visible trouvée
+        }
+    });
+
+    // Affiche uniquement la flèche visible et cache les autres
+    fleches.forEach(fleche => {
+        if (fleche === flecheVisible) {
+            fleche.style.opacity = "1"; /* Affiche la bonne flèche */
         } else {
-            fleche.style.opacity = "0"; /* Cache les autres flèches */
+            fleche.style.opacity = "0"; /* Cache les autres */
         }
     });
 });
 </script>
+
     
 <body>
     <section class="section-titre">
