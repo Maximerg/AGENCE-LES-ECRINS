@@ -36,7 +36,6 @@
         }
         
         .section-service-gris, .section-service-blanc {
-            min-height: 500px; /* Hauteur minimale */
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
@@ -59,6 +58,7 @@
             width: 100%;
             min-height: 400px;
             align-items: normal;
+            margin: 100px 0px;
         }
 
         .service-text {
@@ -72,6 +72,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden; /* Coupe l’image si besoin */
+            margin: 0px 50px;
         }
         
         .service-media img, .service-media video {
