@@ -37,23 +37,25 @@ document.addEventListener("scroll", function() {
     let fleches = document.querySelectorAll(".section-fleche");
     let flecheVisible = null;
 
+    // Trouver la première flèche qui est bien visible à l'écran
     fleches.forEach(fleche => {
         let rect = fleche.getBoundingClientRect();
-        if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
-            flecheVisible = fleche; // On garde la dernière flèche visible trouvée
+        
+        // Vérifie si la flèche est suffisamment visible (zone centrale)
+        if (rect.top < window.innerHeight * 0.75 && rect.bottom > window.innerHeight * 0.25) {
+            flecheVisible = fleche;
         }
     });
 
-    // Affiche uniquement la flèche visible et cache les autres
-    fleches.forEach(fleche => {
-        if (fleche === flecheVisible) {
-            fleche.style.opacity = "1"; /* Affiche la bonne flèche */
-        } else {
-            fleche.style.opacity = "0"; /* Cache les autres */
-        }
-    });
+    // Si une nouvelle flèche est visible, cacher les autres et afficher celle-ci
+    if (flecheVisible) {
+        fleches.forEach(fleche => {
+            fleche.style.opacity = (fleche === flecheVisible) ? "1" : "0";
+        });
+    }
 });
 </script>
+
 
     
 <body>
