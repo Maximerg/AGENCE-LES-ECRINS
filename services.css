@@ -120,6 +120,23 @@
             font-size: 1.1rem; /* Taille du texte */
         }
 
+        .section-fleche {
+            display: flex;
+            justify-content: center;  /* Centre la flèche horizontalement */
+            align-items: center;  /* Centre verticalement */
+            height: 80px; /* Ajuste la hauteur de l’espace entre les sections */
+            position: relative;
+        }
+        
+        .fleche {
+            width: 30px;
+            height: 30px;
+            border-right: 4px solid black; /* Couleur et épaisseur de la flèche */
+            border-bottom: 4px solid black;
+            transform: rotate(45deg);
+        }
+
+
         /* Pied de page */
         
         .footer {
