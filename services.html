@@ -42,7 +42,7 @@ document.addEventListener("scroll", function() {
         let rect = fleche.getBoundingClientRect();
         
         // Vérifie si la flèche est suffisamment visible (zone centrale)
-        if (rect.top < window.innerHeight * 0.25 && rect.bottom > window.innerHeight * 0.05) {
+        if (rect.top < window.innerHeight * 0.95 && rect.bottom > window.innerHeight * 0.5) {
             flecheVisible = fleche;
         }
     });
