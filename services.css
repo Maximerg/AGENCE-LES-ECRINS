@@ -70,8 +70,6 @@
             flex: 4; /* Prend 50% de l'espace */
             max-width: 100%;
             height: auto;
-            align-items: center;
-            justify-content: center;
             overflow: hidden; /* Coupe l’image si besoin */
             margin: 0px 50px;
         }
