@@ -50,7 +50,7 @@ document.addEventListener("scroll", function() {
     // Si une nouvelle flèche est visible, cacher les autres et afficher celle-ci
     if (flecheVisible) {
         fleches.forEach(fleche => {
-            fleche.style.opacity = (fleche === flecheVisible) ? "1" : "0";
+            fleche.style.opacity = (fleche === flecheVisible) ? "0.7" : "0";
         });
     }
 });
