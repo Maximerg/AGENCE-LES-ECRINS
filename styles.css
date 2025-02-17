@@ -33,7 +33,7 @@ html, body {
 }
 
 .header-divider {
-    height: 2px;
+    height: 1px;
     background-color: #000;
     width: calc(100% - 200px); /* Retrait de 100px de chaque côté */
     margin: 0 auto; /* Centre la ligne */
