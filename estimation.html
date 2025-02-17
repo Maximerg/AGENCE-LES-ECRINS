@@ -47,6 +47,35 @@
                     <span class="close">&times;</span>
                     <div id="form-container">
                     <!-- Le formulaire interactif sera ici -->
+                        
+                        <form id="multi-step-form">
+                            <div class="step active">
+                                <h3>Étape 1 : Informations générales</h3>
+                                <label>Type de bien :</label>
+                                <select name="type">
+                                    <option value="maison">Maison</option>
+                                    <option value="appartement">Appartement</option>
+                                </select>
+                                <button type="button" class="next">Suivant</button>
+                            </div>
+                        
+                            <div class="step">
+                                <h3>Étape 2 : Localisation</h3>
+                                <label>Adresse :</label>
+                                <input type="text" name="adresse">
+                                <button type="button" class="prev">Précédent</button>
+                                <button type="button" class="next">Suivant</button>
+                            </div>
+                        
+                            <div class="step">
+                                <h3>Étape 3 : Détails supplémentaires</h3>
+                                <label>Surface (m²) :</label>
+                                <input type="number" name="surface">
+                                <button type="button" class="prev">Précédent</button>
+                                <button type="submit">Envoyer</button>
+                            </div>
+                        </form>
+                    
                     </div>
                 </div>
             </div>
