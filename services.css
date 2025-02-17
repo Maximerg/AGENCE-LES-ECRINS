@@ -38,7 +38,7 @@
         .section-service-gris, .section-service-blanc {
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
-            text-align: center; /* Centre le texte */
+            text-align: justify; /* Centre le texte */
             border-radius: 0; /* Suppression des coins arrondis */
             display: flex; /* Utilisation de Flexbox */
             justify-content: space-between; /* Espace entre les deux colonnes */
@@ -104,9 +104,6 @@
             justify-content: center;
             align-items: center;
         }
-        .section-presentation .conteneur-presentation {
-            text-align: center;
-        }
 
         h2 {
             font-size: 2.5rem; /* Taille des titres */
@@ -115,13 +112,9 @@
             font-size: 1.9rem; /* Taille des titres */
             margin-bottom: 50px;
         }
+        
         p {
             font-size: 1.1rem; /* Taille du texte */
-            text-align: justify;
-        }
-
-        .texte-presentation p {
-            text-align: center;
         }
 
         .section-fleche {
