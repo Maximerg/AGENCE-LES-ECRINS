@@ -111,6 +111,7 @@
         .service-text h3 {
             font-size: 1.9rem; /* Taille des titres */
             margin-bottom: 50px;
+            text-align: center;
         }
         
         p {
