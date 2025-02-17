@@ -7,9 +7,9 @@ body {
 .presentation-estimation {
  width: 100%;
  height: 300px;
- text-align: center;
+ display: flex;
  justify-content: center;
- valign-items: center;
+ align-items: center;
 }
 
 .conteneur-presentation {
