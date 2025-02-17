@@ -97,7 +97,7 @@ html, body {
     margin: 0px 75px 50px 75px; /* Ajoute 20px d'espace blanc autour */
     width: calc(100% - 150px); /* Compense les marges dans la largeur */
     height: calc(100vh - 100px); /* Compense les marges dans la hauteur */
-    background-image: url('https://i.imgur.com/5zt6Ty8.jpeg');
+    background-image: url('https://i.imgur.com/73vaoVP.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
