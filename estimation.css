@@ -18,6 +18,11 @@ body {
  font-size: 1.1rem;
 }
 
+.section-estimation {
+ width: 100%;
+ height: 200px;
+}
+
 .modal {
     display: none; /* Cachée par défaut */
     position: fixed;
