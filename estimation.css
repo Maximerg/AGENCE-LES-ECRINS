@@ -46,3 +46,12 @@ body {
     font-size: 20px;
     cursor: pointer;
 }
+
+.step {
+    display: none; /* Cacher toutes les étapes par défaut */
+}
+
+.step.active {
+    display: block; /* Afficher uniquement l'étape active */
+}
+
