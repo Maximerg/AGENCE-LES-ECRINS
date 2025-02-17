@@ -5,13 +5,13 @@ body {
 }
 
 .presentation-estimation {
-  width: 100%
-  height: 300px
+ width: 100%;
+ height: 300px;
+ text-align: center;
+ justify-content: center;
+ valign-items: center;
 }
 
 .conteneur-presentation {
  width: 70%;
- text-align: center;
- justify-content: center;
- align-items: center;
 }
