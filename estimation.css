@@ -11,3 +11,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.conteneur-presentation {
+ width: 70%;
+ text-align: center;
+}
