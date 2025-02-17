@@ -62,16 +62,16 @@
         }
 
         .service-text {
-            flex: 6; /* Prend 50% de l'espace */
-            padding: 60px 100px 60px 100px;
+            flex: 5.5; /* Prend 50% de l'espace */
+            padding: 60px 80px 60px 80px;
         }
         
         .service-media {
-            flex: 4; /* Prend 50% de l'espace */
+            flex: 4.5; /* Prend 50% de l'espace */
             max-width: 100%;
             height: auto;
             overflow: hidden; /* Coupe l’image si besoin */
-            margin: 0px 50px;
+            margin: 0px 100px;
         }
         
         .service-media img, .service-media video {
