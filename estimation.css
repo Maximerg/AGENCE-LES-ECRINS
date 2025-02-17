@@ -26,6 +26,10 @@ body {
  align-items: center;
 }
 
+.bouton-estimation {
+ text-align: center;
+}
+
 .modal {
     display: none; /* Cachée par défaut */
     position: fixed;
