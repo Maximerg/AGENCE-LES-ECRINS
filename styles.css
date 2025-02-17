@@ -104,7 +104,6 @@ html, body {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-position: center 25%; /* Décale l'image de 10 % depuis le haut */
 }
 
 /* Section L'Agence */
