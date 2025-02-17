@@ -63,7 +63,7 @@
 
         .service-text {
             flex: 6; /* Prend 50% de l'espace */
-            padding: 80px 70px 60px 80px;
+            padding: 60px 100px 60px 100px;
         }
         
         .service-media {
