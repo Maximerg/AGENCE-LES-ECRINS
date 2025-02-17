@@ -1,8 +1,16 @@
 body {
-  font-family: "Lora", serif;
-  color: #455243; /* Couleur du texte */
-  overflow-x: hidden; /* Empêche le défilement horizontal */
+ font-family: "Lora", serif;
+ color: #455243; /* Couleur du texte */
+ overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
-.
+.presentation-estimation {
+  background-color: #F0F0F0;
+  width: 100%
+  height: 300px
+}
+
+.presentation-estimation p {
+  
+  
 
