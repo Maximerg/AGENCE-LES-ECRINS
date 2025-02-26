@@ -7,10 +7,6 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: #F8F5F0; /* Même couleur que le body */
-}
-
 /* Conteneur principal */
 .estimation-container {
     display: flex;
