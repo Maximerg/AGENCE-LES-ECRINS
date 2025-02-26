@@ -1,1 +1,98 @@
+/* Main - Section Hero */
 
+.main-hero {
+    margin: 0px 75px 50px 75px; /* Ajoute 20px d'espace blanc autour */
+    width: calc(100% - 150px); /* Compense les marges dans la largeur */
+    height: calc(100vh - 100px); /* Compense les marges dans la hauteur */
+    background-image: url('https://i.imgur.com/73vaoVP.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Section L'Agence */
+
+.about-section {
+    width: 100%;
+    height: 500px;
+    background-color: #F0F0F0;
+    color: #455243; /* Couleur du texte */
+    text-align: center;
+    font-family: "Lora", serif;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-container h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 15px;
+}
+
+/* Section Fondatrice */
+
+.founder-section {
+    background-color: #fff;
+    color: #455243;
+    width: 100%;
+    height: 700px;
+    font-family: "Lora", serif;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+.founder-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre les éléments horizontalement */
+    max-width: 1400px;
+    margin: 0px 100px;
+    padding: 20px;
+}
+
+.founder-image {
+    display: flex;
+    justify-content: flex-start; /* Centre l'image dans son conteneur */
+    align-items: center;
+    width: 30%; /* Occupe 50% de la largeur */
+    padding-top: 100px;
+}
+
+.founder-image img {
+    width: 300px;
+    height: auto;
+}
+
+.founder-text {
+    flex: 1;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.founder-text h2 {
+    font-size: 2rem;
+    margin: 20px 0px;
+    padding: 15px;
+}
+
+.founder-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 15px;
+}
