@@ -34,80 +34,70 @@
       </div>
     </header>
 
+<body>
+    <header>
+        <div class="header-top">
+            <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins" class="founder-logo">
+        </div>
+        <div class="header-divider"></div>
+        <div class="header-bottom">
+            <nav>
+                <ul>
+                    <li><a href="index.html">L'AGENCE</a></li>
+                    <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="estimation.html" class="active">ESTIMATION</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <main>
-        <section class="presentation-estimation">
-            <div class="conteneur-presentation">
-                <div class="separator sep-odd"></div> <!-- 1er : gauche haut, droit bas -->
+        <section class="estimation-container">
+            <div class="text-section">
                 <p>Une estimation juste et précise est essentielle pour bien démarrer tout projet immobilier. Elle permet de définir la juste valeur de votre bien, en tenant compte de nombreux critères, tels que l’état du marché, l’emplacement, les caractéristiques spécifiques de votre propriété et son potentiel.</p>
-                <div class="separator sep-even"></div> <!-- 2e : gauche bas, droit haut -->
                 <p>En effet, un prix de vente adéquat vous permet de vous positionner de manière stratégique face aux acheteurs et contribue également à optimiser la durée de commercialisation de votre bien, en vous assurant que la vente se fasse dans les meilleures conditions et dans un délai optimal.</p>
-                <div class="separator sep-odd"></div> <!-- 3e : gauche haut, droit bas -->
                 <p>En tant qu’expert du secteur, je m’engage à vous fournir une analyse complète et objective afin de vous aider à atteindre vos objectifs dans les meilleures conditions.</p>
-                <div class="separator sep-even"></div> <!-- 4e : gauche bas, droit haut -->
+            </div>
+            <div class="image-section">
+                <button id="open-form">Démarrer l'estimation</button>
             </div>
         </section>
 
-        <section class="section-estimation">
-            <div class="bouton-estimation">
-                <button id="open-form">Démarrer l'estimation</button>
-            </div>
-            <div id="form-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <div id="form-container">
-                    <!-- Le formulaire interactif sera ici -->
-                        
+        <div id="form-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <div id="form-container">
                     <form id="multi-step-form">
-                        <!-- Étape 1 : Informations générales -->
                         <div class="step active">
                             <h3>Étape 1 : Informations générales</h3>
-                            <label for="type">Type de bien :</label>
-                            <select name="type" id="type" required>
-                                <option value="">Sélectionnez...</option>
+                            <label>Type de bien :</label>
+                            <select name="type">
                                 <option value="maison">Maison</option>
                                 <option value="appartement">Appartement</option>
-                                <option value="villa">Villa</option>
-                                <option value="terrain">Terrain</option>
-                            </select>
-                            <label for="etat">État du bien :</label>
-                            <select name="etat" id="etat" required>
-                                <option value="">Sélectionnez...</option>
-                                <option value="neuf">Neuf</option>
-                                <option value="bon">Bon état</option>
-                                <option value="renover">À rénover</option>
                             </select>
                             <button type="button" class="next">Suivant</button>
                         </div>
-                    
-                        <!-- Étape 2 : Localisation -->
                         <div class="step">
                             <h3>Étape 2 : Localisation</h3>
-                            <label for="adresse">Adresse :</label>
-                            <input type="text" id="adresse" name="adresse" placeholder="Ex. : 12 Rue des Oliviers, Gordes" required>
-                            <label for="code-postal">Code postal :</label>
-                            <input type="text" id="code-postal" name="code-postal" placeholder="Ex. : 84220" required>
+                            <label>Adresse :</label>
+                            <input type="text" name="adresse">
                             <button type="button" class="prev">Précédent</button>
                             <button type="button" class="next">Suivant</button>
                         </div>
-                    
-                        <!-- Étape 3 : Détails supplémentaires -->
                         <div class="step">
                             <h3>Étape 3 : Détails supplémentaires</h3>
-                            <label for="surface">Surface habitable (m²) :</label>
-                            <input type="number" id="surface" name="surface" min="1" placeholder="Ex. : 120" required>
-                            <label for="pieces">Nombre de pièces :</label>
-                            <input type="number" id="pieces" name="pieces" min="1" placeholder="Ex. : 5" required>
+                            <label>Surface (m²) :</label>
+                            <input type="number" name="surface">
                             <button type="button" class="prev">Précédent</button>
                             <button type="submit">Envoyer</button>
                         </div>
                     </form>
-                    
-                    </div>
                 </div>
             </div>
-        </section>
-   <script src="estimation.js"></script>
-   </main>
+        </div>
+    </main>
 
     <footer class="footer">
         <div class="footer-container">
