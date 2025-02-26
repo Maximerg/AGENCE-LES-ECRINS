@@ -73,7 +73,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 250px;
         }
+
         .section-titre .conteneur-titre {
             text-align: center;
         }
