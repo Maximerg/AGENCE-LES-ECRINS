@@ -16,6 +16,14 @@ main {
     margin-top: 0; /* Supprime toute marge par défaut */
 }
 
+.estimation-container {
+    display: flex;
+    min-height: 70vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
 /* Conteneur principal */
 .estimation-container {
     display: flex;
