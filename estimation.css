@@ -21,6 +21,29 @@ body {
     color: #555;
 }
 
+/* Séparateurs */
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Espace entre les traits */
+    margin: 20px 0; /* Espacement vertical au-dessus et en dessous */
+}
+
+.separator::before,
+.separator::after,
+.separator span {
+    content: '';
+    width: 20px; /* Longueur de chaque trait */
+    height: 1px; /* Épaisseur fine */
+    background-color: #455243; /* Vert sombre de ton thème */
+    display: inline-block;
+}
+
+.separator span {
+    width: 10px; /* Trait central légèrement plus court pour un effet design */
+}
+
 /* Bouton Démarrer l'estimation */
 .bouton-estimation {
     text-align: center;
