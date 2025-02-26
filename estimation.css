@@ -27,7 +27,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 20px 0;
-    height: 10px; /* Hauteur totale du conteneur pour gérer le décalage */
+    height: 20px; /* Hauteur totale du conteneur pour gérer le décalage */
     position: relative;
 }
 
@@ -36,7 +36,7 @@ body {
 .separator::after {
     content: '';
     width: 40px; /* Longueur totale de chaque trait */
-    height: 1px;
+    height: 2px;
     background-color: #455243;
     position: absolute;
 }
