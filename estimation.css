@@ -7,6 +7,12 @@ body {
     padding: 0;
 }
 
+html, body {
+    height: 100%; /* ou min-height: 100vh */
+    margin: 0;
+    padding: 0;
+}
+
 /* Conteneur principal */
 .estimation-container {
     display: flex;
