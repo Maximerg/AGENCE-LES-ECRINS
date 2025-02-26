@@ -1,6 +1,6 @@
 /* Main - Section Hero */
 .main-hero {
-    margin: 0 75px 50px 75px;
+    margin: 25px 75px 50px 75px;
     width: calc(100% - 150px);
     min-height: calc(100vh - 100px);
     background-image: url('https://i.imgur.com/73vaoVP.jpeg');
