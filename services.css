@@ -27,7 +27,7 @@
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
-            background-color: #ffffff; /* Couleur blanche */
+            background-color: #fff; /* Couleur blanche */
             color: #455243; /* Couleur du texte */
             display: flex;
             justify-content: center;
