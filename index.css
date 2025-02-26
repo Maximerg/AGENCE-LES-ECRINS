@@ -1,9 +1,8 @@
 /* Main - Section Hero */
-
 .main-hero {
-    margin: 0px 75px 50px 75px; /* Ajoute 20px d'espace blanc autour */
-    width: calc(100% - 150px); /* Compense les marges dans la largeur */
-    height: calc(100vh - 100px); /* Compense les marges dans la hauteur */
+    margin: 0 75px 50px 75px;
+    width: calc(100% - 150px);
+    min-height: calc(100vh - 100px);
     background-image: url('https://i.imgur.com/73vaoVP.jpeg');
     background-size: cover;
     background-position: center;
@@ -14,22 +13,22 @@
 }
 
 /* Section L'Agence */
-
 .about-section {
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     background-color: #F0F0F0;
-    color: #455243; /* Couleur du texte */
+    color: #455243;
     text-align: center;
     font-family: "Lora", serif;
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
+    justify-content: center;
+    align-items: center;
 }
 
 .about-container {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .about-container h2 {
@@ -45,32 +44,31 @@
 }
 
 /* Section Fondatrice */
-
 .founder-section {
     background-color: #fff;
     color: #455243;
     width: 100%;
-    height: 700px;
+    min-height: 700px;
     font-family: "Lora", serif;
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
+    justify-content: center;
+    align-items: center;
 }
 
 .founder-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centre les éléments horizontalement */
+    justify-content: center;
     max-width: 1400px;
-    margin: 0px 100px;
+    margin: 0 100px;
     padding: 20px;
 }
 
 .founder-image {
     display: flex;
-    justify-content: flex-start; /* Centre l'image dans son conteneur */
+    justify-content: flex-start;
     align-items: center;
-    width: 30%; /* Occupe 50% de la largeur */
+    width: 30%;
     padding-top: 100px;
 }
 
@@ -87,7 +85,7 @@
 
 .founder-text h2 {
     font-size: 2rem;
-    margin: 20px 0px;
+    margin: 20px 0;
     padding: 15px;
 }
 
@@ -95,4 +93,171 @@
     font-size: 1.2rem;
     line-height: 1.5;
     padding: 15px;
+}
+
+/* Section Biens Disponibles */
+#biens-disponibles {
+    padding: 30px 0;
+    background-color: #F0F0F0;
+    text-align: center;
+    color: #455243;
+    min-height: 200px;
+}
+
+#biens-disponibles h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Neutraliser la bande blanche du header */
+.header-bottom {
+    padding-bottom: 0;
+}
+
+/* Media Queries pour responsivité */
+
+/* Tablettes (jusqu’à 1024px) */
+@media (max-width: 1024px) {
+    .main-hero {
+        margin: 0 40px 40px 40px;
+        width: calc(100% - 80px);
+        min-height: 80vh; /* Réduit légèrement */
+    }
+
+    .about-container {
+        max-width: 800px;
+    }
+
+    .founder-container {
+        margin: 0 50px;
+    }
+
+    .founder-image {
+        width: 40%; /* Un peu plus large sur tablette */
+    }
+
+    .founder-image img {
+        width: 250px;
+    }
+}
+
+/* Téléphones et petites tablettes (jusqu’à 768px) */
+@media (max-width: 768px) {
+    .main-hero {
+        margin: 0 20px 30px 20px;
+        width: calc(100% - 40px);
+        min-height: 60vh; /* Réduit pour éviter un scroll excessif */
+    }
+
+    .about-section {
+        min-height: 400px;
+    }
+
+    .about-container {
+        padding: 15px;
+    }
+
+    .about-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-container p {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .founder-section {
+        min-height: 600px; /* Réduit pour mobile */
+    }
+
+    .founder-container {
+        flex-direction: column;
+        margin: 0 20px;
+        text-align: center;
+    }
+
+    .founder-image {
+        width: 100%;
+        padding-top: 20px;
+        justify-content: center;
+    }
+
+    .founder-image img {
+        width: 200px; /* Plus petit pour mobile */
+    }
+
+    .founder-text {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .founder-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .founder-text p {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    #biens-disponibles {
+        padding: 20px 0;
+        min-height: 150px;
+    }
+
+    #biens-disponibles h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Petits téléphones (jusqu’à 480px) */
+@media (max-width: 480px) {
+    .main-hero {
+        margin: 0 10px 20px 10px;
+        width: calc(100% - 20px);
+        min-height: 50vh; /* Encore plus compact */
+    }
+
+    .about-section {
+        min-height: 350px;
+    }
+
+    .about-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-container p {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .founder-section {
+        min-height: 500px;
+    }
+
+    .founder-container {
+        margin: 0 10px;
+    }
+
+    .founder-image img {
+        width: 180px;
+    }
+
+    .founder-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .founder-text p {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    #biens-disponibles {
+        min-height: 120px;
+    }
+
+    #biens-disponibles h2 {
+        font-size: 1.5rem;
+    }
 }
