@@ -1,70 +1,136 @@
+/* Style général */
 body {
- font-family: "Lora", serif;
- color: #455243; /* Couleur du texte */
- overflow-x: hidden; /* Empêche le défilement horizontal */
+    font-family: 'Lora', serif;
+    background-color: #f8f5f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
+/* Section présentation */
 .presentation-estimation {
- width: 100%;
- height: 350px;
- display: flex;
- justify-content: center;
- align-items: center;
- padding: 50px 0px;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.conteneur-presentation {
- width: 75%;
- text-align: center;
- font-size: 1.1rem;
+.conteneur-presentation p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
 }
 
-.section-estimation {
- width: 100%;
- height: 200px;
- display: flex;
- justify-content: center;
- align-items: center;
-}
-
+/* Bouton Démarrer l'estimation */
 .bouton-estimation {
- text-align: center;
+    text-align: center;
+    margin: 40px 0;
 }
 
+#open-form {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#open-form:hover {
+    background-color: #34495e;
+}
+
+/* Modale */
 .modal {
-    display: none; /* Cachée par défaut */
+    display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond assombri */
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
 }
 
 .modal-content {
-    background: white;
-    padding: 20px;
-    width: 40%;
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
     border-radius: 10px;
-    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .close {
     position: absolute;
-    right: 15px;
     top: 10px;
-    font-size: 20px;
+    right: 15px;
+    font-size: 30px;
+    color: #888;
     cursor: pointer;
 }
 
+.close:hover {
+    color: #333;
+}
+
+/* Formulaire multi-étapes */
 .step {
-    display: none; /* Cacher toutes les étapes par défaut */
+    display: none;
 }
 
 .step.active {
-    display: block; /* Afficher uniquement l'étape active */
+    display: block;
 }
 
+#multi-step-form h3 {
+    font-family: 'Cinzel', serif;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#multi-step-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+#multi-step-form input,
+#multi-step-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+    font-size: 1em;
+}
+
+#multi-step-form button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#multi-step-form button:hover {
+    background-color: #34495e;
+}
+
+.prev {
+    background-color: #888;
+}
+
+.prev:hover {
+    background-color: #666;
+}
