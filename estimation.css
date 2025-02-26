@@ -7,15 +7,13 @@ body {
     padding: 0;
 }
 
-html, body {
-    min-height: 100vh; /* ou min-height: 100vh */
-    margin: 0;
-    padding: 0;
+header {
+    display: block; /* Assure que le header est un bloc plein */
+    margin-bottom: 0;
 }
 
-.header-bottom nav ul {
-    margin: 0;
-    padding: 0;
+main {
+    margin-top: 0; /* Supprime toute marge par défaut */
 }
 
 /* Conteneur principal */
