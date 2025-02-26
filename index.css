@@ -96,12 +96,11 @@
 }
 
 /* Section Biens Disponibles */
+
 #biens-disponibles {
-    padding: 30px 0;
-    background-color: #F0F0F0;
-    text-align: center;
-    color: #455243;
-    min-height: 200px;
+    min-height: auto;
+    padding: 15px 0;
+    margin-top: 15px;
 }
 
 #biens-disponibles h2 {
@@ -146,27 +145,16 @@
 @media (max-width: 768px) {
     /* Section L'Agence */
     .about-section {
-        min-height: auto; /* Remplace 400px pour s’adapter au contenu */
-        padding: 20px 0; /* Ajoute un padding vertical pour espacer */
-    }
-
-    .about-container {
-        padding: 15px;
-    }
-
-    .about-container h2 {
-        font-size: 1.8rem;
-    }
-
-    .about-container p {
-        font-size: 1rem;
-        padding: 10px;
+        min-height: auto;
+        padding: 20px 0;
+        margin-bottom: 20px; /* Ajoute un espacement clair en bas */
     }
 
     /* Section Fondatrice */
     .founder-section {
-        min-height: auto; /* Remplace 600px pour s’adapter au contenu */
-        padding: 20px 0; /* Ajoute un padding vertical */
+        min-height: auto;
+        padding: 20px 0;
+        margin: 20px 0; /* Marge en haut et en bas pour séparer */
     }
 
     .founder-container {
@@ -177,7 +165,8 @@
 
     .founder-image {
         width: 100%;
-        padding-top: 20px;
+        padding-top: 0; /* Supprime le padding-top excessif */
+        margin-bottom: 20px; /* Espace entre l’image et le texte */
         justify-content: center;
     }
 
@@ -187,26 +176,14 @@
 
     .founder-text {
         padding-left: 0;
-        padding-top: 20px;
-    }
-
-    .founder-text h2 {
-        font-size: 1.8rem;
-    }
-
-    .founder-text p {
-        font-size: 1rem;
-        padding: 10px;
+        padding-top: 0; /* Supprime le padding-top pour un flux naturel */
     }
 
     /* Section Biens Disponibles */
     #biens-disponibles {
+        min-height: auto;
         padding: 20px 0;
-        min-height: auto; /* Remplace 150px pour s’adapter */
-    }
-
-    #biens-disponibles h2 {
-        font-size: 1.8rem;
+        margin-top: 20px; /* Espace au-dessus pour éviter le chevauchement */
     }
 }
 
@@ -214,49 +191,31 @@
 @media (max-width: 480px) {
     /* Section L'Agence */
     .about-section {
-        min-height: auto; /* Remplace 350px */
+        min-height: auto;
         padding: 15px 0;
-    }
-
-    .about-container h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-container p {
-        font-size: 0.9rem;
-        padding: 8px;
+        margin-bottom: 15px;
     }
 
     /* Section Fondatrice */
     .founder-section {
-        min-height: auto; /* Remplace 500px */
+        min-height: auto;
         padding: 15px 0;
+        margin: 15px 0;
     }
 
     .founder-container {
         margin: 0 10px;
     }
 
+    .founder-image {
+        padding-top: 0;
+        margin-bottom: 15px;
+    }
+
     .founder-image img {
         width: 180px;
     }
 
-    .founder-text h2 {
-        font-size: 1.5rem;
+    .founder-text {
+        padding-top: 0;
     }
-
-    .founder-text p {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
-
-    /* Section Biens Disponibles */
-    #biens-disponibles {
-        min-height: auto; /* Remplace 120px */
-        padding: 15px 0;
-    }
-
-    #biens-disponibles h2 {
-        font-size: 1.5rem;
-    }
-}
