@@ -142,16 +142,12 @@
     }
 }
 
-/* Téléphones et petites tablettes (jusqu’à 768px) */
+/* Petites tablettes/téléphones (jusqu’à 768px) */
 @media (max-width: 768px) {
-    .main-hero {
-        margin: 0 20px 30px 20px;
-        width: calc(100% - 40px);
-        min-height: 60vh; /* Réduit pour éviter un scroll excessif */
-    }
-
+    /* Section L'Agence */
     .about-section {
-        min-height: 400px;
+        min-height: auto; /* Remplace 400px pour s’adapter au contenu */
+        padding: 20px 0; /* Ajoute un padding vertical pour espacer */
     }
 
     .about-container {
@@ -167,8 +163,10 @@
         padding: 10px;
     }
 
+    /* Section Fondatrice */
     .founder-section {
-        min-height: 600px; /* Réduit pour mobile */
+        min-height: auto; /* Remplace 600px pour s’adapter au contenu */
+        padding: 20px 0; /* Ajoute un padding vertical */
     }
 
     .founder-container {
@@ -184,7 +182,7 @@
     }
 
     .founder-image img {
-        width: 200px; /* Plus petit pour mobile */
+        width: 200px;
     }
 
     .founder-text {
@@ -201,9 +199,10 @@
         padding: 10px;
     }
 
+    /* Section Biens Disponibles */
     #biens-disponibles {
         padding: 20px 0;
-        min-height: 150px;
+        min-height: auto; /* Remplace 150px pour s’adapter */
     }
 
     #biens-disponibles h2 {
@@ -213,14 +212,10 @@
 
 /* Petits téléphones (jusqu’à 480px) */
 @media (max-width: 480px) {
-    .main-hero {
-        margin: 0 10px 20px 10px;
-        width: calc(100% - 20px);
-        min-height: 50vh; /* Encore plus compact */
-    }
-
+    /* Section L'Agence */
     .about-section {
-        min-height: 350px;
+        min-height: auto; /* Remplace 350px */
+        padding: 15px 0;
     }
 
     .about-container h2 {
@@ -232,8 +227,10 @@
         padding: 8px;
     }
 
+    /* Section Fondatrice */
     .founder-section {
-        min-height: 500px;
+        min-height: auto; /* Remplace 500px */
+        padding: 15px 0;
     }
 
     .founder-container {
@@ -253,8 +250,10 @@
         padding: 8px;
     }
 
+    /* Section Biens Disponibles */
     #biens-disponibles {
-        min-height: 120px;
+        min-height: auto; /* Remplace 120px */
+        padding: 15px 0;
     }
 
     #biens-disponibles h2 {
