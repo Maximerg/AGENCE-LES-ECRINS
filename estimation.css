@@ -13,6 +13,11 @@ html, body {
     padding: 0;
 }
 
+.header-bottom nav ul {
+    margin: 0;
+    padding: 0;
+}
+
 /* Conteneur principal */
 .estimation-container {
     display: flex;
