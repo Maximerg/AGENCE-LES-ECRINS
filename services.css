@@ -11,8 +11,7 @@
             box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
             word-wrap: break-word; /* Permet de casser les mots trop longs */
             text-align: center; /* Centre le texte */
-            background-color: #ffffff; /* Couleur blanche */
-            background-image: url('https://i.imgur.com/5zt6Ty8.jpeg'); /* Remplacez par l'URL de votre image */
+            background-color: #455243; /* Couleur blanche */
             background-size: cover; /* L'image couvre toute la section */
             background-position: center; /* Centre l'image */
             position: relative; /* Permet de positionner le texte */
