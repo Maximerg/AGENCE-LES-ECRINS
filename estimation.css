@@ -26,22 +26,41 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px; /* Espace entre les traits */
-    margin: 20px 0; /* Espacement vertical au-dessus et en dessous */
+    margin: 20px 0;
+    height: 10px; /* Hauteur totale du conteneur pour gérer le décalage */
+    position: relative;
 }
 
+/* Base des traits */
 .separator::before,
-.separator::after,
-.separator span {
+.separator::after {
     content: '';
-    width: 20px; /* Longueur de chaque trait */
-    height: 1px; /* Épaisseur fine */
-    background-color: #455243; /* Vert sombre de ton thème */
-    display: inline-block;
+    width: 40px; /* Longueur totale de chaque trait */
+    height: 1px;
+    background-color: #455243;
+    position: absolute;
 }
 
-.separator span {
-    width: 10px; /* Trait central légèrement plus court pour un effet design */
+/* Séparateurs impairs (1er et 3e) : gauche haut, droit bas */
+.sep-odd::before {
+    left: calc(50% - 45px); /* Décalé à gauche */
+    top: 2px; /* Plus haut */
+}
+
+.sep-odd::after {
+    left: calc(50% - 15px); /* Décalé à droite avec chevauchement */
+    top: 6px; /* Plus bas */
+}
+
+/* Séparateurs pairs (2e et 4e) : gauche bas, droit haut */
+.sep-even::before {
+    left: calc(50% - 45px); /* Décalé à gauche */
+    top: 6px; /* Plus bas */
+}
+
+.sep-even::after {
+    left: calc(50% - 15px); /* Décalé à droite avec chevauchement */
+    top: 2px; /* Plus haut */
 }
 
 /* Bouton Démarrer l'estimation */
