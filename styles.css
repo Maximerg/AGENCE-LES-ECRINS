@@ -262,3 +262,36 @@ html, body {
         font-size: 0.9rem;
     }
 }
+
+/* Petites tablettes/téléphones (jusqu’à 768px) */
+@media (max-width: 768px) {
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .footer-text {
+        margin-bottom: 15px;
+    }
+
+    .footer-links {
+        position: static;
+        align-items: center;
+    }
+}
+
+/* Petits téléphones (jusqu’à 480px) */
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 10px;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+}
