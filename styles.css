@@ -143,6 +143,10 @@ html, body {
     color: #fff; /* Garde la couleur blanche après un clic */
 }
 
+.burger-menu {
+    display: none; /* Masqué par défaut sur desktop */
+}
+
 /* Media Queries pour responsivité */
 
 /* Tablettes (jusqu’à 1024px) */
@@ -178,30 +182,29 @@ html, body {
 /* Petites tablettes/téléphones (jusqu’à 768px) */
 @media (max-width: 768px) {
     .header-bottom {
-        padding: 10px 0; /* Réduit légèrement */
+        padding: 10px 0;
+        position: relative;
     }
 
     .header-bottom nav {
         position: relative;
     }
 
-    /* Menu burger */
     .burger-menu {
-        display: block;
-        font-size: 1.5rem;
+        display: block; /* Visible sur mobile */
+        font-size: 1.8rem; /* Plus grand pour être visible */
         background: none;
         border: none;
         color: #000;
         cursor: pointer;
-        padding: 10px;
+        padding: 5px 10px;
         position: absolute;
         left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 10px; /* Positionné en haut du header-bottom */
     }
 
     .header-bottom nav ul {
-        display: none; /* Masqué par défaut */
+        display: none;
         flex-direction: column;
         gap: 15px;
         background: #fff;
@@ -214,12 +217,12 @@ html, body {
     }
 
     .header-bottom nav ul.active {
-        display: flex; /* Affiché quand actif */
+        display: flex;
     }
 
     .header-bottom nav ul li {
         width: 100%;
-        text-align: center; /* Centre les liens */
+        text-align: center;
     }
 
     .header-bottom nav ul li a {
@@ -232,8 +235,9 @@ html, body {
 /* Petits téléphones (jusqu’à 480px) */
 @media (max-width: 480px) {
     .burger-menu {
-        font-size: 1.2rem;
-        padding: 8px;
+        font-size: 1.5rem; /* Légèrement plus petit mais visible */
+        padding: 5px 8px;
+        top: 8px;
     }
 
     .header-bottom nav ul {
