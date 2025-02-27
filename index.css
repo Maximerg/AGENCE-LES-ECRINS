@@ -27,7 +27,7 @@
 .carousel-item {
     width: 33.33%; /* 100% / 3 images */
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     filter: brightness(50%); /* Sombre par défaut */
     transition: filter 0.5s ease;
 }
