@@ -184,15 +184,12 @@ html, body {
     .header-bottom {
         padding: 10px 0;
         position: relative;
-    }
-
-    .header-bottom nav {
-        position: relative;
+        min-height: 50px; /* Assure une hauteur pour le burger */
     }
 
     .burger-menu {
-        display: block; /* Visible sur mobile */
-        font-size: 1.8rem; /* Plus grand pour être visible */
+        display: block;
+        font-size: 1.8rem;
         background: none;
         border: none;
         color: #000;
@@ -200,7 +197,8 @@ html, body {
         padding: 5px 10px;
         position: absolute;
         left: 10px;
-        top: 10px; /* Positionné en haut du header-bottom */
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .header-bottom nav ul {
@@ -214,6 +212,7 @@ html, body {
         top: 100%;
         left: 0;
         z-index: 1000;
+        text-align: center; /* Centre les liens */
     }
 
     .header-bottom nav ul.active {
@@ -222,7 +221,6 @@ html, body {
 
     .header-bottom nav ul li {
         width: 100%;
-        text-align: center;
     }
 
     .header-bottom nav ul li a {
@@ -235,13 +233,13 @@ html, body {
 /* Petits téléphones (jusqu’à 480px) */
 @media (max-width: 480px) {
     .burger-menu {
-        font-size: 1.5rem; /* Légèrement plus petit mais visible */
+        font-size: 1.5rem;
         padding: 5px 8px;
-        top: 8px;
     }
 
     .header-bottom nav ul {
         gap: 10px;
+        padding: 15px 0;
     }
 
     .header-bottom nav ul li a {
