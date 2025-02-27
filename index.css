@@ -1,10 +1,11 @@
 /* Main - Section Hero */
 .main-hero {
-    margin: 50px 75px 50px 75px;
-    width: calc(100% - 150px);
-    min-height: calc(100vh - 100px);
+    margin: 0 auto 50px auto; /* Centré avec marge en bas */
+    width: 90%; /* Réduit par rapport à calc(100% - 150px) */
+    max-width: 1200px; /* Même limite que .container dans styles.css */
+    height: 600px; /* Hauteur fixe, ajustable selon tes besoins */
     position: relative;
-    overflow: hidden; /* Empêche les images de déborder */
+    overflow: hidden;
 }
 
 .carousel {
@@ -15,49 +16,45 @@
 
 .carousel-inner {
     display: flex;
-    width: 300%; /* 100% par image, ici pour 3 images */
+    width: 300%; /* Pour 3 images */
     height: 100%;
-    animation: slide 15s infinite; /* Défilement toutes les 5s par image (15s pour 3) */
+    animation: slide 15s infinite;
 }
 
 .carousel-item {
-    width: 33.33%; /* 100% / nombre d’images (ici 3) */
+    width: 33.33%; /* 100% / 3 images */
     height: 100%;
-    object-fit: cover; /* Remplace background-size: cover */
+    object-fit: cover;
 }
 
 /* Animation du carrousel */
 @keyframes slide {
-    0% { transform: translateX(0); }      /* Première image */
-    33.33% { transform: translateX(0); }  /* Pause sur la première */
-    33.34% { transform: translateX(-33.33%); } /* Deuxième image */
-    66.66% { transform: translateX(-33.33%); } /* Pause sur la deuxième */
-    66.67% { transform: translateX(-66.66%); } /* Troisième image */
-    100% { transform: translateX(-66.66%); }   /* Pause sur la troisième */
+    0% { transform: translateX(0); }
+    33.33% { transform: translateX(0); }
+    33.34% { transform: translateX(-33.33%); }
+    66.66% { transform: translateX(-33.33%); }
+    66.67% { transform: translateX(-66.66%); }
+    100% { transform: translateX(-66.66%); }
 }
 
 /* Responsivité */
 @media (max-width: 1024px) {
     .main-hero {
-        margin: 0 40px 40px 40px;
-        width: calc(100% - 80px);
-        min-height: 80vh;
+        height: 500px; /* Réduit pour tablettes */
     }
 }
 
 @media (max-width: 768px) {
     .main-hero {
-        margin: 0 20px 30px 20px;
-        width: calc(100% - 40px);
-        min-height: 60vh;
+        height: 400px; /* Réduit pour petits écrans */
+        margin: 0 auto 30px auto;
     }
 }
 
 @media (max-width: 480px) {
     .main-hero {
-        margin: 0 10px 20px 10px;
-        width: calc(100% - 20px);
-        min-height: 50vh;
+        height: 300px; /* Compact pour petits téléphones */
+        margin: 0 auto 20px auto;
     }
 }
 
