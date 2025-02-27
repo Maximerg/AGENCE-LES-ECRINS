@@ -151,31 +151,21 @@ html, body {
 
 /* Tablettes (jusqu’à 1024px) */
 @media (max-width: 1024px) {
-    /* Header */
     .founder-logo {
-        max-width: 300px; /* Réduit légèrement le logo */
+        max-width: 300px;
     }
 
     .header-divider {
-        width: calc(100% - 100px); /* Réduit les marges blanches */
-        box-shadow: 0px 0px 0px 50px #fff; /* Réduit l’ombre */
+        width: calc(100% - 100px);
+        box-shadow: 0px 0px 0px 50px #fff;
     }
 
     .header-bottom nav ul {
-        gap: 30px; /* Réduit l’espacement entre les liens */
+        gap: 30px;
     }
 
     .header-bottom nav ul li a {
-        padding: 5px 20px; /* Réduit le padding des liens */
-    }
-
-    /* Footer */
-    .footer-container {
-        padding: 0 15px;
-    }
-
-    .footer-links {
-        right: 15px; /* Légère réduction de la marge droite */
+        padding: 5px 20px;
     }
 }
 
@@ -184,7 +174,7 @@ html, body {
     .header-bottom {
         padding: 10px 0;
         position: relative;
-        min-height: 50px; /* Assure une hauteur pour le burger */
+        min-height: 50px;
     }
 
     .burger-menu {
@@ -196,33 +186,36 @@ html, body {
         cursor: pointer;
         padding: 5px 10px;
         position: absolute;
-        left: 50%; /* Centre horizontalement */
+        left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%); /* Centre parfaitement */
+        transform: translate(-50%, -50%);
     }
-    
+
     .header-bottom nav ul {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
         flex-direction: column;
         gap: 15px;
         background: #fff;
         width: 100%;
-        padding: 20px 0;
+        padding: 0;
         position: absolute;
         top: 100%;
         left: 0;
         z-index: 1000;
-        text-align: center; /* Centre les textes */
+        text-align: center;
+        transition: max-height 0.3s ease, padding 0.3s ease;
     }
 
     .header-bottom nav ul.active {
-        display: flex;
+        max-height: 300px;
+        padding: 20px 0;
     }
 
     .header-bottom nav ul li {
         width: 100%;
-        display: flex; /* Ajouté pour centrer le contenu */
-        justify-content: center; /* Centre horizontalement */
+        display: flex;
+        justify-content: center;
     }
 
     .header-bottom nav ul li a {
@@ -232,19 +225,32 @@ html, body {
     }
 }
 
-/* Petits téléphones (jusqu’à 480px) */
+/* Très petits téléphones (jusqu’à 480px) */
 @media (max-width: 480px) {
+    .founder-logo {
+        max-width: 200px;
+        padding: 10px 0;
+    }
+
+    .header-divider {
+        width: calc(100% - 20px);
+        box-shadow: 0px 0px 0px 10px #fff;
+    }
+
     .burger-menu {
         font-size: 1.5rem;
         padding: 5px 8px;
-        position: absolute;
-        left: 50%; /* Centre horizontalement */
+        left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%); /* Centre parfaitement */
+        transform: translate(-50%, -50%);
     }
 
     .header-bottom nav ul {
         gap: 10px;
+    }
+
+    .header-bottom nav ul.active {
+        max-height: 250px;
         padding: 15px 0;
     }
 
