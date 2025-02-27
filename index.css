@@ -223,35 +223,51 @@
 @media (max-width: 768px) {
     /* Section L'Agence */
     .about-section {
-        min-height: auto;
-        padding: 20px 0;
-        margin-bottom: 20px;
-    }
-
-    .about-container {
-        flex-direction: column;
-        margin: 0 20px;
-        text-align: center;
-    }
-
-    .about-image {
-        width: 100%;
-        padding-top: 0;
-        margin-bottom: 20px;
-        justify-content: center;
-        display: flex;
-    }
-
-    .about-image img {
-        width: 200px;
-        margin: 0 auto;
-    }
-
-    .about-text {
-        padding-left: 0;
-        padding-top: 0;
-        text-align: center;
-    }
+            min-height: auto;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+    
+        .about-container {
+            flex-direction: column;
+            margin: 0 auto; /* Centré horizontalement */
+            padding: 0 20px;
+            text-align: center;
+            max-width: 100%; /* Assure qu’il reste dans les limites */
+        }
+    
+        .about-image {
+            width: 100%;
+            padding-top: 0;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center; /* Centre l’image */
+            align-items: center;
+        }
+    
+        .about-image img {
+            width: 200px;
+            margin: 0 auto;
+        }
+    
+        .about-text {
+            padding: 0;
+            text-align: center;
+        }
+    
+        .about-text h2 {
+            font-size: 1.8rem; /* Aligné avec .founder-text */
+        }
+    
+        .about-text p {
+            font-size: 1rem; /* Aligné avec .founder-text */
+            padding: 10px;
+        }
+    
+        .about-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
 
     /* Section Fondatrice */
     .founder-section {
@@ -294,13 +310,13 @@
 @media (max-width: 480px) {
     /* Section L'Agence */
     .about-section {
-        min-height: auto;
         padding: 15px 0;
         margin-bottom: 15px;
     }
 
     .about-container {
-        margin: 0 10px;
+        margin: 0 auto;
+        padding: 0 10px;
         text-align: center;
     }
 
@@ -309,10 +325,20 @@
         margin: 0 auto;
     }
 
-    .about-text {
-        padding-top: 0;
+    .about-text h2 {
+        font-size: 1.5rem; /* Aligné avec .founder-text */
     }
 
+    .about-text p {
+        font-size: 1rem; /* Aligné avec .founder-text */
+        padding: 8px;
+    }
+
+    .about-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+ 
     /* Section Fondatrice */
     .founder-section {
         min-height: auto;
