@@ -71,7 +71,6 @@
 
 .about-container {
     display: flex;
-    align-items: center;
     justify-content: center;
     max-width: 1400px;
     margin: 0 100px;
@@ -84,7 +83,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 30%;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .about-image img {
