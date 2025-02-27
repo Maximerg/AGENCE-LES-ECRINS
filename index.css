@@ -1,6 +1,6 @@
 /* Main - Section Hero */
 .main-hero {
-    margin: 0 auto 50px auto; /* Centré avec marge en bas */
+    margin: 50px auto 50px auto; /* Centré avec marge en bas */
     width: 90%; /* Réduit par rapport à calc(100% - 150px) */
     max-width: 1200px; /* Même limite que .container dans styles.css */
     height: 600px; /* Hauteur fixe, ajustable selon tes besoins */
