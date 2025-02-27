@@ -1,4 +1,4 @@
-/* Main - Section Hero */
+ /* Main - Section Hero */
 .main-hero {
     margin: 25px auto 50px auto;
     width: 90%;
@@ -225,14 +225,39 @@
     .about-section {
         min-height: auto;
         padding: 20px 0;
-        margin-bottom: 20px; /* Ajoute un espacement clair en bas */
+        margin-bottom: 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        margin: 0 20px;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 100%;
+        padding-top: 0;
+        margin-bottom: 20px;
+        justify-content: center;
+        display: flex;
+    }
+
+    .about-image img {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        padding-left: 0;
+        padding-top: 0;
+        text-align: center;
     }
 
     /* Section Fondatrice */
     .founder-section {
         min-height: auto;
         padding: 20px 0;
-        margin: 20px 0; /* Marge en haut et en bas pour séparer */
+        margin: 20px 0;
     }
 
     .founder-container {
@@ -243,8 +268,8 @@
 
     .founder-image {
         width: 100%;
-        padding-top: 0; /* Supprime le padding-top excessif */
-        margin-bottom: 20px; /* Espace entre l’image et le texte */
+        padding-top: 0;
+        margin-bottom: 20px;
         justify-content: center;
     }
 
@@ -254,14 +279,14 @@
 
     .founder-text {
         padding-left: 0;
-        padding-top: 0; /* Supprime le padding-top pour un flux naturel */
+        padding-top: 0;
     }
 
     /* Section Biens Disponibles */
     #biens-disponibles {
         min-height: auto;
         padding: 20px 0;
-        margin-top: 20px; /* Espace au-dessus pour éviter le chevauchement */
+        margin-top: 20px;
     }
 }
 
@@ -272,6 +297,20 @@
         min-height: auto;
         padding: 15px 0;
         margin-bottom: 15px;
+    }
+
+    .about-container {
+        margin: 0 10px;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 180px;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        padding-top: 0;
     }
 
     /* Section Fondatrice */
@@ -297,6 +336,7 @@
     .founder-text {
         padding-top: 0;
     }
+}
 
     /* Tablettes (jusqu’à 1024px) */
 @media (max-width: 1024px) {
