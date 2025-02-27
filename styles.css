@@ -142,3 +142,114 @@ html, body {
 .footer-links a:visited {
     color: #fff; /* Garde la couleur blanche après un clic */
 }
+
+/* Media Queries pour responsivité */
+
+/* Tablettes (jusqu’à 1024px) */
+@media (max-width: 1024px) {
+    /* Header */
+    .founder-logo {
+        max-width: 300px; /* Réduit légèrement le logo */
+    }
+
+    .header-divider {
+        width: calc(100% - 100px); /* Réduit les marges blanches */
+        box-shadow: 0px 0px 0px 50px #fff; /* Réduit l’ombre */
+    }
+
+    .header-bottom nav ul {
+        gap: 30px; /* Réduit l’espacement entre les liens */
+    }
+
+    .header-bottom nav ul li a {
+        padding: 5px 20px; /* Réduit le padding des liens */
+    }
+
+    /* Footer */
+    .footer-container {
+        padding: 0 15px;
+    }
+
+    .footer-links {
+        right: 15px; /* Légère réduction de la marge droite */
+    }
+}
+
+/* Petites tablettes/téléphones (jusqu’à 768px) */
+@media (max-width: 768px) {
+    /* Header */
+    .founder-logo {
+        max-width: 250px; /* Plus petit pour mobile */
+        padding: 15px 0;
+    }
+
+    .header-divider {
+        width: calc(100% - 50px); /* Encore plus étroit */
+        box-shadow: 0px 0px 0px 25px #fff;
+    }
+
+    .header-bottom nav ul {
+        flex-direction: column; /* Passe en colonne pour la navigation */
+        gap: 15px;
+    }
+
+    .header-bottom nav ul li {
+        width: 100%; /* Pleine largeur pour chaque lien */
+        text-align: center;
+    }
+
+    .header-bottom nav ul li a {
+        padding: 10px 0; /* Simplifie le padding */
+        display: block; /* Assure un comportement bloque */
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column; /* Empile texte et liens */
+        padding: 15px;
+    }
+
+    .footer-text {
+        margin-bottom: 15px; /* Espace entre texte et liens */
+    }
+
+    .footer-links {
+        position: static; /* Plus absolu, suit le flux */
+        align-items: center; /* Centre les liens */
+    }
+}
+
+/* Petits téléphones (jusqu’à 480px) */
+@media (max-width: 480px) {
+    /* Header */
+    .founder-logo {
+        max-width: 200px; /* Très compact */
+        padding: 10px 0;
+    }
+
+    .header-divider {
+        width: calc(100% - 20px); /* Minimal */
+        box-shadow: 0px 0px 0px 10px #fff;
+    }
+
+    .header-bottom nav ul {
+        gap: 10px;
+    }
+
+    .header-bottom nav ul li a {
+        font-size: 0.9rem; /* Réduit la taille du texte */
+    }
+
+    /* Footer */
+    .footer-container {
+        padding: 10px;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+}
