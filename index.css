@@ -83,7 +83,6 @@
     justify-content: flex-start;
     align-items: center;
     width: 30%;
-    padding-top: 30px;
     margin-left: 60px;
 }
 
@@ -100,7 +99,6 @@
 
 .about-text h2 {
     font-size: 2rem;
-    margin: 20px 0;
     padding: 15px;
 }
 
