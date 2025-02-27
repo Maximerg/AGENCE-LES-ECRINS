@@ -1,6 +1,6 @@
 /* Main - Section Hero */
 .main-hero {
-    margin: 0 75px 50px 75px;
+    margin: 50px 75px 50px 75px;
     width: calc(100% - 150px);
     min-height: calc(100vh - 100px);
     position: relative;
@@ -156,11 +156,6 @@
     font-size: 2rem;
     letter-spacing: 2px;
     margin-bottom: 20px;
-}
-
-/* Neutraliser la bande blanche du header */
-.header-bottom {
-    padding-bottom: 0;
 }
 
 /* Media Queries pour responsivité */
