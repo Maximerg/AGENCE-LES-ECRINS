@@ -212,7 +212,7 @@ html, body {
         top: 100%;
         left: 0;
         z-index: 1000;
-        text-align: center; /* Centre les liens */
+        text-align: center; /* Centre les textes */
     }
 
     .header-bottom nav ul.active {
@@ -221,6 +221,8 @@ html, body {
 
     .header-bottom nav ul li {
         width: 100%;
+        display: flex; /* Ajouté pour centrer le contenu */
+        justify-content: center; /* Centre horizontalement */
     }
 
     .header-bottom nav ul li a {
