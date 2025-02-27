@@ -24,7 +24,8 @@
 .carousel-item {
     width: 33.33%; /* 100% / 3 images */
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Affiche l’image entière sans rogner */
+    background-color: #fff; /* Bordures blanches pour combler l’espace */
 }
 
 /* Animation du carrousel */
