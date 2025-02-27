@@ -95,6 +95,32 @@
         document.querySelector('.header-bottom nav ul').classList.toggle('active');
     });
 </script>
+
+<script>
+    const carouselInner = document.querySelector('.carousel-inner');
+    const items = document.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        // Déplace le carrousel
+        carouselInner.style.transform = `translateX(-${currentIndex * (100 / items.length)}%)`;
+        
+        // Met à jour la classe active
+        items.forEach((item, index) => {
+            item.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    // Passe à l’image suivante toutes les 5 secondes
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % items.length; // Boucle circulaire
+        updateCarousel();
+    }, 5000);
+
+    // Initialise la première image comme active
+    updateCarousel();
+</script>
+    
 </body>
 
 </html>
