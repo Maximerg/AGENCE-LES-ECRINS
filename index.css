@@ -1,15 +1,64 @@
 /* Main - Section Hero */
 .main-hero {
-    margin: 25px 75px 50px 75px;
+    margin: 0 75px 50px 75px;
     width: calc(100% - 150px);
     min-height: calc(100vh - 100px);
-    background-image: url('https://i.imgur.com/73vaoVP.jpeg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
+    overflow: hidden; /* Empêche les images de déborder */
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 300%; /* 100% par image, ici pour 3 images */
+    height: 100%;
+    animation: slide 15s infinite; /* Défilement toutes les 5s par image (15s pour 3) */
+}
+
+.carousel-item {
+    width: 33.33%; /* 100% / nombre d’images (ici 3) */
+    height: 100%;
+    object-fit: cover; /* Remplace background-size: cover */
+}
+
+/* Animation du carrousel */
+@keyframes slide {
+    0% { transform: translateX(0); }      /* Première image */
+    33.33% { transform: translateX(0); }  /* Pause sur la première */
+    33.34% { transform: translateX(-33.33%); } /* Deuxième image */
+    66.66% { transform: translateX(-33.33%); } /* Pause sur la deuxième */
+    66.67% { transform: translateX(-66.66%); } /* Troisième image */
+    100% { transform: translateX(-66.66%); }   /* Pause sur la troisième */
+}
+
+/* Responsivité */
+@media (max-width: 1024px) {
+    .main-hero {
+        margin: 0 40px 40px 40px;
+        width: calc(100% - 80px);
+        min-height: 80vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-hero {
+        margin: 0 20px 30px 20px;
+        width: calc(100% - 40px);
+        min-height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-hero {
+        margin: 0 10px 20px 10px;
+        width: calc(100% - 20px);
+        min-height: 50vh;
+    }
 }
 
 /* Section L'Agence */
