@@ -177,59 +177,63 @@ html, body {
 
 /* Petites tablettes/téléphones (jusqu’à 768px) */
 @media (max-width: 768px) {
-    /* Header */
-    .founder-logo {
-        max-width: 250px; /* Plus petit pour mobile */
-        padding: 15px 0;
+    .header-bottom {
+        padding: 10px 0; /* Réduit légèrement */
     }
 
-    .header-divider {
-        width: calc(100% - 50px); /* Encore plus étroit */
-        box-shadow: 0px 0px 0px 25px #fff;
+    .header-bottom nav {
+        position: relative;
+    }
+
+    /* Menu burger */
+    .burger-menu {
+        display: block;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: #000;
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .header-bottom nav ul {
-        flex-direction: column; /* Passe en colonne pour la navigation */
+        display: none; /* Masqué par défaut */
+        flex-direction: column;
         gap: 15px;
+        background: #fff;
+        width: 100%;
+        padding: 20px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .header-bottom nav ul.active {
+        display: flex; /* Affiché quand actif */
     }
 
     .header-bottom nav ul li {
-        width: 100%; /* Pleine largeur pour chaque lien */
-        text-align: center;
+        width: 100%;
+        text-align: center; /* Centre les liens */
     }
 
     .header-bottom nav ul li a {
-        padding: 10px 0; /* Simplifie le padding */
-        display: block; /* Assure un comportement bloque */
-    }
-
-    /* Footer */
-    .footer-container {
-        flex-direction: column; /* Empile texte et liens */
-        padding: 15px;
-    }
-
-    .footer-text {
-        margin-bottom: 15px; /* Espace entre texte et liens */
-    }
-
-    .footer-links {
-        position: static; /* Plus absolu, suit le flux */
-        align-items: center; /* Centre les liens */
+        padding: 10px 0;
+        display: block;
+        font-size: 1rem;
     }
 }
 
 /* Petits téléphones (jusqu’à 480px) */
 @media (max-width: 480px) {
-    /* Header */
-    .founder-logo {
-        max-width: 200px; /* Très compact */
-        padding: 10px 0;
-    }
-
-    .header-divider {
-        width: calc(100% - 20px); /* Minimal */
-        box-shadow: 0px 0px 0px 10px #fff;
+    .burger-menu {
+        font-size: 1.2rem;
+        padding: 8px;
     }
 
     .header-bottom nav ul {
@@ -237,8 +241,9 @@ html, body {
     }
 
     .header-bottom nav ul li a {
-        font-size: 0.9rem; /* Réduit la taille du texte */
+        font-size: 0.9rem;
     }
+}
 
     /* Footer */
     .footer-container {
