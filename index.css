@@ -24,7 +24,6 @@
     position: absolute;
     top: 0;
     left: -100%; /* Centre la première image au départ */
-    animation: slide 15s infinite;
 }
 
 .carousel-item {
