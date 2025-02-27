@@ -196,11 +196,11 @@ html, body {
         cursor: pointer;
         padding: 5px 10px;
         position: absolute;
-        left: 10px;
+        left: 50%; /* Centre horizontalement */
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%); /* Centre parfaitement */
     }
-
+    
     .header-bottom nav ul {
         display: none;
         flex-direction: column;
@@ -235,6 +235,10 @@ html, body {
     .burger-menu {
         font-size: 1.5rem;
         padding: 5px 8px;
+        position: absolute;
+        left: 50%; /* Centre horizontalement */
+        top: 50%;
+        transform: translate(-50%, -50%); /* Centre parfaitement */
     }
 
     .header-bottom nav ul {
