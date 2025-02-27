@@ -249,23 +249,10 @@ html, body {
     }
 }
 
-    /* Footer */
-    .footer-container {
-        padding: 10px;
-    }
-
-    .footer-text {
-        font-size: 0.9rem;
-    }
-
-    .footer-links a {
-        font-size: 0.9rem;
-    }
-}
+/* Media Queries pour le Footer */
 
 /* Petites tablettes/téléphones (jusqu’à 768px) */
 @media (max-width: 768px) {
-    /* Footer */
     .footer-container {
         flex-direction: column;
         padding: 15px;
@@ -295,3 +282,4 @@ html, body {
         font-size: 0.9rem;
     }
 }
+
