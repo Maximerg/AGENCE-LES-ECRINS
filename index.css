@@ -62,7 +62,7 @@
     background-color: #F0F0F0;
     color: #455243;
     width: 100%;
-    min-height: 700px; /* Aligné avec .founder-section */
+    min-height: 600px; /* Aligné avec .founder-section */
     font-family: "Lora", serif;
     display: flex;
     justify-content: center;
