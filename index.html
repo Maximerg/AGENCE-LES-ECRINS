@@ -102,9 +102,10 @@
     let currentIndex = 0;
 
     function updateCarousel() {
-        // Déplace le carrousel
-        carouselInner.style.transform = `translateX(-${currentIndex * (100 / items.length)}%)`;
-        
+        // Déplace le carrousel pour centrer l’image active
+        const offset = -currentIndex * (100 / items.length);
+        carouselInner.style.transform = `translateX(${offset}%)`;
+
         // Met à jour la classe active
         items.forEach((item, index) => {
             item.classList.toggle('active', index === currentIndex);
@@ -113,11 +114,11 @@
 
     // Passe à l’image suivante toutes les 5 secondes
     setInterval(() => {
-        currentIndex = (currentIndex + 1) % items.length; // Boucle circulaire
+        currentIndex = (currentIndex + 1) % items.length; // Boucle
         updateCarousel();
     }, 5000);
 
-    // Initialise la première image comme active
+    // Initialise la première image
     updateCarousel();
 </script>
     
