@@ -210,12 +210,13 @@
     .main-hero {
         height: 400px;
         margin: 15px auto 50px auto !important; /* 15px en haut, 50px en bas */
+        padding: 50px 0; /* Ajoute 50px en haut et en bas à l’intérieur */
     }
 
     .about-section {
         min-height: auto;
-        padding: 20px 0;
-        margin: 50px 0 !important; /* 50px en haut et en bas */
+        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        margin: 50px 0 !important; /* 50px en haut et en bas à l’extérieur */
     }
 
     .about-container {
@@ -261,8 +262,8 @@
 
     .founder-section {
         min-height: auto;
-        padding: 20px 0;
-        margin: 50px 0 !important; /* 50px en haut et en bas */
+        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        margin: 50px 0 !important; /* 50px en haut et en bas à l’extérieur */
     }
 
     .founder-container {
@@ -303,8 +304,8 @@
 
     #biens-disponibles {
         min-height: auto;
-        padding: 20px 0;
-        margin: 50px 0 !important; /* 50px en haut et en bas */
+        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        margin: 50px 0 !important; /* 50px en haut et en bas à l’extérieur */
     }
 
     #biens-disponibles h2 {
@@ -317,12 +318,13 @@
     .main-hero {
         height: 300px;
         margin: 15px auto 50px auto !important; /* 15px en haut, 50px en bas */
+        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
     }
 
     .about-section {
         min-height: auto;
-        padding: 15px 0;
-        margin: 50px 0 !important; /* 50px en haut et en bas */
+        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        margin: 50px 0 !important; /* 50px en haut et en bas à l’extérieur */
     }
 
     .about-container {
@@ -352,8 +354,8 @@
 
     .founder-section {
         min-height: auto;
-        padding: 15px 0;
-        margin: 50px 0 !important; /* 50px en haut et en bas */
+        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        margin: 50px 0 !important; /* 50px en haut et en bas à l’extérieur */
     }
 
     .founder-container {
@@ -377,8 +379,8 @@
     }
 
     #biens-disponibles {
-        padding: 15px 0;
-        margin: 50px 0 !important; /* 50px en haut et en bas */
+        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        margin: 50px 0 !important; /* 50px en haut et en bas à l’extérieur */
     }
 
     #biens-disponibles h2 {
