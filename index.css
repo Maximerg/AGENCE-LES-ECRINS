@@ -293,8 +293,8 @@
     }
 
     .founder-text {
-        padding-left: 0;
-        padding-top: 0;
+        font-size: 1rem; /* Aligné avec .founder-text */
+        padding: 10px;
     }
 
     /* Section Biens Disponibles */
@@ -359,7 +359,8 @@
     }
 
     .founder-text {
-        padding-top: 0;
+        font-size: 1rem; /* Aligné avec .founder-text */
+        padding: 10px;
     }
 }
 
