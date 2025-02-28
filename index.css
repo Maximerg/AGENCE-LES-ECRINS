@@ -80,10 +80,9 @@
 
 .about-image {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 30%;
-    margin-left: 60px;
 }
 
 .about-image img {
