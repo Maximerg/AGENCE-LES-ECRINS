@@ -209,7 +209,7 @@
 @media (max-width: 768px) {
     .main-hero {
         height: 400px;
-        padding: 50px 0; /* Ajoute 50px en haut et en bas à l’intérieur */
+        padding: 0 0 25px 0; /* Ajoute 50px en haut et en bas à l’intérieur */
     }
 
     .about-section {
@@ -313,7 +313,7 @@
 @media (max-width: 480px) {
     .main-hero {
         height: 300px;
-        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        padding: 0 0 25px 0; /* 50px en haut et en bas à l’intérieur */
     }
 
     .about-section {
