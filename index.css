@@ -36,27 +36,6 @@
     filter: brightness(100%); /* Éclaircit l’image centrale */
 }
 
-/* Responsivité */
-@media (max-width: 1024px) {
-    .main-hero {
-        height: 500px;
-    }
-}
-
-@media (max-width: 768px) {
-    .main-hero {
-        height: 400px;
-        margin: 0 auto 30px auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-hero {
-        height: 300px;
-        margin: 0 auto 20px auto;
-    }
-}
-
 /* Section L'Agence */
 .about-section {
     background-color: #F0F0F0;
@@ -98,6 +77,7 @@
 
 .about-text h2 {
     font-size: 2rem;
+    margin: 20px 0; /* Aligné avec .founder-text */
     padding: 15px;
 }
 
@@ -196,13 +176,20 @@
 /* Tablettes (jusqu’à 1024px) */
 @media (max-width: 1024px) {
     .main-hero {
-        margin: 0 40px 40px 40px;
-        width: calc(100% - 80px);
-        min-height: 80vh; /* Réduit légèrement */
+        height: 500px;
     }
 
     .about-container {
+        margin: 0 50px;
         max-width: 800px;
+    }
+
+    .about-image {
+        width: 40%;
+    }
+
+    .about-image img {
+        width: 250px;
     }
 
     .founder-container {
@@ -210,7 +197,7 @@
     }
 
     .founder-image {
-        width: 40%; /* Un peu plus large sur tablette */
+        width: 40%;
     }
 
     .founder-image img {
@@ -220,55 +207,58 @@
 
 /* Petites tablettes/téléphones (jusqu’à 768px) */
 @media (max-width: 768px) {
-    /* Section L'Agence */
-    .about-section {
-            min-height: auto;
-            padding: 20px 0;
-            margin-bottom: 20px;
-        }
-    
-        .about-container {
-            flex-direction: column;
-            margin: 0 auto; /* Centré horizontalement */
-            padding: 0 20px;
-            text-align: center;
-            max-width: 100%; /* Assure qu’il reste dans les limites */
-        }
-    
-        .about-image {
-            width: 100%;
-            padding-top: 0;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center; /* Centre l’image */
-            align-items: center;
-        }
-    
-        .about-image img {
-            width: 200px;
-            margin: 0 auto;
-        }
-    
-        .about-text {
-            padding: 0;
-            text-align: center;
-        }
-    
-        .about-text h2 {
-            font-size: 1.8rem; /* Aligné avec .founder-text */
-        }
-    
-        .about-text p {
-            font-size: 1rem; /* Aligné avec .founder-text */
-            padding: 10px;
-        }
-    
-        .about-button {
-            padding: 10px 20px;
-            font-size: 1rem;
-        }
+    .main-hero {
+        height: 400px;
+        margin: 15px auto 30px auto; /* Aligné avec autres sections */
+    }
 
-    /* Section Fondatrice */
+    .about-section {
+        min-height: auto;
+        padding: 20px 0;
+        margin: 20px 0; /* Cohérent avec .founder-section */
+    }
+
+    .about-container {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .about-image {
+        width: 100%;
+        padding-top: 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-image img {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        padding: 0;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .about-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
     .founder-section {
         min-height: auto;
         padding: 20px 0;
@@ -277,40 +267,62 @@
 
     .founder-container {
         flex-direction: column;
-        margin: 0 20px;
+        margin: 0 auto;
+        padding: 0 20px;
         text-align: center;
+        max-width: 100%;
     }
 
     .founder-image {
         width: 100%;
         padding-top: 0;
         margin-bottom: 20px;
+        display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .founder-image img {
         width: 200px;
+        margin: 0 auto;
     }
 
     .founder-text {
-        font-size: 1rem; /* Aligné avec .founder-text */
+        padding: 0;
+        text-align: center;
+    }
+
+    .founder-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .founder-text p {
+        font-size: 1rem;
         padding: 10px;
     }
 
-    /* Section Biens Disponibles */
     #biens-disponibles {
         min-height: auto;
         padding: 20px 0;
-        margin-top: 20px;
+        margin: 20px 0;
+    }
+
+    #biens-disponibles h2 {
+        font-size: 1.8rem;
     }
 }
 
-/* Petits téléphones (jusqu’à 480px) */
+/* Très petits téléphones (jusqu’à 480px) */
 @media (max-width: 480px) {
-    /* Section L'Agence */
+    .main-hero {
+        height: 300px;
+        margin: 10px auto 20px auto;
+    }
+
     .about-section {
+        min-height: auto;
         padding: 15px 0;
-        margin-bottom: 15px;
+        margin: 15px 0;
     }
 
     .about-container {
@@ -325,11 +337,11 @@
     }
 
     .about-text h2 {
-        font-size: 1.5rem; /* Aligné avec .founder-text */
+        font-size: 1.5rem;
     }
 
     .about-text p {
-        font-size: 1rem; /* Aligné avec .founder-text */
+        font-size: 1rem;
         padding: 8px;
     }
 
@@ -337,8 +349,7 @@
         padding: 10px 20px;
         font-size: 0.9rem;
     }
- 
-    /* Section Fondatrice */
+
     .founder-section {
         min-height: auto;
         padding: 15px 0;
@@ -346,97 +357,31 @@
     }
 
     .founder-container {
-        margin: 0 10px;
-    }
-
-    .founder-image {
-        padding-top: 0;
-        margin-bottom: 15px;
+        margin: 0 auto;
+        padding: 0 10px;
+        text-align: center;
     }
 
     .founder-image img {
         width: 180px;
+        margin: 0 auto;
     }
 
-    .founder-text {
-        font-size: 1rem; /* Aligné avec .founder-text */
-        padding: 10px;
-    }
-}
-
-    /* Tablettes (jusqu’à 1024px) */
-@media (max-width: 1024px) {
-    .about-container {
-        margin: 0 50px;
+    .founder-text h2 {
+        font-size: 1.5rem;
     }
 
-    .about-image {
-        width: 40%;
+    .founder-text p {
+        font-size: 1rem;
+        padding: 8px;
     }
 
-    .about-image img {
-        width: 250px;
-    }
-}
-
-/* Petites tablettes/téléphones (jusqu’à 768px) */
-@media (max-width: 768px) {
-    .about-section {
-        min-height: auto;
-        padding: 20px 0;
-        margin: 20px 0;
-    }
-
-    .about-container {
-        flex-direction: column;
-        margin: 0 20px;
-        text-align: center;
-    }
-
-    .about-image {
-        width: 100%;
-        padding-top: 0;
-        margin-bottom: 20px;
-        justify-content: center;
-    }
-
-    .about-image img {
-        width: 200px;
-    }
-
-    .about-text {
-        padding-left: 0;
-        padding-top: 0;
-    }
-}
-
-/* Très petits téléphones (jusqu’à 480px) */
-@media (max-width: 480px) {
-    .about-section {
+    #biens-disponibles {
         padding: 15px 0;
         margin: 15px 0;
     }
 
-    .about-container {
-        margin: 0 10px;
-    }
-
-    .about-image img {
-        width: 180px;
-    }
-
-    .about-text h2 {
+    #biens-disponibles h2 {
         font-size: 1.5rem;
     }
-
-    .about-text p {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
-
-    .about-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
 }
-
