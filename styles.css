@@ -92,6 +92,33 @@ html, body {
     width: 100%; /* Barre sous le texte visible au hover */
 }
 
+
+/* Styles globaux pour les titres */
+
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+}
+
+/* Media Queries pour responsivité */
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
 /* Pied de page */
 
 .footer {
