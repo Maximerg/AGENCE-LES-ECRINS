@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,177 +7,178 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Serif+Text:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Agence Les Ecrins</title>
+    <title>Agence Les Ecrins - Services</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="services.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Serif+Text:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-
+<body>
     <header>
         <div class="header-top">
             <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins" class="founder-logo">
         </div>
         <div class="header-divider"></div>
         <div class="header-bottom">
+            <button class="burger-menu">☰</button>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">L'AGENCE</a></li>
+                    <li><a href="index.html">L'AGENCE</a></li>
                     <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="services.html" class="active">SERVICES</a></li>
                     <li><a href="estimation.html">ESTIMATION</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
+        </div>
     </header>
 
-<script>
-document.addEventListener("scroll", function() {
-    let fleches = document.querySelectorAll(".section-fleche");
-    let flecheVisible = null;
-
-    // Trouver la première flèche qui est bien visible à l'écran
-    fleches.forEach(fleche => {
-        let rect = fleche.getBoundingClientRect();
-        
-        // Vérifie si la flèche est suffisamment visible (zone centrale)
-        if (rect.top < window.innerHeight * 0.95 && rect.bottom > window.innerHeight * 0.5) {
-            flecheVisible = fleche;
-        }
-    });
-
-    // Si une nouvelle flèche est visible, cacher les autres et afficher celle-ci
-    if (flecheVisible) {
-        fleches.forEach(fleche => {
-            fleche.style.opacity = (fleche === flecheVisible) ? "0.7" : "0";
-        });
-    }
-});
-</script>
-
-
-    
-<body>
-    <section class="section-titre">
-        <div class="conteneur-titre">
-            <h2>VOUS SOUHAITEZ VOUS SEPARER DE VOTRE BIEN ?</h2>
-        </div>
-    </section>
+    <main>
+        <section class="section-titre">
+            <div class="conteneur-titre">
+                <h2>VOUS SOUHAITEZ VOUS SÉPARER DE VOTRE BIEN ?</h2>
+            </div>
+        </section>
   
-    <section class="section-presentation">
-        <div class="conteneur-presentation">
-            <p class="texte-presentation">
-                L'agence Les Écrins vous propose une multitude de services vous permettant de mettre en valeur<br> votre bien et d'aborder sereinement la vente.
-            </p>
-        </div>
-    </section>
+        <section class="section-presentation">
+            <div class="conteneur-presentation">
+                <p class="texte-presentation">
+                    L'agence Les Écrins vous propose une multitude de services vous permettant de mettre en valeur<br> votre bien et d'aborder sereinement la vente.
+                </p>
+            </div>
+        </section>
 
-    <section class="section-fleche">
-        <div class="fleche"></div>
-    </section>
+        <section class="section-fleche">
+            <div class="fleche"></div>
+        </section>
 
-    
-    <section class="section-service-gris">
-        <div class="service-content">
-           <div class="service-text">
-              <h3>ESTIMATION OFFERTE</h3>
-              <p>Une estimation juste et précise est essentielle pour bien démarrer votre projet immobilier. Grâce à notre parfaite connaissance du marché local, nous analysons chaque aspect de votre bien pour vous fournir une évaluation objective. Vous bénéficiez ainsi d’un prix cohérent avec la demande actuelle et d’un accompagnement fiable dès les premières étapes.</p>
-          </div>
-          <div class="service-media">
-            <img src="https://i.imgur.com/bixh106.jpeg" alt="Une estimation immobilière">
-          </div>
-        </div>
-    </section>
+        <section class="section-service">
+            <div class="service-content">
+                <div class="service-text">
+                    <h3>ESTIMATION OFFERTE</h3>
+                    <p>Une estimation juste et précise est essentielle pour bien démarrer votre projet immobilier. Grâce à notre parfaite connaissance du marché local, nous analysons chaque aspect de votre bien pour vous fournir une évaluation objective. Vous bénéficiez ainsi d’un prix cohérent avec la demande actuelle et d’un accompagnement fiable dès les premières étapes.</p>
+                </div>
+                <div class="service-media">
+                    <img src="https://i.imgur.com/bixh106.jpeg" alt="Une estimation immobilière">
+                </div>
+            </div>
+        </section>
 
-    <section class="section-fleche">
-        <div class="fleche"></div>
-    </section>
-    
-    <section class="section-service-blanc">
-        <div class="service-content">
-          <div class="service-media">
-              <img src="https://i.imgur.com/eWhe5jk.jpeg" alt="Un appareil photo professionnel">
-          </div>
-          <div class="service-text">
-              <h3>REPORTAGE PHOTO PROFESSIONNEL</h3>
-              <p>Des photos de qualité professionnelle sont essentielles pour capter l’attention et valoriser votre bien. Nous mettons en avant ses atouts avec des angles soigneusement travaillés et une lumière optimisée. Un visuel soigné permet de susciter l’émotion et d’attirer des acquéreurs sérieux.</p>
-          </div>
-        </div> 
-    </section>
+        <section class="section-fleche">
+            <div class="fleche"></div>
+        </section>
+        
+        <section class="section-service">
+            <div class="service-content">
+                <div class="service-media">
+                    <img src="https://i.imgur.com/eWhe5jk.jpeg" alt="Un appareil photo professionnel">
+                </div>
+                <div class="service-text">
+                    <h3>REPORTAGE PHOTO PROFESSIONNEL</h3>
+                    <p>Des photos de qualité professionnelle sont essentielles pour capter l’attention et valoriser votre bien. Nous mettons en avant ses atouts avec des angles soigneusement travaillés et une lumière optimisée. Un visuel soigné permet de susciter l’émotion et d’attirer des acquéreurs sérieux.</p>
+                </div>
+            </div> 
+        </section>
 
-    <section class="section-fleche">
-        <div class="fleche"></div>
-    </section>
-    
-    <section class="section-service-gris">
-        <div class="service-content">
-           <div class="service-text">
-              <h3>ACCOMPAGNEMENT COMPLET</h3>
-              <p>Bénéficiez d’un suivi personnalisé à chaque étape, de l’estimation à la signature définitive. Nous vous guidons avec transparence et expertise pour optimiser chaque phase de la vente. Notre engagement : vous offrir un accompagnement sur mesure, adapté à vos besoins et à votre bien.</p>
-          </div>
-          <div class="service-media">
-            <img src="https://i.imgur.com/4QaYFbg.jpeg" alt="L'accompagnement du vendeur">
-          </div>
-        </div>
-    </section>
+        <section class="section-fleche">
+            <div class="fleche"></div>
+        </section>
+        
+        <section class="section-service">
+            <div class="service-content">
+                <div class="service-text">
+                    <h3>ACCOMPAGNEMENT COMPLET</h3>
+                    <p>Bénéficiez d’un suivi personnalisé à chaque étape, de l’estimation à la signature définitive. Nous vous guidons avec transparence et expertise pour optimiser chaque phase de la vente. Notre engagement : vous offrir un accompagnement sur mesure, adapté à vos besoins et à votre bien.</p>
+                </div>
+                <div class="service-media">
+                    <img src="https://i.imgur.com/4QaYFbg.jpeg" alt="L'accompagnement du vendeur">
+                </div>
+            </div>
+        </section>
 
-    <section class="section-fleche">
-        <div class="fleche"></div>
-    </section>
-    
-    <section class="section-service-blanc">
-        <div class="service-content">
-          <div class="service-media">
-              <img src="https://i.imgur.com/51iy8Ba.jpeg" alt="Un drone">
-          </div> 
-          <div class="service-text">
-              <h3>PHOTOGRAPHIES ET VIDÉOS AÉRIENNES</h3>
-              <p>Offrez une nouvelle perspective à votre bien avec des prises de vue aériennes de qualité professionnelle. Le drone permet de capturer l’ampleur, l’environnement et les atouts uniques de votre propriété. Une mise en valeur spectaculaire qui séduit les acquéreurs dès le premier regard.</p>
-          </div>
-        </div>
-    </section>
+        <section class="section-fleche">
+            <div class="fleche"></div>
+        </section>
+        
+        <section class="section-service">
+            <div class="service-content">
+                <div class="service-media">
+                    <img src="https://i.imgur.com/51iy8Ba.jpeg" alt="Un drone">
+                </div> 
+                <div class="service-text">
+                    <h3>PHOTOGRAPHIES ET VIDÉOS AÉRIENNES</h3>
+                    <p>Offrez une nouvelle perspective à votre bien avec des prises de vue aériennes de qualité professionnelle. Le drone permet de capturer l’ampleur, l’environnement et les atouts uniques de votre propriété. Une mise en valeur spectaculaire qui séduit les acquéreurs dès le premier regard.</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="section-fleche">
-        <div class="fleche"></div>
-    </section>
-    
-    <section class="section-service-gris">
-        <div class="service-content">
-           <div class="service-text">
-              <h3>VISIBILITÉ INTERNATIONALE</h3>
-              <p>Donnez à votre bien une portée exceptionnelle grâce à une diffusion sur les principaux portails immobiliers en France et à l’international. Cette stratégie ciblée garantit une visibilité maximale auprès d’acheteurs qualifiés, augmentant ainsi vos chances de vendre rapidement et dans les meilleures conditions.</p>
-          </div>
-          <div class="service-media">
-            <img src="https://i.imgur.com/bd4Pixu.jpeg" alt="Une diffusion internationale du bien">
-          </div>
-        </div>
-    </section>
+        <section class="section-fleche">
+            <div class="fleche"></div>
+        </section>
+        
+        <section class="section-service">
+            <div class="service-content">
+                <div class="service-text">
+                    <h3>VISIBILITÉ INTERNATIONALE</h3>
+                    <p>Donnez à votre bien une portée exceptionnelle grâce à une diffusion sur les principaux portails immobiliers en France et à l’international. Cette stratégie ciblée garantit une visibilité maximale auprès d’acheteurs qualifiés, augmentant ainsi vos chances de vendre rapidement et dans les meilleures conditions.</p>
+                </div>
+                <div class="service-media">
+                    <img src="https://i.imgur.com/bd4Pixu.jpeg" alt="Une diffusion internationale du bien">
+                </div>
+            </div>
+        </section>
 
-    <section class="section-fleche">
-        <div class="fleche"></div>
-    </section>
-    
-    <section class="section-service-blanc">
-        <div class="service-content">
-          <div class="service-media">
-            <img src="https://i.imgur.com/wU9Oa68.jpeg" alt="Une Visite Virtuelle 3D">
-          </div>
-           <div class="service-text">
-              <h3>VISITE VIRTUELLE 3D</h3>
-              <p>Permettez à vos acheteurs potentiels de découvrir votre bien en détail grâce à une visite virtuelle immersive. Ils pourront explorer chaque pièce à leur rythme, offrant une expérience réaliste sans se déplacer. Une solution moderne qui facilite la prise de décision, tout en élargissant la portée de votre annonce.</p>
-          </div>
-        </div>
-    </section>
-</body>
+        <section class="section-fleche">
+            <div class="fleche"></div>
+        </section>
+        
+        <section class="section-service">
+            <div class="service-content">
+                <div class="service-media">
+                    <img src="https://i.imgur.com/wU9Oa68.jpeg" alt="Une Visite Virtuelle 3D">
+                </div>
+                <div class="service-text">
+                    <h3>VISITE VIRTUELLE 3D</h3>
+                    <p>Permettez à vos acheteurs potentiels de découvrir votre bien en détail grâce à une visite virtuelle immersive. Ils pourront explorer chaque pièce à leur rythme, offrant une expérience réaliste sans se déplacer. Une solution moderne qui facilite la prise de décision, tout en élargissant la portée de votre annonce.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer-container">
-            <p class="footer-text">&copy; 2024 Agence Les Écrins. Tous droits réservés.</p>
+            <p class="footer-text">© 2024 Agence Les Écrins. Tous droits réservés.</p>
             <div class="footer-links">
                 <a href="documents/honoraires.pdf" target="_blank">Barème des honoraires</a>
                 <a href="mentions-legales.html">Mentions légales</a>
             </div>
         </div>
     </footer>
-  
+
+    <script>
+        document.querySelector('.burger-menu').addEventListener('click', function() {
+            document.querySelector('.header-bottom nav ul').classList.toggle('active');
+        });
+    </script>
+
+    <script>
+        document.addEventListener("scroll", function() {
+            let fleches = document.querySelectorAll(".section-fleche");
+            let flecheVisible = null;
+
+            fleches.forEach(fleche => {
+                let rect = fleche.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.95 && rect.bottom > window.innerHeight * 0.5) {
+                    flecheVisible = fleche;
+                }
+            });
+
+            if (flecheVisible) {
+                fleches.forEach(fleche => {
+                    fleche.style.opacity = (fleche === flecheVisible) ? "0.7" : "0";
+                });
+            }
+        });
+    </script>
+</body>
 </html>
