@@ -164,21 +164,27 @@
 <script>
     document.addEventListener("scroll", function() {
         let fleches = document.querySelectorAll(".section-fleche");
-        let flecheVisible = null;
+        let sections = document.querySelectorAll(".section-service, .section-presentation"); // Sections pertinentes
+        let scrollPosition = window.scrollY + window.innerHeight * 0.5; // Point médian de l’écran
 
-        fleches.forEach(fleche => {
-            let rect = fleche.getBoundingClientRect();
-            // Apparition/disparition à 15% de la hauteur de l’écran
-            if (rect.top < window.innerHeight * 0.85 && rect.bottom > window.innerHeight * 0.15) {
-                flecheVisible = fleche;
+        fleches.forEach((fleche, index) => {
+            // Récupère la section précédente et suivante
+            let prevSection = sections[index];
+            let nextSection = sections[index + 1];
+
+            if (prevSection && nextSection) {
+                let prevBottom = prevSection.getBoundingClientRect().bottom + window.scrollY;
+                let nextTop = nextSection.getBoundingClientRect().top + window.scrollY;
+
+                // Affiche la flèche quand le bas de la section précédente approche du milieu de l’écran
+                // et la cache quand le haut de la section suivante atteint le milieu
+                if (scrollPosition > prevBottom - window.innerHeight * 0.2 && scrollPosition < nextTop - window.innerHeight * 0.2) {
+                    fleche.style.opacity = "0.7";
+                } else {
+                    fleche.style.opacity = "0";
+                }
             }
         });
-
-        if (flecheVisible) {
-            fleches.forEach(fleche => {
-                fleche.style.opacity = (fleche === flecheVisible) ? "0.7" : "0";
-            });
-        }
     });
 </script>
     
