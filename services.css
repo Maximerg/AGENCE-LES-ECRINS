@@ -1,173 +1,270 @@
-        body {
-            font-family: "Lora", serif;
-            margin: 0;
-            padding: 0;
-            color: #455243; /* Couleur du texte */
-            overflow-x: hidden; /* Empêche le défilement horizontal */
-        }
-        
-        .section-presentation {
-            padding: 30px;
-            min-height: 150px; /* Hauteur minimale */
-            box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
-            word-wrap: break-word; /* Permet de casser les mots trop longs */
-            text-align: center; /* Centre le texte */
-            background-color: #fff; /* Couleur blanche */
-            color: #455243; /* Couleur du texte */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .section-service-gris, .section-service-blanc {
-            box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
-            word-wrap: break-word; /* Permet de casser les mots trop longs */
-            text-align: justify; /* Centre le texte */
-            border-radius: 0; /* Suppression des coins arrondis */
-            display: flex; /* Utilisation de Flexbox */
-            justify-content: space-between; /* Espace entre les deux colonnes */
-            align-items: center; /* Centre verticalement */
-        }
-        
-        .section-service-gris {
-            background-color: #ffffff; /* Couleur gris légère */
-        }
-        
-        .section-service-blanc {
-            background-color: #ffffff; /* Couleur blanche */
-        }
+body {
+    font-family: "Lora", serif;
+    margin: 0;
+    padding: 0;
+    color: #455243;
+    overflow-x: hidden;
+}
 
-      .service-content {
-            display: flex;
-            width: 100%;
-            min-height: 400px;
-            align-items: normal;
-            margin: 100px 0px;
-        }
+.section-titre {
+    background-color: #455243;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+}
 
-        .service-text {
-            flex: 5.5; /* Prend 50% de l'espace */
-            padding: 60px 80px 60px 80px;
-        }
-        
-        .service-media {
-            flex: 4.5; /* Prend 50% de l'espace */
-            max-width: 100%;
-            height: auto;
-            overflow: hidden; /* Coupe l’image si besoin */
-            margin: 0px 100px;
-        }
-        
-        .service-media img, .service-media video {
-            width: 100%; /* L'image ou la vidéo prend toute la largeur de la colonne */
-            height: 100%; /* Conserve les proportions */
-            object-fit: cover;
-        }
+.section-titre .conteneur-titre {
+    text-align: center;
+}
 
-        .section-titre {
-            background-color: #455243; /* Couleur blanche */
-            background-size: cover; /* L'image couvre toute la section */
-            background-position: center; /* Centre l'image */
-            position: relative; /* Permet de positionner le texte */
-            color: white; /* Couleur du texte en blanc */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 250px;
-        }
+.section-titre h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+}
 
-        .section-titre .conteneur-titre {
-            text-align: center;
-        }
-        .section-titre h2 {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
-        }
-        .section-presentation {
-            background-color: #ffffff; /* Couleur blanche */
-            color: #455243; /* Couleur du texte */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.section-presentation {
+    padding: 30px;
+    min-height: 150px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    text-align: center;
+    background-color: #fff;
+    color: #455243;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        h2 {
-            font-size: 2.5rem; /* Taille des titres */
-        }
-        .service-text h3 {
-            font-size: 1.9rem; /* Taille des titres */
-            margin-bottom: 50px;
-            text-align: center;
-        }
-        
-        p {
-            font-size: 1.1rem; /* Taille du texte */
-        }
+.section-service {
+    box-sizing: border-box;
+    word-wrap: break-word;
+    text-align: justify;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+}
 
-        .section-fleche {
-            display: flex;
-            justify-content: center;  /* Centre la flèche horizontalement */
-            align-items: center;  /* Centre verticalement */
-            height: 50px; /* Ajuste la hauteur de l’espace entre les sections */
-            position: relative;
-            transition: opacity 0.4s ease-in-out;
-        }
-        
-        .fleche {
-            width: 30px;
-            height: 30px;
-            border-right: 3px solid #455243; /* Couleur et épaisseur de la flèche */
-            border-bottom: 3px solid #455243;
-            transform: rotate(45deg);
-        }
+.service-content {
+    display: flex;
+    width: 100%;
+    min-height: 400px;
+    align-items: center;
+    margin: 100px 0;
+}
 
+.service-text {
+    flex: 5.5;
+    padding: 60px 80px;
+}
 
-        /* Pied de page */
-        
-        .footer {
-            background: #455243;
-            color: #fff;
-            position: relative
-            width: 100%;
-            padding: 20px 0; /* Augmente l'espace en haut et en bas */
-            font-family: "Lora", serif;
-        }
-        
-        .footer p {
-            font-size: 1rem; /* Assure que la taille est uniforme */
-        }
-        
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center; /* Centre le texte */   
-            align-items: center;
-            padding: 0 20px;
-            position: relative; /* Permet de positionner les liens à droite */
-        }
-        
-        .footer-text {
-            flex-grow: 1; /* Permet au texte de rester centré */
-            text-align: center; /* Centre le texte */
-        }
-        
-        /* Aligner les liens à droite en colonne */
-        .footer-links {
-            position: absolute;
-            right: 20px; /* Place les liens à droite du footer */
-            display: flex;
-            flex-direction: column; /* Place les liens l’un en dessous de l’autre */
-            align-items: flex-end; /* Aligne à droite */
-        }
-        
-        /* Styles des liens */
-        .footer-links a {
-            color: #fff; /* Garde la couleur blanche */
-            text-decoration: none; /* Supprime le soulignement */
-            transition: color 0.3s ease-in-out;
-        }
-        
-        /* Empêcher le changement de couleur après un clic */
-        .footer-links a:visited {
-            color: #fff; /* Garde la couleur blanche après un clic */
-        }
+.service-media {
+    flex: 4.5;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 100px;
+}
+
+.service-media img, .service-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.service-text h3 {
+    font-size: 1.9rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.section-fleche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    position: relative;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.fleche {
+    width: 30px;
+    height: 30px;
+    border-right: 3px solid #455243;
+    border-bottom: 3px solid #455243;
+    transform: rotate(45deg);
+}
+
+/* Media Queries pour responsivité */
+
+/* Tablettes (jusqu’à 1024px) */
+@media (max-width: 1024px) {
+    .section-titre {
+        min-height: 200px;
+    }
+
+    .section-titre h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-presentation {
+        padding: 25px;
+        min-height: 130px;
+    }
+
+    .service-content {
+        margin: 80px 0;
+    }
+
+    .service-text {
+        padding: 40px 60px;
+    }
+
+    .service-media {
+        margin: 0 60px;
+    }
+
+    .service-text h3 {
+        font-size: 1.7rem;
+        margin-bottom: 40px;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .section-fleche {
+        height: 40px;
+    }
+
+    .fleche {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Petites tablettes/téléphones (jusqu’à 768px) */
+@media (max-width: 768px) {
+    .section-titre {
+        min-height: 180px;
+    }
+
+    .section-titre h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-presentation {
+        padding: 50px 0;
+        min-height: 120px;
+        margin: 50px 0;
+    }
+
+    .section-service {
+        padding: 50px 0;
+        margin: 50px 0;
+    }
+
+    .service-content {
+        flex-direction: column;
+        margin: 0;
+        min-height: auto;
+    }
+
+    .service-text {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .service-media {
+        margin: 20px auto;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .service-text h3 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .section-fleche {
+        height: 40px;
+        margin: 20px 0;
+    }
+
+    .fleche {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Très petits téléphones (jusqu’à 480px) */
+@media (max-width: 480px) {
+    .section-titre {
+        min-height: 150px;
+    }
+
+    .section-titre h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-presentation {
+        padding: 50px 0;
+        min-height: 100px;
+        margin: 50px 0;
+    }
+
+    .section-service {
+        padding: 50px 0;
+        margin: 50px 0;
+    }
+
+    .service-content {
+        margin: 0;
+    }
+
+    .service-text {
+        padding: 0 15px;
+    }
+
+    .service-media {
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+
+    .service-text h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .section-fleche {
+        height: 30px;
+        margin: 20px 0;
+    }
+
+    .fleche {
+        width: 20px;
+        height: 20px;
+    }
+}
