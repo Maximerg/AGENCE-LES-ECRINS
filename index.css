@@ -76,7 +76,6 @@
 }
 
 .about-text h2 {
-    font-size: 2rem;
     margin: 20px 0; /* Aligné avec .founder-text */
     padding: 15px;
     margin-bottom: 30px; /* Aligné avec services.css */
@@ -147,7 +146,6 @@
 }
 
 .founder-text h2 {
-    font-size: 2rem;
     margin: 20px 0;
     padding: 15px;
     margin-bottom: 30px; /* Aligné avec services.css */
@@ -248,7 +246,6 @@
     }
 
     .about-text h2 {
-        font-size: 1.8rem;
         margin-bottom: 40px; /* Aligné avec services.css */
     }
 
@@ -295,7 +292,6 @@
     }
 
     .founder-text h2 {
-        font-size: 1.8rem;
         margin-bottom: 40px; /* Aligné avec services.css */
     }
 
@@ -342,7 +338,6 @@
     }
 
     .about-text h2 {
-        font-size: 1.5rem;
         margin-bottom: 30px; /* Aligné avec services.css */
     }
 
@@ -387,7 +382,6 @@
     }
 
     .founder-text h2 {
-        font-size: 1.5rem;
         margin-bottom: 30px; /* Aligné avec services.css */
     }
 
