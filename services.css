@@ -191,8 +191,9 @@ p {
 
     .service-media {
         margin: 20px auto;
-        width: 100%;
-        padding: 0 20px;
+        width: 80%; /* Réduit à 80% de la largeur */
+        max-width: 300px; /* Limite la taille pour rester visible */
+        padding: 0;
     }
 
     .service-text h3 {
@@ -246,7 +247,9 @@ p {
 
     .service-media {
         margin: 15px auto;
-        padding: 0 15px;
+        width: 80%; /* Réduit à 80% de la largeur */
+        max-width: 250px; /* Plus petit mais visible */
+        padding: 0;
     }
 
     .service-text h3 {
