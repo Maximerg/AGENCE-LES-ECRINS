@@ -79,12 +79,13 @@
     font-size: 2rem;
     margin: 20px 0; /* Aligné avec .founder-text */
     padding: 15px;
+    margin-bottom: 60px; /* Aligné avec services.css */
 }
 
 .about-text p {
     font-size: 1.2rem;
     line-height: 1.5;
-    padding: 15px;
+    padding: 20px 0; /* Aligné avec services.css */
 }
 
 .about-button {
@@ -148,12 +149,13 @@
     font-size: 2rem;
     margin: 20px 0;
     padding: 15px;
+    margin-bottom: 60px; /* Aligné avec services.css */
 }
 
 .founder-text p {
     font-size: 1.2rem;
     line-height: 1.5;
-    padding: 15px;
+    padding: 20px 0; /* Aligné avec services.css */
 }
 
 /* Section Biens Disponibles */
@@ -213,7 +215,7 @@
 
     .about-section {
         min-height: auto;
-        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        padding: 50px 0;
     }
 
     .about-container {
@@ -227,7 +229,7 @@
     .about-image {
         width: 100%;
         padding-top: 0;
-        margin-bottom: 20px;
+        margin-bottom: 40px; /* Aligné avec services.css */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -239,17 +241,18 @@
     }
 
     .about-text {
-        padding: 0;
+        padding: 0 40px; /* Aligné avec services.css */
         text-align: center;
     }
 
     .about-text h2 {
         font-size: 1.8rem;
+        margin-bottom: 40px; /* Aligné avec services.css */
     }
 
     .about-text p {
         font-size: 1rem;
-        padding: 10px;
+        padding: 15px 0; /* Aligné avec services.css */
     }
 
     .about-button {
@@ -259,7 +262,7 @@
 
     .founder-section {
         min-height: auto;
-        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        padding: 50px 0;
     }
 
     .founder-container {
@@ -273,7 +276,7 @@
     .founder-image {
         width: 100%;
         padding-top: 0;
-        margin-bottom: 20px;
+        margin-bottom: 40px; /* Aligné avec services.css */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -285,22 +288,23 @@
     }
 
     .founder-text {
-        padding: 0;
+        padding: 0 40px; /* Aligné avec services.css */
         text-align: center;
     }
 
     .founder-text h2 {
         font-size: 1.8rem;
+        margin-bottom: 40px; /* Aligné avec services.css */
     }
 
     .founder-text p {
         font-size: 1rem;
-        padding: 10px;
+        padding: 15px 0; /* Aligné avec services.css */
     }
 
     #biens-disponibles {
         min-height: auto;
-        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        padding: 50px 0;
     }
 
     #biens-disponibles h2 {
@@ -316,7 +320,7 @@
 
     .about-section {
         min-height: auto;
-        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        padding: 50px 0;
     }
 
     .about-container {
@@ -330,13 +334,19 @@
         margin: 0 auto;
     }
 
+    .about-text {
+        padding: 0 30px; /* Aligné avec services.css */
+        text-align: center;
+    }
+
     .about-text h2 {
         font-size: 1.5rem;
+        margin-bottom: 30px; /* Aligné avec services.css */
     }
 
     .about-text p {
         font-size: 1rem;
-        padding: 8px;
+        padding: 12px 0; /* Aligné avec services.css */
     }
 
     .about-button {
@@ -346,7 +356,7 @@
 
     .founder-section {
         min-height: auto;
-        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        padding: 50px 0;
     }
 
     .founder-container {
@@ -355,22 +365,37 @@
         text-align: center;
     }
 
+    .founder-image {
+        width: 100%;
+        padding-top: 0;
+        margin-bottom: 30px; /* Aligné avec services.css */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .founder-image img {
         width: 180px;
         margin: 0 auto;
     }
 
+    .founder-text {
+        padding: 0 30px; /* Aligné avec services.css */
+        text-align: center;
+    }
+
     .founder-text h2 {
         font-size: 1.5rem;
+        margin-bottom: 30px; /* Aligné avec services.css */
     }
 
     .founder-text p {
         font-size: 1rem;
-        padding: 8px;
+        padding: 12px 0; /* Aligné avec services.css */
     }
 
     #biens-disponibles {
-        padding: 50px 0; /* 50px en haut et en bas à l’intérieur */
+        padding: 50px 0;
     }
 
     #biens-disponibles h2 {
