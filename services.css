@@ -169,7 +169,7 @@ p {
     }
 
     .section-presentation {
-        padding: 50px 20px; /* Ajout de 20px sur les côtés */
+        padding: 50px 20px;
         min-height: 120px;
         margin: 50px 0;
     }
@@ -186,12 +186,12 @@ p {
     }
 
     .service-text {
-        padding: 0 40px; /* Ajout de 40px sur les côtés au lieu de 20px */
+        padding: 0 40px;
         text-align: center;
     }
 
     .service-media {
-        margin: 20px auto;
+        margin: 40px auto; /* Augmenté de 20px à 40px */
         width: 80%;
         max-width: 300px;
         padding: 0;
@@ -199,11 +199,12 @@ p {
 
     .service-text h3 {
         font-size: 1.5rem;
-        margin-bottom: 30px;
+        margin-bottom: 40px; /* Augmenté de 30px à 40px */
     }
 
     p {
         font-size: 1rem;
+        padding: 15px 0; /* Augmenté de 10px à 15px */
     }
 
     .section-fleche {
@@ -228,7 +229,7 @@ p {
     }
 
     .section-presentation {
-        padding: 50px 15px; /* Ajout de 15px sur les côtés */
+        padding: 50px 15px;
         min-height: 100px;
         margin: 50px 0;
     }
@@ -243,11 +244,11 @@ p {
     }
 
     .service-text {
-        padding: 0 30px; /* Ajout de 30px sur les côtés au lieu de 15px */
+        padding: 0 30px;
     }
 
     .service-media {
-        margin: 15px auto;
+        margin: 30px auto; /* Augmenté de 15px à 30px */
         width: 80%;
         max-width: 250px;
         padding: 0;
@@ -255,11 +256,12 @@ p {
 
     .service-text h3 {
         font-size: 1.3rem;
-        margin-bottom: 20px;
+        margin-bottom: 30px; /* Augmenté de 20px à 30px */
     }
 
     p {
         font-size: 1rem;
+        padding: 12px 0; /* Augmenté de 8px à 12px */
     }
 
     .section-fleche {
