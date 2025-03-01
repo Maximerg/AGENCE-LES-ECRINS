@@ -161,24 +161,26 @@
         });
     </script>
 
-    <script>
-        document.addEventListener("scroll", function() {
-            let fleches = document.querySelectorAll(".section-fleche");
-            let flecheVisible = null;
+<script>
+    document.addEventListener("scroll", function() {
+        let fleches = document.querySelectorAll(".section-fleche");
+        let flecheVisible = null;
 
-            fleches.forEach(fleche => {
-                let rect = fleche.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.95 && rect.bottom > window.innerHeight * 0.5) {
-                    flecheVisible = fleche;
-                }
-            });
-
-            if (flecheVisible) {
-                fleches.forEach(fleche => {
-                    fleche.style.opacity = (fleche === flecheVisible) ? "0.7" : "0";
-                });
+        fleches.forEach(fleche => {
+            let rect = fleche.getBoundingClientRect();
+            // Apparition/disparition à 15% de la hauteur de l’écran
+            if (rect.top < window.innerHeight * 0.85 && rect.bottom > window.innerHeight * 0.15) {
+                flecheVisible = fleche;
             }
         });
-    </script>
+
+        if (flecheVisible) {
+            fleches.forEach(fleche => {
+                fleche.style.opacity = (fleche === flecheVisible) ? "0.7" : "0";
+            });
+        }
+    });
+</script>
+    
 </body>
 </html>
