@@ -92,36 +92,28 @@ html, body {
     width: 100%; /* Barre sous le texte visible au hover */
 }
 
-
-/* Styles globaux pour les titres */
-
-h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 2rem;
-}
-
 /* Styles globaux pour les titres */
 h2 {
     font-family: "Playfair Display", serif;
-    font-size: 1.9rem; /* Aligné avec .service-text h2 sur services */
+    font-size: 2rem; /* Aligné avec .service-text h2 sur services */
 }
 
 /* Media Queries pour responsivité */
 @media (max-width: 1024px) {
     h2 {
-        font-size: 1.7rem; /* Aligné avec .service-text h2 */
+        font-size: 1.8rem; /* Aligné avec .service-text h2 */
     }
 }
 
 @media (max-width: 768px) {
     h2 {
-        font-size: 1.5rem; /* Aligné avec .service-text h2 */
+        font-size: 1.6rem; /* Aligné avec .service-text h2 */
     }
 }
 
 @media (max-width: 480px) {
     h2 {
-        font-size: 1.3rem; /* Aligné avec .service-text h2 */
+        font-size: 1.4rem; /* Aligné avec .service-text h2 */
     }
 }
 
