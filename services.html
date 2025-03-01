@@ -164,21 +164,24 @@
 <script>
     document.addEventListener("scroll", function() {
         let fleches = document.querySelectorAll(".section-fleche");
-        let sections = document.querySelectorAll(".section-service, .section-presentation"); // Sections pertinentes
+        let sections = document.querySelectorAll(".section-service, .section-presentation");
 
         fleches.forEach((fleche, index) => {
-            // Récupère la section précédente et suivante
+            // Section précédente (avant la flèche)
             let prevSection = sections[index];
+            // Section suivante (après la flèche)
             let nextSection = sections[index + 1];
 
+            // Si les deux sections existent
             if (prevSection && nextSection) {
                 let prevBottom = prevSection.getBoundingClientRect().bottom + window.scrollY;
                 let nextTop = nextSection.getBoundingClientRect().top + window.scrollY;
-                let scrollPosition = window.scrollY + window.innerHeight;
+                let scrollBottom = window.scrollY + window.innerHeight; // Bas de l’écran
+                let scrollMiddle = window.scrollY + window.innerHeight * 0.5; // Milieu de l’écran
 
                 // Affiche la flèche quand le bas de la section précédente est visible
-                // et la cache quand le haut de la section suivante atteint le milieu de l’écran
-                if (scrollPosition > prevBottom - window.innerHeight * 0.5 && scrollPosition < nextTop - window.innerHeight * 0.5) {
+                // et la cache quand la section suivante atteint le milieu
+                if (scrollBottom > prevBottom && scrollMiddle < nextTop) {
                     fleche.style.opacity = "0.7";
                 } else {
                     fleche.style.opacity = "0";
