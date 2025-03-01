@@ -196,6 +196,7 @@ p {
     }
 
     .service-text h2 {
+        font-size: 1.8rem;
         margin-bottom: 40px; /* Augmenté de 30px à 40px */
     }
 
@@ -252,6 +253,7 @@ p {
     }
 
     .service-text h2 {
+        font-size: 1.5rem;
         margin-bottom: 30px; /* Augmenté de 20px à 30px */
     }
 
