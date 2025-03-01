@@ -165,7 +165,6 @@
     document.addEventListener("scroll", function() {
         let fleches = document.querySelectorAll(".section-fleche");
         let sections = document.querySelectorAll(".section-service, .section-presentation"); // Sections pertinentes
-        let scrollPosition = window.scrollY + window.innerHeight * 0.5; // Point médian de l’écran
 
         fleches.forEach((fleche, index) => {
             // Récupère la section précédente et suivante
@@ -175,10 +174,11 @@
             if (prevSection && nextSection) {
                 let prevBottom = prevSection.getBoundingClientRect().bottom + window.scrollY;
                 let nextTop = nextSection.getBoundingClientRect().top + window.scrollY;
+                let scrollPosition = window.scrollY + window.innerHeight;
 
-                // Affiche la flèche quand le bas de la section précédente approche du milieu de l’écran
-                // et la cache quand le haut de la section suivante atteint le milieu
-                if (scrollPosition > prevBottom - window.innerHeight * 0.2 && scrollPosition < nextTop - window.innerHeight * 0.2) {
+                // Affiche la flèche quand le bas de la section précédente est visible
+                // et la cache quand le haut de la section suivante atteint le milieu de l’écran
+                if (scrollPosition > prevBottom - window.innerHeight * 0.5 && scrollPosition < nextTop - window.innerHeight * 0.5) {
                     fleche.style.opacity = "0.7";
                 } else {
                     fleche.style.opacity = "0";
