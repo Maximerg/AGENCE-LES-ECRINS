@@ -79,7 +79,7 @@
     font-size: 2rem;
     margin: 20px 0; /* Aligné avec .founder-text */
     padding: 15px;
-    margin-bottom: 60px; /* Aligné avec services.css */
+    margin-bottom: 30px; /* Aligné avec services.css */
 }
 
 .about-text p {
@@ -149,7 +149,7 @@
     font-size: 2rem;
     margin: 20px 0;
     padding: 15px;
-    margin-bottom: 60px; /* Aligné avec services.css */
+    margin-bottom: 30px; /* Aligné avec services.css */
 }
 
 .founder-text p {
