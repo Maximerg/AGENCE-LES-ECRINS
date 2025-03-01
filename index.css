@@ -80,6 +80,7 @@
     margin: 20px 0; /* Aligné avec .founder-text */
     padding: 15px;
     margin-bottom: 30px; /* Aligné avec services.css */
+    font-family: "Playfair Display", serif;
 }
 
 .about-text p {
