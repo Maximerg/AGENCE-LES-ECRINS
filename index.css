@@ -403,7 +403,6 @@
 .magazine-image img {
     width: 400px;
     height: auto;
-    margin-bottom: 35px;
 }
 
 .magazine-images {
@@ -419,6 +418,7 @@
     width: 90%;
     height: auto;
     object-fit: cover;
+    margin-bottom: 35px;
 }
 
 /* Media Queries pour responsivité */
