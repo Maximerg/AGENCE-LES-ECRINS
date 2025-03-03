@@ -36,12 +36,11 @@
     filter: brightness(100%); /* Éclaircit l’image centrale */
 }
 
-/* Section L'Agence */
 .about-section {
     background-color: #F0F0F0;
     color: #455243;
     width: 100%;
-    min-height: 650px; /* Aligné avec .founder-section */
+    min-height: 650px;
     font-family: "Lora", serif;
     display: flex;
     justify-content: center;
@@ -54,38 +53,26 @@
     max-width: 1400px;
     margin: 0 100px;
     padding: 20px;
-    flex-direction: row-reverse;
-}
-
-.about-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-}
-
-.about-image img {
-    width: 300px;
-    height: auto;
+    flex-direction: column; /* Changé pour centrer verticalement */
 }
 
 .about-text {
     flex: 1;
-    padding-right: 40px; /* Change de left à right pour l’espacement */
-    text-align: left;
+    padding-right: 40px;
+    text-align: center; /* Centré au lieu de left */
 }
 
 .about-text h2 {
-    margin: 20px 0; /* Aligné avec .founder-text */
+    font-size: 1.9rem;
+    margin: 20px 0;
     padding: 15px;
-    margin-bottom: 30px; /* Aligné avec services.css */
-    font-family: "Playfair Display", serif;
+    margin-bottom: 60px;
 }
 
 .about-text p {
     font-size: 1.2rem;
     line-height: 1.5;
-    padding: 20px 0; /* Aligné avec services.css */
+    padding: 20px 0;
 }
 
 .about-button {
@@ -103,10 +90,13 @@
 
 .about-button:hover {
     background-color: #5E6E5A;
-    transform: translateY(-2px); /* Petit effet de surélévation */
+    transform: translateY(-2px);
 }
 
+
+
 /* Section Fondatrice */
+
 .founder-section {
     background-color: #fff;
     color: #455243;
@@ -225,32 +215,19 @@
         max-width: 100%;
     }
 
-    .about-image {
-        width: 100%;
-        padding-top: 0;
-        margin-bottom: 40px; /* Aligné avec services.css */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-image img {
-        width: 200px;
-        margin: 0 auto;
-    }
-
     .about-text {
-        padding: 0 40px; /* Aligné avec services.css */
+        padding: 0 40px;
         text-align: center;
     }
 
     .about-text h2 {
-        margin-bottom: 40px; /* Aligné avec services.css */
+        font-size: 1.5rem;
+        margin-bottom: 40px;
     }
 
     .about-text p {
         font-size: 1rem;
-        padding: 15px 0; /* Aligné avec services.css */
+        padding: 15px 0;
     }
 
     .about-button {
@@ -274,7 +251,7 @@
     .founder-image {
         width: 100%;
         padding-top: 0;
-        margin-bottom: 40px; /* Aligné avec services.css */
+        margin-bottom: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -286,17 +263,18 @@
     }
 
     .founder-text {
-        padding: 0 40px; /* Aligné avec services.css */
+        padding: 0 40px;
         text-align: center;
     }
 
     .founder-text h2 {
-        margin-bottom: 40px; /* Aligné avec services.css */
+        font-size: 1.5rem;
+        margin-bottom: 40px;
     }
 
     .founder-text p {
         font-size: 1rem;
-        padding: 15px 0; /* Aligné avec services.css */
+        padding: 15px 0;
     }
 
     #biens-disponibles {
@@ -305,7 +283,7 @@
     }
 
     #biens-disponibles h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -326,23 +304,19 @@
         text-align: center;
     }
 
-    .about-image img {
-        width: 180px;
-        margin: 0 auto;
-    }
-
     .about-text {
-        padding: 0 30px; /* Aligné avec services.css */
+        padding: 0 30px;
         text-align: center;
     }
 
     .about-text h2 {
-        margin-bottom: 30px; /* Aligné avec services.css */
+        font-size: 1.3rem;
+        margin-bottom: 30px;
     }
 
     .about-text p {
         font-size: 1rem;
-        padding: 12px 0; /* Aligné avec services.css */
+        padding: 12px 0;
     }
 
     .about-button {
@@ -364,7 +338,7 @@
     .founder-image {
         width: 100%;
         padding-top: 0;
-        margin-bottom: 30px; /* Aligné avec services.css */
+        margin-bottom: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -376,17 +350,18 @@
     }
 
     .founder-text {
-        padding: 0 30px; /* Aligné avec services.css */
+        padding: 0 30px;
         text-align: center;
     }
 
     .founder-text h2 {
-        margin-bottom: 30px; /* Aligné avec services.css */
+        font-size: 1.3rem;
+        margin-bottom: 30px;
     }
 
     .founder-text p {
         font-size: 1rem;
-        padding: 12px 0; /* Aligné avec services.css */
+        padding: 12px 0;
     }
 
     #biens-disponibles {
@@ -394,6 +369,152 @@
     }
 
     #biens-disponibles h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+}
+
+/* Section Magazine */
+.magazine-section {
+    background-color: #FFFFFF;
+    color: #455243;
+    width: 100%;
+    min-height: 700px;
+    font-family: "Lora", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.magazine-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 100px;
+    padding: 20px;
+}
+
+.magazine-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin-bottom: 60px;
+}
+
+.magazine-image img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.magazine-images {
+    display: flex;
+    flex: 1;
+    padding-left: 40px;
+}
+
+.magazine-images img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Media Queries pour responsivité */
+
+/* Tablettes (jusqu’à 1024px) */
+@media (max-width: 1024px) {
+    .magazine-section {
+        min-height: 600px;
+    }
+
+    .magazine-container {
+        margin: 0 50px;
+    }
+
+    .magazine-image {
+        width: 40%;
+    }
+
+    .magazine-image img {
+        width: 250px;
+    }
+
+    .magazine-images {
+        padding-left: 40px;
+    }
+
+    .magazine-images img {
+        width: 50%;
+    }
+}
+
+/* Petites tablettes/téléphones (jusqu’à 768px) */
+@media (max-width: 768px) {
+    .magazine-section {
+        min-height: auto;
+        padding: 50px 0;
+    }
+
+    .magazine-container {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .magazine-image {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .magazine-image img {
+        width: 200px;
+    }
+
+    .magazine-images {
+        width: 100%;
+        padding-left: 0;
+        flex-direction: column;
+    }
+
+    .magazine-images img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Très petits téléphones (jusqu’à 480px) */
+@media (max-width: 480px) {
+    .magazine-section {
+        min-height: auto;
+        padding: 50px 0;
+    }
+
+    .magazine-container {
+        margin: 0 auto;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .magazine-image img {
+        width: 180px;
+    }
+
+    .magazine-images img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .about-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
