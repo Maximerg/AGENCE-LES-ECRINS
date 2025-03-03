@@ -1,8 +1,8 @@
 /* Style général */
 body {
     font-family: 'Lora', serif;
-    background-color: #F8F5F0;
-    color: #333;
+    background-color: #F0F0F0;
+    color: #000;
     margin: 0;
     padding: 0;
 }
@@ -28,7 +28,6 @@ body {
 .text-section p {
     font-size: 1.1em;
     line-height: 2;
-    color: #555;
     margin: 15px 0; /* Espacement entre les paragraphes */
 }
 
