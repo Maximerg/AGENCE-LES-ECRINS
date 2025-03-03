@@ -40,7 +40,7 @@
     background-color: #F0F0F0;
     color: #455243;
     width: 100%;
-    min-height: 650px;
+    min-height: 500px;
     font-family: "Lora", serif;
     display: flex;
     justify-content: center;
@@ -50,7 +50,7 @@
 .about-container {
     display: flex;
     justify-content: center;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 100px;
     padding: 20px;
     flex-direction: column; /* Changé pour centrer verticalement */
@@ -58,7 +58,6 @@
 
 .about-text {
     flex: 1;
-    padding-right: 40px;
     text-align: center; /* Centré au lieu de left */
 }
 
