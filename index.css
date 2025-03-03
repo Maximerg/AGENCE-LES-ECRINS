@@ -377,7 +377,7 @@
     background-color: #F0F0F0;
     color: #455243;
     width: 100%;
-    min-height: 700px;
+    min-height: 600px;
     font-family: "Lora", serif;
     display: flex;
     justify-content: center;
@@ -410,13 +410,13 @@
 .magazine-images {
     display: flex;
     flex: 1;
-    padding-left: 40px;
+    padding-left: 100px;
     align-items: center;
     justify-content: center;
 }
 
 .magazine-images img {
-    width: 85%;
+    width: 90%;
     height: auto;
     object-fit: cover;
 }
