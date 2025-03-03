@@ -399,7 +399,6 @@
     justify-content: center;
     align-items: center;
     width: 30%;
-    margin-bottom: 60px;
 }
 
 .magazine-image img {
@@ -417,7 +416,7 @@
 }
 
 .magazine-images img {
-    width: 50%;
+    width: 85%;
     height: auto;
     object-fit: cover;
 }
