@@ -421,6 +421,10 @@
     object-fit: cover;
 }
 
+.about-button p {
+    font-family: "Lora", serif;
+}
+
 /* Media Queries pour responsivité */
 
 /* Tablettes (jusqu’à 1024px) */
