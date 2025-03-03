@@ -395,7 +395,6 @@
 
 .magazine-image {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 30%;
@@ -413,6 +412,7 @@
     padding-left: 100px;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .magazine-images img {
