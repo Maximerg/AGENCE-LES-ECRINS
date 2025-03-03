@@ -395,6 +395,7 @@
 
 .magazine-image {
     display: flex;
+    flex: 0.4;
     justify-content: center;
     align-items: center;
     width: 30%;
@@ -407,7 +408,7 @@
 
 .magazine-images {
     display: flex;
-    flex: 1;
+    flex: 0.6;
     padding-left: 100px;
     align-items: center;
     justify-content: center;
