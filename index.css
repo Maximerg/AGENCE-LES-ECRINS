@@ -409,14 +409,13 @@
 .magazine-images {
     display: flex;
     flex: 0.6;
-    padding-left: 100px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
 .magazine-images img {
-    width: 75%;
+    width: 70%;
     height: auto;
     object-fit: cover;
     margin-bottom: 50px;
