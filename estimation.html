@@ -185,7 +185,7 @@
     });
 
     modal.addEventListener('click', (event) => {
-        const button = event.target.closest('.next, .prev, .start-form');
+        const button = event.target.closest('button');
         if (!button) return;
 
         console.log('Bouton cliqué :', button.className, 'sur l’étape', currentStep);
@@ -207,6 +207,16 @@
                 restoreData();
                 console.log('Retour à l’étape', currentStep);
             }
+        } else if (button.type === 'submit') {
+            saveData();
+            console.log('Formulaire envoyé :', formData);
+            alert('Votre estimation a été envoyée avec succès ! Nous vous contacterons bientôt.');
+            modal.style.display = 'none';
+            currentStep = 0;
+            steps.forEach(step => step.classList.remove('active'));
+            steps[currentStep].classList.add('active');
+            formData = {};
+            document.body.style.overflow = 'auto';
         }
     });
 
