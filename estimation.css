@@ -177,18 +177,19 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    width: 100%; /* Assure une largeur complète pour un alignement correct */
 }
 
-#multi-step-form .step:first-child .button-container {
-    justify-content: center; /* Centre le bouton unique dans la première étape */
+#multi-step-form .step:nth-child(2) .button-container { /* Cible la première étape avec des champs */
+    justify-content: center; /* Centre le bouton unique */
 }
 
 #multi-step-form .prev {
-    margin: 0; /* Supprime la marge par défaut */
+    margin: 0;
 }
 
 #multi-step-form .next {
-    margin: 0; /* Supprime la marge par défaut */
+    margin: 0;
 }
 
 #multi-step-form .button-container:only-child .next {
