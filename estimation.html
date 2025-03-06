@@ -248,11 +248,20 @@
         document.body.style.overflow = 'auto';
     });
 
+    // Écouteur pour le changement de "Typologie du bien"
+    const propertyTypeSelect = document.getElementById('property-type-select');
+    propertyTypeSelect.addEventListener('change', () => {
+        saveData(); // Sauvegarder le nouveau type de bien
+        if (currentStep === 2) { // Si on est à l’étape 3
+            generateDynamicFields();
+        }
+    });
+
     modal.addEventListener('click', (event) => {
         const button = event.target.closest('button');
         if (!button) return;
 
-        console.log('Bouton cliqué :', button.className, 'sur l’étape', currentStep);
+        console.log('Bouton cliqué :', button.className || button.id, 'sur l’étape', currentStep);
         if (button.classList.contains('next') || button.classList.contains('start-form')) {
             if (currentStep < steps.length - 2) { // -2 car la dernière étape est la confirmation
                 saveData();
@@ -277,7 +286,7 @@
                 restoreData();
                 console.log('Retour à l’étape', currentStep);
             }
-        } else if (button.type === 'submit') {
+        } else if (button.id === 'submit-form') {
             saveData();
             console.log('Formulaire envoyé :', formData);
             steps[currentStep].classList.remove('active');
