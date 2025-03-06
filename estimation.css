@@ -177,11 +177,30 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    width: 100%; /* Assure une largeur complète pour un alignement correct */
+    width: 100%;
 }
 
-#multi-step-form .step:nth-child(2) .button-container { /* Cible la première étape avec des champs */
-    justify-content: center; /* Centre le bouton unique */
+/* Supprime la règle de centrage pour la première étape */
+#multi-step-form .step:nth-child(2) .button-container {
+    /* Plus besoin de justify-content: center */
+}
+
+/* Harmonisation des tailles des boutons */
+#multi-step-form button,
+#multi-step-form .prev,
+#multi-step-form .next,
+#multi-step-form .start-form {
+    padding: 10px 20px; /* Taille uniforme */
+    font-size: 1em;
+    width: auto; /* Laisse la largeur s’adapter au contenu */
+    min-width: 120px; /* Taille minimale pour cohérence */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+}
+
+#multi-step-form .start-form {
+    padding: 10px 20px; /* Même taille que les autres boutons */
+    font-size: 1em;
+    min-width: 200px; /* Légèrement plus large pour le bouton de départ */
 }
 
 #multi-step-form .prev {
