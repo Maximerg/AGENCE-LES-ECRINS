@@ -197,6 +197,7 @@ body {
 
     .estimation-image {
         flex: 0 0 40%;
+        flex-direction: column;
     }
 
     #open-form {
@@ -232,6 +233,7 @@ body {
     .estimation-image {
         width: 100%;
         margin-top: 40px;
+        flex-direction: column;
     }
 
     #open-form {
@@ -264,6 +266,7 @@ body {
     .estimation-image {
         width: 100%;
         margin-top: 30px;
+        flex-direction: column;
     }
 
     #open-form {
