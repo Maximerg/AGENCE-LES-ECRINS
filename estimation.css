@@ -203,10 +203,6 @@ body {
     min-width: 200px; /* Légèrement plus large pour le bouton de départ */
 }
 
-#multi-step-form .next {
-    margin: 0;
-}
-
 #multi-step-form .button-container:only-child .next {
     margin-left: auto;
     margin-right: auto;
