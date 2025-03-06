@@ -117,81 +117,82 @@
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.burger-menu').addEventListener('click', function() {
-            document.querySelector('.header-bottom nav ul').classList.toggle('active');
+<script>
+    document.querySelector('.burger-menu').addEventListener('click', function() {
+        document.querySelector('.header-bottom nav ul').classList.toggle('active');
+    });
+
+    const openForm = document.getElementById('open-form');
+    const modal = document.getElementById('form-modal');
+    const closeModal = document.querySelector('.close');
+    const steps = document.querySelectorAll('.step');
+    let currentStep = 0;
+    let formData = {};
+
+    function saveData() {
+        const inputs = steps[currentStep].querySelectorAll('input, select');
+        inputs.forEach(input => {
+            formData[input.name] = input.value;
         });
-    
-        const openForm = document.getElementById('open-form');
-        const modal = document.getElementById('form-modal');
-        const closeModal = document.querySelector('.close');
-        const steps = document.querySelectorAll('.step');
-        let currentStep = 0;
-        let formData = {}; // Objet pour stocker les données du formulaire
-    
-        // Sauvegarde des données dans formData
-        function saveData() {
-            const inputs = steps[currentStep].querySelectorAll('input, select');
-            inputs.forEach(input => {
-                formData[input.name] = input.value;
-            });
-        }
-    
-        // Restaure les données dans les champs
-        function restoreData() {
-            const inputs = steps[currentStep].querySelectorAll('input, select');
-            inputs.forEach(input => {
-                if (formData[input.name]) {
-                    input.value = formData[input.name];
-                }
-            });
-        }
-    
-        openForm.addEventListener('click', () => {
-            modal.style.display = 'block';
+    }
+
+    function restoreData() {
+        const inputs = steps[currentStep].querySelectorAll('input, select');
+        inputs.forEach(input => {
+            if (formData[input.name]) {
+                input.value = formData[input.name];
+            }
         });
-    
-        closeModal.addEventListener('click', () => {
+    }
+
+    openForm.addEventListener('click', () => {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Désactive le défilement de l’arrière-plan
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+        currentStep = 0;
+        steps.forEach(step => step.classList.remove('active'));
+        steps[currentStep].classList.add('active');
+        formData = {};
+        document.body.style.overflow = 'auto'; // Restaure le défilement
+    });
+
+    document.querySelectorAll('.next').forEach(button => {
+        button.addEventListener('click', () => {
+            if (currentStep < steps.length - 1) {
+                saveData();
+                steps[currentStep].classList.remove('active');
+                currentStep++;
+                steps[currentStep].classList.add('active');
+                restoreData();
+            }
+        });
+    });
+
+    document.querySelectorAll('.prev').forEach(button => {
+        button.addEventListener('click', () => {
+            if (currentStep > 0) {
+                saveData();
+                steps[currentStep].classList.remove('active');
+                currentStep--;
+                steps[currentStep].classList.add('active');
+                restoreData();
+            }
+        });
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
             modal.style.display = 'none';
             currentStep = 0;
             steps.forEach(step => step.classList.remove('active'));
             steps[currentStep].classList.add('active');
-            formData = {}; // Réinitialise les données à la fermeture
-        });
-    
-        document.querySelectorAll('.next').forEach(button => {
-            button.addEventListener('click', () => {
-                if (currentStep < steps.length - 1) {
-                    saveData(); // Sauvegarde avant de passer à l’étape suivante
-                    steps[currentStep].classList.remove('active');
-                    currentStep++;
-                    steps[currentStep].classList.add('active');
-                    restoreData(); // Restaure les données si l’utilisateur revient
-                }
-            });
-        });
-    
-        document.querySelectorAll('.prev').forEach(button => {
-            button.addEventListener('click', () => {
-                if (currentStep > 0) {
-                    saveData(); // Sauvegarde avant de revenir en arrière
-                    steps[currentStep].classList.remove('active');
-                    currentStep--;
-                    steps[currentStep].classList.add('active');
-                    restoreData(); // Restaure les données
-                }
-            });
-        });
-    
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-                currentStep = 0;
-                steps.forEach(step => step.classList.remove('active'));
-                steps[currentStep].classList.add('active');
-                formData = {}; // Réinitialise les données
-            }
-        });
+            formData = {};
+            document.body.style.overflow = 'auto'; // Restaure le défilement
+        }
+    });
 </script>
 </body>
 </html>
