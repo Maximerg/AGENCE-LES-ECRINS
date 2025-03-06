@@ -10,9 +10,9 @@ body {
 /* Section Titre Estimation */
 
 .estimation-title-section {
-    background-color: #FFFFFF;
+    background-color: #F0F0F0;
     width: 100%;
-    min-height: 150px;
+    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@ body {
 .estimation-section {
     background-color: #F0F0F0;
     width: 100%;
-    min-height: 700px;
+    min-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
