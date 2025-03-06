@@ -457,6 +457,10 @@ body {
     .confirmation-message p {
         font-size: 0.9rem;
     }
+
+    .step {
+        transition: opacity 0.3s ease, transform 0.4s ease; /* Légère réduction pour mobile */
+    }
 }
 
 /* Très petits téléphones (jusqu’à 480px) */
@@ -524,5 +528,9 @@ body {
     
     .confirmation-message p {
         font-size: 0.85rem;
+    }
+
+    .step {
+        transition: opacity 0.3s ease, transform 0.4s ease; /* Légère réduction pour mobile */
     }
 }
