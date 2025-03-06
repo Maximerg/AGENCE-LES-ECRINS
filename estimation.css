@@ -28,7 +28,7 @@ body {
 .text-section p {
     font-size: 1.1em;
     line-height: 2;
-    margin: 15px 0; /* Espacement entre les paragraphes */
+    margin: 30px 0; /* Espacement entre les paragraphes */
 }
 
 /* Section image (40%) */
