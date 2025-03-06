@@ -164,7 +164,7 @@
     let formData = {};
 
     function saveData() {
-        const inputs = steps[currentStep].querySelectorAll('input, select');
+        const inputs = steps[currentStep].querySelectorAll('input, select, textarea');
         inputs.forEach(input => {
             formData[input.name] = input.value;
         });
@@ -172,12 +172,75 @@
     }
 
     function restoreData() {
-        const inputs = steps[currentStep].querySelectorAll('input, select');
+        const inputs = steps[currentStep].querySelectorAll('input, select, textarea');
         inputs.forEach(input => {
             if (formData[input.name]) {
                 input.value = formData[input.name];
             }
         });
+    }
+
+    function generateDynamicFields() {
+        const dynamicFieldsContainer = document.getElementById('dynamic-fields');
+        dynamicFieldsContainer.innerHTML = ''; // Vider le conteneur
+
+        const propertyType = formData['property-type'] || '';
+        let fieldsHTML = '';
+
+        if (propertyType === 'maison') {
+            fieldsHTML = `
+                <label for="construction-year">Année de construction :</label>
+                <input type="number" name="construction-year" id="construction-year" min="1900" max="2025">
+                <label for="rooms">Nombre de pièces :</label>
+                <input type="number" name="rooms" id="rooms" min="1">
+                <label for="living-area">Surface habitable (m²) :</label>
+                <input type="number" name="living-area" id="living-area" min="0">
+                <label for="outdoor-area">Surface extérieure (m²) :</label>
+                <input type="number" name="outdoor-area" id="outdoor-area" min="0">
+                <label for="annexes">Annexes (ex. : piscine, abri de jardin) :</label>
+                <input type="text" name="annexes" id="annexes">
+            `;
+        } else if (propertyType === 'appartement') {
+            fieldsHTML = `
+                <label for="construction-year">Année de construction :</label>
+                <input type="number" name="construction-year" id="construction-year" min="1900" max="2025">
+                <label for="floor">Étage :</label>
+                <input type="number" name="floor" id="floor" min="0">
+                <label for="rooms">Nombre de pièces :</label>
+                <input type="number" name="rooms" id="rooms" min="1">
+                <label for="living-area">Surface habitable (m²) :</label>
+                <input type="number" name="living-area" id="living-area" min="0">
+                <label for="balcony">Présence d’un balcon ?</label>
+                <select name="balcony" id="balcony">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+            `;
+        } else if (propertyType === 'terrain') {
+            fieldsHTML = `
+                <label for="land-area">Surface du terrain (m²) :</label>
+                <input type="number" name="land-area" id="land-area" min="0">
+                <label for="constructible">Terrain constructible ?</label>
+                <select name="constructible" id="constructible">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+                <label for="access">Accès (ex. : route, chemin) :</label>
+                <input type="text" name="access" id="access">
+            `;
+        } else {
+            fieldsHTML = `
+                <label for="description">Description du bien :</label>
+                <input type="text" name="description" id="description">
+                <label for="area">Surface (m²) :</label>
+                <input type="number" name="area" id="area" min="0">
+            `;
+        }
+
+        dynamicFieldsContainer.innerHTML = fieldsHTML;
+        restoreData(); // Restaurer les données si elles existent
     }
 
     openForm.addEventListener('click', () => {
@@ -200,11 +263,14 @@
 
         console.log('Bouton cliqué :', button.className, 'sur l’étape', currentStep);
         if (button.classList.contains('next') || button.classList.contains('start-form')) {
-            if (currentStep < steps.length - 1) {
+            if (currentStep < steps.length - 2) { // -2 car la dernière étape est la confirmation
                 saveData();
                 steps[currentStep].classList.remove('active');
                 currentStep++;
                 steps[currentStep].classList.add('active');
+                if (currentStep === 2) { // Étape 3 (Détails du bien)
+                    generateDynamicFields();
+                }
                 restoreData();
                 console.log('Passage à l’étape', currentStep);
             }
@@ -214,19 +280,19 @@
                 steps[currentStep].classList.remove('active');
                 currentStep--;
                 steps[currentStep].classList.add('active');
+                if (currentStep === 2) { // Étape 3 (Détails du bien)
+                    generateDynamicFields();
+                }
                 restoreData();
                 console.log('Retour à l’étape', currentStep);
             }
         } else if (button.type === 'submit') {
             saveData();
             console.log('Formulaire envoyé :', formData);
-            alert('Votre estimation a été envoyée avec succès ! Nous vous contacterons bientôt.');
-            modal.style.display = 'none';
-            currentStep = 0;
-            steps.forEach(step => step.classList.remove('active'));
+            steps[currentStep].classList.remove('active');
+            currentStep++;
             steps[currentStep].classList.add('active');
-            formData = {};
-            document.body.style.overflow = 'auto';
+            console.log('Passage à l’étape de confirmation', currentStep);
         }
     });
 
