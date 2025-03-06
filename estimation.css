@@ -12,7 +12,7 @@ body {
 .estimation-title-section {
     background-color: #F0F0F0;
     width: 100%;
-    min-height: 100px;
+    min-height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
