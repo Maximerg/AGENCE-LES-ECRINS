@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 250px;
+    min-height: 200px;
 }
 
 .section-titre .conteneur-titre {
