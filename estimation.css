@@ -167,6 +167,19 @@ body {
     background-color: #666;
 }
 
+#multi-step-form .step {
+    padding: 20px 0;
+}
+
+#multi-step-form label {
+    margin: 15px 0 5px; /* Plus d’espace entre les labels */
+}
+
+#multi-step-form input,
+#multi-step-form select {
+    margin-bottom: 20px; /* Espacement entre les champs */
+}
+
 /* Première étape du formulaire (introduction) */
 .form-intro {
     display: flex;
@@ -290,6 +303,19 @@ body {
         padding: 10px 20px;
         font-size: 1em;
     }
+
+    #multi-step-form .step {
+    padding: 15px 0;
+    }
+    
+    #multi-step-form label {
+        margin: 12px 0 5px;
+    }
+    
+    #multi-step-form input,
+    #multi-step-form select {
+        margin-bottom: 15px;
+    }
 }
 
 /* Très petits téléphones (jusqu’à 480px) */
@@ -331,5 +357,18 @@ body {
     .start-form {
         padding: 10px 20px;
         font-size: 0.9em;
+    }
+
+    #multi-step-form .step {
+    padding: 10px 0;
+    }
+    
+    #multi-step-form label {
+        margin: 10px 0 5px;
+    }
+    
+    #multi-step-form input,
+    #multi-step-form select {
+        margin-bottom: 10px;
     }
 }
