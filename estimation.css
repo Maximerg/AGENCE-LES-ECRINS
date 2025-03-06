@@ -44,6 +44,7 @@ body {
     background-position: center;
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -202,6 +203,10 @@ body {
         padding: 12px 25px;
         font-size: 1em;
     }
+
+    .estimation-note {
+    font-size: 0.85rem;
+    }
 }
 
 /* Petites tablettes/téléphones (jusqu’à 768px) */
@@ -233,6 +238,10 @@ body {
         padding: 10px 20px;
         font-size: 1em;
     }
+
+    .estimation-note {
+    font-size: 0.8rem;
+    }
 }
 
 /* Très petits téléphones (jusqu’à 480px) */
@@ -260,5 +269,9 @@ body {
     #open-form {
         padding: 10px 20px;
         font-size: 0.9em;
+    }
+
+    .estimation-note {
+    font-size: 0.75rem;
     }
 }
