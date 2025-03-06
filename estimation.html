@@ -85,21 +85,12 @@
                             <label for="city">Ville :</label>
                             <input type="text" name="city" id="city">
                             <label for="property-type">Typologie du bien :</label>
-                            <select name="property-type" id="property-type">
+                            <select name="property-type" id="property-type-select">
                                 <option value="">Sélectionnez une option</option>
                                 <option value="maison">Maison</option>
                                 <option value="appartement">Appartement</option>
                                 <option value="terrain">Terrain</option>
                                 <option value="autres">Autres</option>
-                            </select>
-                            <label for="condition">État général :</label>
-                            <select name="condition" id="condition">
-                                <option value="">Sélectionnez une option</option>
-                                <option value="neuf">Neuf</option>
-                                <option value="excellent">Excellent état</option>
-                                <option value="bon">Bon état</option>
-                                <option value="mauvais">Mauvais état</option>
-                                <option value="tres-mauvais">Très mauvais état</option>
                             </select>
                             <div class="button-container">
                                 <button type="button" class="prev">Précédent</button>
@@ -123,7 +114,7 @@
                             <label for="remarks">Remarques supplémentaires :</label>
                             <textarea name="remarks" id="remarks" rows="6" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Lora', serif; font-size: 1em; background-color: #f9f9f9;"></textarea>
                             <div class="button-container submit-container">
-                                <button type="submit">Envoyer le formulaire</button>
+                                <button type="button" id="submit-form">Envoyer le formulaire</button>
                             </div>
                         </div>
                     
