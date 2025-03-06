@@ -159,6 +159,21 @@ body {
     background-color: #5E6E5A;
 }
 
+/* Conteneur pour les boutons Précédent/Suivant */
+#multi-step-form .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#multi-step-form .prev {
+    margin: 0; /* Supprime la marge par défaut */
+}
+
+#multi-step-form .next {
+    margin: 0; /* Supprime la marge par défaut */
+}
+
 .prev {
     background-color: #888;
 }
