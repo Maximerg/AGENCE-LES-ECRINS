@@ -20,13 +20,13 @@ body {
 
 .estimation-content {
     display: flex;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 100px;
     padding: 20px;
 }
 
 .estimation-text {
-    flex: 1;
+    flex: 5;
     padding: 0 40px;
     text-align: left;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .estimation-image {
-    flex: 0 0 40%;
+    flex: 5;
     background-image: url('https://via.placeholder.com/600x800');
     background-size: cover;
     background-position: center;
