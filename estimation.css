@@ -1,40 +1,50 @@
 /* Style général */
 body {
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
     background-color: #F0F0F0;
     color: #455243;
     margin: 0;
     padding: 0;
 }
 
-/* Conteneur principal */
-.estimation-container {
+/* Section Estimation */
+.estimation-section {
+    background-color: #FFFFFF;
+    width: 100%;
+    min-height: 700px;
     display: flex;
-    min-height: 70vh; /* Hauteur minimale pour occuper l’écran */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px;
-}
-
-/* Section texte (60%) */
-.text-section {
-    flex: 0 0 60%; /* 60% de la largeur */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 50px 0;
 }
 
-.text-section p {
-    font-size: 1.1em;
-    line-height: 2;
-    margin: 30px 0; /* Espacement entre les paragraphes */
+.estimation-content {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 100px;
+    padding: 20px;
 }
 
-/* Section image (40%) */
-.image-section {
-    flex: 0 0 40%; /* 40% de la largeur */
-    background-image: url('https://via.placeholder.com/600x800'); /* Remplace par ton image */
+.estimation-text {
+    flex: 1;
+    padding: 0 40px;
+    text-align: left;
+}
+
+.estimation-text h2 {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.estimation-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+.estimation-image {
+    flex: 0 0 40%;
+    background-image: url('https://via.placeholder.com/600x800');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -43,19 +53,18 @@ body {
     align-items: center;
 }
 
-/* Bouton sur l'image */
 #open-form {
     background-color: #455243;
     color: white;
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
-    z-index: 1; /* Assure que le bouton est au-dessus de l’image */
+    z-index: 1;
 }
 
 #open-form:hover {
@@ -107,8 +116,8 @@ body {
     display: block;
 }
 
-#multi-step-form h3 {
-    font-family: 'Cinzel', serif;
+#multi-step-form h2 {
+    font-family: "Cinzel", serif;
     color: #455243;
     margin-bottom: 20px;
 }
@@ -116,7 +125,7 @@ body {
 #multi-step-form label {
     display: block;
     margin: 10px 0 5px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
 
@@ -127,7 +136,7 @@ body {
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
     font-size: 1em;
     background-color: #f9f9f9;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -161,4 +170,89 @@ body {
 
 .prev:hover {
     background-color: #666;
+}
+
+/* Media Queries pour responsivité */
+
+/* Tablettes (jusqu’à 1024px) */
+@media (max-width: 1024px) {
+    .estimation-section {
+        min-height: 600px;
+    }
+
+    .estimation-content {
+        margin: 0 50px;
+    }
+
+    .estimation-text {
+        padding: 0 40px;
+    }
+
+    .estimation-image {
+        flex: 0 0 40%;
+    }
+
+    #open-form {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+/* Petites tablettes/téléphones (jusqu’à 768px) */
+@media (max-width: 768px) {
+    .estimation-section {
+        min-height: auto;
+        padding: 50px 0;
+    }
+
+    .estimation-content {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .estimation-text {
+        padding: 0 40px;
+        text-align: center;
+    }
+
+    .estimation-image {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    #open-form {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* Très petits téléphones (jusqu’à 480px) */
+@media (max-width: 480px) {
+    .estimation-section {
+        min-height: auto;
+        padding: 50px 0;
+    }
+
+    .estimation-content {
+        margin: 0 auto;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .estimation-text {
+        padding: 0 30px;
+    }
+
+    .estimation-image {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    #open-form {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
 }
