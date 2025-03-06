@@ -104,13 +104,38 @@ body {
     color: #333;
 }
 
-/* Formulaire multi-étapes */
+/* Formulaire multi-étapes avec transitions */
 .step {
     display: none;
+    position: absolute; /* Position absolue pour le glissement */
+    width: 100%; /* Largeur complète pour l’effet de slide */
+    opacity: 0; /* Opacité initiale à 0 */
+    transition: opacity 0.3s ease, transform 0.5s ease; /* Animation fluide */
 }
 
 .step.active {
     display: block;
+    opacity: 1; /* Opacité à 1 quand active */
+    transform: translateX(0); /* Position normale */
+    position: relative; /* Revenir à relative quand active */
+}
+
+/* Classes temporaires pour les transitions */
+.step.next-slide {
+    transform: translateX(100%); /* Glisse vers la droite */
+    opacity: 0;
+}
+
+.step.prev-slide {
+    transform: translateX(-100%); /* Glisse vers la gauche */
+    opacity: 0;
+}
+
+/* Ajuster le conteneur pour gérer les transitions */
+#multi-step-form {
+    position: relative; /* Contexte pour les positions absolues */
+    overflow: hidden; /* Masquer les débordements pendant l’animation */
+    height: 100%; /* Hauteur dynamique */
 }
 
 #multi-step-form h2 {
