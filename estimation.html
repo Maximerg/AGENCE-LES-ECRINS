@@ -54,31 +54,61 @@
                     <form id="multi-step-form">
                         <div class="step active">
                             <div class="form-intro">
-                                <p class="form-note">Vous êtes sur le point de remplir un formulaire pour l’estimation de votre bien. Chaque information demandée est utile pour affiner notre analyse, mais si certaines manquent, nous pourrons tout de même établir une première estimation. Nous vous recontacterons ensuite pour valider les détails et vous fournir une évaluation précise accompagnée d’un dossier complet.</p>
+                                <p class="form-note">Cette estimation est gratuite et sans engagement. Elle sera réalisée par un expert local.</p>
                                 <button type="button" class="next start-form">Commencer le formulaire</button>
-                                <p class="form-duration">Durée estimative : 3 minutes</p>
+                                <p class="form-duration">Durée estimative : 2 minutes</p>
                             </div>
                         </div>
                         <div class="step">
-                            <h2>Étape 1 : Informations générales</h2>
-                            <label for="type">Type de bien :</label>
-                            <select name="type" id="type">
-                                <option value="maison">Maison</option>
-                                <option value="appartement">Appartement</option>
-                            </select>
+                            <h2>Étape 1 : Informations personnelles</h2>
+                            <label for="full-name">Nom et prénom :</label>
+                            <input type="text" name="full-name" id="full-name" required>
+                            <label for="phone">Numéro de téléphone :</label>
+                            <input type="tel" name="phone" id="phone" required>
+                            <label for="email">Adresse e-mail :</label>
+                            <input type="email" name="email" id="email" required>
                             <button type="button" class="next">Suivant</button>
                         </div>
                         <div class="step">
-                            <h2>Étape 2 : Localisation</h2>
-                            <label for="adresse">Adresse :</label>
-                            <input type="text" name="adresse" id="adresse">
+                            <h2>Étape 2 : Informations sur le bien</h2>
+                            <label for="property-address">Adresse du bien :</label>
+                            <input type="text" name="property-address" id="property-address" required>
+                            <label for="postal-code">Code postal :</label>
+                            <input type="text" name="postal-code" id="postal-code" required>
+                            <label for="city">Ville :</label>
+                            <input type="text" name="city" id="city" required>
+                            <label for="property-type">Typologie du bien :</label>
+                            <select name="property-type" id="property-type" required>
+                                <option value="">Sélectionnez une option</option>
+                                <option value="maison">Maison</option>
+                                <option value="appartement">Appartement</option>
+                                <option value="terrain">Terrain</option>
+                                <option value="autres">Autres</option>
+                            </select>
+                            <label for="condition">État général :</label>
+                            <select name="condition" id="condition" required>
+                                <option value="">Sélectionnez une option</option>
+                                <option value="neuf">Neuf</option>
+                                <option value="excellent">Excellent état</option>
+                                <option value="bon">Bon état</option>
+                                <option value="mauvais">Mauvais état</option>
+                                <option value="tres-mauvais">Très mauvais état</option>
+                            </select>
                             <button type="button" class="prev">Précédent</button>
                             <button type="button" class="next">Suivant</button>
                         </div>
                         <div class="step">
-                            <h2>Étape 3 : Détails supplémentaires</h2>
-                            <label for="surface">Surface (m²) :</label>
-                            <input type="number" name="surface" id="surface">
+                            <h2>Étape 3 : Détails du bien</h2>
+                            <label for="construction-year">Année de construction :</label>
+                            <input type="number" name="construction-year" id="construction-year" min="1900" max="2025" required>
+                            <label for="rooms">Nombre de pièces :</label>
+                            <input type="number" name="rooms" id="rooms" min="1" required>
+                            <label for="living-area">Surface habitable (m²) :</label>
+                            <input type="number" name="living-area" id="living-area" min="0" required>
+                            <label for="outdoor-area">Surface extérieure (m²) :</label>
+                            <input type="number" name="outdoor-area" id="outdoor-area" min="0" required>
+                            <label for="annexes">Annexes (ex. : piscine, abri de jardin) :</label>
+                            <input type="text" name="annexes" id="annexes">
                             <button type="button" class="prev">Précédent</button>
                             <button type="submit">Envoyer</button>
                         </div>
