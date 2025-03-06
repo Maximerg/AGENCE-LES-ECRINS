@@ -169,9 +169,8 @@ body {
     width: 100%;
 }
 
-/* Supprime la règle de centrage pour la première étape */
 #multi-step-form .step:nth-child(2) .button-container {
-    /* Plus besoin de justify-content: center */
+    justify-content: end;
 }
 
 /* Harmonisation des tailles des boutons */
