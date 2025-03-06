@@ -44,7 +44,6 @@ body {
     background-position: center;
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -65,17 +64,6 @@ body {
 
 #open-form:hover {
     background-color: #5E6E5A;
-}
-
-/* Note explicative sous le bouton */
-
-.estimation-note {
-    font-size: 0.9rem; /* Petite police */
-    font-style: italic; /* Italique */
-    text-align: center; /* Centré */
-    color: #455243; /* Même couleur que le reste pour cohérence */
-    margin-top: 15px; /* Espacement entre le bouton et la note */
-    line-height: 1.4; /* Lisibilité */
 }
 
 /* Modale */
@@ -197,7 +185,6 @@ body {
 
     .estimation-image {
         flex: 0 0 40%;
-        flex-direction: column;
     }
 
     #open-form {
@@ -233,7 +220,6 @@ body {
     .estimation-image {
         width: 100%;
         margin-top: 40px;
-        flex-direction: column;
     }
 
     #open-form {
@@ -266,7 +252,6 @@ body {
     .estimation-image {
         width: 100%;
         margin-top: 30px;
-        flex-direction: column;
     }
 
     #open-form {
