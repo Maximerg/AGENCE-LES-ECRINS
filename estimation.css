@@ -89,6 +89,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     max-height: 80vh;
     overflow-y: auto;
+    overflow-x: hidden; /* Empêcher le débordement horizontal */
 }
 
 .close {
@@ -107,35 +108,40 @@ body {
 /* Formulaire multi-étapes avec transitions */
 .step {
     display: none;
-    position: absolute; /* Position absolue pour le glissement */
-    width: 100%; /* Largeur complète pour l’effet de slide */
-    opacity: 0; /* Opacité initiale à 0 */
-    transition: opacity 0.3s ease, transform 0.5s ease; /* Animation fluide */
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.5s ease;
 }
 
 .step.active {
     display: block;
-    opacity: 1; /* Opacité à 1 quand active */
-    transform: translateX(0); /* Position normale */
-    position: relative; /* Revenir à relative quand active */
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
 }
 
 /* Classes temporaires pour les transitions */
 .step.next-slide {
-    transform: translateX(100%); /* Glisse vers la droite */
+    transform: translateX(100%);
     opacity: 0;
 }
 
 .step.prev-slide {
-    transform: translateX(-100%); /* Glisse vers la gauche */
+    transform: translateX(-100%);
     opacity: 0;
 }
 
 /* Ajuster le conteneur pour gérer les transitions */
 #multi-step-form {
-    position: relative; /* Contexte pour les positions absolues */
-    overflow: hidden; /* Masquer les débordements pendant l’animation */
-    height: 100%; /* Hauteur dynamique */
+    position: relative;
+    overflow: hidden;
+    height: auto; /* Hauteur dynamique */
+    min-height: 100%; /* Assurer une hauteur minimale */
+}
+
+#multi-step-form .step {
+    padding: 20px 20px; /* Restaurer le padding symétrique */
 }
 
 #multi-step-form h2 {
@@ -146,26 +152,29 @@ body {
 
 #multi-step-form label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 15px 0 5px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
 
 #multi-step-form input,
-#multi-step-form select {
+#multi-step-form select,
+#multi-step-form textarea {
     width: 100%;
     padding: 12px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: "Lora", serif;
     font-size: 1em;
     background-color: #f9f9f9;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
 }
 
 #multi-step-form input:focus,
-#multi-step-form select:focus {
+#multi-step-form select:focus,
+#multi-step-form textarea:focus {
     outline: none;
     border-color: #455243;
     box-shadow: 0 0 5px rgba(69, 82, 67, 0.3);
@@ -194,10 +203,6 @@ body {
     width: 100%;
 }
 
-#multi-step-form .step:nth-child(2) .button-container {
-    justify-content: end;
-}
-
 #multi-step-form .submit-container {
     display: flex;
     justify-content: center;
@@ -205,22 +210,26 @@ body {
     width: 100%;
 }
 
+#multi-step-form .step:nth-child(2) .button-container {
+    justify-content: end;
+}
+
 /* Harmonisation des tailles des boutons */
 #multi-step-form button,
 #multi-step-form .prev,
 #multi-step-form .next,
 #multi-step-form .start-form {
-    padding: 10px 20px; /* Taille uniforme */
+    padding: 10px 20px;
     font-size: 1em;
-    width: auto; /* Laisse la largeur s’adapter au contenu */
-    min-width: 120px; /* Taille minimale pour cohérence */
-    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    width: auto;
+    min-width: 120px;
+    box-sizing: border-box;
 }
 
 #multi-step-form .start-form {
-    padding: 10px 20px; /* Même taille que les autres boutons */
+    padding: 10px 20px;
     font-size: 1em;
-    min-width: 200px; /* Légèrement plus large pour le bouton de départ */
+    min-width: 200px;
 }
 
 .prev {
@@ -231,36 +240,13 @@ body {
     background-color: #666;
 }
 
-#multi-step-form .step {
-    padding: 20px 20px; /* Padding symétrique à gauche et à droite */
-}
-
-#multi-step-form label {
-    margin: 15px 0 5px; /* Plus d’espace entre les labels */
-}
-
-#multi-step-form input,
-#multi-step-form select,
-#multi-step-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: "Lora", serif;
-    font-size: 1em;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box; /* Inclut le padding dans la largeur */
-}
-
 /* Première étape du formulaire (introduction) */
 .form-intro {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 300px; /* Hauteur minimale pour centrer verticalement */
+    min-height: 300px;
     padding: 20px;
 }
 
@@ -294,7 +280,7 @@ body {
     font-style: italic;
     text-align: center;
     color: #455243;
-    margin-top: 10px; /* Espacement proche du bouton */
+    margin-top: 10px;
     line-height: 1.4;
 }
 
@@ -322,8 +308,6 @@ body {
 }
 
 /* Media Queries pour responsivité */
-
-/* Tablettes (jusqu’à 1024px) */
 @media (max-width: 1024px) {
     .estimation-section {
         min-height: 600px;
@@ -364,7 +348,7 @@ body {
         font-size: 0.9em;
         min-width: 100px;
     }
-    
+
     #multi-step-form .start-form {
         min-width: 180px;
     }
@@ -375,7 +359,6 @@ body {
     }
 }
 
-/* Petites tablettes/téléphones (jusqu’à 768px) */
 @media (max-width: 768px) {
     .estimation-section {
         min-height: auto;
@@ -406,29 +389,30 @@ body {
     }
 
     .form-intro {
-    min-height: 250px;
+        min-height: 250px;
     }
-    
+
     .form-note,
     .form-duration {
         font-size: 0.8rem;
     }
-    
+
     .start-form {
         padding: 10px 20px;
         font-size: 1em;
     }
 
     #multi-step-form .step {
-    padding: 15px 0;
+        padding: 15px 15px;
     }
-    
+
     #multi-step-form label {
         margin: 12px 0 5px;
     }
-    
+
     #multi-step-form input,
-    #multi-step-form select {
+    #multi-step-form select,
+    #multi-step-form textarea {
         margin-bottom: 15px;
     }
 
@@ -436,34 +420,29 @@ body {
     #multi-step-form .prev,
     #multi-step-form .next,
     #multi-step-form .start-form {
-        padding: 6px 12px;
-        font-size: 0.85em;
-        min-width: 90px;
-    }
-    
-    #multi-step-form .start-form {
-        min-width: 160px;
+        padding: 8px 16px;
+        font-size: 0.9em;
+        min-width: 100px;
     }
 
-    #multi-step-form .step {
-        padding: 15px 15px;
+    #multi-step-form .start-form {
+        min-width: 180px;
     }
-    
+
     .confirmation-message {
         padding: 20px 10px;
         min-height: 200px;
     }
-    
+
     .confirmation-message p {
         font-size: 0.9rem;
     }
 
     .step {
-        transition: opacity 0.3s ease, transform 0.4s ease; /* Légère réduction pour mobile */
+        transition: opacity 0.3s ease, transform 0.4s ease; /* Ajustement pour mobile */
     }
 }
 
-/* Très petits téléphones (jusqu’à 480px) */
 @media (max-width: 480px) {
     .estimation-section {
         min-height: auto;
@@ -491,46 +470,56 @@ body {
     }
 
     .form-intro {
-    min-height: 200px;
+        min-height: 200px;
     }
-    
+
     .form-note,
     .form-duration {
         font-size: 0.75rem;
     }
-    
+
     .start-form {
         padding: 10px 20px;
         font-size: 0.9em;
     }
 
     #multi-step-form .step {
-    padding: 10px 0;
+        padding: 10px 10px;
     }
-    
+
     #multi-step-form label {
         margin: 10px 0 5px;
     }
-    
+
     #multi-step-form input,
-    #multi-step-form select {
+    #multi-step-form select,
+    #multi-step-form textarea {
         margin-bottom: 10px;
     }
 
-    #multi-step-form .step {
-        padding: 10px 10px;
+    #multi-step-form button,
+    #multi-step-form .prev,
+    #multi-step-form .next,
+    #multi-step-form .start-form {
+        padding: 6px 12px;
+        font-size: 0.85em;
+        min-width: 90px;
     }
-    
+
+    #multi-step-form .start-form {
+        min-width: 160px;
+    }
+
     .confirmation-message {
         padding: 15px 5px;
         min-height: 150px;
     }
-    
+
     .confirmation-message p {
         font-size: 0.85rem;
     }
 
     .step {
-        transition: opacity 0.3s ease, transform 0.4s ease; /* Légère réduction pour mobile */
+        transition: opacity 0.3s ease, transform 0.4s ease; /* Ajustement pour mobile */
     }
 }
