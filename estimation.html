@@ -158,7 +158,7 @@
         inputs.forEach(input => {
             formData[input.name] = input.value;
         });
-        console.log('Données sauvegardées pour l’étape', currentStep, formData); // Débogage
+        console.log('Données sauvegardées pour l’étape', currentStep, formData);
     }
 
     function restoreData() {
@@ -184,37 +184,40 @@
         document.body.style.overflow = 'auto';
     });
 
-    // Initialisation des écouteurs pour tous les boutons
     function initButtons() {
-        document.querySelectorAll('.next, .prev, .start-form').forEach(button => {
+        const buttons = document.querySelectorAll('.next, .prev, .start-form');
+        console.log('Nombre de boutons trouvés :', buttons.length); // Débogage
+        buttons.forEach((button, index) => {
             button.addEventListener('click', (event) => {
-                const buttonClass = event.target.className;
-                console.log('Bouton cliqué :', buttonClass, 'sur l’étape', currentStep); // Débogage
-                if (buttonClass.includes('next') || buttonClass.includes('start-form')) {
+                console.log('Bouton cliqué :', button.className, 'sur l’étape', currentStep, 'index', index);
+                if (button.classList.contains('next') || button.classList.contains('start-form')) {
                     if (currentStep < steps.length - 1) {
                         saveData();
                         steps[currentStep].classList.remove('active');
                         currentStep++;
                         steps[currentStep].classList.add('active');
                         restoreData();
-                        console.log('Passage à l’étape', currentStep); // Débogage
+                        console.log('Passage à l’étape', currentStep);
                     }
-                } else if (buttonClass.includes('prev')) {
+                } else if (button.classList.contains('prev')) {
                     if (currentStep > 0) {
                         saveData();
                         steps[currentStep].classList.remove('active');
                         currentStep--;
                         steps[currentStep].classList.add('active');
                         restoreData();
-                        console.log('Retour à l’étape', currentStep); // Débogage
+                        console.log('Retour à l’étape', currentStep);
                     }
                 }
             });
         });
     }
 
-    // Appel initial des écouteurs après le chargement du DOM
-    document.addEventListener('DOMContentLoaded', initButtons);
+    // S’assurer que le DOM est chargé avant d’initialiser les boutons
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('DOM chargé, initialisation des boutons...');
+        initButtons();
+    });
 
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
