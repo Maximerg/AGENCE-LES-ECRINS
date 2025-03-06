@@ -16,7 +16,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: justify;
 }
 
 .estimation-content {
@@ -29,7 +28,7 @@ body {
 .estimation-text {
     flex: 6;
     padding: 0 40px;
-    text-align: left;
+    text-align: justify;
 }
 
 .estimation-text p {
