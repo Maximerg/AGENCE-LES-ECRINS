@@ -35,7 +35,7 @@ body {
 .estimation-section {
     background-color: #F0F0F0;
     width: 100%;
-    min-height: 550px;
+    min-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
