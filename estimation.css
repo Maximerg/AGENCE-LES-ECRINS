@@ -66,6 +66,17 @@ body {
     background-color: #5E6E5A;
 }
 
+/* Note explicative sous le bouton */
+
+.estimation-note {
+    font-size: 0.9rem; /* Petite police */
+    font-style: italic; /* Italique */
+    text-align: center; /* Centré */
+    color: #455243; /* Même couleur que le reste pour cohérence */
+    margin-top: 15px; /* Espacement entre le bouton et la note */
+    line-height: 1.4; /* Lisibilité */
+}
+
 /* Modale */
 .modal {
     display: none;
