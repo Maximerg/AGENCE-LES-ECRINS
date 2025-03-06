@@ -26,7 +26,7 @@ body {
 }
 
 .estimation-text {
-    flex: 5;
+    flex: 6.5;
     padding: 0 40px;
     text-align: left;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .estimation-image {
-    flex: 5;
+    flex: 3.5;
     background-image: url('https://via.placeholder.com/600x800');
     background-size: cover;
     background-position: center;
