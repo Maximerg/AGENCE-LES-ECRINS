@@ -173,6 +173,13 @@ body {
     justify-content: end;
 }
 
+#multi-step-form .submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
 /* Harmonisation des tailles des boutons */
 #multi-step-form button,
 #multi-step-form .prev,
@@ -200,7 +207,7 @@ body {
 }
 
 #multi-step-form .step {
-    padding: 20px 0;
+    padding: 20px 20px; /* Padding symétrique à gauche et à droite */
 }
 
 #multi-step-form label {
@@ -208,8 +215,18 @@ body {
 }
 
 #multi-step-form input,
-#multi-step-form select {
-    margin-bottom: 20px; /* Espacement entre les champs */
+#multi-step-form select,
+#multi-step-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: "Lora", serif;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
 }
 
 /* Première étape du formulaire (introduction) */
@@ -254,6 +271,29 @@ body {
     color: #455243;
     margin-top: 10px; /* Espacement proche du bouton */
     line-height: 1.4;
+}
+
+.confirmation-message {
+    text-align: center;
+    padding: 40px 20px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-message h2 {
+    font-family: "Cinzel", serif;
+    color: #455243;
+    margin-bottom: 20px;
+}
+
+.confirmation-message p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px 0;
+    color: #455243;
 }
 
 /* Media Queries pour responsivité */
@@ -302,6 +342,11 @@ body {
     
     #multi-step-form .start-form {
         min-width: 180px;
+    }
+
+    .confirmation-message {
+        padding: 30px 15px;
+        min-height: 250px;
     }
 }
 
@@ -374,6 +419,19 @@ body {
     #multi-step-form .start-form {
         min-width: 160px;
     }
+
+    #multi-step-form .step {
+        padding: 15px 15px;
+    }
+    
+    .confirmation-message {
+        padding: 20px 10px;
+        min-height: 200px;
+    }
+    
+    .confirmation-message p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Très petits téléphones (jusqu’à 480px) */
@@ -428,5 +486,18 @@ body {
     #multi-step-form input,
     #multi-step-form select {
         margin-bottom: 10px;
+    }
+
+    #multi-step-form .step {
+        padding: 10px 10px;
+    }
+    
+    .confirmation-message {
+        padding: 15px 5px;
+        min-height: 150px;
+    }
+    
+    .confirmation-message p {
+        font-size: 0.85rem;
     }
 }
