@@ -52,13 +52,13 @@
                 <span class="close">×</span>
                 <div id="form-container">
                     <form id="multi-step-form">
-                    <!-- Étape 0 : Introduction -->
-                    <div class="step active">
-                        <div class="form-intro">
-                            <p class="form-note">Chaque information demandée est utile pour affiner notre analyse, mais si certaines manquent, nous pourrons tout de même établir une première estimation. Nous vous recontacterons ensuite pour valider les détails et vous fournir une évaluation précise accompagnée d'un dossier complet.</p>
-                            <button type="button" class="next start-form">Commencer le formulaire</button>
-                            <p class="form-duration">Durée estimative : 3 minutes</p>
-                        </div>
+                        <!-- Étape 0 : Introduction -->
+                        <div class="step active">
+                            <div class="form-intro">
+                                <p class="form-note">Chaque information demandée est utile pour affiner notre analyse, mais si certaines manquent, nous pourrons tout de même établir une première estimation. Nous vous recontacterons ensuite pour valider les détails et vous fournir une évaluation précise accompagnée d'un dossier complet.</p>
+                                <button type="button" class="next start-form">Commencer le formulaire</button>
+                                <p class="form-duration">Durée estimative : 3 minutes</p>
+                            </div>
                         </div>
                     
                         <!-- Étape 1 : Informations personnelles -->
@@ -83,7 +83,7 @@
                             <label for="postal-code">Code postal :</label>
                             <input type="text" name="postal-code" id="postal-code">
                             <label for="city">Ville :</label>
-                            <input type="text" name="city" id="city" required>
+                            <input type="text" name="city" id="city">
                             <label for="property-type">Typologie du bien :</label>
                             <select name="property-type" id="property-type">
                                 <option value="">Sélectionnez une option</option>
@@ -92,28 +92,47 @@
                                 <option value="terrain">Terrain</option>
                                 <option value="autres">Autres</option>
                             </select>
+                            <label for="condition">État général :</label>
+                            <select name="condition" id="condition">
+                                <option value="">Sélectionnez une option</option>
+                                <option value="neuf">Neuf</option>
+                                <option value="excellent">Excellent état</option>
+                                <option value="bon">Bon état</option>
+                                <option value="mauvais">Mauvais état</option>
+                                <option value="tres-mauvais">Très mauvais état</option>
+                            </select>
                             <div class="button-container">
                                 <button type="button" class="prev">Précédent</button>
                                 <button type="button" class="next">Suivant</button>
                             </div>
                         </div>
                     
-                        <!-- Étape 3 : Détails du bien -->
+                        <!-- Étape 3 : Détails du bien (sera rempli dynamiquement) -->
                         <div class="step">
                             <h2>Détails du bien</h2>
-                            <label for="construction-year">Année de construction :</label>
-                            <input type="number" name="construction-year" id="construction-year" min="1900" max="2025">
-                            <label for="rooms">Nombre de pièces :</label>
-                            <input type="number" name="rooms" id="rooms" min="1">
-                            <label for="living-area">Surface habitable (m²) :</label>
-                            <input type="number" name="living-area" id="living-area" min="0">
-                            <label for="outdoor-area">Surface extérieure (m²) :</label>
-                            <input type="number" name="outdoor-area" id="outdoor-area" min="0">
-                            <label for="annexes">Annexes (ex. : piscine, abri de jardin) :</label>
-                            <input type="text" name="annexes" id="annexes">
+                            <div id="dynamic-fields"></div>
                             <div class="button-container">
                                 <button type="button" class="prev">Précédent</button>
-                                <button type="submit">Envoyer</button>
+                                <button type="button" class="next">Suivant</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Étape 4 : Remarques -->
+                        <div class="step">
+                            <h2>Remarques</h2>
+                            <label for="remarks">Remarques supplémentaires :</label>
+                            <textarea name="remarks" id="remarks" rows="6" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Lora', serif; font-size: 1em; background-color: #f9f9f9;"></textarea>
+                            <div class="button-container submit-container">
+                                <button type="submit">Envoyer le formulaire</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Étape 5 : Confirmation -->
+                        <div class="step">
+                            <div class="confirmation-message">
+                                <h2>Formulaire envoyé avec succès !</h2>
+                                <p>Votre demande d’estimation a été bien reçue. Nous allons analyser les informations fournies et vous contacterons dans les meilleurs délais pour vous fournir une évaluation précise accompagnée d’un dossier complet.</p>
+                                <p>Merci de votre confiance !</p>
                             </div>
                         </div>
                     </form>
