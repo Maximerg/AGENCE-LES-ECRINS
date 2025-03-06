@@ -167,6 +167,50 @@ body {
     background-color: #666;
 }
 
+/* Première étape du formulaire (introduction) */
+.form-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; /* Hauteur minimale pour centrer verticalement */
+    padding: 20px;
+}
+
+.form-note {
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    color: #455243;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.start-form {
+    background-color: #455243;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-form:hover {
+    background-color: #5E6E5A;
+}
+
+.form-duration {
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    color: #455243;
+    margin-top: 10px; /* Espacement proche du bouton */
+    line-height: 1.4;
+}
+
 /* Media Queries pour responsivité */
 
 /* Tablettes (jusqu’à 1024px) */
@@ -192,8 +236,14 @@ body {
         font-size: 1em;
     }
 
-    .estimation-note {
-    font-size: 0.85rem;
+    .form-note,
+    .form-duration {
+        font-size: 0.85rem;
+    }
+
+    .start-form {
+        padding: 12px 25px;
+        font-size: 1em;
     }
 }
 
@@ -227,8 +277,18 @@ body {
         font-size: 1em;
     }
 
-    .estimation-note {
-    font-size: 0.8rem;
+    .form-intro {
+    min-height: 250px;
+    }
+    
+    .form-note,
+    .form-duration {
+        font-size: 0.8rem;
+    }
+    
+    .start-form {
+        padding: 10px 20px;
+        font-size: 1em;
     }
 }
 
@@ -259,7 +319,17 @@ body {
         font-size: 0.9em;
     }
 
-    .estimation-note {
-    font-size: 0.75rem;
+    .form-intro {
+    min-height: 200px;
+    }
+    
+    .form-note,
+    .form-duration {
+        font-size: 0.75rem;
+    }
+    
+    .start-form {
+        padding: 10px 20px;
+        font-size: 0.9em;
     }
 }
