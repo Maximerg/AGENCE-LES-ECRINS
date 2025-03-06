@@ -159,28 +159,28 @@
         document.body.style.overflow = 'auto';
     });
 
-    // Ajout d’un délégué d’événements pour gérer les boutons dans les conteneurs dynamiques
-    modal.addEventListener('click', (event) => {
-        const button = event.target.closest('.next, .prev, .start-form');
-        if (!button) return;
-
-        if (button.classList.contains('next') || button.classList.contains('start-form')) {
-            if (currentStep < steps.length - 1) {
-                saveData();
-                steps[currentStep].classList.remove('active');
-                currentStep++;
-                steps[currentStep].classList.add('active');
-                restoreData();
+    // Ajout d’écouteurs explicites pour chaque bouton
+    document.querySelectorAll('.next, .prev, .start-form').forEach(button => {
+        button.addEventListener('click', (event) => {
+            console.log('Bouton cliqué :', event.target.className); // Débogage
+            if (event.target.classList.contains('next') || event.target.classList.contains('start-form')) {
+                if (currentStep < steps.length - 1) {
+                    saveData();
+                    steps[currentStep].classList.remove('active');
+                    currentStep++;
+                    steps[currentStep].classList.add('active');
+                    restoreData();
+                }
+            } else if (event.target.classList.contains('prev')) {
+                if (currentStep > 0) {
+                    saveData();
+                    steps[currentStep].classList.remove('active');
+                    currentStep--;
+                    steps[currentStep].classList.add('active');
+                    restoreData();
+                }
             }
-        } else if (button.classList.contains('prev')) {
-            if (currentStep > 0) {
-                saveData();
-                steps[currentStep].classList.remove('active');
-                currentStep--;
-                steps[currentStep].classList.add('active');
-                restoreData();
-            }
-        }
+        });
     });
 
     window.addEventListener('click', (event) => {
