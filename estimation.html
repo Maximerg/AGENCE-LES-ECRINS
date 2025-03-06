@@ -67,7 +67,9 @@
                             <input type="tel" name="phone" id="phone" required>
                             <label for="email">Adresse e-mail :</label>
                             <input type="email" name="email" id="email" required>
-                            <button type="button" class="next">Suivant</button>
+                            <div class="button-container">
+                                <button type="button" class="next">Suivant</button>
+                            </div>
                         </div>
                         <div class="step">
                             <h2>Étape 2 : Informations sur le bien</h2>
@@ -85,23 +87,19 @@
                                 <option value="terrain">Terrain</option>
                                 <option value="autres">Autres</option>
                             </select>
-                            <button type="button" class="prev">Précédent</button>
-                            <button type="button" class="next">Suivant</button>
-                        </div>
-                        <div class="step">
-                            <h2>Étape 3 : Détails du bien</h2>
-                            <label for="construction-year">Année de construction :</label>
-                            <input type="number" name="construction-year" id="construction-year" min="1900" max="2025" required>
-                            <label for="rooms">Nombre de pièces :</label>
-                            <input type="number" name="rooms" id="rooms" min="1" required>
-                            <label for="living-area">Surface habitable (m²) :</label>
-                            <input type="number" name="living-area" id="living-area" min="0" required>
-                            <label for="outdoor-area">Surface extérieure (m²) :</label>
-                            <input type="number" name="outdoor-area" id="outdoor-area" min="0" required>
-                            <label for="annexes">Annexes (ex. : piscine, abri de jardin) :</label>
-                            <input type="text" name="annexes" id="annexes">
-                            <button type="button" class="prev">Précédent</button>
-                            <button type="submit">Envoyer</button>
+                            <label for="condition">État général :</label>
+                            <select name="condition" id="condition" required>
+                                <option value="">Sélectionnez une option</option>
+                                <option value="neuf">Neuf</option>
+                                <option value="excellent">Excellent état</option>
+                                <option value="bon">Bon état</option>
+                                <option value="mauvais">Mauvais état</option>
+                                <option value="tres-mauvais">Très mauvais état</option>
+                            </select>
+                            <div class="button-container">
+                                <button type="button" class="prev">Précédent</button>
+                                <button type="button" class="next">Suivant</button>
+                            </div>
                         </div>
                     </form>
                 </div>
