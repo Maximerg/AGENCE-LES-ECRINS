@@ -134,6 +134,7 @@
         inputs.forEach(input => {
             formData[input.name] = input.value;
         });
+        console.log('Données sauvegardées pour l’étape', currentStep, formData); // Débogage
     }
 
     function restoreData() {
@@ -159,29 +160,37 @@
         document.body.style.overflow = 'auto';
     });
 
-    // Ajout d’écouteurs explicites pour chaque bouton
-    document.querySelectorAll('.next, .prev, .start-form').forEach(button => {
-        button.addEventListener('click', (event) => {
-            console.log('Bouton cliqué :', event.target.className); // Débogage
-            if (event.target.classList.contains('next') || event.target.classList.contains('start-form')) {
-                if (currentStep < steps.length - 1) {
-                    saveData();
-                    steps[currentStep].classList.remove('active');
-                    currentStep++;
-                    steps[currentStep].classList.add('active');
-                    restoreData();
+    // Initialisation des écouteurs pour tous les boutons
+    function initButtons() {
+        document.querySelectorAll('.next, .prev, .start-form').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const buttonClass = event.target.className;
+                console.log('Bouton cliqué :', buttonClass, 'sur l’étape', currentStep); // Débogage
+                if (buttonClass.includes('next') || buttonClass.includes('start-form')) {
+                    if (currentStep < steps.length - 1) {
+                        saveData();
+                        steps[currentStep].classList.remove('active');
+                        currentStep++;
+                        steps[currentStep].classList.add('active');
+                        restoreData();
+                        console.log('Passage à l’étape', currentStep); // Débogage
+                    }
+                } else if (buttonClass.includes('prev')) {
+                    if (currentStep > 0) {
+                        saveData();
+                        steps[currentStep].classList.remove('active');
+                        currentStep--;
+                        steps[currentStep].classList.add('active');
+                        restoreData();
+                        console.log('Retour à l’étape', currentStep); // Débogage
+                    }
                 }
-            } else if (event.target.classList.contains('prev')) {
-                if (currentStep > 0) {
-                    saveData();
-                    steps[currentStep].classList.remove('active');
-                    currentStep--;
-                    steps[currentStep].classList.add('active');
-                    restoreData();
-                }
-            }
+            });
         });
-    });
+    }
+
+    // Appel initial des écouteurs après le chargement du DOM
+    document.addEventListener('DOMContentLoaded', initButtons);
 
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
