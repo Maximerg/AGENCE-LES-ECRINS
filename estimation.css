@@ -89,7 +89,8 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     max-height: 80vh;
     overflow-y: auto;
-    overflow-x: hidden; /* Empêcher le débordement horizontal */
+    overflow-x: visible; /* Autoriser le débordement horizontal pour éviter la coupure */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
 }
 
 .close {
@@ -109,7 +110,7 @@ body {
 .step {
     display: none;
     position: absolute;
-    width: 100%;
+    width: calc(100% - 40px); /* Soustraire le padding pour éviter la coupure */
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.5s ease;
 }
@@ -135,9 +136,10 @@ body {
 /* Ajuster le conteneur pour gérer les transitions */
 #multi-step-form {
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Autoriser le débordement pour éviter la coupure */
     height: auto; /* Hauteur dynamique */
     min-height: 100%; /* Assurer une hauteur minimale */
+    width: 100%;
 }
 
 #multi-step-form .step {
@@ -357,6 +359,10 @@ body {
         padding: 30px 15px;
         min-height: 250px;
     }
+
+    .step {
+        width: calc(100% - 30px); /* Ajuster pour le padding réduit */
+    }
 }
 
 @media (max-width: 768px) {
@@ -404,6 +410,7 @@ body {
 
     #multi-step-form .step {
         padding: 15px 15px;
+        width: calc(100% - 30px); /* Ajuster pour le padding réduit */
     }
 
     #multi-step-form label {
@@ -485,6 +492,7 @@ body {
 
     #multi-step-form .step {
         padding: 10px 10px;
+        width: calc(100% - 20px); /* Ajuster pour le padding réduit */
     }
 
     #multi-step-form label {
