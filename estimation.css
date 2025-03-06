@@ -83,23 +83,12 @@ body {
     margin: 5% auto;
     padding: 30px;
     width: 90%;
-    max-width: 900px;
-    border-radius: 10px;
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 30px;
-    width: 90%;
     max-width: 750px;
     border-radius: 10px;
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    max-height: 80vh; /* Limite la hauteur de la modale */
-    overflow-y: auto; /* Permet le défilement vertical dans la modale */
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .close {
@@ -201,11 +190,6 @@ body {
     padding: 10px 20px; /* Même taille que les autres boutons */
     font-size: 1em;
     min-width: 200px; /* Légèrement plus large pour le bouton de départ */
-}
-
-#multi-step-form .button-container:only-child .next {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .prev {
