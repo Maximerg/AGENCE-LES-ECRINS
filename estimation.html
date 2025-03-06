@@ -52,13 +52,16 @@
                 <span class="close">×</span>
                 <div id="form-container">
                     <form id="multi-step-form">
-                        <div class="step active">
-                            <div class="form-intro">
-                                <p class="form-note">Chaque information demandée est utile pour affiner notre analyse, mais si certaines manquent, nous pourrons tout de même établir une première estimation. Nous vous recontacterons ensuite pour valider les détails et vous fournir une évaluation précise accompagnée d’un dossier complet.</p>
-                                <button type="button" class="next start-form">Commencer le formulaire</button>
-                                <p class="form-duration">Durée estimative : 3 minutes</p>
-                            </div>
+                    <!-- Étape 0 : Introduction -->
+                    <div class="step active">
+                        <div class="form-intro">
+                            <p class="form-note">Cette estimation est gratuite et sans engagement. Elle sera réalisée par un expert local.</p>
+                            <button type="button" class="next start-form">Commencer le formulaire</button>
+                            <p class="form-duration">Durée estimative : 2 minutes</p>
                         </div>
+                        </div>
+                    
+                        <!-- Étape 1 : Informations personnelles -->
                         <div class="step">
                             <h2>Étape 1 : Informations personnelles</h2>
                             <label for="full-name">Nom et prénom :</label>
@@ -71,6 +74,8 @@
                                 <button type="button" class="next">Suivant</button>
                             </div>
                         </div>
+                    
+                        <!-- Étape 2 : Informations sur le bien -->
                         <div class="step">
                             <h2>Étape 2 : Informations sur le bien</h2>
                             <label for="property-address">Adresse du bien :</label>
@@ -99,6 +104,25 @@
                             <div class="button-container">
                                 <button type="button" class="prev">Précédent</button>
                                 <button type="button" class="next">Suivant</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Étape 3 : Détails du bien -->
+                        <div class="step">
+                            <h2>Étape 3 : Détails du bien</h2>
+                            <label for="construction-year">Année de construction :</label>
+                            <input type="number" name="construction-year" id="construction-year" min="1900" max="2025" required>
+                            <label for="rooms">Nombre de pièces :</label>
+                            <input type="number" name="rooms" id="rooms" min="1" required>
+                            <label for="living-area">Surface habitable (m²) :</label>
+                            <input type="number" name="living-area" id="living-area" min="0" required>
+                            <label for="outdoor-area">Surface extérieure (m²) :</label>
+                            <input type="number" name="outdoor-area" id="outdoor-area" min="0" required>
+                            <label for="annexes">Annexes (ex. : piscine, abri de jardin) :</label>
+                            <input type="text" name="annexes" id="annexes">
+                            <div class="button-container">
+                                <button type="button" class="prev">Précédent</button>
+                                <button type="submit">Envoyer</button>
                             </div>
                         </div>
                     </form>
