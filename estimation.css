@@ -12,7 +12,7 @@ body {
 .estimation-title-section {
     background-color: #F0F0F0;
     width: 100%;
-    min-height: 120px;
+    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@ body {
 .estimation-section {
     background-color: #F0F0F0;
     width: 100%;
-    min-height: 600px;
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +45,7 @@ body {
     display: flex;
     max-width: 1600px;
     margin: 0 100px;
-    padding: 20px;
+    padding: 0 0 50px;
 }
 
 .estimation-text {
