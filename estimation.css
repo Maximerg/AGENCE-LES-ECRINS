@@ -7,7 +7,31 @@ body {
     padding: 0;
 }
 
+/* Section Titre Estimation */
+
+.estimation-title-section {
+    background-color: #FFFFFF;
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.estimation-title {
+    text-align: center;
+}
+
+.estimation-title h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.9rem;
+    color: #455243;
+    margin: 0;
+}
+
 /* Section Estimation */
+
 .estimation-section {
     background-color: #F0F0F0;
     width: 100%;
@@ -28,11 +52,6 @@ body {
     flex: 6.5;
     padding: 0 40px;
     text-align: left;
-}
-
-.estimation-text h2 {
-    margin-bottom: 60px;
-    text-align: center;
 }
 
 .estimation-text p {
