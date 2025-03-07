@@ -266,9 +266,9 @@
             if (currentStep < steps.length - 2) {
                 saveData();
                 steps[currentStep].classList.remove('active');
-                steps[currentStep].classList.add('next-slide'); // Animation de sortie
+                steps[currentStep].classList.add('next-slide'); // Animation de fondu
                 currentStep++;
-                steps[currentStep].classList.add('active', 'prev-slide'); // Animation d’entrée
+                steps[currentStep].classList.add('active'); // Animation d’apparition
                 if (currentStep === 2) { // Étape 3 (Détails du bien)
                     generateDynamicFields();
                 }
@@ -276,7 +276,6 @@
 
                 // Retirer les classes d’animation après la transition
                 setTimeout(() => {
-                    steps[currentStep].classList.remove('prev-slide');
                     steps[currentStep - 1].classList.remove('next-slide');
                 }, 500); // Correspond à la durée de l’animation (0.5s)
 
@@ -286,9 +285,9 @@
             if (currentStep > 0) {
                 saveData();
                 steps[currentStep].classList.remove('active');
-                steps[currentStep].classList.add('prev-slide'); // Animation de sortie
+                steps[currentStep].classList.add('prev-slide'); // Animation de fondu
                 currentStep--;
-                steps[currentStep].classList.add('active', 'next-slide'); // Animation d’entrée
+                steps[currentStep].classList.add('active'); // Animation d’apparition
                 if (currentStep === 2) { // Étape 3 (Détails du bien)
                     generateDynamicFields();
                 }
@@ -296,7 +295,6 @@
 
                 // Retirer les classes d’animation après la transition
                 setTimeout(() => {
-                    steps[currentStep].classList.remove('next-slide');
                     steps[currentStep + 1].classList.remove('prev-slide');
                 }, 500); // Correspond à la durée de l’animation (0.5s)
 
@@ -306,14 +304,13 @@
             saveData();
             console.log('Formulaire envoyé :', formData);
             steps[currentStep].classList.remove('active');
-            steps[currentStep].classList.add('next-slide'); // Animation de sortie
+            steps[currentStep].classList.add('next-slide'); // Animation de fondu
             currentStep++;
-            steps[currentStep].classList.add('active', 'prev-slide'); // Animation d’entrée
+            steps[currentStep].classList.add('active'); // Animation d’apparition
             console.log('Passage à l’étape de confirmation', currentStep);
 
             // Retirer les classes d’animation après la transition
             setTimeout(() => {
-                steps[currentStep].classList.remove('prev-slide');
                 steps[currentStep - 1].classList.remove('next-slide');
             }, 500); // Correspond à la durée de l’animation (0.5s)
         }
