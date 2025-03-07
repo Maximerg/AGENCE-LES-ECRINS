@@ -108,21 +108,19 @@ body {
 
 /* Formulaire multi-étapes avec transitions */
 .step {
-    display: none;
-    position: absolute;
+    display: none; /* Masquer par défaut */
     width: calc(100% - 40px); /* Garder la largeur ajustée pour le padding */
     opacity: 0;
-    transition: opacity 0.5s ease; /* Transition uniquement sur l’opacité */
+    transition: opacity 0.5s ease-in-out; /* Transition uniquement sur l’opacité */
+    will-change: opacity; /* Optimiser l’animation */
 }
 
 .step.active {
-    display: block;
+    display: block; /* Afficher l’étape active */
     opacity: 1;
-    position: relative;
 }
 
-/* Classes temporaires pour les transitions */
-
+/* Classes temporaires pour les transitions (uniquement fondu) */
 .step.next-slide,
 .step.prev-slide {
     opacity: 0; /* Disparition avec fondu */
