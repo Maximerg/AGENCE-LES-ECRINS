@@ -266,15 +266,17 @@
             if (currentStep < steps.length - 2) {
                 saveData();
                 steps[currentStep].classList.remove('active');
-                steps[currentStep].classList.add('next-slide'); // Animation de fondu
+                steps[currentStep].classList.add('next-slide'); // Appliquer l’animation de fondu
+                // Forcer le reflow pour déclencher la transition
+                steps[currentStep].offsetHeight;
                 currentStep++;
-                steps[currentStep].classList.add('active'); // Animation d’apparition
+                steps[currentStep].classList.add('active'); // Activer la nouvelle étape
                 if (currentStep === 2) { // Étape 3 (Détails du bien)
                     generateDynamicFields();
                 }
                 restoreData();
 
-                // Retirer les classes d’animation après la transition
+                // Retirer la classe d’animation après la transition
                 setTimeout(() => {
                     steps[currentStep - 1].classList.remove('next-slide');
                 }, 500); // Correspond à la durée de l’animation (0.5s)
@@ -285,15 +287,17 @@
             if (currentStep > 0) {
                 saveData();
                 steps[currentStep].classList.remove('active');
-                steps[currentStep].classList.add('prev-slide'); // Animation de fondu
+                steps[currentStep].classList.add('prev-slide'); // Appliquer l’animation de fondu
+                // Forcer le reflow pour déclencher la transition
+                steps[currentStep].offsetHeight;
                 currentStep--;
-                steps[currentStep].classList.add('active'); // Animation d’apparition
+                steps[currentStep].classList.add('active'); // Activer la nouvelle étape
                 if (currentStep === 2) { // Étape 3 (Détails du bien)
                     generateDynamicFields();
                 }
                 restoreData();
 
-                // Retirer les classes d’animation après la transition
+                // Retirer la classe d’animation après la transition
                 setTimeout(() => {
                     steps[currentStep + 1].classList.remove('prev-slide');
                 }, 500); // Correspond à la durée de l’animation (0.5s)
@@ -304,12 +308,14 @@
             saveData();
             console.log('Formulaire envoyé :', formData);
             steps[currentStep].classList.remove('active');
-            steps[currentStep].classList.add('next-slide'); // Animation de fondu
+            steps[currentStep].classList.add('next-slide'); // Appliquer l’animation de fondu
+            // Forcer le reflow pour déclencher la transition
+            steps[currentStep].offsetHeight;
             currentStep++;
-            steps[currentStep].classList.add('active'); // Animation d’apparition
+            steps[currentStep].classList.add('active'); // Activer la nouvelle étape
             console.log('Passage à l’étape de confirmation', currentStep);
 
-            // Retirer les classes d’animation après la transition
+            // Retirer la classe d’animation après la transition
             setTimeout(() => {
                 steps[currentStep - 1].classList.remove('next-slide');
             }, 500); // Correspond à la durée de l’animation (0.5s)
