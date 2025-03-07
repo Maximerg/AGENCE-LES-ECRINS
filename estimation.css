@@ -112,7 +112,7 @@ body {
     position: absolute;
     width: calc(100% - 40px); /* Soustraire le padding pour éviter la coupure */
     opacity: 0;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Ajouter visibility à la transition */
+    transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out; /* Ajouter visibility à la transition */
     will-change: opacity, visibility; /* Optimiser l’animation */
 }
 
