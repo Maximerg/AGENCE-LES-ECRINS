@@ -112,20 +112,19 @@ body {
     position: absolute;
     width: calc(100% - 40px); /* Soustraire le padding pour éviter la coupure */
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.5s ease;
+    transition: opacity 0.5s ease; /* Transition uniquement sur l’opacité */
 }
 
 .step.active {
     display: block;
     opacity: 1;
-    transform: translateX(0);
     position: relative;
 }
 
 /* Classes temporaires pour les transitions */
-.step.next-slide {
-    transform: translateX(100%);
-    opacity: 0;
+.step.next-slide,
+.step.prev-slide {
+    opacity: 0; /* Disparition avec fondu */
 }
 
 .step.prev-slide {
@@ -445,7 +444,7 @@ body {
     }
 
     .step {
-        transition: opacity 0.3s ease, transform 0.4s ease; /* Ajustement pour mobile */
+        transition: opacity 0.4s ease; /* Légère réduction pour mobile */
     }
 }
 
@@ -527,6 +526,6 @@ body {
     }
 
     .step {
-        transition: opacity 0.3s ease, transform 0.4s ease; /* Ajustement pour mobile */
+        transition: opacity 0.4s ease; /* Légère réduction pour mobile */
     }
 }
