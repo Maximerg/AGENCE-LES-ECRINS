@@ -138,6 +138,7 @@ body {
     height: auto; /* Hauteur dynamique */
     min-height: 100%; /* Assurer une hauteur minimale */
     width: 100%;
+    background: transparent; /* Assurer qu’aucun fond ne masque l’animation */
 }
 
 #multi-step-form .step {
