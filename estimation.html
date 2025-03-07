@@ -242,6 +242,38 @@
                 </select>
                 <label for="carrez-area">Surface Carrez (m²) :</label>
                 <input type="number" name="carrez-area" id="carrez-area" min="0">
+                <label for="annexes">Annexes (ex. : parking, caves) :</label>
+                <input type="text" name="annexes" id="annexes">
+                <label for="condition">État général :</label>
+                <select name="condition" id="condition">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="neuf">Neuf</option>
+                    <option value="excellent">Excellent état</option>
+                    <option value="bon">Bon état</option>
+                    <option value="rafraichir">À rafraîchir</option>
+                    <option value="renover">À rénover</option>
+                </select>
+            `;
+        } else if (propertyType === 'immeuble') {
+            fieldsHTML = `
+                <label for="construction-year">Année de construction :</label>
+                <input type="number" name="construction-year" id="construction-year" min="1900" max="2025">
+                <label for="housing-lots">Nombre de lots d'habitation :</label>
+                <input type="number" name="housing-lots" id="housing-lots" min="0">
+                <label for="commercial-lots">Nombre de lots local commercial :</label>
+                <input type="number" name="commercial-lots" id="commercial-lots" min="0">
+                <label for="floors">Nombre d'étages :</label>
+                <input type="number" name="floors" id="floors" min="0">
+                <label for="elevator">Ascenseur :</label>
+                <select name="elevator" id="elevator">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+                <label for="living-area">Surface habitable (m²) :</label>
+                <input type="number" name="living-area" id="living-area" min="0">
+                <label for="annexes">Annexes (ex. : parking, caves) :</label>
+                <input type="text" name="annexes" id="annexes">
                 <label for="condition">État général :</label>
                 <select name="condition" id="condition">
                     <option value="">Sélectionnez une option</option>
