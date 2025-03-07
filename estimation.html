@@ -190,6 +190,15 @@
                 <input type="number" name="outdoor-area" id="outdoor-area" min="0">
                 <label for="annexes">Annexes (ex. : piscine, abri de jardin) :</label>
                 <input type="text" name="annexes" id="annexes">
+                <label for="condition">État général :</label>
+                <select name="condition" id="condition">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="neuf">Neuf</option>
+                    <option value="excellent">Excellent état</option>
+                    <option value="bon">Bon état</option>
+                    <option value="rafraichir">À rafraîchir</option>
+                    <option value="renover">À rénover</option>
+                </select>
             `;
         } else if (propertyType === 'appartement') {
             fieldsHTML = `
