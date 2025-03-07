@@ -86,11 +86,15 @@
                             <input type="text" name="city" id="city">
                             <label for="property-type">Typologie du bien :</label>
                             <select name="property-type" id="property-type-select">
-                                <option value="">Sélectionnez une option</option>
-                                <option value="maison">Maison</option>
-                                <option value="appartement">Appartement</option>
-                                <option value="terrain">Terrain</option>
-                                <option value="autres">Autres</option>
+                                    <option value="">Sélectionnez une option</option>
+                                    <option value="maison">Maison</option>
+                                    <option value="mas">Mas</option>
+                                    <option value="corps-de-ferme">Corps de ferme</option>
+                                    <option value="appartement">Appartement</option>
+                                    <option value="immeuble">immeuble</option>
+                                    <option value="local-commercial">Local Commercial</option>
+                                    <option value="terrain">Terrain</option>
+                                    <option value="autre">Autres</option>
                             </select>
                             <div class="button-container">
                                 <button type="button" class="prev">Précédent</button>
@@ -178,7 +182,7 @@
         const propertyType = formData['property-type'] || '';
         let fieldsHTML = '';
 
-        if (propertyType === 'maison') {
+        if (propertyType === 'maison' || propertyType === 'mas' || propertyType === 'corps-de-ferme') {
             fieldsHTML = `
                 <label for="construction-year">Année de construction :</label>
                 <input type="number" name="construction-year" id="construction-year" min="1900" max="2025">
