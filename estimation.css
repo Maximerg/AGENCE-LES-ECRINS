@@ -108,27 +108,24 @@ body {
 
 /* Formulaire multi-étapes avec transitions */
 .step {
-    display: none; /* Masquer par défaut */
-    width: calc(100% - 40px); /* Garder la largeur ajustée pour le padding */
+    display: none;
+    position: absolute; /* Restaurer pour superposer les étapes */
+    width: calc(100% - 40px); /* Soustraire le padding pour éviter la coupure */
     opacity: 0;
     transition: opacity 0.5s ease-in-out; /* Transition uniquement sur l’opacité */
     will-change: opacity; /* Optimiser l’animation */
 }
 
 .step.active {
-    display: block; /* Afficher l’étape active */
+    display: block;
     opacity: 1;
+    position: relative;
 }
 
-/* Classes temporaires pour les transitions (uniquement fondu) */
+/* Classes temporaires pour les transitions */
 .step.next-slide,
 .step.prev-slide {
     opacity: 0; /* Disparition avec fondu */
-}
-
-.step.prev-slide {
-    transform: translateX(-100%);
-    opacity: 0;
 }
 
 /* Ajuster le conteneur pour gérer les transitions */
@@ -138,11 +135,10 @@ body {
     height: auto; /* Hauteur dynamique */
     min-height: 100%; /* Assurer une hauteur minimale */
     width: 100%;
-    background: transparent; /* Assurer qu’aucun fond ne masque l’animation */
 }
 
 #multi-step-form .step {
-    padding: 20px 20px; /* Restaurer le padding symétrique */
+    padding: 20px 20px; /* Padding symétrique */
 }
 
 #multi-step-form h2 {
@@ -170,7 +166,7 @@ body {
     font-size: 1em;
     background-color: #f9f9f9;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    box-sizing: border-box;
 }
 
 #multi-step-form input:focus,
@@ -442,10 +438,6 @@ body {
     .confirmation-message p {
         font-size: 0.9rem;
     }
-
-    .step {
-        transition: opacity 0.4s ease; /* Légère réduction pour mobile */
-    }
 }
 
 @media (max-width: 480px) {
@@ -523,9 +515,5 @@ body {
 
     .confirmation-message p {
         font-size: 0.85rem;
-    }
-
-    .step {
-        transition: opacity 0.4s ease; /* Légère réduction pour mobile */
     }
 }
