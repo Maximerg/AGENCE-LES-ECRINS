@@ -286,16 +286,33 @@
             `;
         } else if (propertyType === 'terrain') {
             fieldsHTML = `
-                <label for="land-area">Surface du terrain (m²) :</label>
+                <label for="land-area">Superficie (m²) :</label>
                 <input type="number" name="land-area" id="land-area" min="0">
-                <label for="constructible">Terrain constructible ?</label>
+                <label for="constructible">Terrain constructible :</label>
                 <select name="constructible" id="constructible">
                     <option value="">Sélectionnez une option</option>
                     <option value="oui">Oui</option>
                     <option value="non">Non</option>
                 </select>
-                <label for="access">Accès (ex. : route, chemin) :</label>
-                <input type="text" name="access" id="access">
+                <label for="viabilised">Viabilisé :</label>
+                <select name="viabilised" id="viabilised">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+                <label for="servitude">Servitude :</label>
+                <select name="servitude" id="servitude">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+                <label for="building-permit">Permis de construire :</label>
+                <select name="building-permit" id="building-permit">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="non">Non</option>
+                    <option value="en-cours">En cours</option>
+                    <option value="accepte">Accepté</option>
+                </select>
             `;
         } else {
             fieldsHTML = `
