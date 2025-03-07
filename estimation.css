@@ -108,16 +108,16 @@ body {
 
 /* Formulaire multi-étapes avec transitions */
 .step {
-    display: none;
-    position: absolute; /* Restaurer pour superposer les étapes */
+    visibility: hidden; /* Masquer par défaut sans retirer du DOM */
+    position: absolute;
     width: calc(100% - 40px); /* Soustraire le padding pour éviter la coupure */
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Transition uniquement sur l’opacité */
-    will-change: opacity; /* Optimiser l’animation */
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Ajouter visibility à la transition */
+    will-change: opacity, visibility; /* Optimiser l’animation */
 }
 
 .step.active {
-    display: block;
+    visibility: visible; /* Afficher l’étape active */
     opacity: 1;
     position: relative;
 }
@@ -125,7 +125,8 @@ body {
 /* Classes temporaires pour les transitions */
 .step.next-slide,
 .step.prev-slide {
-    opacity: 0; /* Disparition avec fondu */
+    visibility: hidden; /* Masquer pendant la transition */
+    opacity: 0;
 }
 
 /* Ajuster le conteneur pour gérer les transitions */
