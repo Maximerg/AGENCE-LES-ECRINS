@@ -89,7 +89,6 @@
                                     <option value="">Sélectionnez une option</option>
                                     <option value="maison">Maison</option>
                                     <option value="mas">Mas</option>
-                                    <option value="corps-de-ferme">Corps de ferme</option>
                                     <option value="appartement">Appartement</option>
                                     <option value="immeuble">Immeuble</option>
                                     <option value="local-commercial">Local Commercial</option>
@@ -182,7 +181,7 @@
         const propertyType = formData['property-type'] || '';
         let fieldsHTML = '';
 
-        if (propertyType === 'maison' || propertyType === 'mas' || propertyType === 'corps-de-ferme') {
+        if (propertyType === 'maison' || propertyType === 'mas') {
             fieldsHTML = `
                 <label for="construction-year">Année de construction :</label>
                 <input type="number" name="construction-year" id="construction-year" min="1900" max="2025">
