@@ -89,8 +89,8 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     max-height: 80vh;
     overflow-y: auto;
-    overflow-x: visible; /* Autoriser le débordement horizontal pour éviter la coupure */
-    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    overflow-x: visible;
+    box-sizing: border-box;
 }
 
 .close {
@@ -106,40 +106,35 @@ body {
     color: #333;
 }
 
-/* Formulaire multi-étapes avec transitions */
+/* Formulaire multi-étapes sans transitions */
 .step {
-    visibility: hidden; /* Masquer par défaut sans retirer du DOM */
+    display: none; /* Masquer par défaut */
     position: absolute;
-    width: calc(100% - 40px); /* Soustraire le padding pour éviter la coupure */
-    opacity: 0;
-    transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out; /* Ajouter visibility à la transition */
-    will-change: opacity, visibility; /* Optimiser l’animation */
+    width: calc(100% - 40px);
 }
 
 .step.active {
-    visibility: visible; /* Afficher l’étape active */
-    opacity: 1;
+    display: block;
     position: relative;
 }
 
-/* Classes temporaires pour les transitions */
+/* Supprimer les classes de transition */
 .step.next-slide,
 .step.prev-slide {
-    visibility: hidden; /* Masquer pendant la transition */
-    opacity: 0;
+    display: none;
 }
 
-/* Ajuster le conteneur pour gérer les transitions */
+/* Ajuster le conteneur */
 #multi-step-form {
     position: relative;
-    overflow: visible; /* Autoriser le débordement pour éviter la coupure */
-    height: auto; /* Hauteur dynamique */
-    min-height: 100%; /* Assurer une hauteur minimale */
+    overflow: visible;
+    height: auto;
+    min-height: 100%;
     width: 100%;
 }
 
 #multi-step-form .step {
-    padding: 20px 20px; /* Padding symétrique */
+    padding: 20px 20px;
 }
 
 #multi-step-form h2 {
@@ -356,7 +351,7 @@ body {
     }
 
     .step {
-        width: calc(100% - 30px); /* Ajuster pour le padding réduit */
+        width: calc(100% - 30px);
     }
 }
 
@@ -405,7 +400,7 @@ body {
 
     #multi-step-form .step {
         padding: 15px 15px;
-        width: calc(100% - 30px); /* Ajuster pour le padding réduit */
+        width: calc(100% - 30px);
     }
 
     #multi-step-form label {
@@ -483,7 +478,7 @@ body {
 
     #multi-step-form .step {
         padding: 10px 10px;
-        width: calc(100% - 20px); /* Ajuster pour le padding réduit */
+        width: calc(100% - 20px);
     }
 
     #multi-step-form label {
