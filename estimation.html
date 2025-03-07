@@ -242,6 +242,15 @@
                 </select>
                 <label for="carrez-area">Surface Carrez (m²) :</label>
                 <input type="number" name="carrez-area" id="carrez-area" min="0">
+                <label for="condition">État général :</label>
+                <select name="condition" id="condition">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="neuf">Neuf</option>
+                    <option value="excellent">Excellent état</option>
+                    <option value="bon">Bon état</option>
+                    <option value="rafraichir">À rafraîchir</option>
+                    <option value="renover">À rénover</option>
+                </select>
             `;
         } else if (propertyType === 'terrain') {
             fieldsHTML = `
