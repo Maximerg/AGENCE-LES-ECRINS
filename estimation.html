@@ -208,18 +208,40 @@
             fieldsHTML = `
                 <label for="construction-year">Année de construction :</label>
                 <input type="number" name="construction-year" id="construction-year" min="1900" max="2025">
-                <label for="floor">Étage :</label>
-                <input type="number" name="floor" id="floor" min="0">
                 <label for="rooms">Nombre de pièces :</label>
                 <input type="number" name="rooms" id="rooms" min="1">
                 <label for="living-area">Surface habitable (m²) :</label>
                 <input type="number" name="living-area" id="living-area" min="0">
-                <label for="balcony">Présence d’un balcon ?</label>
+                <label for="floor">Étage :</label>
+                <input type="number" name="floor" id="floor" min="0">
+                <label for="elevator">Ascenseur :</label>
+                <select name="elevator" id="elevator">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+                <label for="exposure">Exposition :</label>
+                <select name="exposure" id="exposure">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="nord">Nord</option>
+                    <option value="sud">Sud</option>
+                    <option value="est">Est</option>
+                    <option value="ouest">Ouest</option>
+                </select>
+                <label for="balcony">Balcon :</label>
                 <select name="balcony" id="balcony">
                     <option value="">Sélectionnez une option</option>
                     <option value="oui">Oui</option>
                     <option value="non">Non</option>
                 </select>
+                <label for="terrace">Terrasse :</label>
+                <select name="terrace" id="terrace">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+                <label for="carrez-area">Surface Carrez (m²) :</label>
+                <input type="number" name="carrez-area" id="carrez-area" min="0">
             `;
         } else if (propertyType === 'terrain') {
             fieldsHTML = `
