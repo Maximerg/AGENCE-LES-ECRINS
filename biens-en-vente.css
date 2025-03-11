@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     min-height: 500px; /* Ajuste la hauteur selon tes besoins */
-    background-image: url('images/ouvrier-travaillant.jpg'); /* Remplace par le chemin de ton image */
+    background-image: url('https://i.imgur.com/6z66Lmx.jpeg'); /* Remplace par le chemin de ton image */
     background-size: cover; /* L'image couvre toute la section */
     background-position: center; /* Centrée */
     background-repeat: no-repeat; /* Pas de répétition */
