@@ -377,7 +377,7 @@
     background-color: #F0F0F0;
     color: #455243;
     width: 100%;
-    min-height: 700px;
+    min-height: 850px;
     font-family: "Lora", serif;
     display: flex;
     justify-content: center;
@@ -389,7 +389,7 @@
     align-items: center;
     justify-content: center;
     max-width: 1400px;
-    margin: 0 100px;
+    margin: 0 100px 100px;
     padding: 20px;
 }
 
