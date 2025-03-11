@@ -1,1 +1,49 @@
+.properties-section {
+    position: relative;
+    width: 100%;
+    min-height: 500px; /* Ajuste la hauteur selon tes besoins */
+    background-image: url('images/ouvrier-travaillant.jpg'); /* Remplace par le chemin de ton image */
+    background-size: cover; /* L'image couvre toute la section */
+    background-position: center; /* Centrée */
+    background-repeat: no-repeat; /* Pas de répétition */
+}
 
+.construction-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Texte blanc pour contraste */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour lisibilité */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour contraste */
+    border-radius: 10px; /* Coins arrondis pour un look élégant */
+}
+
+.construction-overlay h2 {
+    font-family: 'EB Garamond', Garamond, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.construction-overlay p {
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
+}
+
+/* Assurer que la section prend toute la place disponible */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
