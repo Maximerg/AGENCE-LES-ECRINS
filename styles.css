@@ -94,7 +94,7 @@ html, body {
 
 /* Styles globaux pour les titres */
 h2 {
-    font-family: "Playfair Display", serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 2rem; /* Aligné avec .service-text h2 sur services */
 }
 
