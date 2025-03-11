@@ -17,8 +17,6 @@
     color: white; /* Texte blanc pour contraste */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour lisibilité */
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour contraste */
-    border-radius: 10px; /* Coins arrondis pour un look élégant */
 }
 
 .construction-overlay h2 {
