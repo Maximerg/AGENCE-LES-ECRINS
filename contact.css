@@ -13,6 +13,7 @@
     align-items: flex-start;
     max-width: 1100px; /* Agrandir la largeur du cadre */
     margin: 30px auto;
+    border-radius: 5px; /* Coins arrondis */
     background-color: #fff; /* Fond blanc pour l'encart */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour le style */
     padding: 30px; /* Augmenter l'espace interne */
