@@ -43,6 +43,15 @@ body {
     padding: 30px;
 }
 
+/* Ajout du style pour la barre de séparation */
+.separator-bar {
+    width: 50%; /* Environ la moitié de la largeur du texte/titre */
+    max-width: 300px; /* Limite à 300px pour éviter qu’elle soit trop large */
+    height: 2px; /* Épaisseur de la barre */
+    background-color: white; /* Couleur blanche */
+    margin: 20px auto; /* Centré avec un espace au-dessus et en-dessous */
+}
+
 .section-service {
     box-sizing: border-box;
     word-wrap: break-word;
