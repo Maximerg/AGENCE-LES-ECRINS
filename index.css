@@ -133,6 +133,10 @@
 .founder-contact {
     text-align: center; /* Centre les informations par rapport à l'image */
     margin-top: 15px; /* Espace entre l'image et les coordonnées */
+    user-select: text; /* Permet la sélection et le copier-coller */
+    -webkit-user-select: text; /* Pour WebKit */
+    -moz-user-select: text; /* Pour Firefox */
+    -ms-user-select: text; /* Pour IE/Edge */
 }
 
 .founder-contact .email,
