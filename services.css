@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 200px;
+    min-height: 175px;
 }
 
 .section-titre .conteneur-titre {
@@ -28,7 +28,7 @@ body {
 
 .section-presentation {
     padding: 30px;
-    min-height: 250px; /* Augmenté à 250px comme demandé */
+    min-height: 300px; /* Augmenté à 250px comme demandé */
     box-sizing: border-box;
     word-wrap: break-word;
     text-align: center;
