@@ -16,23 +16,24 @@
 </head>
 
 <body>
-  
+    
     <header>
-      <div class="header-top">
-        <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins" class="founder-logo">
-      </div>
-      <div class="header-divider"></div>
-      <div class="header-bottom">
-        <nav>
-            <ul>
-                <li><a href="index.html">L'AGENCE</a></li>
-                <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="estimation.html">ESTIMATION</a></li>
-                <li><a href="contact.html" class="active">CONTACT</a></li>
-            </ul>
-        </nav>
-      </div>
+        <div class="header-top">
+            <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins" class="founder-logo">
+        </div>
+        <div class="header-divider"></div>
+        <div class="header-bottom">
+            <button class="burger-menu">☰</button> <!-- Ajouté -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">L'AGENCE</a></li>
+                    <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="estimation.html">ESTIMATION</a></li>
+                    <li><a href="contact.html" class="active">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -47,7 +48,7 @@
                         
                         <label for="email">Email :</label>
                         <input type="email" id="email" name="email" placeholder="Votre email" required>
-
+    
                         <label for="phone">Numéro de téléphone :</label>
                         <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
                         
@@ -72,19 +73,21 @@
             </div>
         </section>
     </main>
-
-   </main>
-
+    
     <footer class="footer">
         <div class="footer-container">
-            <p class="footer-text">&copy; 2025 Agence Les Écrins. Tous droits réservés.</p>
+            <p class="footer-text">© 2025 Agence Les Écrins. Tous droits réservés.</p>
             <div class="footer-links">
                 <a href="documents/honoraires.pdf" target="_blank">Barème des honoraires</a>
                 <a href="mentions-legales.html">Mentions légales</a>
             </div>
         </div>
     </footer>
-  
-</body>
-  
+
+<script>
+    document.querySelector('.burger-menu').addEventListener('click', function() {
+        document.querySelector('.header-bottom nav ul').classList.toggle('active');
+    });
+</script>
+    
 </html>
