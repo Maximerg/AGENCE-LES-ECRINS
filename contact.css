@@ -20,6 +20,28 @@
     position: relative;
 }
 
+.contact-info .contact-item {
+    display: flex;
+    align-items: center; /* Garde les icônes alignées verticalement avec le texte */
+    margin-bottom: 15px;
+}
+
+.contact-info .contact-icon {
+    width: 16px; /* Réduit la taille des icônes */
+    height: 16px; /* Même hauteur pour uniformité */
+    margin-right: 8px; /* Réduit l’espace entre l’icône et le texte pour les coller davantage */
+    object-fit: contain; /* S’assure que l’image s’adapte sans déformation */
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 0; /* Supprime la marge par défaut pour les <p> dans contact-item */
+}
+
+.contact-info .contact-item p {
+    margin-bottom: 5px; /* Espace léger pour l’adresse avec plusieurs lignes */
+}
+
 .contact-form, .contact-info {
     width: 45%; /* Les deux colonnes prennent 45% de la largeur */
     font-family: "Lora", serif;
