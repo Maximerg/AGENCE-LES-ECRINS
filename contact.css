@@ -25,10 +25,11 @@
     font-family: "Lora", serif;
 }
 
-.contact-form h2, .contact-info h2 {
+.contact-form h2,
+.contact-info h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Playfair Display", serif; /* Changé de Poppins à Playfair Display */
     font-weight: normal;
 }
 
@@ -60,7 +61,7 @@
 }
 
 .contact-form form button:hover {
-    background-color: #455243;
+    background-color: #5E6E5A; /* Couleur différente au survol */
 }
 
 .contact-info p, .contact-info a {
