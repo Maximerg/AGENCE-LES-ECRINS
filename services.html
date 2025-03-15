@@ -163,7 +163,7 @@
 <script>
     document.addEventListener("scroll", function() {
         let fleches = document.querySelectorAll(".section-fleche");
-        let sections = document.querySelectorAll(".section-service, .section-presentation");
+        let sections = [document.querySelector(".section-intro"), ...document.querySelectorAll(".section-service")];
 
         fleches.forEach((fleche, index) => {
             // Section précédente (avant la flèche)
