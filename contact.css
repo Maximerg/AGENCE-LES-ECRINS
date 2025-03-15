@@ -60,6 +60,29 @@
     transition: background-color 0.3s;
 }
 
+.contact-form form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: "Lora", serif;
+    background-color: #fff;
+    color: #455243;
+    appearance: none; /* Supprime le style par défaut du navigateur */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23455243" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Flèche personnalisée */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.contact-form form select:focus {
+    outline: none;
+    border-color: #455243;
+}
+
 .contact-form form button:hover {
     background-color: #5E6E5A; /* Couleur différente au survol */
 }
