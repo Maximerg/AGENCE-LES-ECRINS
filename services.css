@@ -16,10 +16,10 @@ body {
     display: flex;
     flex-direction: column; /* Titre et texte alignés verticalement */
     align-items: center; /* Centré horizontalement */
-    min-height: 300px; /* Hauteur minimale réduite à 300px */
+    min-height: 375px; /* Hauteur minimale réduite à 300px */
     padding: 30px;
     box-sizing: border-box;
-    margin-bottom: 100px; /* Marge de 100px avec fond blanc */
+    margin-bottom: 50px; /* Marge de 100px avec fond blanc */
 }
 
 .conteneur-titre {
@@ -29,7 +29,7 @@ body {
 .section-intro h2 {
     font-size: 2rem;
     margin: 0;
-    padding: 30px;
+    padding: 40px;
 }
 
 .conteneur-presentation {
@@ -40,7 +40,7 @@ body {
 .texte-presentation {
     margin: 0;
     font-size: 1.2rem;
-    padding: 30px;
+    padding: 40px;
 }
 
 .separator-bar {
