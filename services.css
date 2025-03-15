@@ -29,17 +29,18 @@ body {
 .section-intro h2 {
     font-size: 2rem;
     margin: 0;
+    padding: 30px;
 }
 
 .conteneur-presentation {
     text-align: center;
-    margin-top: 20px; /* Espace réduit entre le titre et le texte */
     max-width: 80%;
 }
 
 .texte-presentation {
     margin: 0;
     font-size: 1.2rem;
+    padding: 30px;
 }
 
 .section-service {
