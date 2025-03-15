@@ -14,9 +14,8 @@ body {
     color: white;
     display: flex;
     flex-direction: column; /* Titre en haut, texte en bas */
-    justify-content: space-between; /* Espace entre le titre et le texte */
     align-items: center;
-    min-height: 80vh; /* Prend presque toute la hauteur de la fenêtre */
+    min-height: 40vh; /* Prend presque toute la hauteur de la fenêtre */
     padding: 30px;
     box-sizing: border-box;
 }
@@ -29,6 +28,7 @@ body {
 .section-intro h2 {
     font-size: 2rem; /* Taille du titre inchangée */
     margin: 0;
+    padding-bottom: 50px;
 }
 
 .conteneur-presentation {
