@@ -6,51 +6,40 @@ body {
     overflow-x: hidden;
 }
 
-.section-titre {
-    background-color: #455243;
+.section-intro {
+    background-color: #455243; /* Couleur de fond sombre comme .section-titre */
     background-size: cover;
     background-position: center;
     position: relative;
     color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Titre en haut, texte en bas */
+    justify-content: space-between; /* Espace entre le titre et le texte */
     align-items: center;
-    min-height: 175px;
-}
-
-.section-titre .conteneur-titre {
-    text-align: center;
-}
-
-.section-titre h2 {
-    font-size: 2rem;
-}
-
-.section-presentation {
+    min-height: 80vh; /* Prend presque toute la hauteur de la fenêtre */
     padding: 30px;
-    min-height: 300px; /* Augmenté à 250px comme demandé */
     box-sizing: border-box;
-    word-wrap: break-word;
+}
+
+.conteneur-titre {
     text-align: center;
-    background-color: #fff;
-    color: #455243;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Pour l'ombre */
+    padding-top: 40px; /* Espace au-dessus du titre */
+}
+
+.section-intro h2 {
+    font-size: 2rem; /* Taille du titre inchangée */
+    margin: 0;
 }
 
 .conteneur-presentation {
-    border: 3px solid #455243; /* Bordure angulaire */
-    padding: 20px;
-    box-shadow: 0 6px 12px rgba(69, 82, 67, 0.3); /* Ombre maintenue */
-    max-width: 80%; /* Limite la largeur */
-    background-color: #fff;
-    /* Suppression de clip-path et border-radius pour angles droits */
+    text-align: center;
+    padding-bottom: 60px; /* Espace en bas pour équilibrer */
+    max-width: 80%; /* Limite la largeur du texte */
 }
 
 .texte-presentation {
-    margin: 0; /* Supprime les marges par défaut du paragraphe */
+    margin: 0;
+    font-size: 1.2rem; /* Taille du texte inchangée */
 }
 
 .section-service {
