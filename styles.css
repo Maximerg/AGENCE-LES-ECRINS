@@ -127,7 +127,7 @@ h2 {
 .footer {
     background: #455243;
     color: #fff;
-    position: relative
+    position: relative;
     width: 100%;
     padding: 20px 0; /* Augmente l'espace en haut et en bas */
     font-family: "Lora", serif;
