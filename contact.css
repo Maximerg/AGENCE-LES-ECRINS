@@ -28,7 +28,7 @@
 .contact-form h2,
 .contact-info h2 {
     font-size: 1.8rem;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-family: "Playfair Display", serif; /* Changé de Poppins à Playfair Display */
     font-weight: normal;
 }
@@ -37,6 +37,7 @@
     display: block;
     margin-bottom: 8px;
     font-family: "Playfair Display", serif;
+    font-weight: bold;
 }
 
 .contact-form form input, .contact-form form textarea {
