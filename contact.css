@@ -30,14 +30,12 @@
     font-size: 1.8rem;
     margin-bottom: 50px;
     font-family: "Playfair Display", serif; /* Changé de Poppins à Playfair Display */
-    font-weight: normal;
 }
 
 .contact-form form label {
     display: block;
     margin-bottom: 8px;
     font-family: "Playfair Display", serif;
-    font-weight: bold;
 }
 
 .contact-form form input, .contact-form form textarea {
