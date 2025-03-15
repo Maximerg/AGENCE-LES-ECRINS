@@ -120,11 +120,41 @@
     justify-content: flex-start;
     align-items: center;
     width: 30%;
+    flex-direction: column; /* Ajouté pour aligner l'image et les coordonnées verticalement */
 }
 
 .founder-image img {
     width: 300px;
     height: auto;
+}
+
+/* Ajout des styles pour les coordonnées dans .founder-section */
+
+.founder-contact {
+    text-align: center; /* Centre les informations par rapport à l'image */
+    margin-top: 15px; /* Espace entre l'image et les coordonnées */
+}
+
+.founder-contact .email,
+.founder-contact .phone {
+    font-size: 0.9rem; /* Taille discrète mais lisible */
+    color: #455243; /* Couleur cohérente avec le thème */
+    margin: 5px 0; /* Espace entre l'email et le téléphone */
+    line-height: 1.2; /* Évite que les lignes soient trop serrées */
+}
+
+/* Optionnel : Ajoute un léger effet au survol pour rendre les coordonnées interactives */
+
+.founder-contact .email a,
+.founder-contact .phone a {
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    color: #455243;
+    transition: color 0.3s ease;
+}
+
+.founder-contact .email a:hover,
+.founder-contact .phone a:hover {
+    color: #5E6E5A; /* Couleur légèrement plus claire au survol */
 }
 
 .founder-text {
