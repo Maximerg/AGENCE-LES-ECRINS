@@ -4,42 +4,42 @@ body {
     padding: 0;
     color: #455243;
     overflow-x: hidden;
+    background-color: #fff; /* Fond blanc global pour les marges */
 }
 
 .section-intro {
-    background-color: #455243; /* Couleur de fond sombre comme .section-titre */
+    background-color: #455243; /* Couleur de fond sombre */
     background-size: cover;
     background-position: center;
     position: relative;
     color: white;
     display: flex;
-    flex-direction: column; /* Titre en haut, texte en bas */
-    align-items: center;
-    min-height: 40vh; /* Prend presque toute la hauteur de la fenêtre */
+    flex-direction: column; /* Titre et texte alignés verticalement */
+    align-items: center; /* Centré horizontalement */
+    min-height: 300px; /* Hauteur minimale réduite à 300px */
     padding: 30px;
     box-sizing: border-box;
+    margin-bottom: 100px; /* Marge de 100px avec fond blanc */
 }
 
 .conteneur-titre {
     text-align: center;
-    padding-top: 40px; /* Espace au-dessus du titre */
 }
 
 .section-intro h2 {
-    font-size: 2rem; /* Taille du titre inchangée */
+    font-size: 2rem;
     margin: 0;
-    padding-bottom: 50px;
 }
 
 .conteneur-presentation {
     text-align: center;
-    padding-bottom: 60px; /* Espace en bas pour équilibrer */
-    max-width: 80%; /* Limite la largeur du texte */
+    margin-top: 20px; /* Espace réduit entre le titre et le texte */
+    max-width: 80%;
 }
 
 .texte-presentation {
     margin: 0;
-    font-size: 1.2rem; /* Taille du texte inchangée */
+    font-size: 1.2rem;
 }
 
 .section-service {
