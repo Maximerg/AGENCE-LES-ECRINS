@@ -24,12 +24,12 @@ body {
 
 .conteneur-titre {
     text-align: center;
+    padding: 50px;
 }
 
 .section-intro h2 {
     font-size: 2rem;
     margin: 0;
-    padding: 40px;
 }
 
 .conteneur-presentation {
@@ -40,7 +40,7 @@ body {
 .texte-presentation {
     margin: 0;
     font-size: 1.2rem;
-    padding: 40px;
+    padding: 50px;
 }
 
 .section-service {
