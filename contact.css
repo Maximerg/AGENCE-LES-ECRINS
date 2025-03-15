@@ -16,7 +16,6 @@
     background-color: #fff; /* Fond blanc pour l'encart */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour le style */
     padding: 30px; /* Augmenter l'espace interne */
-    border-radius: 10px; /* Coins arrondis */
     position: relative;
 }
 
