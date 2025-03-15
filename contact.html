@@ -42,13 +42,22 @@
                 <!-- Formulaire de contact -->
                 <div class="contact-form">
                     <h2>CONTACTEZ-NOUS</h2>
-                    <form>
+                    <form action="#" method="POST">
+                        <label for="request-type">Nature de la demande :</label>
+                        <select id="request-type" name="request-type" required>
+                            <option value="" disabled selected>Choisissez une option</option>
+                            <option value="achat">Achat</option>
+                            <option value="vente">Vente</option>
+                            <option value="rejoindre-equipe">Rejoindre notre équipe</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                        
                         <label for="name">Nom et prénom:</label>
                         <input type="text" id="name" name="name" placeholder="Votre nom" required>
                         
                         <label for="email">Email :</label>
                         <input type="email" id="email" name="email" placeholder="Votre email" required>
-    
+                
                         <label for="phone">Numéro de téléphone :</label>
                         <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
                         
