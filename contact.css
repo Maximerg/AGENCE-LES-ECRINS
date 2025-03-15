@@ -40,7 +40,7 @@
 
 .contact-form form input, .contact-form form textarea {
     width: 94%;
-    padding: 15px; /* Augmenter l'espace interne des champs du formulaire */
+    padding: 10px; /* Augmenter l'espace interne des champs du formulaire */
     margin-bottom: 20px; /* Ajouter plus d'espace entre les champs */
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -61,7 +61,7 @@
 
 .contact-form form select {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
