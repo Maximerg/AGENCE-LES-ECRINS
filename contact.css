@@ -27,8 +27,8 @@
 }
 
 .contact-info .contact-icon {
-    width: 30px; /* Réduit la taille des icônes */
-    height: 30px; /* Même hauteur pour uniformité */
+    width: 36px; /* Réduit la taille des icônes */
+    height: 36px; /* Même hauteur pour uniformité */
     margin-right: 8px; /* Réduit l’espace entre l’icône et le texte pour les coller davantage */
     margin-top: 10px;
     object-fit: contain; /* S’assure que l’image s’adapte sans déformation */
