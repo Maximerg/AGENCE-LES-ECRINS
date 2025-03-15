@@ -41,6 +41,7 @@
 
 .contact-info .contact-item p {
     margin-bottom: 5px; /* Espace léger pour l’adresse avec plusieurs lignes */
+    color: black;
 }
 
 .contact-form, .contact-info {
