@@ -50,6 +50,7 @@
 
 .contact-form form button {
     background-color: #455243;
+    font-family: "Lora", serif;
     color: #fff;
     border: none;
     padding: 12px 25px; /* Augmenter la taille du bouton */
