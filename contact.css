@@ -214,7 +214,7 @@ h2 {
 
     .contact-form,
     .contact-info {
-        width: 90%;
+        width: 100%;
         margin-bottom: 30px;
     }
 
@@ -226,29 +226,33 @@ h2 {
     .contact-info h2 {
         font-size: 1.5rem;
         margin-bottom: 30px;
-        text-align: center;
+        text-align: center; /* Centre le titre */
     }
 
     .contact-form form label {
-        text-align: center;
+        text-align: center; /* Centre les labels */
     }
 
     .contact-form form input,
     .contact-form form textarea,
     .contact-form form select {
-        width: 100%;
+        width: 80%; /* Réduit la largeur pour un meilleur centrage */
+        margin: 0 auto 20px auto; /* Centre horizontalement avec espace en bas */
         padding: 8px;
         font-size: 0.9rem;
+        display: block; /* Assure que chaque champ est un bloc centré */
     }
 
     .contact-form form button {
-        width: 100%;
+        width: 80%; /* Largeur réduite pour le centrage */
+        margin: 0 auto; /* Centre horizontalement */
         padding: 10px;
         font-size: 0.9rem;
+        display: block; /* Assure que le bouton est centré */
     }
 
     .contact-info .contact-item {
-        justify-content: center;
+        justify-content: center; /* Centre les icônes et textes */
     }
 
     .contact-info .contact-icon {
@@ -260,16 +264,17 @@ h2 {
     .contact-item p,
     .contact-item a {
         font-size: 0.9rem;
-        text-align: center;
+        text-align: center; /* Centre le texte des infos */
     }
 
     .contact-info .contact-link {
-        justify-content: center;
+        justify-content: center; /* Centre les liens */
     }
 
     .contact-info .social-title {
-        text-align: center;
+        text-align: center; /* Centre le titre social */
     }
+}
 
     /* Styles pour le burger-menu uniquement sur mobile */
     .header-bottom nav ul {
