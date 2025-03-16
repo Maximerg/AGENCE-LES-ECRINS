@@ -30,7 +30,6 @@
     width: 36px;
     height: 36px;
     margin-right: 8px;
-    /* margin-top: 10px; */ /* Supprimé */
     object-fit: contain;
     vertical-align: middle;
 }
@@ -153,10 +152,13 @@ h2 {
     color: black;
 }
 
-.contact-info .contact-link:hover {
-    text-decoration: underline;
-}
-
 .contact-info .contact-link p {
     margin-bottom: 0;
+    line-height: 36px; /* Aligne le texte avec la hauteur de l’icône */
+    display: inline-flex;
+    align-items: center;
+}
+
+.contact-info .contact-link:hover {
+    text-decoration: underline;
 }
