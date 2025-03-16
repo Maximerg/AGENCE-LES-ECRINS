@@ -1,71 +1,51 @@
 .contact-section {
     padding: 50px 0;
-    background-color: #455243; /* Remplacez par le chemin de votre image */
-    background-size: cover; /* L'image couvre tout l'arrière-plan */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    position: relative; /* Nécessaire pour placer le contenu au-dessus */
+    background-color: #455243;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .contact-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1100px; /* Agrandir la largeur du cadre */
+    max-width: 1100px;
     margin: 30px auto;
-    border-radius: 5px; /* Coins arrondis */
-    background-color: #fff; /* Fond blanc pour l'encart */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour le style */
-    padding: 30px; /* Augmenter l'espace interne */
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
     position: relative;
 }
 
 .contact-info .contact-item {
     display: flex;
-    align-items: center; /* Garde les icônes alignées verticalement avec le texte */
+    align-items: center;
     margin-bottom: 15px;
 }
 
-.contact-info .contact-link {
-    display: flex;
-    align-items: center; /* Aligne l’icône et le texte verticalement */
-    text-decoration: none; /* Supprime le soulignement par défaut du lien */
-    color: black; /* Garde la couleur du texte cohérente */
-}
-
-.contact-info .contact-link:hover {
-    text-decoration: underline; /* Ajoute un soulignement au survol, comme pour les autres liens */
-}
-
-.contact-info .contact-link p {
-    margin-bottom: 0; /* Supprime la marge par défaut pour les <p> dans le lien */
-}
-
-.contact-info .social-title {
-    margin-top: 40px; /* Espace supplémentaire pour abaisser la ligne */
-    font-size: 1rem;
-    margin-bottom: 15px; /* Garde l’espacement en dessous cohérent */
-}
-
 .contact-info .contact-icon {
-    width: 36px; /* Réduit la taille des icônes */
-    height: 36px; /* Même hauteur pour uniformité */
-    margin-right: 8px; /* Réduit l’espace entre l’icône et le texte pour les coller davantage */
-    vertical-align: middle; /* Aligne l’icône au milieu verticalement */
-    object-fit: contain; /* S’assure que l’image s’adapte sans déformation */
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+    /* margin-top: 10px; */ /* Supprimé */
+    object-fit: contain;
+    vertical-align: middle;
 }
 
 .contact-info p {
     font-size: 1rem;
-    margin-bottom: 0; /* Supprime la marge par défaut pour les <p> dans contact-item */
+    margin-bottom: 0;
 }
 
 .contact-item p {
-    margin-bottom: 5px; /* Espace léger pour l’adresse avec plusieurs lignes */
+    margin-bottom: 5px;
 }
 
 .contact-form, .contact-info {
-    width: 45%; /* Les deux colonnes prennent 45% de la largeur */
+    width: 45%;
     font-family: "Lora", serif;
 }
 
@@ -73,7 +53,7 @@
 .contact-info h2 {
     font-size: 1.8rem;
     margin-bottom: 50px;
-    font-family: "Playfair Display", serif; /* Changé de Poppins à Playfair Display */
+    font-family: "Playfair Display", serif;
 }
 
 .contact-form form label {
@@ -84,8 +64,8 @@
 
 .contact-form form input, .contact-form form textarea {
     width: 96%;
-    padding: 10px; /* Augmenter l'espace interne des champs du formulaire */
-    margin-bottom: 20px; /* Ajouter plus d'espace entre les champs */
+    padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
@@ -97,7 +77,7 @@
     font-family: "Lora", serif;
     color: #fff;
     border: none;
-    padding: 12px 25px; /* Augmenter la taille du bouton */
+    padding: 12px 25px;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
@@ -114,10 +94,10 @@
     font-family: "Lora", serif;
     background-color: #fff;
     color: #455243;
-    appearance: none; /* Supprime le style par défaut du navigateur */
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23455243" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Flèche personnalisée */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23455243" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 10px center;
 }
@@ -128,12 +108,12 @@
 }
 
 .contact-form form button:hover {
-    background-color: #5E6E5A; /* Couleur différente au survol */
+    background-color: #5E6E5A;
 }
 
 .contact-item p, .contact-item a {
     font-size: 1rem;
-    margin-bottom: 15px; /* Ajouter plus d'espace entre les paragraphes */
+    margin-bottom: 15px;
 }
 
 .contact-info a {
@@ -148,14 +128,35 @@
 .contact-container::before {
     content: "";
     position: absolute;
-    height: 80%; /* La ligne noire prend 80% de la hauteur */
+    height: 80%;
     width: 1px;
     background-color: #000;
-    top: 10%; /* Centre la ligne verticalement */
-    left: 50%; /* Place la ligne au centre */
+    top: 10%;
+    left: 50%;
     transform: translateX(-50%);
 }
 
 h2 {
     font-family: "Lora", serif;
+}
+
+.contact-info .social-title {
+    margin-top: 30px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.contact-info .contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.contact-info .contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-info .contact-link p {
+    margin-bottom: 0;
 }
