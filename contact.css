@@ -360,10 +360,11 @@ h2 {
 }
 
 /* Styles pour inverser les couleurs du footer avec une spécificité plus élevée */
+
 .contact-section + .footer {
-    background-color: #455243; /* Fond vert de l'agence */
-    color: #fff; /* Texte blanc */
-    padding: 10px 0; /* Réduit le padding pour éviter un changement de taille trop important */
+    background-color: #455243 !important;
+    color: #fff !important;
+    padding: 10px 0;
 }
 
 .contact-section + .footer .footer-container {
