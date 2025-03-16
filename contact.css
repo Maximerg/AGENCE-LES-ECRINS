@@ -359,36 +359,35 @@ h2 {
     }
 }
 
-/* Styles pour inverser les couleurs du footer avec une spécificité plus élevée */
-
+/* Styles pour inverser les couleurs du footer avec une priorité maximale */
 .contact-section + .footer {
-    background-color: #455243 !important;
-    color: #fff !important;
-    padding: 10px 0;
+    background-color: #fff !important; /* Fond blanc */
+    color: #455243 !important; /* Texte vert */
+    padding: 20px 0; /* Conserver le padding comme dans styles.css */
 }
 
 .contact-section + .footer .footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 15px; /* Réduit le padding interne pour correspondre à une taille plus standard */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
 }
 
 .contact-section + .footer .footer-text {
-    color: #fff; /* Assure que le texte © 2025 est blanc */
-    margin: 0;
-    font-size: 0.9rem;
+    color: #455243 !important; /* Texte vert */
+    margin: 0 !important;
+    font-size: 0.9rem !important;
 }
 
 .contact-section + .footer .footer-links a {
-    color: #fff; /* Liens blancs */
-    text-decoration: none;
-    margin-left: 15px; /* Réduit légèrement l’espacement entre les liens */
-    font-size: 0.9rem;
+    color: #455243 !important; /* Liens verts */
+    text-decoration: none !important;
+    margin-left: 15px !important;
+    font-size: 0.9rem !important;
 }
 
 .contact-section + .footer .footer-links a:hover {
-    text-decoration: underline; /* Soulignement au survol pour les liens */
+    text-decoration: underline !important;
 }
