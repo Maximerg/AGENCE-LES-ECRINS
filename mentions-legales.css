@@ -27,7 +27,7 @@ h2 {
     margin-bottom: 20px; /* Plus d'espace en dessous */
 }
 
-p {
+.section p {
     font-size: 1rem;
     color: #455243; /* Texte en blanc */
     line-height: 1.8; /* Augmenté pour plus de lisibilité */
