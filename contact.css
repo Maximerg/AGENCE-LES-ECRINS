@@ -358,3 +358,36 @@ h2 {
         display: none; /* Masque le bouton burger sur desktop */
     }
 }
+
+/* Styles pour inverser les couleurs du footer */
+.footer {
+    background-color: #455243;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer .footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    color: #fff;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
