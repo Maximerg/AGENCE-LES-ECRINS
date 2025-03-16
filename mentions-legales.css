@@ -83,4 +83,26 @@ a:hover {
 @media (max-width: 480px) {
     .mentions-section {
         padding: 40px 0; /* Réduit pour petits écrans */
-   
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .mentions-section section {
+        margin-bottom: 25px;
+    }
+}
