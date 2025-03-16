@@ -26,6 +26,12 @@
     margin-bottom: 15px;
 }
 
+.contact-info .social-title {
+    margin-top: 30px; /* Espace supplémentaire pour abaisser la ligne */
+    font-size: 1rem;
+    margin-bottom: 15px; /* Garde l’espacement en dessous cohérent */
+}
+
 .contact-info .contact-icon {
     width: 36px; /* Réduit la taille des icônes */
     height: 36px; /* Même hauteur pour uniformité */
