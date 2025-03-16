@@ -39,7 +39,7 @@
     margin-bottom: 0; /* Supprime la marge par défaut pour les <p> dans contact-item */
 }
 
-.contact-info .contact-item p {
+.contact-item p {
     margin-bottom: 5px; /* Espace léger pour l’adresse avec plusieurs lignes */
 }
 
@@ -110,7 +110,7 @@
     background-color: #5E6E5A; /* Couleur différente au survol */
 }
 
-.contact-info p, .contact-info a {
+.contact-item p, .contact-item a {
     font-size: 1rem;
     margin-bottom: 15px; /* Ajouter plus d'espace entre les paragraphes */
 }
