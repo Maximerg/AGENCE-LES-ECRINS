@@ -153,11 +153,196 @@ h2 {
 }
 
 .contact-info .contact-link p {
-    line-height: 36px; /* Aligne le texte avec la hauteur de l’icône */
+    line-height: 36px;
     display: inline-flex;
     align-items: center;
 }
 
 .contact-info .contact-link:hover {
     text-decoration: underline;
+}
+
+/* Media Queries pour responsive */
+@media (max-width: 1024px) {
+    .contact-container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .contact-form, .contact-info {
+        width: 48%;
+    }
+
+    .contact-info .contact-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .contact-form h2,
+    .contact-info h2 {
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea,
+    .contact-form form select {
+        padding: 8px;
+        font-size: 0.95rem;
+    }
+
+    .contact-form form button {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .contact-info p,
+    .contact-item p,
+    .contact-item a {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 15px;
+        max-width: 100%;
+        margin: 15px;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .contact-container::before {
+        display: none;
+    }
+
+    .contact-form h2,
+    .contact-info h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .contact-form form label {
+        text-align: center;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea,
+    .contact-form form select {
+        width: 100%;
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .contact-form form button {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .contact-info .contact-item {
+        justify-content: center;
+    }
+
+    .contact-info .contact-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .contact-info p,
+    .contact-item p,
+    .contact-item a {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .contact-info .contact-link {
+        justify-content: center;
+    }
+
+    .contact-info .social-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .contact-form h2,
+    .contact-info h2 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea,
+    .contact-form form select {
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+
+    .contact-form form button {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    .contact-info .contact-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contact-info p,
+    .contact-item p,
+    .contact-item a {
+        font-size: 0.85rem;
+    }
+
+    .contact-form form label {
+        font-size: 0.9rem;
+    }
+}
+
+/* Styles pour le menu burger (si pas dans styles.css) */
+.header-bottom nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-bottom nav ul.active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.header-bottom nav ul li {
+    margin: 0;
+    width: 100%;
+}
+
+.header-bottom nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #455243;
+    text-decoration: none;
+}
+
+.header-bottom nav ul li a:hover {
+    background-color: #f0f0f0;
 }
