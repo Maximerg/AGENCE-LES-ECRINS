@@ -359,35 +359,35 @@ h2 {
     }
 }
 
-/* Styles pour inverser les couleurs du footer */
-.footer {
-    background-color: #455243;
-    color: #fff;
-    padding: 20px 0;
+/* Styles pour inverser les couleurs du footer avec une spécificité plus élevée */
+.contact-section + .footer {
+    background-color: #455243; /* Fond vert de l'agence */
+    color: #fff; /* Texte blanc */
+    padding: 10px 0; /* Réduit le padding pour éviter un changement de taille trop important */
 }
 
-.footer .footer-container {
+.contact-section + .footer .footer-container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 15px; /* Réduit le padding interne pour correspondre à une taille plus standard */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer-text {
-    color: #fff;
+.contact-section + .footer .footer-text {
+    color: #fff; /* Assure que le texte © 2025 est blanc */
     margin: 0;
     font-size: 0.9rem;
 }
 
-.footer-links a {
-    color: #fff;
+.contact-section + .footer .footer-links a {
+    color: #fff; /* Liens blancs */
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 15px; /* Réduit légèrement l’espacement entre les liens */
     font-size: 0.9rem;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+.contact-section + .footer .footer-links a:hover {
+    text-decoration: underline; /* Soulignement au survol pour les liens */
 }
