@@ -26,6 +26,21 @@
     margin-bottom: 15px;
 }
 
+.contact-info .contact-link {
+    display: flex;
+    align-items: center; /* Aligne l’icône et le texte verticalement */
+    text-decoration: none; /* Supprime le soulignement par défaut du lien */
+    color: black; /* Garde la couleur du texte cohérente */
+}
+
+.contact-info .contact-link:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol, comme pour les autres liens */
+}
+
+.contact-info .contact-link p {
+    margin-bottom: 0; /* Supprime la marge par défaut pour les <p> dans le lien */
+}
+
 .contact-info .social-title {
     margin-top: 40px; /* Espace supplémentaire pour abaisser la ligne */
     font-size: 1rem;
