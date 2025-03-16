@@ -1,0 +1,130 @@
+/* Styles pour la page mentions légales */
+.mentions-section {
+    padding: 50px 0;
+    background-color: #fff;
+    font-family: "Lora", serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: #455243;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: #455243;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem;
+    color: #000;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #455243;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour le footer de la page mentions légales */
+.footer.contact-footer {
+    background-color: #fff !important; /* Fond blanc */
+    color: #455243 !important; /* Texte vert */
+    padding: 20px 0 !important;
+}
+
+.footer.contact-footer .footer-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.footer.contact-footer .footer-text {
+    color: #455243 !important; /* Texte vert */
+    margin: 0 !important;
+    font-size: 0.9rem !important;
+}
+
+.footer.contact-footer .footer-links a {
+    color: #455243 !important; /* Liens verts */
+    text-decoration: none !important;
+    margin-left: 15px !important;
+    font-size: 0.9rem !important;
+}
+
+.footer.contact-footer .footer-links a:hover {
+    text-decoration: underline !important;
+}
+
+/* Media Queries pour responsivité */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .footer.contact-footer .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer.contact-footer .footer-links {
+        margin-top: 10px;
+    }
+
+    .footer.contact-footer .footer-links a {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+}
