@@ -1,7 +1,7 @@
 /* Styles pour la page mentions légales */
 .mentions-section {
-    padding: 50px 0;
-    background-color: #fff;
+    padding: 70px 0; /* Augmenté pour plus d'espace global */
+    background-color: #455243; /* Fond vert */
     font-family: "Lora", serif;
 }
 
@@ -14,28 +14,28 @@
 h1 {
     font-family: "Playfair Display", serif;
     font-size: 2rem;
-    color: #455243;
+    color: #fff; /* Titre principal en blanc */
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px; /* Plus d'espace sous le titre principal */
 }
 
 h2 {
     font-family: "Playfair Display", serif;
     font-size: 1.5rem;
-    color: #455243;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    color: #fff; /* Sous-titres en blanc */
+    margin-top: 40px; /* Plus d'espace au-dessus */
+    margin-bottom: 20px; /* Plus d'espace en dessous */
 }
 
 p {
     font-size: 1rem;
-    color: #000;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    color: #fff; /* Texte en blanc */
+    line-height: 1.8; /* Augmenté pour plus de lisibilité */
+    margin-bottom: 15px; /* Plus d'espace entre les paragraphes */
 }
 
 a {
-    color: #455243;
+    color: #fff; /* Liens en blanc */
     text-decoration: none;
 }
 
@@ -43,41 +43,44 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Ajouter un espacement entre les sections */
+.mentions-section section {
+    margin-bottom: 40px; /* Espace entre chaque section */
+}
+
 /* Media Queries pour responsivité */
 @media (max-width: 768px) {
+    .mentions-section {
+        padding: 50px 0; /* Réduit pour tablettes */
+    }
+
     h1 {
         font-size: 1.8rem;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     h2 {
         font-size: 1.3rem;
-        margin-top: 25px;
-        margin-bottom: 10px;
+        margin-top: 30px;
+        margin-bottom: 15px;
     }
 
     p {
         font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 12px;
     }
 
     .container {
         padding: 0 15px;
     }
+
+    .mentions-section section {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.6rem;
-        margin-bottom: 25px;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-        margin-top: 20px;
-        margin-bottom: 8px;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-}
+    .mentions-section {
+        padding: 40px 0; /* Réduit pour petits écrans */
+   
