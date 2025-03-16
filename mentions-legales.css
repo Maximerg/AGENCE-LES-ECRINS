@@ -1,7 +1,7 @@
 /* Styles pour la page mentions légales */
 .mentions-section {
     padding: 70px 0; /* Augmenté pour plus d'espace global */
-    background-color: #455243; /* Fond vert */
+    background-color: white; /* Fond vert */
     font-family: "Lora", serif;
 }
 
@@ -14,7 +14,7 @@
 h1 {
     font-family: "Playfair Display", serif;
     font-size: 2rem;
-    color: #fff; /* Titre principal en blanc */
+    color: #455243; /* Titre principal en blanc */
     text-align: center;
     margin-bottom: 50px; /* Plus d'espace sous le titre principal */
 }
@@ -22,20 +22,20 @@ h1 {
 h2 {
     font-family: "Playfair Display", serif;
     font-size: 1.5rem;
-    color: #fff; /* Sous-titres en blanc */
+    color: #455243; /* Sous-titres en blanc */
     margin-top: 40px; /* Plus d'espace au-dessus */
     margin-bottom: 20px; /* Plus d'espace en dessous */
 }
 
 p {
     font-size: 1rem;
-    color: #fff; /* Texte en blanc */
+    color: #455243; /* Texte en blanc */
     line-height: 1.8; /* Augmenté pour plus de lisibilité */
     margin-bottom: 15px; /* Plus d'espace entre les paragraphes */
 }
 
 a {
-    color: #fff; /* Liens en blanc */
+    color: #455243; /* Liens en blanc */
     text-decoration: none;
 }
 
