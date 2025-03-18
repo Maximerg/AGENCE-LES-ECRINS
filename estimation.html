@@ -65,11 +65,11 @@
                         <div class="step">
                             <h2>Informations personnelles</h2>
                             <label for="full-name">Nom et prénom :</label>
-                            <input type="text" name="full-name" id="full-name">
+                            <input type="text" name="full-name" id="full-name" required>
                             <label for="phone">Numéro de téléphone :</label>
-                            <input type="tel" name="phone" id="phone">
+                            <input type="tel" name="phone" id="phone" required>
                             <label for="email">Adresse e-mail :</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" required>
                             <div class="button-container">
                                 <button type="button" class="next">Suivant</button>
                             </div>
@@ -79,21 +79,21 @@
                         <div class="step">
                             <h2>Informations sur le bien</h2>
                             <label for="property-address">Adresse du bien :</label>
-                            <input type="text" name="property-address" id="property-address">
+                            <input type="text" name="property-address" id="property-address" required>
                             <label for="postal-code">Code postal :</label>
-                            <input type="text" name="postal-code" id="postal-code">
+                            <input type="text" name="postal-code" id="postal-code" required>
                             <label for="city">Ville :</label>
-                            <input type="text" name="city" id="city">
+                            <input type="text" name="city" id="city" required>
                             <label for="property-type">Typologie du bien :</label>
-                            <select name="property-type" id="property-type-select">
-                                    <option value="">Sélectionnez une option</option>
-                                    <option value="maison">Maison</option>
-                                    <option value="mas">Mas</option>
-                                    <option value="appartement">Appartement</option>
-                                    <option value="immeuble">Immeuble</option>
-                                    <option value="local-commercial">Local Commercial</option>
-                                    <option value="terrain">Terrain</option>
-                                    <option value="autre">Autres</option>
+                            <select name="property-type" id="property-type-select" required>
+                                <option value="">Sélectionnez une option</option>
+                                <option value="maison">Maison</option>
+                                <option value="mas">Mas</option>
+                                <option value="appartement">Appartement</option>
+                                <option value="immeuble">Immeuble</option>
+                                <option value="local-commercial">Local Commercial</option>
+                                <option value="terrain">Terrain</option>
+                                <option value="autre">Autres</option>
                             </select>
                             <div class="button-container">
                                 <button type="button" class="prev">Précédent</button>
@@ -115,9 +115,9 @@
                         <div class="step">
                             <h2>Remarques</h2>
                             <label for="remarks">Remarques supplémentaires :</label>
-                            <textarea name="remarks" id="remarks" rows="6" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Lora', serif; font-size: 1em; background-color: #f9f9f9;"></textarea>
+                            <textarea name="remarks" id="remarks" rows="6" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Lora', serif; font-size: 1em; background-color: #f9f9f9;" required></textarea>
                             <div class="button-container submit-container">
-                                <button type="button" id="submit-form">Envoyer le formulaire</button>
+                                <button type="submit" id="submit-form">Envoyer le formulaire</button>
                             </div>
                         </div>
                     
