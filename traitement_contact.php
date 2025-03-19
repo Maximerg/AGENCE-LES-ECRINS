@@ -1,0 +1,43 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$servername = "agencrk633.mysql.db"; // Remplace par l'hôte exact d'OVH
+$username = "agencrk633"; // Remplace par ton utilisateur OVH
+$password = "cUdkut-2caxky-mehwuz"; // Remplace par ton mot de passe OVH
+$dbname = "aagencrk633"; // Nom de la base OVH
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    die("Erreur de connexion : " . $e->getMessage());
+}
+
+$nature_demande = $_POST['nature_demande'];
+$nom_prenom = $_POST['nom_prenom'];
+$email = $_POST['email'];
+$telephone = $_POST['telephone'];
+$message = $_POST['message'];
+$date = date('Y-m-d H:i:s');
+
+$sql = "INSERT INTO contacts (nature_demande, nom_prenom, email, telephone, message, date) 
+        VALUES (:nature_demande, :nom_prenom, :email, :telephone, :message, :date)";
+$stmt = $conn->prepare($sql);
+$stmt->bindParam(':nature_demande', $nature_demande);
+$stmt->bindParam(':nom_prenom', $nom_prenom);
+$stmt->bindParam(':email', $email);
+$stmt->bindParam(':telephone', $telephone);
+$stmt->bindParam(':message', $message);
+$stmt->bindParam(':date', $date);
+
+try {
+    $stmt->execute();
+    echo "Message envoyé avec succès !";
+} catch(PDOException $e) {
+    echo "Erreur lors de l'insertion : " . $e->getMessage();
+}
+
+$conn = null;
+?>
