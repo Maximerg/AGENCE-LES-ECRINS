@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 $servername = "agencrk633.mysql.db"; // Remplace par l'hôte exact d'OVH
 $username = "agencrk633"; // Remplace par ton utilisateur OVH
 $password = "cUdkut-2caxky-mehwuz"; // Remplace par ton mot de passe OVH
-$dbname = "aagencrk633"; // Nom de la base OVH
+$dbname = "agencrk633"; // Nom de la base OVH
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
