@@ -340,15 +340,6 @@ function generateDynamicFields() {
     restoreData(); // Restaurer les données si elles existent
 }
 
-// Met à jour l'écouteur pour le changement de "Typologie du bien"
-const typeBienSelect = document.getElementById('type_bien_select');
-typeBienSelect.addEventListener('change', () => {
-    saveData(); // Sauvegarder le nouveau type de bien
-    if (currentStep === 2) { // Si on est à l’étape 3
-        generateDynamicFields();
-    }
-});
-
     openForm.addEventListener('click', () => {
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
