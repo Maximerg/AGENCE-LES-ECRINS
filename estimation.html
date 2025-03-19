@@ -64,10 +64,10 @@
                         <!-- Étape 1 : Informations personnelles -->
                         <div class="step">
                             <h2>Informations personnelles</h2>
-                            <label for="full-name">Nom et prénom :</label>
-                            <input type="text" name="full-name" id="full-name" required>
-                            <label for="phone">Numéro de téléphone :</label>
-                            <input type="tel" name="phone" id="phone" required>
+                            <label for="nom_prenom">Nom et prénom :</label>
+                            <input type="text" name="nom_prenom" id="nom_prenom" required>
+                            <label for="telephone">Numéro de téléphone :</label>
+                            <input type="tel" name="telephone" id="telephone" required>
                             <label for="email">Adresse e-mail :</label>
                             <input type="email" name="email" id="email" required>
                             <div class="button-container">
@@ -78,20 +78,20 @@
                         <!-- Étape 2 : Informations sur le bien -->
                         <div class="step">
                             <h2>Informations sur le bien</h2>
-                            <label for="property-address">Adresse du bien :</label>
-                            <input type="text" name="property-address" id="property-address" required>
-                            <label for="postal-code">Code postal :</label>
-                            <input type="text" name="postal-code" id="postal-code" required>
-                            <label for="city">Ville :</label>
-                            <input type="text" name="city" id="city" required>
-                            <label for="property-type">Typologie du bien :</label>
-                            <select name="property-type" id="property-type-select" required>
+                            <label for="adresse_bien">Adresse du bien :</label>
+                            <input type="text" name="adresse_bien" id="adresse_bien" required>
+                            <label for="code_postal">Code postal :</label>
+                            <input type="text" name="code_postal" id="code_postal" required>
+                            <label for="ville">Ville :</label>
+                            <input type="text" name="ville" id="ville" required>
+                            <label for="type_bien">Typologie du bien :</label>
+                            <select name="type_bien" id="type_bien_select" required>
                                 <option value="">Sélectionnez une option</option>
                                 <option value="maison">Maison</option>
                                 <option value="mas">Mas</option>
                                 <option value="appartement">Appartement</option>
                                 <option value="immeuble">Immeuble</option>
-                                <option value="local-commercial">Local Commercial</option>
+                                <option value="local_commercial">Local Commercial</option>
                                 <option value="terrain">Terrain</option>
                                 <option value="autre">Autres</option>
                             </select>
@@ -114,8 +114,8 @@
                         <!-- Étape 4 : Remarques -->
                         <div class="step">
                             <h2>Remarques</h2>
-                            <label for="remarks">Remarques supplémentaires :</label>
-                            <textarea name="remarks" id="remarks" rows="6" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Lora', serif; font-size: 1em; background-color: #f9f9f9;" required></textarea>
+                            <label for="remarques">Remarques supplémentaires :</label>
+                            <textarea name="remarques" id="remarques" rows="6" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Lora', serif; font-size: 1em; background-color: #f9f9f9;" required></textarea>
                             <div class="button-container submit-container">
                                 <button type="submit" id="submit-form">Envoyer le formulaire</button>
                             </div>
@@ -173,172 +173,181 @@
         });
     }
 
-    function generateDynamicFields() {
-        const dynamicFieldsContainer = document.getElementById('dynamic-fields');
-        dynamicFieldsContainer.innerHTML = ''; // Vider le conteneur
+function generateDynamicFields() {
+    const dynamicFieldsContainer = document.getElementById('dynamic-fields');
+    dynamicFieldsContainer.innerHTML = ''; // Vider le conteneur
 
-        const propertyType = formData['property-type'] || '';
-        let fieldsHTML = '';
+    const typeBien = formData['type_bien'] || '';
+    let fieldsHTML = '';
 
-        if (propertyType === 'maison' || propertyType === 'mas') {
-            fieldsHTML = `
-                <label for="construction-year">Année de construction :</label>
-                <input type="number" name="construction-year" id="construction-year" min="1900" max="2025">
-                <label for="rooms">Nombre de pièces :</label>
-                <input type="number" name="rooms" id="rooms" min="1">
-                <label for="living-area">Surface habitable (m²) :</label>
-                <input type="number" name="living-area" id="living-area" min="0">
-                <label for="outdoor-area">Surface extérieure (m²) :</label>
-                <input type="number" name="outdoor-area" id="outdoor-area" min="0">
-                <label for="annexes">Annexes (ex. : piscine, abri de jardin) :</label>
-                <input type="text" name="annexes" id="annexes">
-                <label for="condition">État général :</label>
-                <select name="condition" id="condition">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="neuf">Neuf</option>
-                    <option value="excellent">Excellent état</option>
-                    <option value="bon">Bon état</option>
-                    <option value="rafraichir">À rafraîchir</option>
-                    <option value="renover">À rénover</option>
-                </select>
-            `;
-        } else if (propertyType === 'appartement') {
-            fieldsHTML = `
-                <label for="construction-year">Année de construction :</label>
-                <input type="number" name="construction-year" id="construction-year" min="1900" max="2025">
-                <label for="rooms">Nombre de pièces :</label>
-                <input type="number" name="rooms" id="rooms" min="1">
-                <label for="carrez-area">Surface Carrez (m²) :</label>
-                <input type="number" name="carrez-area" id="carrez-area" min="0">
-                <label for="floor">Étage :</label>
-                <input type="number" name="floor" id="floor" min="0">
-                <label for="elevator">Ascenseur :</label>
-                <select name="elevator" id="elevator">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="exposure">Exposition :</label>
-                <select name="exposure" id="exposure">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="nord">Nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="est">Est</option>
-                    <option value="ouest">Ouest</option>
-                    <option value="traversant">Traversant</option>
-                </select>
-                <label for="balcony">Balcon :</label>
-                <select name="balcony" id="balcony">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="terrace">Terrasse :</label>
-                <select name="terrace" id="terrace">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="annexes">Annexes (ex. : parking, caves) :</label>
-                <input type="text" name="annexes" id="annexes">
-                <label for="condition">État général :</label>
-                <select name="condition" id="condition">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="neuf">Neuf</option>
-                    <option value="excellent">Excellent état</option>
-                    <option value="bon">Bon état</option>
-                    <option value="rafraichir">À rafraîchir</option>
-                    <option value="renover">À rénover</option>
-                </select>
-            `;
-        } else if (propertyType === 'immeuble') {
-            fieldsHTML = `
-                <label for="construction-year">Année de construction :</label>
-                <input type="number" name="construction-year" id="construction-year" min="1900" max="2025">
-                <label for="housing-lots">Nombre de lots d'habitation :</label>
-                <input type="number" name="housing-lots" id="housing-lots" min="0">
-                <label for="commercial-lots">Nombre de lots local commercial :</label>
-                <input type="number" name="commercial-lots" id="commercial-lots" min="0">
-                <label for="floors">Nombre d'étages :</label>
-                <input type="number" name="floors" id="floors" min="0">
-                <label for="elevator">Ascenseur :</label>
-                <select name="elevator" id="elevator">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="living-area">Surface habitable (m²) :</label>
-                <input type="number" name="living-area" id="living-area" min="0">
-                <label for="annexes">Annexes (ex. : parking, caves) :</label>
-                <input type="text" name="annexes" id="annexes">
-                <label for="condition">État général :</label>
-                <select name="condition" id="condition">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="neuf">Neuf</option>
-                    <option value="excellent">Excellent état</option>
-                    <option value="bon">Bon état</option>
-                    <option value="rafraichir">À rafraîchir</option>
-                    <option value="renover">À rénover</option>
-                </select>
-            `;
-        } else if (propertyType === 'local-commercial') {
-            fieldsHTML = `
-                <label for="estimation-type">Type d'estimation :</label>
-                <select name="estimation-type" id="estimation-type">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="murs-commerciaux">Murs commerciaux</option>
-                    <option value="droit-au-bail">Droit au bail</option>
-                    <option value="cession-fonds-commerce">Cession de fonds de commerce</option>
-                </select>
-                <label for="rooms">Nombre de pièces :</label>
-                <input type="number" name="rooms" id="rooms" min="1">
-                <label for="area">Surface (m²) :</label>
-                <input type="number" name="area" id="area" min="0">
-                <label for="annexes">Annexes (ex. : stockage, parking) :</label>
-                <input type="text" name="annexes" id="annexes">
-            `;
-        } else if (propertyType === 'terrain') {
-            fieldsHTML = `
-                <label for="land-area">Superficie (m²) :</label>
-                <input type="number" name="land-area" id="land-area" min="0">
-                <label for="constructible">Terrain constructible :</label>
-                <select name="constructible" id="constructible">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="viabilised">Viabilisé :</label>
-                <select name="viabilised" id="viabilised">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="servitude">Servitude :</label>
-                <select name="servitude" id="servitude">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="building-permit">Permis de construire :</label>
-                <select name="building-permit" id="building-permit">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="non">Non</option>
-                    <option value="en-cours">En cours</option>
-                    <option value="accepte">Accepté</option>
-                </select>
-            `;
-        } else {
-            fieldsHTML = `
-                <label for="description">Description du bien :</label>
-                <input type="text" name="description" id="description">
-                <label for="area">Surface (m²) :</label>
-                <input type="number" name="area" id="area" min="0">
-            `;
-        }
-
-        dynamicFieldsContainer.innerHTML = fieldsHTML;
-        restoreData(); // Restaurer les données si elles existent
+    if (typeBien === 'maison' || typeBien === 'mas') {
+        fieldsHTML = `
+            <label for="annee_construction">Année de construction :</label>
+            <input type="number" name="annee_construction" id="annee_construction" min="1900" max="2025">
+            <label for="nombre_pieces">Nombre de pièces :</label>
+            <input type="number" name="nombre_pieces" id="nombre_pieces" min="1">
+            <label for="surface_habitable">Surface habitable (m²) :</label>
+            <input type="number" name="surface_habitable" id="surface_habitable" min="0">
+            <label for="surface_exterieure">Surface extérieure (m²) :</label>
+            <input type="number" name="surface_exterieure" id="surface_exterieure" min="0">
+            <label for="annexes">Annexes (ex. : piscine, abri de jardin) :</label>
+            <input type="text" name="annexes" id="annexes">
+            <label for="etat_general">État général :</label>
+            <select name="etat_general" id="etat_general">
+                <option value="">Sélectionnez une option</option>
+                <option value="neuf">Neuf</option>
+                <option value="excellent">Excellent état</option>
+                <option value="bon">Bon état</option>
+                <option value="rafraichir">À rafraîchir</option>
+                <option value="renover">À rénover</option>
+            </select>
+        `;
+    } else if (typeBien === 'appartement') {
+        fieldsHTML = `
+            <label for="annee_construction">Année de construction :</label>
+            <input type="number" name="annee_construction" id="annee_construction" min="1900" max="2025">
+            <label for="nombre_pieces">Nombre de pièces :</label>
+            <input type="number" name="nombre_pieces" id="nombre_pieces" min="1">
+            <label for="surface_carrez">Surface Carrez (m²) :</label>
+            <input type="number" name="surface_carrez" id="surface_carrez" min="0">
+            <label for="etage">Étage :</label>
+            <input type="number" name="etage" id="etage" min="0">
+            <label for="ascenseur">Ascenseur :</label>
+            <select name="ascenseur" id="ascenseur">
+                <option value="">Sélectionnez une option</option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+            <label for="exposition">Exposition :</label>
+            <select name="exposition" id="exposition">
+                <option value="">Sélectionnez une option</option>
+                <option value="nord">Nord</option>
+                <option value="sud">Sud</option>
+                <option value="est">Est</option>
+                <option value="ouest">Ouest</option>
+                <option value="traversant">Traversant</option>
+            </select>
+            <label for="balcon">Balcon :</label>
+            <select name="balcon" id="balcon">
+                <option value="">Sélectionnez une option</option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+            <label for="terrasse">Terrasse :</label>
+            <select name="terrasse" id="terrasse">
+                <option value="">Sélectionnez une option</option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+            <label for="annexes">Annexes (ex. : parking, caves) :</label>
+            <input type="text" name="annexes" id="annexes">
+            <label for="etat_general">État général :</label>
+            <select name="etat_general" id="etat_general">
+                <option value="">Sélectionnez une option</option>
+                <option value="neuf">Neuf</option>
+                <option value="excellent">Excellent état</option>
+                <option value="bon">Bon état</option>
+                <option value="rafraichir">À rafraîchir</option>
+                <option value="renover">À rénover</option>
+            </select>
+        `;
+    } else if (typeBien === 'immeuble') {
+        fieldsHTML = `
+            <label for="annee_construction">Année de construction :</label>
+            <input type="number" name="annee_construction" id="annee_construction" min="1900" max="2025">
+            <label for="lots_habitation">Nombre de lots d'habitation :</label>
+            <input type="number" name="lots_habitation" id="lots_habitation" min="0">
+            <label for="lots_commerciaux">Nombre de lots local commercial :</label>
+            <input type="number" name="lots_commerciaux" id="lots_commerciaux" min="0">
+            <label for="nombre_etages">Nombre d'étages :</label>
+            <input type="number" name="nombre_etages" id="nombre_etages" min="0">
+            <label for="ascenseur">Ascenseur :</label>
+            <select name="ascenseur" id="ascenseur">
+                <option value="">Sélectionnez une option</option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+            <label for="surface_habitable">Surface habitable (m²) :</label>
+            <input type="number" name="surface_habitable" id="surface_habitable" min="0">
+            <label for="annexes">Annexes (ex. : parking, caves) :</label>
+            <input type="text" name="annexes" id="annexes">
+            <label for="etat_general">État général :</label>
+            <select name="etat_general" id="etat_general">
+                <option value="">Sélectionnez une option</option>
+                <option value="neuf">Neuf</option>
+                <option value="excellent">Excellent état</option>
+                <option value="bon">Bon état</option>
+                <option value="rafraichir">À rafraîchir</option>
+                <option value="renover">À rénover</option>
+            </select>
+        `;
+    } else if (typeBien === 'local_commercial') {
+        fieldsHTML = `
+            <label for="type_estimation">Type d'estimation :</label>
+            <select name="type_estimation" id="type_estimation">
+                <option value="">Sélectionnez une option</option>
+                <option value="murs_commerciaux">Murs commerciaux</option>
+                <option value="droit_au_bail">Droit au bail</option>
+                <option value="cession_fonds_commerce">Cession de fonds de commerce</option>
+            </select>
+            <label for="nombre_pieces">Nombre de pièces :</label>
+            <input type="number" name="nombre_pieces" id="nombre_pieces" min="1">
+            <label for="surface">Surface (m²) :</label>
+            <input type="number" name="surface" id="surface" min="0">
+            <label for="annexes">Annexes (ex. : stockage, parking) :</label>
+            <input type="text" name="annexes" id="annexes">
+        `;
+    } else if (typeBien === 'terrain') {
+        fieldsHTML = `
+            <label for="superficie">Superficie (m²) :</label>
+            <input type="number" name="superficie" id="superficie" min="0">
+            <label for="constructible">Terrain constructible :</label>
+            <select name="constructible" id="constructible">
+                <option value="">Sélectionnez une option</option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+            <label for="viabilise">Viabilisé :</label>
+            <select name="viabilise" id="viabilise">
+                <option value="">Sélectionnez une option</option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+            <label for="servitude">Servitude :</label>
+            <select name="servitude" id="servitude">
+                <option value="">Sélectionnez une option</option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+            <label for="permis_construire">Permis de construire :</label>
+            <select name="permis_construire" id="permis_construire">
+                <option value="">Sélectionnez une option</option>
+                <option value="non">Non</option>
+                <option value="en_cours">En cours</option>
+                <option value="accepte">Accepté</option>
+            </select>
+        `;
+    } else {
+        fieldsHTML = `
+            <label for="description">Description du bien :</label>
+            <input type="text" name="description" id="description">
+            <label for="surface">Surface (m²) :</label>
+            <input type="number" name="surface" id="surface" min="0">
+        `;
     }
+
+    dynamicFieldsContainer.innerHTML = fieldsHTML;
+    restoreData(); // Restaurer les données si elles existent
+}
+
+// Met à jour l'écouteur pour le changement de "Typologie du bien"
+const typeBienSelect = document.getElementById('type_bien_select');
+typeBienSelect.addEventListener('change', () => {
+    saveData(); // Sauvegarder le nouveau type de bien
+    if (currentStep === 2) { // Si on est à l’étape 3
+        generateDynamicFields();
+    }
+});
 
     openForm.addEventListener('click', () => {
         modal.style.display = 'block';
