@@ -99,6 +99,42 @@ $stmt->bindParam(':type_estimation', $type_estimation);
 
 try {
     $stmt->execute();
+    $to = "maxime.renoudgrappin@gmail.com"; // Remplace par l’email de l’entreprise
+    $subject = "Nouvelle demande d'estimation";
+    $body = "Nom et prénom : $nom_prenom\n" .
+            "Téléphone : $telephone\n" .
+            "Email : $email\n" .
+            "Adresse du bien : $adresse_bien, $code_postal $ville\n" .
+            "Type de bien : $type_bien\n" .
+            "Remarques : $remarques\n" .
+            "Date : $date\n" .
+            // Ajoute les champs dynamiques s’ils existent
+            (isset($annee_construction) ? "Année de construction : $annee_construction\n" : "") .
+            (isset($nombre_pieces) ? "Nombre de pièces : $nombre_pieces\n" : "") .
+            (isset($surface_habitable) ? "Surface habitable : $surface_habitable m²\n" : "") .
+            (isset($surface_exterieure) ? "Surface extérieure : $surface_exterieure m²\n" : "") .
+            (isset($annexes) ? "Annexes : $annexes\n" : "") .
+            (isset($etat_general) ? "État général : $etat_general\n" : "") .
+            (isset($surface_carrez) ? "Surface Carrez : $surface_carrez m²\n" : "") .
+            (isset($etage) ? "Étage : $etage\n" : "") .
+            (isset($ascenseur) ? "Ascenseur : $ascenseur\n" : "") .
+            (isset($exposition) ? "Exposition : $exposition\n" : "") .
+            (isset($balcon) ? "Balcon : $balcon\n" : "") .
+            (isset($terrasse) ? "Terrasse : $terrasse\n" : "") .
+            (isset($lots_habitation) ? "Lots d'habitation : $lots_habitation\n" : "") .
+            (isset($lots_commerciaux) ? "Lots commerciaux : $lots_commerciaux\n" : "") .
+            (isset($nombre_etages) ? "Nombre d'étages : $nombre_etages\n" : "") .
+            (isset($surface) ? "Surface : $surface m²\n" : "") .
+            (isset($superficie) ? "Superficie : $superficie m²\n" : "") .
+            (isset($constructible) ? "Constructible : $constructible\n" : "") .
+            (isset($viabilise) ? "Viabilisé : $viabilise\n" : "") .
+            (isset($servitude) ? "Servitude : $servitude\n" : "") .
+            (isset($permis_construire) ? "Permis de construire : $permis_construire\n" : "") .
+            (isset($description) ? "Description : $description\n" : "") .
+            (isset($type_estimation) ? "Type d'estimation : $type_estimation\n" : "");
+    $headers = "From: noreply@agencelesecrins.com\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    mail($to, $subject, $body, $headers);
     echo "Demande d'estimation envoyée avec succès !";
 } catch(PDOException $e) {
     echo "Erreur lors de l'insertion : " . $e->getMessage();
