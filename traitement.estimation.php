@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 $servername = "agencrk633.mysql.db"; // Remplace par l'hôte exact d'OVH
 $username = "agencrk633"; // Remplace par ton utilisateur OVH
-$password = "cUdkut-2caxky-mehwuz"; // Remplace par ton mot de passe OVH
+$password = "cUdkut2caxkymehwuz"; // Remplace par ton mot de passe OVH
 $dbname = "agencrk633"; // Nom de la base OVH
 
 try {
