@@ -42,7 +42,8 @@ try {
             "Téléphone : $telephone\n" .
             "Message : $message\n" .
             "Date : $date";
-    $headers = "From: noreply@agencelesecrins.com";
+    $headers = "From: noreply@agencelesecrins.com\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
     mail($to, $subject, $body, $headers);
     echo "Message envoyé avec succès !";
 } catch(PDOException $e) {
