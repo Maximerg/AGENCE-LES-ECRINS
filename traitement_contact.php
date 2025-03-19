@@ -34,6 +34,16 @@ $stmt->bindParam(':date', $date);
 
 try {
     $stmt->execute();
+    $to = "maxime.renoudgrappin@gmail.com"; // Remplace par l’email de l’entreprise
+    $subject = "Nouvelle soumission de formulaire de contact";
+    $body = "Nature de la demande : $nature_demande\n" .
+            "Nom et prénom : $nom_prenom\n" .
+            "Email : $email\n" .
+            "Téléphone : $telephone\n" .
+            "Message : $message\n" .
+            "Date : $date";
+    $headers = "From: noreply@agencelesecrins.com";
+    mail($to, $subject, $body, $headers);
     echo "Message envoyé avec succès !";
 } catch(PDOException $e) {
     echo "Erreur lors de l'insertion : " . $e->getMessage();
