@@ -199,11 +199,6 @@ h2 {
     .header-bottom nav ul li a {
         padding: 5px 20px;
     }
-    
-    .header-key {
-        max-height: 100px; /* Réduire la taille de l'image */
-        left: 15px; /* Réduire l'espace à gauche */
-    }
 }
 
 /* Petites tablettes/téléphones (jusqu’à 768px) */
@@ -260,11 +255,6 @@ h2 {
         display: block;
         font-size: 1rem;
     }
-
-    .header-key {
-        max-height: 70px; /* Réduire encore la taille */
-        left: 10px; /* Réduire l'espace à gauche */
-    }
 }
 
 /* Très petits téléphones (jusqu’à 480px) */
@@ -298,11 +288,6 @@ h2 {
 
     .header-bottom nav ul li a {
         font-size: 0.9rem;
-    }
-
-    .header-key {
-        max-height: 50px; /* Réduire davantage la taille */
-        left: 5px; /* Réduire l'espace à gauche */
     }
 }
 
