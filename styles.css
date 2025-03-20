@@ -24,6 +24,7 @@ html, body {
     justify-content: center; /* Centrer horizontalement */
     padding: 20px 0;
     position: relative; /* Pour que .header-key puisse être positionné si besoin */
+    background-color: #FFF;
 }
 
 /* Styles pour .founder-logo */
