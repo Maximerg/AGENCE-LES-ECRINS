@@ -199,40 +199,61 @@
 
 <script>
     const startTime = Date.now();
+    let isLoaded = false; // Variable pour suivre si le chargement est terminé
 
-    const hideLoader = () => {
+    // Marquer le chargement comme terminé quand window.onload est déclenché
+    window.addEventListener('load', () => {
+        console.log('window.onload déclenché');
+        isLoaded = true;
+        handleLoadComplete();
+    });
+
+    // Afficher le loader si le chargement prend plus de 500ms
+    setTimeout(() => {
+        if (!isLoaded) {
+            const loader = document.querySelector('.loader');
+            if (loader && !loader.classList.contains('hidden')) {
+                console.log('Chargement > 500ms, affichage du loader...');
+                loader.classList.add('visible');
+            }
+        }
+    }, 500);
+
+    const handleLoadComplete = () => {
         const loader = document.querySelector('.loader');
-        if (!loader) {
-            console.error('Erreur : l’élément .loader n’a pas été trouvé.');
+        const pageContent = document.querySelector('.page-content');
+        if (!loader || !pageContent) {
+            console.error('Erreur : .loader ou .page-content non trouvé.');
             return;
         }
 
         const elapsedTime = Date.now() - startTime;
+
+        // Si le chargement a pris moins de 500ms, afficher la page immédiatement
         if (elapsedTime < 500) {
-            console.log('Chargement trop rapide (< 500ms), masquage immédiat du loader.');
-            loader.classList.add('hidden');
+            console.log('Chargement rapide (< 500ms), affichage direct de la page.');
+            loader.classList.add('hidden'); // S'assurer que le loader reste masqué
+            pageContent.classList.add('loaded');
             return;
         }
 
+        // Sinon, attendre la durée minimale de 2 secondes avant de masquer le loader
         console.log('Loader affiché, masquage après un minimum de 2 secondes...');
-        const remainingTime = Math.max(0, 2000 - elapsedTime); // Durée minimale de 2 secondes
+        const remainingTime = Math.max(0, 2000 - elapsedTime);
         setTimeout(() => {
             loader.classList.add('hidden');
+            setTimeout(() => {
+                pageContent.classList.add('loaded');
+            }, 1200); // Attendre la fin de la transition du loader (1.2s)
         }, remainingTime);
     };
 
-    // Utiliser uniquement window.onload pour attendre que toutes les ressources soient chargées
-    window.addEventListener('load', () => {
-        console.log('window.onload déclenché');
-        hideLoader();
-    });
-
-    // Sécurité : forcer la disparition après 10 secondes
+    // Sécurité : forcer la disparition du loader et afficher la page après 10 secondes
     setTimeout(() => {
-        const loader = document.querySelector('.loader');
-        if (loader && !loader.classList.contains('hidden')) {
-            console.log('Forcer la disparition du loader après 10 secondes');
-            loader.classList.add('hidden');
+        if (!isLoaded) {
+            console.log('Forcer la fin du chargement après 10 secondes');
+            isLoaded = true;
+            handleLoadComplete();
         }
     }, 10000);
 </script>
