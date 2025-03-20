@@ -422,22 +422,43 @@
 </script>
 
 <script>
-    // Attendre que la page soit complètement chargée
-    window.addEventListener('load', () => {
-        const loader = document.querySelector('.loader');
-        // Ajouter la classe .hidden pour masquer le loader
-        loader.classList.add('hidden');
-    });
-</script>
+    const startTime = Date.now();
 
-<script>
-    window.addEventListener('load', () => {
+    const hideLoader = () => {
         const loader = document.querySelector('.loader');
-        // Attendre au moins 1 seconde avant de masquer le loader
+        if (!loader) {
+            console.error('Erreur : l’élément .loader n’a pas été trouvé.');
+            return;
+        }
+
+        const elapsedTime = Date.now() - startTime;
+        if (elapsedTime < 500) {
+            console.log('Chargement trop rapide (< 500ms), masquage immédiat du loader.');
+            loader.classList.add('hidden');
+            return;
+        }
+
+        console.log('Loader affiché, masquage après un minimum de 2 secondes...');
+        const remainingTime = Math.max(0, 2000 - elapsedTime); // Durée minimale de 2 secondes
         setTimeout(() => {
             loader.classList.add('hidden');
-        }, 1000); // 1000ms = 1 seconde
+        }, remainingTime);
+    };
+
+    // Utiliser uniquement window.onload pour attendre que toutes les ressources soient chargées
+    window.addEventListener('load', () => {
+        console.log('window.onload déclenché');
+        hideLoader();
     });
+
+    // Sécurité : forcer la disparition après 10 secondes
+    setTimeout(() => {
+        const loader = document.querySelector('.loader');
+        if (loader && !loader.classList.contains('hidden')) {
+            console.log('Forcer la disparition du loader après 10 secondes');
+            loader.classList.add('hidden');
+        }
+    }, 10000);
 </script>
 </body>
 </html>
