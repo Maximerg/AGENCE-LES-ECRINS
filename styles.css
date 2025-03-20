@@ -376,7 +376,7 @@ h2 {
     max-height: 150px;
     width: auto;
     object-fit: contain;
-    animation: spin 2s linear infinite;
+    animation: spin 4s linear infinite;
     animation-delay: 0s; /* S'assurer que l'animation commence immédiatement */
 }
 
