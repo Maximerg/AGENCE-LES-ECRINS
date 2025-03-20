@@ -212,7 +212,7 @@ h2 {
     .header-key {
         max-height: 100px; /* Réduire la taille de l'image */
         left: 15px; /* Réduire l'espace à gauche */
-        top: 15%; /* Ajuster la position verticale */
+        top: 35px; /* Ajuster la position verticale */
     }
 }
 
@@ -272,9 +272,9 @@ h2 {
     }
 
     .header-key {
-        max-height: 80px; /* Réduire encore la taille */
+        max-height: 70px; /* Réduire encore la taille */
         left: 10px; /* Réduire l'espace à gauche */
-        top: 2%; /* Ajuster la position verticale */
+        top: 25px; /* Ajuster la position verticale */
     }
 }
 
@@ -312,9 +312,9 @@ h2 {
     }
 
     .header-key {
-        max-height: 60px; /* Réduire davantage la taille */
+        max-height: 50px; /* Réduire davantage la taille */
         left: 5px; /* Réduire l'espace à gauche */
-        top: 25%; /* Ajuster la position verticale */
+        top: 20px; /* Ajuster la position verticale */
     }
 }
 
