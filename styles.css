@@ -40,6 +40,7 @@ html, body {
     max-height: 125px; /* Ajuste la hauteur selon la taille de ton image */
     width: auto;
     object-fit: contain; /* Garde les proportions de l'image */
+    z-index: 1001; /* S'assurer que l'image est au-dessus du menu burger */
 }
 
 .header-divider {
