@@ -274,7 +274,7 @@ h2 {
     .header-key {
         max-height: 80px; /* Réduire encore la taille */
         left: 10px; /* Réduire l'espace à gauche */
-        top: 20%; /* Ajuster la position verticale */
+        top: 2%; /* Ajuster la position verticale */
     }
 }
 
