@@ -122,6 +122,15 @@
 <script>
     const startTime = Date.now();
 
+    // Afficher le loader si le chargement prend plus de 500ms
+    setTimeout(() => {
+        const loader = document.querySelector('.loader');
+        if (loader && !loader.classList.contains('hidden')) {
+            console.log('Chargement > 500ms, affichage du loader...');
+            loader.classList.add('visible');
+        }
+    }, 500);
+
     const hideLoader = () => {
         const loader = document.querySelector('.loader');
         if (!loader) {
@@ -130,12 +139,6 @@
         }
 
         const elapsedTime = Date.now() - startTime;
-        if (elapsedTime < 500) {
-            console.log('Chargement trop rapide (< 500ms), masquage immédiat du loader.');
-            loader.classList.add('hidden');
-            return;
-        }
-
         console.log('Loader affiché, masquage après un minimum de 2 secondes...');
         const remainingTime = Math.max(0, 2000 - elapsedTime); // Durée minimale de 2 secondes
         setTimeout(() => {
@@ -143,7 +146,7 @@
         }, remainingTime);
     };
 
-    // Utiliser uniquement window.onload pour attendre que toutes les ressources soient chargées
+    // Utiliser window.onload pour attendre que toutes les ressources soient chargées
     window.addEventListener('load', () => {
         console.log('window.onload déclenché');
         hideLoader();
