@@ -133,17 +133,11 @@
 
 <script>
     const startTime = Date.now();
-    let isLoaded = false; // Variable pour suivre si le chargement est terminé
-
-    // Marquer le chargement comme terminé quand window.onload est déclenché
-    window.addEventListener('load', () => {
-        console.log('window.onload déclenché');
-        isLoaded = true;
-        handleLoadComplete();
-    });
+    let isLoaded = false;
+    let loaderTimeout = null;
 
     // Afficher le loader si le chargement prend plus de 500ms
-    setTimeout(() => {
+    loaderTimeout = setTimeout(() => {
         if (!isLoaded) {
             const loader = document.querySelector('.loader');
             if (loader && !loader.classList.contains('hidden')) {
@@ -161,12 +155,18 @@
             return;
         }
 
+        // Annuler le setTimeout pour afficher le loader
+        if (loaderTimeout) {
+            clearTimeout(loaderTimeout);
+            loaderTimeout = null;
+        }
+
         const elapsedTime = Date.now() - startTime;
 
         // Si le chargement a pris moins de 500ms, afficher la page immédiatement
         if (elapsedTime < 500) {
             console.log('Chargement rapide (< 500ms), affichage direct de la page.');
-            loader.classList.add('hidden'); // S'assurer que le loader reste masqué
+            loader.classList.add('hidden');
             pageContent.classList.add('loaded');
             return;
         }
@@ -178,11 +178,17 @@
             loader.classList.add('hidden');
             setTimeout(() => {
                 pageContent.classList.add('loaded');
-            }, 1200); // Attendre la fin de la transition du loader (1.2s)
+            }, 1200);
         }, remainingTime);
     };
 
-    // Sécurité : forcer la disparition du loader et afficher la page après 10 secondes
+    window.addEventListener('load', () => {
+        console.log('window.onload déclenché');
+        isLoaded = true;
+        handleLoadComplete();
+    });
+
+    // Sécurité : forcer la fin du chargement après 10 secondes
     setTimeout(() => {
         if (!isLoaded) {
             console.log('Forcer la fin du chargement après 10 secondes');
