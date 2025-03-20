@@ -212,7 +212,7 @@ h2 {
     .header-key {
         max-height: 100px; /* Réduire la taille de l'image */
         left: 15px; /* Réduire l'espace à gauche */
-        top: 35px; /* Ajuster la position verticale */
+        top: 50px; /* Ajuster la position verticale */
     }
 }
 
@@ -274,7 +274,7 @@ h2 {
     .header-key {
         max-height: 70px; /* Réduire encore la taille */
         left: 10px; /* Réduire l'espace à gauche */
-        top: 25px; /* Ajuster la position verticale */
+        top: 40px; /* Ajuster la position verticale */
     }
 }
 
@@ -314,7 +314,7 @@ h2 {
     .header-key {
         max-height: 50px; /* Réduire davantage la taille */
         left: 5px; /* Réduire l'espace à gauche */
-        top: 20px; /* Ajuster la position verticale */
+        top: 30px; /* Ajuster la position verticale */
     }
 }
 
