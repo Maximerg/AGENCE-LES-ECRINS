@@ -350,6 +350,19 @@ h2 {
     }
 }
 
+/* Masquer le contenu de la page par défaut */
+.page-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Transition fluide pour l'apparition */
+}
+
+/* Afficher le contenu quand la classe .loaded est ajoutée */
+.page-content.loaded {
+    opacity: 1;
+    visibility: visible;
+}
+
 .loader {
     position: fixed;
     top: 0;
