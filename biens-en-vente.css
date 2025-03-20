@@ -31,6 +31,18 @@
     font-size: 1.2em;
 }
 
+/* Styles pour le bouton burger */
+.burger-menu {
+    display: none; /* Caché sur les grands écrans */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+    z-index: 1000;
+}
+
 /* Assurer que la section prend toute la place disponible */
 body {
     display: flex;
