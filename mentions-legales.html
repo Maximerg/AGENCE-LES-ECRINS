@@ -118,5 +118,24 @@
             </div>
         </div>
     </footer>
+
+<script>
+    // Attendre que la page soit complètement chargée
+    window.addEventListener('load', () => {
+        const loader = document.querySelector('.loader');
+        // Ajouter la classe .hidden pour masquer le loader
+        loader.classList.add('hidden');
+    });
+</script>
+
+<script>
+    window.addEventListener('load', () => {
+        const loader = document.querySelector('.loader');
+        // Attendre au moins 1 seconde avant de masquer le loader
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 1000); // 1000ms = 1 seconde
+    });
+</script>
 </body>
 </html>
