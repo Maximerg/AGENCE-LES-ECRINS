@@ -20,137 +20,139 @@
     <div class="loader">
         <img src="https://i.imgur.com/1j9PvN8.jpeg" alt="Loader - Clé" class="loader-key">
     </div>
-    <header>
-        <div class="header-top">
-            <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins" class="founder-logo">
-            <img src="https://i.imgur.com/1j9PvN8.jpeg" alt="Moitié de clé" class="header-key">
-        </div>
-        <div class="header-divider">
-        </div>
-        <div class="header-bottom">
-            <button class="burger-menu">☰</button>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">L'AGENCE</a></li>
-                    <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="estimation.html">ESTIMATION</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>    
-        <section class="estimation-section">
-            <div class="estimation-content">
-                <div class="estimation-text">
-                    <p>"Une estimation juste et précise est essentielle pour bien démarrer tout projet immobilier. Elle permet de définir la juste valeur de votre bien, en tenant compte de nombreux critères, tels que l’état du marché, l’emplacement, les caractéristiques spécifiques de votre propriété et son potentiel.</p>
-                    <p>En effet, un prix de vente adéquat vous permet de vous positionner de manière stratégique face aux acheteurs et contribue également à optimiser la durée de commercialisation de votre bien, en vous assurant que la vente se fasse dans les meilleures conditions et dans un délai optimal.</p>
-                    <p>En tant qu’expert du secteur, je m’engage à vous fournir une analyse complète et objective afin de vous aider à atteindre vos objectifs dans les meilleures conditions."</p>
-                </div>
-                <div class="estimation-image">
-                    <button id="open-form">Démarrer l'estimation</button>
-                </div>
+    <div class="page-content">
+        <header>
+            <div class="header-top">
+                <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins" class="founder-logo">
+                <img src="https://i.imgur.com/1j9PvN8.jpeg" alt="Moitié de clé" class="header-key">
             </div>
-        </section>
+            <div class="header-divider">
+            </div>
+            <div class="header-bottom">
+                <button class="burger-menu">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">L'AGENCE</a></li>
+                        <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
+                        <li><a href="services.html">SERVICES</a></li>
+                        <li><a href="estimation.html">ESTIMATION</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     
-        <div id="form-modal" class="modal">
-            <div class="modal-content">
-                <span class="close">×</span>
-                <div id="form-container">
-                    <form id="multi-step-form" action="traitement_estimation.php" method="POST">
-                        <!-- Étape 0 : Introduction -->
-                        <div class="step active">
-                            <div class="form-intro">
-                                <p class="form-note">Chaque information demandée est utile pour affiner notre analyse, mais si certaines manquent, nous pourrons tout de même établir une première estimation. Nous vous recontacterons ensuite pour valider les détails et vous fournir une évaluation précise accompagnée d'un dossier complet.</p>
-                                <button type="button" class="next start-form">Commencer le formulaire</button>
-                                <p class="form-duration">Durée estimative : 3 minutes</p>
+        <main>    
+            <section class="estimation-section">
+                <div class="estimation-content">
+                    <div class="estimation-text">
+                        <p>"Une estimation juste et précise est essentielle pour bien démarrer tout projet immobilier. Elle permet de définir la juste valeur de votre bien, en tenant compte de nombreux critères, tels que l’état du marché, l’emplacement, les caractéristiques spécifiques de votre propriété et son potentiel.</p>
+                        <p>En effet, un prix de vente adéquat vous permet de vous positionner de manière stratégique face aux acheteurs et contribue également à optimiser la durée de commercialisation de votre bien, en vous assurant que la vente se fasse dans les meilleures conditions et dans un délai optimal.</p>
+                        <p>En tant qu’expert du secteur, je m’engage à vous fournir une analyse complète et objective afin de vous aider à atteindre vos objectifs dans les meilleures conditions."</p>
+                    </div>
+                    <div class="estimation-image">
+                        <button id="open-form">Démarrer l'estimation</button>
+                    </div>
+                </div>
+            </section>
+        
+            <div id="form-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">×</span>
+                    <div id="form-container">
+                        <form id="multi-step-form" action="traitement_estimation.php" method="POST">
+                            <!-- Étape 0 : Introduction -->
+                            <div class="step active">
+                                <div class="form-intro">
+                                    <p class="form-note">Chaque information demandée est utile pour affiner notre analyse, mais si certaines manquent, nous pourrons tout de même établir une première estimation. Nous vous recontacterons ensuite pour valider les détails et vous fournir une évaluation précise accompagnée d'un dossier complet.</p>
+                                    <button type="button" class="next start-form">Commencer le formulaire</button>
+                                    <p class="form-duration">Durée estimative : 3 minutes</p>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <!-- Étape 1 : Informations personnelles -->
-                        <div class="step">
-                            <h2>Informations personnelles</h2>
-                            <label for="nom_prenom">Nom et prénom :</label>
-                            <input type="text" name="nom_prenom" id="nom_prenom" required>
-                            <label for="telephone">Numéro de téléphone :</label>
-                            <input type="tel" name="telephone" id="telephone" required>
-                            <label for="email">Adresse e-mail :</label>
-                            <input type="email" name="email" id="email" required>
-                            <div class="button-container">
-                                <button type="button" class="next">Suivant</button>
+                        
+                            <!-- Étape 1 : Informations personnelles -->
+                            <div class="step">
+                                <h2>Informations personnelles</h2>
+                                <label for="nom_prenom">Nom et prénom :</label>
+                                <input type="text" name="nom_prenom" id="nom_prenom" required>
+                                <label for="telephone">Numéro de téléphone :</label>
+                                <input type="tel" name="telephone" id="telephone" required>
+                                <label for="email">Adresse e-mail :</label>
+                                <input type="email" name="email" id="email" required>
+                                <div class="button-container">
+                                    <button type="button" class="next">Suivant</button>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <!-- Étape 2 : Informations sur le bien -->
-                        <div class="step">
-                            <h2>Informations sur le bien</h2>
-                            <label for="adresse_bien">Adresse du bien :</label>
-                            <input type="text" name="adresse_bien" id="adresse_bien" required>
-                            <label for="code_postal">Code postal :</label>
-                            <input type="text" name="code_postal" id="code_postal" required>
-                            <label for="ville">Ville :</label>
-                            <input type="text" name="ville" id="ville" required>
-                            <label for="type_bien">Typologie du bien :</label>
-                            <select name="type_bien" id="type_bien_select" required>
-                                <option value="">Sélectionnez une option</option>
-                                <option value="maison">Maison</option>
-                                <option value="mas">Mas</option>
-                                <option value="appartement">Appartement</option>
-                                <option value="immeuble">Immeuble</option>
-                                <option value="local_commercial">Local Commercial</option>
-                                <option value="terrain">Terrain</option>
-                                <option value="autre">Autres</option>
-                            </select>
-                            <div class="button-container">
-                                <button type="button" class="prev">Précédent</button>
-                                <button type="button" class="next">Suivant</button>
+                        
+                            <!-- Étape 2 : Informations sur le bien -->
+                            <div class="step">
+                                <h2>Informations sur le bien</h2>
+                                <label for="adresse_bien">Adresse du bien :</label>
+                                <input type="text" name="adresse_bien" id="adresse_bien" required>
+                                <label for="code_postal">Code postal :</label>
+                                <input type="text" name="code_postal" id="code_postal" required>
+                                <label for="ville">Ville :</label>
+                                <input type="text" name="ville" id="ville" required>
+                                <label for="type_bien">Typologie du bien :</label>
+                                <select name="type_bien" id="type_bien_select" required>
+                                    <option value="">Sélectionnez une option</option>
+                                    <option value="maison">Maison</option>
+                                    <option value="mas">Mas</option>
+                                    <option value="appartement">Appartement</option>
+                                    <option value="immeuble">Immeuble</option>
+                                    <option value="local_commercial">Local Commercial</option>
+                                    <option value="terrain">Terrain</option>
+                                    <option value="autre">Autres</option>
+                                </select>
+                                <div class="button-container">
+                                    <button type="button" class="prev">Précédent</button>
+                                    <button type="button" class="next">Suivant</button>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <!-- Étape 3 : Détails du bien (sera rempli dynamiquement) -->
-                        <div class="step">
-                            <h2>Détails du bien</h2>
-                            <div id="dynamic-fields"></div>
-                            <div class="button-container">
-                                <button type="button" class="prev">Précédent</button>
-                                <button type="button" class="next">Suivant</button>
+                        
+                            <!-- Étape 3 : Détails du bien (sera rempli dynamiquement) -->
+                            <div class="step">
+                                <h2>Détails du bien</h2>
+                                <div id="dynamic-fields"></div>
+                                <div class="button-container">
+                                    <button type="button" class="prev">Précédent</button>
+                                    <button type="button" class="next">Suivant</button>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <!-- Étape 4 : Remarques -->
-                        <div class="step">
-                            <h2>Remarques</h2>
-                            <label for="remarques">Remarques supplémentaires :</label>
-                            <textarea name="remarques" id="remarques" rows="6" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Lora', serif; font-size: 1em; background-color: #f9f9f9;" required></textarea>
-                            <div class="button-container submit-container">
-                                <button type="submit" id="submit-form">Envoyer le formulaire</button>
+                        
+                            <!-- Étape 4 : Remarques -->
+                            <div class="step">
+                                <h2>Remarques</h2>
+                                <label for="remarques">Remarques supplémentaires :</label>
+                                <textarea name="remarques" id="remarques" rows="6" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Lora', serif; font-size: 1em; background-color: #f9f9f9;" required></textarea>
+                                <div class="button-container submit-container">
+                                    <button type="submit" id="submit-form">Envoyer le formulaire</button>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <!-- Étape 5 : Confirmation -->
-                        <div class="step">
-                            <div class="confirmation-message">
-                                <h2>Merci pour votre message.</h2>
-                                <p>L’équipe Les Écrins en a bien pris connaissance et reviendra vers vous dans les plus brefs délais. Nous restons à votre disposition et vous remercions de votre confiance.</p>
+                        
+                            <!-- Étape 5 : Confirmation -->
+                            <div class="step">
+                                <div class="confirmation-message">
+                                    <h2>Merci pour votre message.</h2>
+                                    <p>L’équipe Les Écrins en a bien pris connaissance et reviendra vers vous dans les plus brefs délais. Nous restons à votre disposition et vous remercions de votre confiance.</p>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <p class="footer-text">© 2025 Agence Les Écrins. Tous droits réservés.</p>
-            <div class="footer-links">
-                <a href="documents/honoraires.pdf" target="_blank">Barème des honoraires</a>
-                <a href="mentions-legales.html">Mentions légales</a>
+        </main>
+    
+        <footer class="footer">
+            <div class="footer-container">
+                <p class="footer-text">© 2025 Agence Les Écrins. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="documents/honoraires.pdf" target="_blank">Barème des honoraires</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
 <script>
     document.querySelector('.burger-menu').addEventListener('click', function() {
