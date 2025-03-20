@@ -366,6 +366,11 @@ h2 {
     visibility: hidden; /* Invisible par défaut */
 }
 
+.loader.visible {
+    opacity: 1; /* Afficher quand la classe .visible est ajoutée */
+    visibility: visible;
+}
+
 .loader.hidden {
     opacity: 0;
     visibility: hidden;
@@ -376,8 +381,8 @@ h2 {
     max-height: 150px;
     width: auto;
     object-fit: contain;
-    animation: spin 4s linear infinite;
-    animation-delay: 0s; /* S'assurer que l'animation commence immédiatement */
+    animation: spin 4s linear infinite; /* Rotation plus lente, comme déjà ajusté */
+    animation-delay: 0s;
 }
 
 @keyframes spin {
