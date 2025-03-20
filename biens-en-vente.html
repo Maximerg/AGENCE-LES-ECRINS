@@ -63,6 +63,25 @@
     </footer>
 
 <script>
+    // Attendre que la page soit complètement chargée
+    window.addEventListener('load', () => {
+        const loader = document.querySelector('.loader');
+        // Ajouter la classe .hidden pour masquer le loader
+        loader.classList.add('hidden');
+    });
+</script>
+
+<script>
+    window.addEventListener('load', () => {
+        const loader = document.querySelector('.loader');
+        // Attendre au moins 1 seconde avant de masquer le loader
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 1000); // 1000ms = 1 seconde
+    });
+</script>
+
+<script>
     document.querySelector('.burger-menu').addEventListener('click', function() {
         document.querySelector('.header-bottom nav ul').classList.toggle('active');
     });
