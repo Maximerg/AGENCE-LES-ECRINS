@@ -18,28 +18,28 @@ html, body {
     width: 100vw; /* Empêche tout dépassement de la largeur de l'écran */
 }
 
-/* En-tête */
 .header-top {
-    background: #fff;
-    text-align: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Utiliser Flexbox pour aligner les éléments */
+    align-items: center; /* Centrer verticalement les éléments */
+    justify-content: center; /* Centrer horizontalement */
+    padding: 20px 0;
+    position: relative; /* Pour que .header-key puisse être positionné si besoin */
 }
 
+/* Styles pour .founder-logo */
 .founder-logo {
-    max-width: 350px; /* Ajuste la largeur du logo */
-    height: auto; /* Garde les proportions */
-    object-fit: cover; /* Ajuste l’image sans la déformer */
-    padding: 20px 0px;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
 }
 
+/* Styles pour .header-key */
 .header-key {
     position: absolute;
     left: 20px;
-    top: 11%;
-    transform: translateY(-50%);
-    max-height: 125px; /* Ajuste la hauteur selon la taille de ton image */
+    max-height: 125px; /* Hauteur pour desktop */
     width: auto;
-    object-fit: contain; /* Garde les proportions de l'image */
+    object-fit: contain;
     z-index: 1001; /* S'assurer que l'image est au-dessus du menu burger */
 }
 
@@ -212,7 +212,6 @@ h2 {
     .header-key {
         max-height: 100px; /* Réduire la taille de l'image */
         left: 15px; /* Réduire l'espace à gauche */
-        top: 65px; /* Ajuster la position verticale */
     }
 }
 
@@ -274,7 +273,6 @@ h2 {
     .header-key {
         max-height: 70px; /* Réduire encore la taille */
         left: 10px; /* Réduire l'espace à gauche */
-        top: 50px; /* Ajuster la position verticale */
     }
 }
 
@@ -314,7 +312,6 @@ h2 {
     .header-key {
         max-height: 50px; /* Réduire davantage la taille */
         left: 5px; /* Réduire l'espace à gauche */
-        top: 40px; /* Ajuster la position verticale */
     }
 }
 
