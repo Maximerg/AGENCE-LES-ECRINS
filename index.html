@@ -119,6 +119,15 @@
 </script>
 
 <script>
+    // Attendre que la page soit complètement chargée
+    window.addEventListener('load', () => {
+        const loader = document.querySelector('.loader');
+        // Ajouter la classe .hidden pour masquer le loader
+        loader.classList.add('hidden');
+    });
+</script>
+
+<script>
     const carouselInner = document.querySelector('.carousel-inner');
     const items = document.querySelectorAll('.carousel-item');
     let currentIndex = 0;
