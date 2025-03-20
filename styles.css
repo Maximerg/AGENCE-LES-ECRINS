@@ -34,16 +34,6 @@ html, body {
     object-fit: cover;
 }
 
-/* Styles pour .header-key */
-.header-key {
-    position: absolute;
-    left: 20px;
-    max-height: 125px; /* Hauteur pour desktop */
-    width: auto;
-    object-fit: contain;
-    z-index: 1001; /* S'assurer que l'image est au-dessus du menu burger */
-}
-
 .header-divider {
     height: 1px;
     background-color: #000;
