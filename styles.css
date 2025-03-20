@@ -350,35 +350,36 @@ h2 {
     }
 }
 
-/* Styles pour le loader */
 .loader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff; /* Fond blanc pour couvrir la page pendant le chargement */
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* S'assurer que le loader est au-dessus de tout */
-    transition: opacity 0.5s ease; /* Animation pour la disparition */
+    z-index: 9999;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    opacity: 1;
+    visibility: visible;
 }
 
-/* Cacher le loader une fois la page chargée */
 .loader.hidden {
     opacity: 0;
-    pointer-events: none; /* Désactiver les interactions une fois caché */
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .loader-key {
-    max-height: 150px; /* Taille de l'image pour desktop */
+    max-height: 150px;
     width: auto;
     object-fit: contain;
-    animation: spin 2s linear infinite; /* Animation de rotation */
+    animation: spin 2s linear infinite;
+    animation-delay: 0s; /* S'assurer que l'animation commence immédiatement */
 }
 
-/* Animation de rotation */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -391,19 +392,18 @@ h2 {
 /* Media Queries pour responsivité */
 @media (max-width: 1024px) {
     .loader-key {
-        max-height: 120px; /* Réduire la taille sur tablettes */
+        max-height: 120px;
     }
 }
 
 @media (max-width: 768px) {
     .loader-key {
-        max-height: 100px; /* Réduire la taille sur téléphones */
+        max-height: 100px;
     }
 }
 
 @media (max-width: 480px) {
     .loader-key {
-        max-height: 80px; /* Réduire davantage sur très petits écrans */
+        max-height: 80px;
     }
 }
-
