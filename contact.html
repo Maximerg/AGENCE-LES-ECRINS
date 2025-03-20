@@ -22,112 +22,114 @@
     <div class="loader">
         <img src="https://i.imgur.com/1j9PvN8.jpeg" alt="Loader - Clé" class="loader-key">
     </div>
-    <header>
-        <div class="header-top">
-            <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins" class="founder-logo">
-            <img src="https://i.imgur.com/1j9PvN8.jpeg" alt="Moitié de clé" class="header-key">
-        </div>
-        <div class="header-divider">
-        </div>
-        <div class="header-bottom">
-            <button class="burger-menu">☰</button>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">L'AGENCE</a></li>
-                    <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="estimation.html">ESTIMATION</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="contact-section">
-            <div class="contact-container">
-                <!-- Formulaire de contact -->
-                <div class="contact-form">
-                    <h2>CONTACTEZ-NOUS</h2>
-                    <form action="traitement_contact.php" method="POST">
-                        <label for="nature_demande">Nature de la demande :</label>
-                        <select id="nature_demande" name="nature_demande" required>
-                            <option value="" disabled selected>Choisissez une option</option>
-                            <option value="achat">Achat</option>
-                            <option value="vente">Vente</option>
-                            <option value="rejoindre_equipe">Nous rejoindre</option>
-                            <option value="autre">Autres</option>
-                        </select>
-                        
-                        <label for="nom_prenom">NOM et prénom :</label>
-                        <input type="text" id="nom_prenom" name="nom_prenom" required>
-                        
-                        <label for="email">Email :</label>
-                        <input type="email" id="email" name="email" required>
-                    
-                        <label for="telephone">Numéro de téléphone :</label>
-                        <input type="tel" id="telephone" name="telephone" required>
-                        
-                        <label for="message">Message :</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        
-                        <button type="submit">Envoyer</button>
-                    </form>
-                </div>
+    <div class="page-content">
+        <header>
+            <div class="header-top">
+                <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins" class="founder-logo">
+                <img src="https://i.imgur.com/1j9PvN8.jpeg" alt="Moitié de clé" class="header-key">
+            </div>
+            <div class="header-divider">
+            </div>
+            <div class="header-bottom">
+                <button class="burger-menu">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">L'AGENCE</a></li>
+                        <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
+                        <li><a href="services.html">SERVICES</a></li>
+                        <li><a href="estimation.html">ESTIMATION</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     
-                <div class="contact-info">
-                    <h2>RETROUVEZ L'AGENCE</h2>
-                    <div class="contact-item">
-                        <img src="https://i.imgur.com/2gzbhMp.jpeg" alt="Icône téléphone" class="contact-icon">
-                        <p><a href="tel:06 52 98 85 17">06 52 98 85 17</a></p>
+        <main>
+            <section class="contact-section">
+                <div class="contact-container">
+                    <!-- Formulaire de contact -->
+                    <div class="contact-form">
+                        <h2>CONTACTEZ-NOUS</h2>
+                        <form action="traitement_contact.php" method="POST">
+                            <label for="nature_demande">Nature de la demande :</label>
+                            <select id="nature_demande" name="nature_demande" required>
+                                <option value="" disabled selected>Choisissez une option</option>
+                                <option value="achat">Achat</option>
+                                <option value="vente">Vente</option>
+                                <option value="rejoindre_equipe">Nous rejoindre</option>
+                                <option value="autre">Autres</option>
+                            </select>
+                            
+                            <label for="nom_prenom">NOM et prénom :</label>
+                            <input type="text" id="nom_prenom" name="nom_prenom" required>
+                            
+                            <label for="email">Email :</label>
+                            <input type="email" id="email" name="email" required>
+                        
+                            <label for="telephone">Numéro de téléphone :</label>
+                            <input type="tel" id="telephone" name="telephone" required>
+                            
+                            <label for="message">Message :</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            
+                            <button type="submit">Envoyer</button>
+                        </form>
                     </div>
-                    <div class="contact-item">
-                        <img src="https://i.imgur.com/AD1olKE.jpeg" alt="Icône email" class="contact-icon">
-                        <p><a href="mailto:contact@agencelesecrins.com">contact@agencelesecrins.com</a></p>
+        
+                    <div class="contact-info">
+                        <h2>RETROUVEZ L'AGENCE</h2>
+                        <div class="contact-item">
+                            <img src="https://i.imgur.com/2gzbhMp.jpeg" alt="Icône téléphone" class="contact-icon">
+                            <p><a href="tel:06 52 98 85 17">06 52 98 85 17</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <img src="https://i.imgur.com/AD1olKE.jpeg" alt="Icône email" class="contact-icon">
+                            <p><a href="mailto:contact@agencelesecrins.com">contact@agencelesecrins.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <img src="https://i.imgur.com/PpHuRvQ.jpeg" alt="Icône localisation" class="contact-icon">
+                            <p>Luberon - Provence</p>
+                        </div>
+                        <h2 class="social-title">NOS RÉSEAUX SOCIAUX :</h2> <!-- Ajout de la classe -->
+                        <div class="contact-item">
+                            <a href="https://www.instagram.com/marie.beaucourt?igsh=MWY3ZmVodnlpa3NkeA==.com" target="_blank" class="contact-link">
+                                <img src="https://i.imgur.com/VAmFzwT.jpeg" alt="Icône Instagram" class="contact-icon">
+                                <p>marie.beaucourt</p>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="" target="_blank" class="contact-link">
+                                <img src="https://i.imgur.com/mHYa3cL.jpeg" alt="Icône Facebook" class="contact-icon">
+                                <p>Agencelesecrins</p>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="https://www.youtube.com/@Marie.Beaucourt" target="_blank" class="contact-link">
+                                <img src="https://i.imgur.com/mBvSQhh.jpeg" alt="Icône Youtube" class="contact-icon">
+                                <p>Marie.Beaucourt</p>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="http://www.tiktok.com/@lesecrins" target="_blank" class="contact-link">
+                                <img src="https://i.imgur.com/deMtfqV.jpeg" alt="Icône TikTok" class="contact-icon">
+                                <p>Agencelesecrins</p>
+                            </a>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <img src="https://i.imgur.com/PpHuRvQ.jpeg" alt="Icône localisation" class="contact-icon">
-                        <p>Luberon - Provence</p>
-                    </div>
-                    <h2 class="social-title">NOS RÉSEAUX SOCIAUX :</h2> <!-- Ajout de la classe -->
-                    <div class="contact-item">
-                        <a href="https://www.instagram.com/marie.beaucourt?igsh=MWY3ZmVodnlpa3NkeA==.com" target="_blank" class="contact-link">
-                            <img src="https://i.imgur.com/VAmFzwT.jpeg" alt="Icône Instagram" class="contact-icon">
-                            <p>marie.beaucourt</p>
-                        </a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="" target="_blank" class="contact-link">
-                            <img src="https://i.imgur.com/mHYa3cL.jpeg" alt="Icône Facebook" class="contact-icon">
-                            <p>Agencelesecrins</p>
-                        </a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="https://www.youtube.com/@Marie.Beaucourt" target="_blank" class="contact-link">
-                            <img src="https://i.imgur.com/mBvSQhh.jpeg" alt="Icône Youtube" class="contact-icon">
-                            <p>Marie.Beaucourt</p>
-                        </a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="http://www.tiktok.com/@lesecrins" target="_blank" class="contact-link">
-                            <img src="https://i.imgur.com/deMtfqV.jpeg" alt="Icône TikTok" class="contact-icon">
-                            <p>Agencelesecrins</p>
-                        </a>
-                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="footer-container">
+                <p class="footer-text">&copy; 2025 Agence Les Écrins. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="documents/honoraires.pdf" target="_blank">Barème des honoraires</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
                 </div>
             </div>
-        </section>
-    </main>
-    
-    <footer class="footer">
-        <div class="footer-container">
-            <p class="footer-text">&copy; 2025 Agence Les Écrins. Tous droits réservés.</p>
-            <div class="footer-links">
-                <a href="documents/honoraires.pdf" target="_blank">Barème des honoraires</a>
-                <a href="mentions-legales.html">Mentions légales</a>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
 <script>
     const startTime = Date.now();
