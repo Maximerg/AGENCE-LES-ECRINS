@@ -141,6 +141,7 @@
     const startTime = Date.now();
     let isLoaded = false;
     let loaderTimeout = null;
+    let hasLoaderBeenShown = false; // Nouvelle variable pour suivre si le loader a été affiché
 
     // Afficher le loader si le chargement prend plus de 500ms
     loaderTimeout = setTimeout(() => {
@@ -149,6 +150,7 @@
             if (loader && !loader.classList.contains('hidden')) {
                 console.log('Chargement > 500ms, affichage du loader...');
                 loader.classList.add('visible');
+                hasLoaderBeenShown = true; // Marquer que le loader a été affiché
             }
         }
     }, 500);
@@ -169,22 +171,22 @@
 
         const elapsedTime = Date.now() - startTime;
 
-        // Si le chargement a pris moins de 500ms, afficher la page immédiatement
-        if (elapsedTime < 500) {
+        // Si le chargement a pris moins de 500ms et que le loader n'a pas été affiché
+        if (elapsedTime < 500 && !hasLoaderBeenShown) {
             console.log('Chargement rapide (< 500ms), affichage direct de la page.');
             loader.classList.add('hidden');
             pageContent.classList.add('loaded');
             return;
         }
 
-        // Sinon, attendre la durée minimale de 2 secondes avant de masquer le loader
-        console.log('Loader affiché, masquage après un minimum de 2 secondes...');
+        // Si le loader a été affiché ou si le chargement a pris plus de 500ms
+        console.log('Loader affiché ou en cours, masquage après un minimum de 2 secondes...');
         const remainingTime = Math.max(0, 2000 - elapsedTime);
         setTimeout(() => {
             loader.classList.add('hidden');
             setTimeout(() => {
                 pageContent.classList.add('loaded');
-            }, 1200);
+            }, 1200); // Attendre la fin de la transition du loader (1.2s)
         }, remainingTime);
     };
 
