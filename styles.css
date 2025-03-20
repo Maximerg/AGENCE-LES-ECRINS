@@ -361,9 +361,9 @@ h2 {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
-    opacity: 1;
-    visibility: visible;
+    transition: opacity 1.2s ease, visibility 1.2s ease;
+    opacity: 0; /* Invisible par défaut */
+    visibility: hidden; /* Invisible par défaut */
 }
 
 .loader.hidden {
