@@ -128,6 +128,16 @@
 </script>
 
 <script>
+    window.addEventListener('load', () => {
+        const loader = document.querySelector('.loader');
+        // Attendre au moins 1 seconde avant de masquer le loader
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 1000); // 1000ms = 1 seconde
+    });
+</script>
+
+<script>
     const carouselInner = document.querySelector('.carousel-inner');
     const items = document.querySelectorAll('.carousel-item');
     let currentIndex = 0;
