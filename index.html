@@ -120,10 +120,8 @@
 </script>
 
 <script>
-    // Mesurer le temps de chargement
     const startTime = Date.now();
 
-    // Fonction pour masquer le loader
     const hideLoader = () => {
         const loader = document.querySelector('.loader');
         if (!loader) {
@@ -131,43 +129,34 @@
             return;
         }
 
-        // Calculer le temps écoulé depuis le début du chargement
         const elapsedTime = Date.now() - startTime;
-
-        // Si le chargement a pris moins de 500ms, masquer immédiatement sans afficher
         if (elapsedTime < 500) {
             console.log('Chargement trop rapide (< 500ms), masquage immédiat du loader.');
             loader.classList.add('hidden');
             return;
         }
 
-        // Sinon, afficher le loader pendant au moins 2 secondes
-        console.log('Loader affiché, masquage après 2 secondes...');
-        const remainingTime = Math.max(0, 2000 - elapsedTime); // 2000ms = 2 secondes
+        console.log('Loader affiché, masquage après un minimum de 2 secondes...');
+        const remainingTime = Math.max(0, 2000 - elapsedTime); // Durée minimale de 2 secondes
         setTimeout(() => {
             loader.classList.add('hidden');
         }, remainingTime);
     };
 
-    // Écouter les événements de chargement
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('DOMContentLoaded déclenché');
-        hideLoader();
-    });
-
+    // Utiliser uniquement window.onload pour attendre que toutes les ressources soient chargées
     window.addEventListener('load', () => {
         console.log('window.onload déclenché');
         hideLoader();
     });
 
-    // Sécurité : forcer la disparition après 5 secondes
+    // Sécurité : forcer la disparition après 10 secondes
     setTimeout(() => {
         const loader = document.querySelector('.loader');
         if (loader && !loader.classList.contains('hidden')) {
-            console.log('Forcer la disparition du loader après 5 secondes');
+            console.log('Forcer la disparition du loader après 10 secondes');
             loader.classList.add('hidden');
         }
-    }, 5000);
+    }, 10000);
 </script>
 
 <script>
