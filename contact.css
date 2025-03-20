@@ -274,42 +274,6 @@ h2 {
     .contact-info .social-title {
         text-align: center; /* Centre le titre social */
     }
-
-    /* Styles pour le burger-menu uniquement sur mobile */
-    .header-bottom nav ul {
-        display: none; /* Masque le menu par défaut sur mobile */
-    }
-
-    .header-bottom nav ul.active {
-        display: block; /* Affiche le menu quand activé */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #fff;
-        width: 100%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-    }
-
-    .header-bottom nav ul li {
-        width: 100%;
-        margin: 0;
-    }
-
-    .header-bottom nav ul li a {
-        display: block;
-        padding: 10px;
-        color: #455243;
-        text-decoration: none;
-    }
-
-    .header-bottom nav ul li a:hover {
-        background-color: #f0f0f0;
-    }
-
-    .burger-menu {
-        display: block; /* Affiche le bouton burger sur mobile */
-    }
 }
 
 @media (max-width: 480px) {
@@ -349,16 +313,5 @@ h2 {
 
     .contact-form form label {
         font-size: 0.9rem;
-    }
-}
-
-/* S’assurer que le burger-menu est masqué sur desktop */
-@media (min-width: 769px) {
-    .header-bottom nav ul {
-        display: flex !important; /* Rétablit l’affichage flex pour desktop */
-    }
-
-    .burger-menu {
-        display: none; /* Masque le bouton burger sur desktop */
     }
 }
