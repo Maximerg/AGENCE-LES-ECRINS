@@ -64,10 +64,10 @@ body {
     display: flex;
     justify-content: center; /* Centrer horizontalement */
     align-items: center; /* Centrer verticalement */
-    padding: 40px 0; /* Ajouter un peu d'espace autour du bouton */
+    padding: 50px 0 0 0; /* Ajouter un peu d'espace autour du bouton */
     background-color: #F0F0F0; /* Même couleur de fond que la page */
     width: 100%;
-    min-height: 150px; /* Hauteur minimale pour la section */
+    min-height: 100px; /* Hauteur minimale pour la section */
 }
 
 #open-form {
