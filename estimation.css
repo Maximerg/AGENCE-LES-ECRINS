@@ -22,7 +22,7 @@ body {
     display: flex;
     max-width: 1600px;
     margin: 0 100px;
-    padding: 40px 0;
+    padding: 0 0 50px 0;
     min-height: 500px; /* Hauteur minimale pour que le texte et l'image aient la même hauteur */
     align-items: stretch; /* S'assurer que les deux éléments s'étendent à la même hauteur */
 }
