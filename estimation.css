@@ -26,25 +26,24 @@ body {
 }
 
 .estimation-text {
-    flex: 6;
+    flex: 5; /* 50% de l'espace */
     padding: 0 40px;
     text-align: justify;
+}
+
+.estimation-image {
+    flex: 5; /* 50% de l'espace */
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centrer l'image horizontalement */
+    align-items: center; /* Centrer l'image verticalement */
+    overflow: hidden;
 }
 
 .estimation-text p {
     font-size: 1.2rem;
     line-height: 1.5;
     padding: 20px 0;
-}
-
-.estimation-image {
-    flex: 4;
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Organiser en colonne : bouton en haut, image en bas */
-    justify-content: flex-start; /* Aligner le contenu en haut */
-    align-items: center;
-    overflow: hidden; /* S'assurer que l'image ne déborde pas */
 }
 
 .estimation-background {
