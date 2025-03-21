@@ -29,7 +29,7 @@ body {
 
 .estimation-text {
     flex: 5;
-    padding: 0 40px 0 20px;
+    padding: 0 40px 0 40px;
     text-align: justify;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@ body {
     justify-content: center; /* Centrer l'image horizontalement */
     align-items: center; /* Centrer l'image verticalement */
     overflow: hidden;
-    padding: 0 20px 0 40px;
+    padding: 0 20px 0 80px;
 }
 
 .estimation-text p {
