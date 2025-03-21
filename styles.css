@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: "Lora", serif;
     line-height: 1.6;
-    color: #FFF;
+    color: black;
     user-select: none; /* Empêche la sélection du texte */
 }
 
