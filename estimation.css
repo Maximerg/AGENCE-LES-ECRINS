@@ -419,7 +419,7 @@ body {
     }
 
     .estimation-button-section {
-        padding: 40px 0 20px 0; /* Ajuster le padding */
+        padding: 80px 0 20px 0; /* Ajuster le padding */
         min-height: 80px;
     }
 
@@ -515,7 +515,7 @@ body {
     }
 
     .estimation-button-section {
-        padding: 30px 0 15px 0; /* Réduire encore le padding */
+        padding: 60px 0 15px 0; /* Réduire encore le padding */
         min-height: 60px;
     }
 
