@@ -8,7 +8,6 @@ body {
 }
 
 /* Section Estimation */
-
 .estimation-section {
     background-color: #F0F0F0;
     width: 100%;
@@ -23,25 +22,25 @@ body {
     max-width: 1600px;
     margin: 0 100px;
     padding: 0 0 50px 0;
-    min-height: 500px; /* Hauteur minimale pour que le texte et l'image aient la même hauteur */
-    align-items: stretch; /* S'assurer que les deux éléments s'étendent à la même hauteur */
+    min-height: 500px;
+    align-items: stretch;
 }
 
 .estimation-text {
     flex: 5;
-    padding: 0 40px 0 40px;
+    padding: 0 40px;
     text-align: justify;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrer le texte verticalement */
+    justify-content: center;
 }
 
 .estimation-image {
-    flex: 5; /* 50% de l'espace */
+    flex: 5;
     position: relative;
     display: flex;
-    justify-content: center; /* Centrer l'image horizontalement */
-    align-items: center; /* Centrer l'image verticalement */
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     padding: 0 20px 0 80px;
 }
@@ -53,22 +52,22 @@ body {
 }
 
 .estimation-background {
-    max-width: 80%; /* Limiter la largeur pour que l'image ne soit pas trop grande */
-    max-height: 80%; /* Limiter la hauteur pour qu'elle reste proportionnée */
-    width: auto; /* Laisser la largeur s'adapter */
-    height: auto; /* Laisser la hauteur s'adapter */
-    object-fit: contain; /* Garder les proportions de l'image */
-    object-position: center; /* Centrer l'image */
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
 }
 
 .estimation-button-section {
     display: flex;
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
-    padding: 75px 0 0 0; /* Ajouter un peu d'espace autour du bouton */
-    background-color: #F0F0F0; /* Même couleur de fond que la page */
+    justify-content: center;
+    align-items: center;
+    padding: 75px 0 0 0;
+    background-color: #F0F0F0;
     width: 100%;
-    min-height: 100px; /* Hauteur minimale pour la section */
+    min-height: 100px;
 }
 
 #open-form {
@@ -129,7 +128,7 @@ body {
 
 /* Formulaire multi-étapes sans transitions */
 .step {
-    display: none; /* Masquer par défaut */
+    display: none;
     position: absolute;
     width: calc(100% - 40px);
 }
@@ -139,13 +138,11 @@ body {
     position: relative;
 }
 
-/* Supprimer les classes de transition */
 .step.next-slide,
 .step.prev-slide {
     display: none;
 }
 
-/* Ajuster le conteneur */
 #multi-step-form {
     position: relative;
     overflow: visible;
@@ -209,7 +206,6 @@ body {
     background-color: #5E6E5A;
 }
 
-/* Conteneur pour les boutons Précédent/Suivant */
 #multi-step-form .button-container {
     display: flex;
     justify-content: space-between;
@@ -228,7 +224,6 @@ body {
     justify-content: end;
 }
 
-/* Harmonisation des tailles des boutons */
 #multi-step-form button,
 #multi-step-form .prev,
 #multi-step-form .next,
@@ -254,7 +249,6 @@ body {
     background-color: #666;
 }
 
-/* Première étape du formulaire (introduction) */
 .form-intro {
     display: flex;
     flex-direction: column;
@@ -321,22 +315,26 @@ body {
 }
 
 /* Media Queries pour responsivité */
+
+/* Tablette (768px - 1024px) */
 @media (max-width: 1024px) {
     .estimation-section {
-        min-height: 500px;
+        min-height: 600px; /* Réduire légèrement la hauteur */
     }
 
     .estimation-content {
         margin: 0 50px;
         min-height: 450px;
+        padding: 0 0 40px 0; /* Réduire le padding */
     }
 
     .estimation-text {
-        padding: 0 40px;
+        padding: 0 30px; /* Réduire le padding */
     }
 
     .estimation-image {
         flex: 5;
+        padding: 0 20px 0 40px; /* Réduire le padding à gauche */
     }
 
     .estimation-background {
@@ -345,8 +343,8 @@ body {
     }
 
     .estimation-button-section {
-        padding: 30px 0;
-        min-height: 120px;
+        padding: 50px 0 0 0; /* Réduire le padding */
+        min-height: 80px;
     }
 
     #open-form {
@@ -387,10 +385,11 @@ body {
     }
 }
 
+/* Mobile large (480px - 768px) */
 @media (max-width: 768px) {
     .estimation-section {
         min-height: auto;
-        padding: 50px 0;
+        padding: 40px 0; /* Ajouter un padding pour éviter que le contenu soit collé au bord */
     }
 
     .estimation-content {
@@ -403,14 +402,15 @@ body {
     }
 
     .estimation-text {
-        padding: 0 40px;
+        padding: 0 30px;
         text-align: center;
     }
 
     .estimation-image {
         width: 100%;
-        margin-top: 40px;
+        margin-top: 30px;
         min-height: 300px;
+        padding: 0; /* Supprimer le padding asymétrique */
     }
 
     .estimation-background {
@@ -419,8 +419,8 @@ body {
     }
 
     .estimation-button-section {
-        padding: 20px 0;
-        min-height: 100px;
+        padding: 40px 0 20px 0; /* Ajuster le padding */
+        min-height: 80px;
     }
 
     #open-form {
@@ -480,10 +480,11 @@ body {
     }
 }
 
+/* Mobile petit (< 480px) */
 @media (max-width: 480px) {
     .estimation-section {
         min-height: auto;
-        padding: 50px 0;
+        padding: 30px 0; /* Réduire le padding */
     }
 
     .estimation-content {
@@ -493,13 +494,19 @@ body {
     }
 
     .estimation-text {
-        padding: 0 30px;
+        padding: 0 20px; /* Réduire le padding */
+    }
+
+    .estimation-text p {
+        font-size: 1rem; /* Réduire la taille du texte */
+        padding: 15px 0;
     }
 
     .estimation-image {
         width: 100%;
-        margin-top: 30px;
-        min-height: 250px;
+        margin-top: 20px;
+        min-height: 200px; /* Réduire la hauteur minimale */
+        padding: 0;
     }
 
     .estimation-background {
@@ -508,12 +515,12 @@ body {
     }
 
     .estimation-button-section {
-        padding: 20px 0;
-        min-height: 80px;
+        padding: 30px 0 15px 0; /* Réduire encore le padding */
+        min-height: 60px;
     }
 
     #open-form {
-        padding: 10px 20px;
+        padding: 8px 16px;
         font-size: 0.9em;
     }
 
@@ -527,7 +534,7 @@ body {
     }
 
     .start-form {
-        padding: 10px 20px;
+        padding: 8px 16px;
         font-size: 0.9em;
     }
 
@@ -544,6 +551,8 @@ body {
     #multi-step-form select,
     #multi-step-form textarea {
         margin-bottom: 10px;
+        padding: 10px;
+        font-size: 0.9em;
     }
 
     #multi-step-form button,
