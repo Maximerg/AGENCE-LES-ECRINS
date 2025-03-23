@@ -546,16 +546,22 @@ body {
     flex-wrap: wrap; /* Permet aux cases de passer à la ligne si nécessaire */
     gap: 20px; /* Espacement entre les cases */
     margin-top: 10px;
+    justify-content: center; /* Centre les .checkbox-label dans .checkbox-group */
 }
 
 /* Style pour chaque case à cocher et son label */
 .checkbox-label {
-    display: flex;
-    align-items: center;
+    display: inline-flex; /* Remplace display: flex pour s'adapter à la largeur du contenu */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement la case et le texte */
     font-family: "Lora", serif;
     font-size: 1rem;
     color: #455243;
     cursor: pointer;
+    padding: 5px 10px; /* Ajoute un peu de padding pour une meilleure apparence */
+    background-color: #f9f9f9; /* Fond léger pour délimiter la "boîte" */
+    border: 1px solid #ddd; /* Bordure pour délimiter la "boîte" */
+    border-radius: 5px; /* Coins arrondis */
 }
 
 /* Style pour la case à cocher elle-même */
@@ -568,6 +574,10 @@ body {
 }
 
 /* Style au survol */
+.checkbox-label:hover {
+    background-color: #e0e0e0; /* Change le fond au survol */
+}
+
 .checkbox-label:hover input[type="checkbox"] {
     opacity: 0.8;
 }
@@ -582,6 +592,7 @@ body {
 
     .checkbox-label {
         font-size: 0.95rem;
+        padding: 4px 8px;
     }
 
     .checkbox-label input[type="checkbox"] {
@@ -595,10 +606,12 @@ body {
     .checkbox-group {
         flex-direction: column; /* Passe en colonne sur mobile */
         gap: 10px;
+        align-items: center; /* Centre les .checkbox-label en colonne */
     }
 
     .checkbox-label {
         font-size: 0.9rem;
+        padding: 4px 8px;
     }
 
     .checkbox-label input[type="checkbox"] {
@@ -615,6 +628,7 @@ body {
 
     .checkbox-label {
         font-size: 0.85rem;
+        padding: 3px 6px;
     }
 
     .checkbox-label input[type="checkbox"] {
