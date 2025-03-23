@@ -247,8 +247,8 @@
 .about-button {
     display: inline-block;
     padding: 12px 25px;
-    background-color: white;
-    color: #455243;
+    background-color: #455243;
+    color: white;
     text-decoration: none;
     font-size: 1rem;
     border-radius: 3px;
@@ -258,8 +258,8 @@
 }
 
 .about-button:hover {
-    background-color: #455243;
-    color: white;
+    background-color: white;
+    color: #455243;
     transform: translateY(-2px);
 }
 
