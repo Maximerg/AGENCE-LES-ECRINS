@@ -66,7 +66,7 @@ body {
 .estimation-content {
     max-width: 1100px; /* Réduire la largeur maximale pour un meilleur centrage */
     margin: 0 100px;
-    padding: 40px 0;
+    padding: 30px 0;
     text-align: center; /* Centrer le texte */
 }
 
