@@ -183,18 +183,84 @@
     padding: 20px 0px 0px 75px; /* Aligné avec services.css */
 }
 
-/* Section Biens Disponibles */
-
-#biens-disponibles {
-    min-height: auto;
-    padding: 15px 0;
-    margin-top: 15px;
+/* Section Magazine */
+.magazine-section {
     background-color: #F0F0F0;
+    color: #455243;
+    width: 100%;
+    min-height: 800px;
+    font-family: "Lora", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#biens-disponibles h2 {
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+.magazine-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 100px 80px;
+    padding: 20px;
+}
+
+.magazine-image {
+    flex: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.magazine-image img {
+    width: 375px;
+    height: auto;
+    object-fit: contain;
+}
+
+.magazine-images {
+    flex: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 75px;
+}
+
+.magazine-images img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+}
+
+.magazine-image a,
+.magazine-images a {
+    text-decoration: none;
+    display: block;
+}
+
+.magazine-image a:hover img,
+.magazine-images a:hover img {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.about-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: white;
+    color: #455243;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 3px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.about-button:hover {
+    background-color: #455243;
+    color: white;
+    transform: translateY(-2px);
 }
 
 /* Media Queries pour responsivité */
@@ -205,17 +271,57 @@
         height: 500px;
     }
 
+    .about-section {
+        min-height: 350px;
+    }
+
     .about-container {
         margin: 0 50px;
         max-width: 800px;
+        padding: 20px 0;
     }
 
-    .about-image {
-        width: 40%;
+    .about-text h2 {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
     }
 
-    .about-image img {
+    .about-text p {
+        font-size: 1.1rem;
+        padding: 20px 0;
+    }
+
+    .magazine-section {
+        min-height: 600px;
+    }
+
+    .magazine-container {
+        margin: 0 50px;
+    }
+
+    .magazine-image {
+        flex: 0.4;
+    }
+
+    .magazine-image img {
         width: 250px;
+    }
+
+    .magazine-images {
+        padding-left: 40px;
+    }
+
+    .magazine-images img {
+        width: 50%;
+    }
+
+    .about-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .founder-section {
+        min-height: 600px;
     }
 
     .founder-container {
@@ -223,11 +329,20 @@
     }
 
     .founder-image {
-        width: 40%;
+        flex: 0.4;
     }
 
     .founder-image img {
         width: 250px;
+    }
+
+    .founder-text h2 {
+        padding: 0px 0px 15px 50px;
+    }
+
+    .founder-text p {
+        padding: 15px 0px 0px 50px;
+        font-size: 1.1rem;
     }
 }
 
@@ -270,6 +385,45 @@
         font-size: 1rem;
     }
 
+    .magazine-section {
+        min-height: auto;
+        padding: 50px 0;
+    }
+
+    .magazine-container {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .magazine-image {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .magazine-image img {
+        width: 200px;
+    }
+
+    .magazine-images {
+        width: 100%;
+        padding-left: 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .magazine-images img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
     .founder-section {
         min-height: auto;
         padding: 50px 0;
@@ -285,11 +439,7 @@
 
     .founder-image {
         width: 100%;
-        padding-top: 0;
         margin-bottom: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .founder-image img {
@@ -305,20 +455,12 @@
     .founder-text h2 {
         font-size: 1.5rem;
         margin-bottom: 40px;
+        padding: 0;
     }
 
     .founder-text p {
         font-size: 1rem;
         padding: 15px 0;
-    }
-
-    #biens-disponibles {
-        min-height: auto;
-        padding: 50px 0;
-    }
-
-    #biens-disponibles h2 {
-        font-size: 1.5rem;
     }
 }
 
@@ -359,176 +501,6 @@
         font-size: 0.9rem;
     }
 
-    .founder-section {
-        min-height: auto;
-        padding: 50px 0;
-    }
-
-    .founder-container {
-        margin: 0 auto;
-        padding: 0 10px;
-        text-align: center;
-    }
-
-    .founder-image {
-        width: 100%;
-        padding-top: 0;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .founder-image img {
-        width: 180px;
-        margin: 0 auto;
-    }
-
-    .founder-text {
-        padding: 0 30px;
-        text-align: center;
-    }
-
-    .founder-text h2 {
-        font-size: 1.3rem;
-        margin-bottom: 30px;
-    }
-
-    .founder-text p {
-        font-size: 1rem;
-        padding: 12px 0;
-    }
-
-    #biens-disponibles {
-        padding: 50px 0;
-    }
-
-    #biens-disponibles h2 {
-        font-size: 1.3rem;
-    }
-}
-
-/* Section Magazine */
-.magazine-section {
-    background-color: #F0F0F0;
-    color: #455243;
-    width: 100%;
-    min-height: 800px;
-    font-family: "Lora", serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.magazine-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1400px;
-    margin: 0 100px 80px;
-    padding: 20px;
-}
-
-.magazine-image {
-    display: flex;
-    flex: 0.4;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-}
-
-.magazine-image img {
-    width: 375px;
-    height: auto;
-}
-
-.magazine-images {
-    display: flex;
-    flex: 0.6;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.magazine-images img {
-    width: 70%;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 75px;
-}
-
-/* Media Queries pour responsivité */
-
-/* Tablettes (jusqu’à 1024px) */
-@media (max-width: 1024px) {
-    .magazine-section {
-        min-height: 600px;
-    }
-
-    .magazine-container {
-        margin: 0 50px;
-    }
-
-    .magazine-image {
-        width: 40%;
-    }
-
-    .magazine-image img {
-        width: 250px;
-    }
-
-    .magazine-images {
-        padding-left: 40px;
-    }
-
-    .magazine-images img {
-        width: 50%;
-    }
-}
-
-/* Petites tablettes/téléphones (jusqu’à 768px) */
-@media (max-width: 768px) {
-    .magazine-section {
-        min-height: auto;
-        padding: 50px 0;
-    }
-
-    .magazine-container {
-        flex-direction: column;
-        margin: 0 auto;
-        padding: 0 20px;
-        text-align: center;
-        max-width: 100%;
-    }
-
-    .magazine-image {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-
-    .magazine-image img {
-        width: 200px;
-    }
-
-    .magazine-images {
-        width: 100%;
-        padding-left: 0;
-        flex-direction: column;
-    }
-
-    .magazine-images img {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .about-button {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-}
-
-/* Très petits téléphones (jusqu’à 480px) */
-@media (max-width: 480px) {
     .magazine-section {
         min-height: auto;
         padding: 50px 0;
@@ -552,5 +524,35 @@
     .about-button {
         padding: 10px 20px;
         font-size: 0.9rem;
+    }
+
+    .founder-section {
+        min-height: auto;
+        padding: 50px 0;
+    }
+
+    .founder-container {
+        margin: 0 auto;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .founder-image img {
+        width: 180px;
+    }
+
+    .founder-text {
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .founder-text h2 {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .founder-text p {
+        font-size: 1rem;
+        padding: 12px 0;
     }
 }
