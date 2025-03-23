@@ -102,33 +102,39 @@
                                 </div>
                             </div>
                         
-                            <!-- Étape 3 : Détails du bien -->
+                           <!-- Étape 3 : Détails du bien -->
                             <div class="step">
                                 <h2>Détails du bien</h2>
                                 <div id="dynamic-fields"></div>
+                                <!-- Ajout des cases à cocher pour les annexes -->
                                 <div class="form-group">
                                     <label>Annexes présentes (cochez les cases correspondantes) :</label>
                                     <div class="checkbox-group">
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" name="annexes[]" value="Piscine"> Piscine
+                                        <label class="checkbox-label" for="annexe-piscine">
+                                            <input type="checkbox" name="annexes[]" id="annexe-piscine" value="Piscine"> Piscine
                                         </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" name="annexes[]" value="Garage"> Garage
+                                        <label class="checkbox-label" for="annexe-garage">
+                                            <input type="checkbox" name="annexes[]" id="annexe-garage" value="Garage"> Garage
                                         </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" name="annexes[]" value="Pool House"> Pool House
+                                        <label class="checkbox-label" for="annexe-poolhouse">
+                                            <input type="checkbox" name="annexes[]" id="annexe-poolhouse" value="Pool House"> Pool House
                                         </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" name="annexes[]" value="Grange"> Grange
+                                        <label class="checkbox-label" for="annexe-grange">
+                                            <input type="checkbox" name="annexes[]" id="annexe-grange" value="Grange"> Grange
                                         </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" name="annexes[]" value="Abri voiture"> Abri voiture
+                                        <label class="checkbox-label" for="annexe-abri-voiture">
+                                            <input type="checkbox" name="annexes[]" id="annexe-abri-voiture" value="Abri voiture"> Abri voiture
                                         </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" name="annexes[]" value="Borie"> Borie
+                                        <label class="checkbox-label" for="annexe-borie">
+                                            <input type="checkbox" name="annexes[]" id="annexe-borie" value="Borie"> Borie
                                         </label>
                                     </div>
                                 </div>
+                                <div class="button-container">
+                                    <button type="button" class="prev">Précédent</button>
+                                    <button type="button" class="next">Suivant</button>
+                                </div>
+                            </div>
                                 <div class="button-container">
                                     <button type="button" class="prev">Précédent</button>
                                     <button type="button" class="next">Suivant</button>
