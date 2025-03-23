@@ -578,7 +578,8 @@ body {
 
 /* Style lorsque la case est cochée : inverser les couleurs */
 .checkbox-label input[type="checkbox"]:checked + span {
-    color: #fff; /* Texte blanc */
+    background-color: white;
+    color: #455243;
 }
 
 .checkbox-label input[type="checkbox"]:checked ~ .checkbox-label {
