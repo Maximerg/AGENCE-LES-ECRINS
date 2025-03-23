@@ -169,7 +169,7 @@
 
 .founder-text h2 {
     margin: 20px 0;
-    padding: 20px 0px 20px 75px;
+    padding: 0px 0px 20px 75px;
     margin-bottom: 30px; /* Aligné avec services.css */
     font-family: "Playfair Display", serif;
 }
@@ -177,7 +177,7 @@
 .founder-text p {
     font-size: 1.2rem;
     line-height: 1.5;
-    padding: 20px 0px 20px 75px; /* Aligné avec services.css */
+    padding: 20px 0px 0px 75px; /* Aligné avec services.css */
 }
 
 /* Section Biens Disponibles */
