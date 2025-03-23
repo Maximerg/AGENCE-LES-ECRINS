@@ -565,6 +565,7 @@ body {
     border-radius: 5px;
     text-align: center;
     position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide pour le changement de couleur */
 }
 
 /* Masquer la case à cocher */
@@ -575,18 +576,18 @@ body {
     height: 0;
 }
 
-/* Style de la coche (quand la case est cochée) */
-.checkbox-label input[type="checkbox"]:checked + span::before {
-    content: "✔"; /* Symbole de coche */
-    position: absolute;
-    left: 15px; /* Positionne la coche à gauche dans la boîte */
-    top: 50%;
-    transform: translateY(-50%); /* Centre verticalement */
-    font-size: 14px;
-    color: #455243; /* Couleur de la coche */
+/* Style lorsque la case est cochée : inverser les couleurs */
+.checkbox-label input[type="checkbox"]:checked + span {
+    color: #fff; /* Texte blanc */
 }
 
-/* Ajout d'un span pour le texte (pour permettre l'utilisation de ::before) */
+.checkbox-label input[type="checkbox"]:checked ~ .checkbox-label {
+    background-color: #455243; /* Fond vert */
+    border-color: #455243; /* Bordure assortie */
+    color: #fff; /* Texte blanc */
+}
+
+/* Ajout d'un span pour le texte */
 .checkbox-label span {
     position: relative;
 }
@@ -594,6 +595,11 @@ body {
 /* Style au survol */
 .checkbox-label:hover {
     background-color: #e0e0e0;
+}
+
+/* Surcharge du survol lorsque la case est cochée */
+.checkbox-label input[type="checkbox"]:checked ~ .checkbox-label:hover {
+    background-color: #3a4236; /* Une teinte légèrement plus foncée pour le survol */
 }
 
 /* Media Queries pour responsivité */
@@ -608,11 +614,6 @@ body {
         font-size: 0.95rem;
         min-width: 110px;
         padding: 8px 12px;
-    }
-
-    .checkbox-label input[type="checkbox"]:checked + span::before {
-        font-size: 12px;
-        left: 12px;
     }
 }
 
@@ -629,11 +630,6 @@ body {
         min-width: 100px;
         padding: 8px 10px;
     }
-
-    .checkbox-label input[type="checkbox"]:checked + span::before {
-        font-size: 10px;
-        left: 10px;
-    }
 }
 
 /* Très petits téléphones (jusqu’à 480px) */
@@ -646,10 +642,5 @@ body {
         font-size: 0.85rem;
         min-width: 90px;
         padding: 6px 8px;
-    }
-
-    .checkbox-label input[type="checkbox"]:checked + span::before {
-        font-size: 8px;
-        left: 8px;
     }
 }
