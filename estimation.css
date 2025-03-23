@@ -14,7 +14,7 @@ body {
     align-items: center;
     padding: 75px 0;
     width: 100%;
-    min-height: 400px; /* Hauteur minimale pour que l'image de fond soit visible */
+    min-height: 100px; /* Hauteur minimale pour que l'image de fond soit visible */
     background-image: url('https://i.imgur.com/kcQS5gY.jpeg'); /* Remplace par l'URL de ton image */
     background-size: cover; /* L'image couvre toute la section */
     background-position: center; /* Centre l'image */
@@ -35,8 +35,8 @@ body {
 }
 
 #open-form {
-    background-color: #455243;
-    color: white;
+    background-color: white;
+    color: #455243;
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
