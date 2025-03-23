@@ -567,46 +567,33 @@ body {
     position: relative;
 }
 
-/* Style pour la case à cocher elle-même */
+/* Masquer la case à cocher */
 .checkbox-label input[type="checkbox"] {
-    appearance: none; /* Supprime les styles par défaut du navigateur */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 18px; /* Largeur et hauteur égales pour un carré */
-    height: 18px;
-    margin-right: 8px;
-    background-color: #fff; /* Fond de la case non cochée */
-    border: 1px solid #455243; /* Bordure de la case */
-    border-radius: 3px; /* Coins légèrement arrondis */
-    position: relative;
-    cursor: pointer;
-    outline: none; /* Supprime tout contour par défaut */
+    position: absolute;
+    opacity: 0; /* Rendre la case invisible */
+    width: 0;
+    height: 0;
 }
 
 /* Style de la coche (quand la case est cochée) */
-.checkbox-label input[type="checkbox"]:checked::after {
+.checkbox-label input[type="checkbox"]:checked + span::before {
     content: "✔"; /* Symbole de coche */
     position: absolute;
+    left: 15px; /* Positionne la coche à gauche dans la boîte */
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centre la coche */
+    transform: translateY(-50%); /* Centre verticalement */
     font-size: 14px;
     color: #455243; /* Couleur de la coche */
 }
 
-/* Style de la case cochée */
-.checkbox-label input[type="checkbox"]:checked {
-    background-color: #e0e0e0; /* Fond de la case cochée */
-    border-color: #455243;
+/* Ajout d'un span pour le texte (pour permettre l'utilisation de ::before) */
+.checkbox-label span {
+    position: relative;
 }
 
 /* Style au survol */
 .checkbox-label:hover {
     background-color: #e0e0e0;
-}
-
-.checkbox-label:hover input[type="checkbox"] {
-    opacity: 0.8;
 }
 
 /* Media Queries pour responsivité */
@@ -623,13 +610,9 @@ body {
         padding: 8px 12px;
     }
 
-    .checkbox-label input[type="checkbox"] {
-        width: 16px;
-        height: 16px;
-    }
-
-    .checkbox-label input[type="checkbox"]:checked::after {
+    .checkbox-label input[type="checkbox"]:checked + span::before {
         font-size: 12px;
+        left: 12px;
     }
 }
 
@@ -647,13 +630,9 @@ body {
         padding: 8px 10px;
     }
 
-    .checkbox-label input[type="checkbox"] {
-        width: 14px;
-        height: 14px;
-    }
-
-    .checkbox-label input[type="checkbox"]:checked::after {
+    .checkbox-label input[type="checkbox"]:checked + span::before {
         font-size: 10px;
+        left: 10px;
     }
 }
 
@@ -669,12 +648,8 @@ body {
         padding: 6px 8px;
     }
 
-    .checkbox-label input[type="checkbox"] {
-        width: 12px;
-        height: 12px;
-    }
-
-    .checkbox-label input[type="checkbox"]:checked::after {
+    .checkbox-label input[type="checkbox"]:checked + span::before {
         font-size: 8px;
+        left: 8px;
     }
 }
