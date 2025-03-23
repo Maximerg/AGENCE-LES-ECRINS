@@ -71,7 +71,7 @@
 .about-text p {
     font-size: 1.2rem;
     line-height: 1.5;
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 .about-button {
@@ -169,7 +169,7 @@
 
 .founder-text h2 {
     margin: 20px 0;
-    padding: 15px;
+    padding: 20px 0px 20px 50px;
     margin-bottom: 30px; /* Aligné avec services.css */
     font-family: "Playfair Display", serif;
 }
@@ -177,7 +177,7 @@
 .founder-text p {
     font-size: 1.2rem;
     line-height: 1.5;
-    padding: 20px 0; /* Aligné avec services.css */
+    padding: 20px 0px 20px 50px; /* Aligné avec services.css */
 }
 
 /* Section Biens Disponibles */
