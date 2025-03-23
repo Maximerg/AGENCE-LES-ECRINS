@@ -88,8 +88,8 @@
 }
 
 .about-button:hover {
-    background-color: white;
-    color: #455243;
+    background-color: #455243;
+    color: white;
     transform: translateY(-2px);
     font-family: "Poppins", sans-serif;
 }
