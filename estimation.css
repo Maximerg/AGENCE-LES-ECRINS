@@ -594,12 +594,14 @@ body {
 
 /* Style au survol */
 .checkbox-label:hover {
-    background-color: #e0e0e0;
+    background-color: white;
+    color: #455243;
 }
 
 /* Surcharge du survol lorsque la case est cochée */
 .checkbox-label input[type="checkbox"]:checked ~ .checkbox-label:hover {
-    background-color: #3a4236; /* Une teinte légèrement plus foncée pour le survol */
+    background-color: white;
+    color: #455243;
 }
 
 /* Media Queries pour responsivité */
