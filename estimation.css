@@ -546,33 +546,57 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 10px;
-    justify-content: center; /* Centre les .checkbox-label dans .checkbox-group */
+    justify-content: center;
 }
 
 /* Style pour chaque case à cocher et son label */
 .checkbox-label {
     display: inline-flex;
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    justify-content: center;
     font-family: "Lora", serif;
     font-size: 1rem;
     color: #455243;
     cursor: pointer;
-    min-width: 120px; /* Largeur minimale pour que le centrage soit visible */
-    padding: 10px 15px; /* Augmente le padding vertical (10px haut/bas) et horizontal (15px gauche/droite) */
+    min-width: 120px;
+    padding: 10px 15px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
-    text-align: center; /* S'assure que le texte est centré si nécessaire */
+    text-align: center;
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
 }
 
 /* Style pour la case à cocher elle-même */
 .checkbox-label input[type="checkbox"] {
-    margin-right: 8px;
+    appearance: none; /* Supprime les styles par défaut du navigateur */
+    -webkit-appearance: none;
+    -moz-appearance: none;
     width: 18px;
     height: 18px;
-    accent-color: #455243;
+    margin-right: 8px;
+    background-color: #fff; /* Fond de la case non cochée */
+    border: 1px solid #455243; /* Bordure de la case */
+    border-radius: 3px; /* Coins légèrement arrondis */
+    position: relative;
     cursor: pointer;
+}
+
+/* Style de la coche (quand la case est cochée) */
+.checkbox-label input[type="checkbox"]:checked::after {
+    content: "✔"; /* Symbole de coche */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centre la coche */
+    font-size: 14px;
+    color: #455243; /* Couleur de la coche */
+}
+
+/* Style de la case cochée */
+.checkbox-label input[type="checkbox"]:checked {
+    background-color: #e0e0e0; /* Fond de la case cochée */
+    border-color: #455243;
 }
 
 /* Style au survol */
@@ -602,6 +626,10 @@ body {
         width: 16px;
         height: 16px;
     }
+
+    .checkbox-label input[type="checkbox"]:checked::after {
+        font-size: 12px;
+    }
 }
 
 /* Petites tablettes/téléphones (jusqu’à 768px) */
@@ -622,6 +650,10 @@ body {
         width: 14px;
         height: 14px;
     }
+
+    .checkbox-label input[type="checkbox"]:checked::after {
+        font-size: 10px;
+    }
 }
 
 /* Très petits téléphones (jusqu’à 480px) */
@@ -639,5 +671,9 @@ body {
     .checkbox-label input[type="checkbox"] {
         width: 12px;
         height: 12px;
+    }
+
+    .checkbox-label input[type="checkbox"]:checked::after {
+        font-size: 8px;
     }
 }
