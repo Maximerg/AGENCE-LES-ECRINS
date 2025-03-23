@@ -241,7 +241,6 @@
 
 .magazine-image a:hover img,
 .magazine-images a:hover img {
-    opacity: 0.8;
     transition: opacity 0.3s ease;
 }
 
