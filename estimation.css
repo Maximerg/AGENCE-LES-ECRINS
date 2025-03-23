@@ -564,7 +564,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
-    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+    position: relative;
 }
 
 /* Style pour la case à cocher elle-même */
@@ -572,7 +572,7 @@ body {
     appearance: none; /* Supprime les styles par défaut du navigateur */
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 18px;
+    width: 18px; /* Largeur et hauteur égales pour un carré */
     height: 18px;
     margin-right: 8px;
     background-color: #fff; /* Fond de la case non cochée */
@@ -580,6 +580,7 @@ body {
     border-radius: 3px; /* Coins légèrement arrondis */
     position: relative;
     cursor: pointer;
+    outline: none; /* Supprime tout contour par défaut */
 }
 
 /* Style de la coche (quand la case est cochée) */
