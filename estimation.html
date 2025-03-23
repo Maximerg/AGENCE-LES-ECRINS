@@ -106,6 +106,29 @@
                             <div class="step">
                                 <h2>Détails du bien</h2>
                                 <div id="dynamic-fields"></div>
+                                <div class="form-group">
+                                    <label>Annexes présentes (cochez les cases correspondantes) :</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="annexes[]" value="Piscine"> Piscine
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="annexes[]" value="Garage"> Garage
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="annexes[]" value="Pool House"> Pool House
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="annexes[]" value="Grange"> Grange
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="annexes[]" value="Abri voiture"> Abri voiture
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="annexes[]" value="Borie"> Borie
+                                        </label>
+                                    </div>
+                                </div>
                                 <div class="button-container">
                                     <button type="button" class="prev">Précédent</button>
                                     <button type="button" class="next">Suivant</button>
@@ -202,8 +225,6 @@
                 <input type="number" name="surface_habitable" id="surface_habitable" min="0">
                 <label for="surface_exterieure">Surface extérieure (m²) :</label>
                 <input type="number" name="surface_exterieure" id="surface_exterieure" min="0">
-                <label for="annexes">Annexes (ex. : piscine, abri de jardin) :</label>
-                <input type="text" name="annexes" id="annexes">
                 <label for="etat_general">État général :</label>
                 <select name="etat_general" id="etat_general">
                     <option value="">Sélectionnez une option</option>
@@ -251,8 +272,6 @@
                     <option value="oui">Oui</option>
                     <option value="non">Non</option>
                 </select>
-                <label for="annexes">Annexes (ex. : parking, caves) :</label>
-                <input type="text" name="annexes" id="annexes">
                 <label for="etat_general">État général :</label>
                 <select name="etat_general" id="etat_general">
                     <option value="">Sélectionnez une option</option>
@@ -281,8 +300,6 @@
                 </select>
                 <label for="surface_habitable">Surface habitable (m²) :</label>
                 <input type="number" name="surface_habitable" id="surface_habitable" min="0">
-                <label for="annexes">Annexes (ex. : parking, caves) :</label>
-                <input type="text" name="annexes" id="annexes">
                 <label for="etat_general">État général :</label>
                 <select name="etat_general" id="etat_general">
                     <option value="">Sélectionnez une option</option>
@@ -306,8 +323,6 @@
                 <input type="number" name="nombre_pieces" id="nombre_pieces" min="1">
                 <label for="surface">Surface (m²) :</label>
                 <input type="number" name="surface" id="surface" min="0">
-                <label for="annexes">Annexes (ex. : stockage, parking) :</label>
-                <input type="text" name="annexes" id="annexes">
             `;
         } else if (typeBien === 'terrain') {
             fieldsHTML = `
