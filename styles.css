@@ -1,6 +1,3 @@
-/* Importation des polices */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@300;400&display=swap');
-
 /* Styles généraux */
 html, body {
     overflow-x: hidden; /* Empêche le défilement horizontal */
