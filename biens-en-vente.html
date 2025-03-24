@@ -38,126 +38,53 @@
 </head>
 
 <body>
-    
-    <div class="loader">
-        <img src="https://i.imgur.com/1j9PvN8.jpeg" alt="Loader - Clé" class="loader-key">
-    </div>
+    <header>
+        <div class="header-top">
+            <a href="index.html">
+                <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins - Immobilier Haut de Gamme à Gordes" class="founder-logo">
+            </a>
+        </div>
+        <div class="header-divider"></div>
+        <div class="header-bottom">
+            <button class="burger-menu" aria-label="Ouvrir le menu">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">L'AGENCE</a></li>
+                    <li><a href="biens-en-vente.html" class="active">BIENS EN VENTE</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="estimation.html">ESTIMATION</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="page-content">
-        <header>
-            <div class="header-top">
-                <a href="index.html">
-                    <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins" class="founder-logo">
-                </a>
+    <main>
+        <h1 class="visually-hidden">Biens en Vente - Agence Les Écrins</h1>
+        <section class="properties-section">
+            <div class="construction-overlay">
+                <h2>En cours de préparation...</h2>
+                <p>Nos biens seront bientôt en ligne. Revenez prochainement pour les découvrir !</p>
             </div>
-            <div class="header-divider">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">© 2025 Agence Les Écrins. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="documents/honoraires.pdf" target="_blank">Barème des honoraires</a>
+                <a href="mentions-legales.html">Mentions légales</a>
             </div>
-            <div class="header-bottom">
-                <button class="burger-menu">☰</button>
-                <nav>
-                    <ul>
-                        <li><a href="index.html" class="active">L'AGENCE</a></li>
-                        <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
-                        <li><a href="services.html">SERVICES</a></li>
-                        <li><a href="estimation.html">ESTIMATION</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    
-        <main>
-            <section class="properties-section">
-                <div class="construction-overlay">
-                    <h2>En cours de préparation...</h2>
-                    <p>Nos biens seront bientôt en ligne. Revenez prochainement pour les découvrir !</p>
-                </div>
-            </section>
-        </main>
-    
-        <footer class="footer">
-            <div class="footer-container">
-                <p class="footer-text">&copy; 2025 Agence Les Écrins. Tous droits réservés.</p>
-                <div class="footer-links">
-                    <a href="documents/honoraires.pdf" target="_blank">Barème des honoraires</a>
-                    <a href="mentions-legales.html">Mentions légales</a>
-                </div>
-            </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
-<script>
-    const startTime = Date.now();
-    let isLoaded = false;
-    let loaderTimeout = null;
-    let hasLoaderBeenShown = false;
-
-    // Afficher le loader si le chargement prend plus de 500ms
-    loaderTimeout = setTimeout(() => {
-        if (!isLoaded) {
-            const loader = document.querySelector('.loader');
-            if (loader && !loader.classList.contains('hidden')) {
-                console.log('Chargement > 500ms, affichage du loader...');
-                loader.classList.add('visible');
-                hasLoaderBeenShown = true;
-            }
-        }
-    }, 500);
-
-    const handleLoadComplete = () => {
-        const loader = document.querySelector('.loader');
-        const pageContent = document.querySelector('.page-content');
-        if (!loader || !pageContent) {
-            console.error('Erreur : .loader ou .page-content non trouvé.');
-            return;
-        }
-
-        // Annuler le setTimeout pour afficher le loader
-        if (loaderTimeout) {
-            clearTimeout(loaderTimeout);
-            loaderTimeout = null;
-        }
-
-        // Si le loader a été affiché, on le masque après la durée minimale
-        if (hasLoaderBeenShown) {
-            console.log('Loader affiché, masquage après un minimum de 2 secondes...');
-            const elapsedTime = Date.now() - startTime;
-            const remainingTime = Math.max(0, 2000 - elapsedTime);
-            setTimeout(() => {
-                loader.classList.add('hidden');
-                setTimeout(() => {
-                    pageContent.classList.add('loaded');
-                }, 1200);
-            }, remainingTime);
-        } else {
-            // Si le loader n'a pas été affiché, on affiche la page immédiatement
-            console.log('Loader non affiché, affichage direct de la page.');
-            loader.classList.add('hidden');
-            pageContent.classList.add('loaded');
-        }
-    };
-
-    window.addEventListener('load', () => {
-        console.log('window.onload déclenché');
-        isLoaded = true;
-        handleLoadComplete();
-    });
-
-    // Sécurité : forcer la fin du chargement après 10 secondes
-    setTimeout(() => {
-        if (!isLoaded) {
-            console.log('Forcer la fin du chargement après 10 secondes');
-            isLoaded = true;
-            handleLoadComplete();
-        }
-    }, 10000);
-</script>
-
-<script>
-    document.querySelector('.burger-menu').addEventListener('click', function() {
-        document.querySelector('.header-bottom nav ul').classList.toggle('active');
-    });
-</script>
+    <script>
+        // Gestion du menu burger
+        document.querySelector('.burger-menu').addEventListener('click', () => {
+            document.querySelector('.header-bottom nav ul').classList.toggle('active');
+        });
+    </script>
 </body>
   
 </html>
