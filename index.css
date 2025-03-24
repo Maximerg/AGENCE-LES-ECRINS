@@ -1,6 +1,18 @@
- /* Main - Section Hero */
+/* Styles utilitaires */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Main - Section Hero */
 .main-hero {
-    margin: 50px auto 150px auto;
+    margin: 50px auto 150px;
     width: 90%;
     max-width: 1200px;
     height: 600px;
@@ -19,23 +31,22 @@
     display: flex;
     width: 300%; /* Pour 3 images */
     height: 100%;
-    position: relative;
-    left: 0; /* Plus de décalage initial */
-    transition: transform 0.5s ease; /* Transition fluide */
+    transition: transform 0.5s ease;
 }
 
 .carousel-item {
     width: 33.33%; /* 100% / 3 images */
     height: 100%;
     object-fit: cover;
-    filter: brightness(50%); /* Sombre par défaut */
+    filter: brightness(50%);
     transition: filter 0.5s ease;
 }
 
 .carousel-item.active {
-    filter: brightness(100%); /* Éclaircit l’image centrale */
+    filter: brightness(100%);
 }
 
+/* Section À propos */
 .about-section {
     background-color: #F0F0F0;
     color: #455243;
@@ -48,24 +59,17 @@
 }
 
 .about-container {
-    display: flex;
-    justify-content: center;
     max-width: 1150px;
-    margin: 50px 100px 0 100px;
-    padding: 30px 0px 0px;
-    flex-direction: column; /* Changé pour centrer verticalement */
-}
-
-.about-text {
-    flex: 1;
-    text-align: center; /* Centré au lieu de left */
+    margin: 50px 100px 0;
+    padding: 30px 0 0;
+    flex-direction: column;
+    text-align: center;
 }
 
 .about-text h2 {
     font-size: 1.9rem;
-    margin: 20px 0;
+    margin: 20px 0 40px;
     padding: 15px;
-    margin-bottom: 40px;
 }
 
 .about-text p {
@@ -74,113 +78,24 @@
     padding: 30px 0;
 }
 
+/* Bouton générique */
 .about-button {
     display: inline-block;
     padding: 12px 25px;
-    background-color: white;
-    color: #455243;
+    background-color: #455243;
+    color: white;
     text-decoration: none;
     font-size: 1rem;
+    font-family: "Poppins", sans-serif;
     border-radius: 3px;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .about-button:hover {
-    background-color: #455243;
-    color: white;
+    background-color: white;
+    color: #455243;
     transform: translateY(-2px);
-    font-family: "Poppins", sans-serif;
-}
-
-
-
-/* Section Fondatrice */
-
-.founder-section {
-    background-color: #fff;
-    color: #455243;
-    width: 100%;
-    min-height: 800px;
-    font-family: "Lora", serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.founder-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1400px;
-    margin: 0 100px;
-    padding: 20px;
-}
-
-.founder-image {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 30%;
-    flex-direction: column; /* Ajouté pour aligner l'image et les coordonnées verticalement */
-}
-
-.founder-image img {
-    width: 300px;
-    height: auto;
-}
-
-/* Ajout des styles pour les coordonnées dans .founder-section */
-
-.founder-contact {
-    text-align: center; /* Centre les informations par rapport à l'image */
-    margin-top: 15px; /* Espace entre l'image et les coordonnées */
-    user-select: text; /* Permet la sélection et le copier-coller */
-    -webkit-user-select: text; /* Pour WebKit */
-    -moz-user-select: text; /* Pour Firefox */
-    -ms-user-select: text; /* Pour IE/Edge */
-}
-
-.founder-contact .email,
-.founder-contact .phone {
-    font-size: 0.9rem; /* Taille discrète mais lisible */
-    color: #455243; /* Couleur cohérente avec le thème */
-    margin: 5px 0; /* Espace entre l'email et le téléphone */
-    line-height: 1.2; /* Évite que les lignes soient trop serrées */
-}
-
-/* Optionnel : Ajoute un léger effet au survol pour rendre les coordonnées interactives */
-
-.founder-contact .email a,
-.founder-contact .phone a {
-    text-decoration: none; /* Supprime le soulignement par défaut */
-    color: #455243;
-    transition: color 0.3s ease;
-}
-
-.founder-contact .email a:hover,
-.founder-contact .phone a:hover {
-    color: #5E6E5A; /* Couleur légèrement plus claire au survol */
-}
-
-.founder-text {
-    flex: 1;
-    padding-left: 40px;
-    text-align: left;
-}
-
-.founder-text h2 {
-    margin: 20px 0;
-    padding: 0px 0px 20px 75px;
-    margin-bottom: 30px; /* Aligné avec services.css */
-    font-family: "Playfair Display", serif;
-}
-
-.founder-text p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    padding: 20px 0px 0px 75px; /* Aligné avec services.css */
 }
 
 /* Section Magazine */
@@ -197,8 +112,6 @@
 
 .magazine-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
     max-width: 1400px;
     margin: 0 100px 80px;
     padding: 20px;
@@ -220,9 +133,9 @@
 .magazine-images {
     flex: 0.6;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     gap: 75px;
 }
 
@@ -235,32 +148,87 @@
 .magazine-image a,
 .magazine-images a {
     text-decoration: none;
-    display: inline-block; /* Modifié pour centrer l'image */
-    text-align: center; /* Centre l'image à l'intérieur du <a> */
-}
-
-.magazine-image a:hover img,
-.magazine-images a:hover img {
-    transition: opacity 0.3s ease;
-}
-
-.about-button {
     display: inline-block;
-    padding: 12px 25px;
-    background-color: #455243;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 3px;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-family: "Poppins", sans-serif;
 }
 
-.about-button:hover {
-    background-color: white;
+/* Section Fondatrice */
+.founder-section {
+    background-color: #fff;
     color: #455243;
-    transform: translateY(-2px);
+    width: 100%;
+    min-height: 800px;
+    font-family: "Lora", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.founder-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 100px;
+    padding: 20px;
+}
+
+.founder-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+}
+
+.founder-image img {
+    width: 300px;
+    height: auto;
+}
+
+.founder-contact {
+    text-align: center;
+    margin-top: 15px;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+.founder-contact .email,
+.founder-contact .phone {
+    font-size: 0.9rem;
+    color: #455243;
+    margin: 5px 0;
+    line-height: 1.2;
+}
+
+.founder-contact .email a,
+.founder-contact .phone a {
+    text-decoration: none;
+    color: #455243;
+    transition: color 0.3s ease;
+}
+
+.founder-contact .email a:hover,
+.founder-contact .phone a:hover {
+    color: #5E6E5A;
+}
+
+.founder-text {
+    flex: 1;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.founder-text h2 {
+    margin: 20px 0 30px;
+    padding: 0 0 20px 75px;
+    font-family: "Playfair Display", serif;
+}
+
+.founder-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 20px 0 0 75px;
 }
 
 /* Media Queries pour responsivité */
@@ -269,10 +237,6 @@
 @media (max-width: 1024px) {
     .main-hero {
         height: 500px;
-    }
-
-    .about-section {
-        min-height: 350px;
     }
 
     .about-container {
@@ -297,10 +261,6 @@
 
     .magazine-container {
         margin: 0 50px;
-    }
-
-    .magazine-image {
-        flex: 0.4;
     }
 
     .magazine-image img {
@@ -328,21 +288,17 @@
         margin: 0 50px;
     }
 
-    .founder-image {
-        flex: 0.4;
-    }
-
     .founder-image img {
         width: 250px;
     }
 
     .founder-text h2 {
-        padding: 0px 0px 15px 50px;
+        padding: 0 0 15px 50px;
     }
 
     .founder-text p {
-        padding: 15px 0px 0px 50px;
         font-size: 1.1rem;
+        padding: 15px 0 0 50px;
     }
 }
 
@@ -358,16 +314,13 @@
     }
 
     .about-container {
-        flex-direction: column;
         margin: 0 auto;
         padding: 0 20px;
-        text-align: center;
         max-width: 100%;
     }
 
     .about-text {
         padding: 0 40px;
-        text-align: center;
     }
 
     .about-text h2 {
@@ -380,11 +333,6 @@
         padding: 15px 0;
     }
 
-    .about-button {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-
     .magazine-section {
         min-height: auto;
         padding: 50px 0;
@@ -394,7 +342,6 @@
         flex-direction: column;
         margin: 0 auto;
         padding: 0 20px;
-        text-align: center;
         max-width: 100%;
     }
 
@@ -410,18 +357,12 @@
     .magazine-images {
         width: 100%;
         padding-left: 0;
-        flex-direction: column;
         gap: 20px;
     }
 
     .magazine-images img {
         width: 100%;
         margin-bottom: 20px;
-    }
-
-    .about-button {
-        padding: 10px 20px;
-        font-size: 1rem;
     }
 
     .founder-section {
@@ -433,7 +374,6 @@
         flex-direction: column;
         margin: 0 auto;
         padding: 0 20px;
-        text-align: center;
         max-width: 100%;
     }
 
@@ -444,7 +384,6 @@
 
     .founder-image img {
         width: 200px;
-        margin: 0 auto;
     }
 
     .founder-text {
@@ -453,9 +392,9 @@
     }
 
     .founder-text h2 {
+        padding: 0;
         font-size: 1.5rem;
         margin-bottom: 40px;
-        padding: 0;
     }
 
     .founder-text p {
@@ -471,19 +410,15 @@
     }
 
     .about-section {
-        min-height: auto;
         padding: 50px 0;
     }
 
     .about-container {
-        margin: 0 auto;
         padding: 0 10px;
-        text-align: center;
     }
 
     .about-text {
         padding: 0 30px;
-        text-align: center;
     }
 
     .about-text h2 {
@@ -492,24 +427,15 @@
     }
 
     .about-text p {
-        font-size: 1rem;
         padding: 12px 0;
     }
 
-    .about-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
     .magazine-section {
-        min-height: auto;
         padding: 50px 0;
     }
 
     .magazine-container {
-        margin: 0 auto;
         padding: 0 10px;
-        text-align: center;
     }
 
     .magazine-image img {
@@ -517,24 +443,15 @@
     }
 
     .magazine-images img {
-        width: 100%;
         margin-bottom: 15px;
     }
 
-    .about-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
     .founder-section {
-        min-height: auto;
         padding: 50px 0;
     }
 
     .founder-container {
-        margin: 0 auto;
         padding: 0 10px;
-        text-align: center;
     }
 
     .founder-image img {
@@ -543,7 +460,6 @@
 
     .founder-text {
         padding: 0 30px;
-        text-align: center;
     }
 
     .founder-text h2 {
@@ -552,7 +468,6 @@
     }
 
     .founder-text p {
-        font-size: 1rem;
         padding: 12px 0;
     }
 }
