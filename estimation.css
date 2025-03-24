@@ -571,6 +571,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     position: relative;
+    margin-bottom: 0 !important; /* Surcharge le margin-bottom à 0 */
 }
 
 /* Style de la coche (quand la case est cochée) */
