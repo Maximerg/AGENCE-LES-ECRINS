@@ -544,8 +544,8 @@ body {
 .checkbox-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 10px;
+    gap: 20px 100px;
+    margin-top: 30px;
     justify-content: center;
 }
 
