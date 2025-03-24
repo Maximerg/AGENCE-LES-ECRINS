@@ -1,35 +1,20 @@
-body {
-    font-family: "Lora", serif;
-    margin: 0;
-    padding: 0;
-    color: #455243;
-    overflow-x: hidden;
-    background-color: #fff; /* Fond blanc global pour les marges */
-}
-
+/* Section Introduction */
 .section-intro {
-    background-color: #F0F0F0; /* Couleur de fond sombre */
-    background-size: cover;
-    background-position: center;
+    background-color: #F0F0F0;
     position: relative;
     color: #455243;
     display: flex;
-    flex-direction: column; /* Titre et texte alignés verticalement */
-    align-items: center; /* Centré horizontalement */
-    min-height: 375px; /* Hauteur minimale réduite à 300px */
+    flex-direction: column;
+    align-items: center;
+    min-height: 375px;
     padding: 30px;
     box-sizing: border-box;
-    margin-bottom: 50px; /* Marge de 100px avec fond blanc */
+    margin-bottom: 50px;
 }
 
 .conteneur-titre {
     text-align: center;
     padding: 90px 0 10px;
-}
-
-.section-intro h2 {
-    font-size: 2rem;
-    margin: 0;
 }
 
 .conteneur-presentation {
@@ -41,17 +26,17 @@ body {
     margin: 0;
     font-size: 1.2rem;
     padding: 20px 0 50px;
+    line-height: 1.5; /* Remplace les <br> pour un meilleur espacement */
 }
 
+/* Section Service */
 .section-service {
-    box-sizing: border-box;
-    word-wrap: break-word;
-    text-align: justify;
-    border-radius: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #FFFFFF;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 
 .service-content {
@@ -75,7 +60,8 @@ body {
     margin: 0 100px;
 }
 
-.service-media img, .service-media video {
+.service-media img,
+.service-media video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -86,11 +72,12 @@ body {
     text-align: center;
 }
 
-main p {
+.service-text p {
     font-size: 1.2rem;
-    padding: 20px 0; /* Augmenté pour plus d’espace vertical */
+    padding: 20px 0;
 }
 
+/* Section Flèche */
 .section-fleche {
     display: flex;
     justify-content: center;
@@ -109,20 +96,22 @@ main p {
 }
 
 /* Media Queries pour responsivité */
-
-/* Tablettes (jusqu’à 1024px) */
 @media (max-width: 1024px) {
-    .section-titre {
-        min-height: 200px;
+    .section-intro {
+        min-height: 300px;
     }
 
-    .section-titre h2 {
-        font-size: 1.8rem;
+    .conteneur-titre {
+        padding: 60px 0 10px;
     }
 
-    .section-presentation {
+    .conteneur-presentation {
         padding: 25px;
-        min-height: 130px;
+    }
+
+    .texte-presentation {
+        font-size: 1.1rem;
+        padding: 15px 0 40px;
     }
 
     .service-content {
@@ -141,7 +130,7 @@ main p {
         margin-bottom: 40px;
     }
 
-    p {
+    .service-text p {
         font-size: 1.1rem;
     }
 
@@ -155,20 +144,23 @@ main p {
     }
 }
 
-/* Petites tablettes/téléphones (jusqu’à 768px) */
 @media (max-width: 768px) {
-    .section-titre {
-        min-height: 180px;
+    .section-intro {
+        min-height: 250px;
+        padding: 20px;
     }
 
-    .section-titre h2 {
-        font-size: 1.6rem;
+    .conteneur-titre {
+        padding: 50px 0 10px;
     }
 
-    .section-presentation {
-        padding: 50px 20px;
-        min-height: 120px;
-        margin: 50px 0;
+    .conteneur-presentation {
+        padding: 20px;
+    }
+
+    .texte-presentation {
+        font-size: 1rem;
+        padding: 15px 0 30px;
     }
 
     .section-service {
@@ -188,19 +180,19 @@ main p {
     }
 
     .service-media {
-        margin: 40px auto; /* Augmenté de 20px à 40px */
+        margin: 40px auto;
         width: 80%;
         max-width: 300px;
         padding: 0;
     }
 
     .service-text h2 {
-        margin-bottom: 40px; /* Augmenté de 30px à 40px */
+        margin-bottom: 40px;
     }
 
-    p {
+    .service-text p {
         font-size: 1rem;
-        padding: 15px 0; /* Augmenté de 10px à 15px */
+        padding: 15px 0;
     }
 
     .section-fleche {
@@ -214,25 +206,28 @@ main p {
     }
 }
 
-/* Très petits téléphones (jusqu’à 480px) */
 @media (max-width: 480px) {
-    .section-titre {
-        min-height: 150px;
+    .section-intro {
+        min-height: 200px;
+        padding: 15px;
     }
 
-    .section-titre h2 {
-        font-size: 1.4rem;
+    .conteneur-titre {
+        padding: 40px 0 10px;
     }
 
-    .section-presentation {
-        padding: 50px 15px;
-        min-height: 100px;
-        margin: 50px 0;
+    .conteneur-presentation {
+        padding: 15px;
+    }
+
+    .texte-presentation {
+        font-size: 0.9rem;
+        padding: 10px 0 20px;
     }
 
     .section-service {
-        padding: 50px 0;
-        margin: 50px 0;
+        padding: 40px 0;
+        margin: 40px 0;
     }
 
     .service-content {
@@ -244,19 +239,19 @@ main p {
     }
 
     .service-media {
-        margin: 30px auto; /* Augmenté de 15px à 30px */
+        margin: 30px auto;
         width: 80%;
         max-width: 250px;
         padding: 0;
     }
 
     .service-text h2 {
-        margin-bottom: 30px; /* Augmenté de 20px à 30px */
+        margin-bottom: 30px;
     }
 
-    p {
-        font-size: 1rem;
-        padding: 12px 0; /* Augmenté de 8px à 12px */
+    .service-text p {
+        font-size: 0.9rem;
+        padding: 12px 0;
     }
 
     .section-fleche {
