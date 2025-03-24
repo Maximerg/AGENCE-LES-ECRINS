@@ -130,23 +130,22 @@
         document.querySelector('.burger-menu').addEventListener('click', () => {
             document.querySelector('.header-bottom nav ul').classList.toggle('active');
         });
-
+        
         // Gestion du carrousel
         const carouselInner = document.querySelector('.carousel-inner');
         const items = document.querySelectorAll('.carousel-item');
         let currentIndex = 0;
-
+        
         function updateCarousel() {
-            const offset = -currentIndex * (100 / items.length);
-            carouselInner.style.transform = `translateX(${offset}%)`;
+            carouselInner.style.transform = `translateX(${-currentIndex * (100 / items.length)}%)`;
             items.forEach((item, index) => item.classList.toggle('active', index === currentIndex));
         }
-
+        
         setInterval(() => {
             currentIndex = (currentIndex + 1) % items.length;
             updateCarousel();
         }, 5000);
-
+        
         updateCarousel();
     </script>
 </body>
