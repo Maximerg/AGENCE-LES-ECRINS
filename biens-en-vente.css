@@ -1,3 +1,19 @@
+/* Layout global */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* Section Propriétés */
 .properties-section {
     position: relative;
     width: 100%;
@@ -15,33 +31,66 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Ombre pour lisibilité */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
     padding: 20px;
 }
 
 .construction-overlay h2 {
-    font-family: 'EB Garamond', Garamond, 'Times New Roman', Times, serif;
-    font-weight: 300;
     font-size: 2.5em;
     margin-bottom: 10px;
 }
 
 .construction-overlay p {
-    font-family: 'Lora', serif;
     font-size: 1.2em;
 }
 
-/* Assurer que la section prend toute la place disponible */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* Media Queries pour responsivité */
+@media (max-width: 1024px) {
+    .properties-section {
+        min-height: 400px;
+    }
+
+    .construction-overlay h2 {
+        font-size: 2.2em;
+    }
+
+    .construction-overlay p {
+        font-size: 1.1em;
+    }
 }
 
-main {
-    flex: 1 0 auto;
+@media (max-width: 768px) {
+    .properties-section {
+        min-height: 350px;
+    }
+
+    .construction-overlay {
+        padding: 15px;
+    }
+
+    .construction-overlay h2 {
+        font-size: 1.8em;
+    }
+
+    .construction-overlay p {
+        font-size: 1em;
+    }
 }
 
-footer {
-    flex-shrink: 0;
+@media (max-width: 480px) {
+    .properties-section {
+        min-height: 300px;
+    }
+
+    .construction-overlay {
+        padding: 10px;
+    }
+
+    .construction-overlay h2 {
+        font-size: 1.5em;
+    }
+
+    .construction-overlay p {
+        font-size: 0.9em;
+    }
 }
