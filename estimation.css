@@ -549,58 +549,53 @@ body {
     justify-content: center;
 }
 
-/* Style pour chaque case à cocher et son label */
-.checkbox-label {
-    display: inline-flex;
+/* Style pour chaque élément (case + texte) */
+.checkbox-item {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100px; /* Largeur fixe pour chaque élément */
+    text-align: center;
+}
+
+/* Style pour la case à cocher */
+.checkbox-item input[type="checkbox"] {
+    width: 18px; /* Taille carrée */
+    height: 18px;
+    background-color: #fff; /* Fond blanc */
+    border: 1px solid #333; /* Contour noir léger */
+    border-radius: 3px; /* Coins légèrement arrondis */
+    cursor: pointer;
+    appearance: none; /* Supprime les styles par défaut du navigateur */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+}
+
+/* Style de la coche (quand la case est cochée) */
+.checkbox-item input[type="checkbox"]:checked::after {
+    content: "✔"; /* Symbole de coche */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centre la coche */
+    font-size: 14px;
+    color: #333; /* Couleur de la coche */
+}
+
+/* Style du texte (label) */
+.checkbox-item label {
     font-family: "Lora", serif;
     font-size: 1rem;
     color: #455243;
+    margin-top: 5px; /* Espacement entre la case et le texte */
     cursor: pointer;
-    min-width: 120px;
-    padding: 10px 15px;
-    background-color: #f9f9f9; /* Fond initial */
-    border: 1px solid #ddd; /* Bordure initiale */
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide pour le changement de couleur */
-}
-
-/* Masquer la case à cocher */
-.checkbox-label input[type="checkbox"] {
-    position: absolute;
-    opacity: 0; /* Rendre la case invisible */
-    width: 0;
-    height: 0;
-}
-
-/* Style lorsque la case est cochée : inverser les couleurs */
-.checkbox-label.checked {
-    background-color: #455243; /* Fond vert */
-    border-color: #455243; /* Bordure assortie */
-    color: #fff; /* Texte blanc */
-}
-
-/* S'assurer que le texte dans le span devient blanc */
-.checkbox-label.checked span {
-    color: #fff; /* Texte blanc */
-}
-
-/* Ajout d'un span pour le texte */
-.checkbox-label span {
-    position: relative;
 }
 
 /* Style au survol */
-.checkbox-label:hover {
-    background-color: #e0e0e0;
-}
-
-/* Surcharge du survol lorsque la case est cochée */
-.checkbox-label.checked:hover {
-    background-color: #3a4236; /* Une teinte légèrement plus foncée pour le survol */
+.checkbox-item input[type="checkbox"]:hover {
+    opacity: 0.8;
 }
 
 /* Media Queries pour responsivité */
@@ -611,10 +606,21 @@ body {
         gap: 15px;
     }
 
-    .checkbox-label {
+    .checkbox-item {
+        width: 90px;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    .checkbox-item input[type="checkbox"]:checked::after {
+        font-size: 12px;
+    }
+
+    .checkbox-item label {
         font-size: 0.95rem;
-        min-width: 110px;
-        padding: 8px 12px;
     }
 }
 
@@ -626,10 +632,21 @@ body {
         align-items: center;
     }
 
-    .checkbox-label {
+    .checkbox-item {
+        width: 80px;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+    }
+
+    .checkbox-item input[type="checkbox"]:checked::after {
+        font-size: 10px;
+    }
+
+    .checkbox-item label {
         font-size: 0.9rem;
-        min-width: 100px;
-        padding: 8px 10px;
     }
 }
 
@@ -639,9 +656,20 @@ body {
         gap: 8px;
     }
 
-    .checkbox-label {
+    .checkbox-item {
+        width: 70px;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        width: 12px;
+        height: 12px;
+    }
+
+    .checkbox-item input[type="checkbox"]:checked::after {
+        font-size: 8px;
+    }
+
+    .checkbox-item label {
         font-size: 0.85rem;
-        min-width: 90px;
-        padding: 6px 8px;
     }
 }
