@@ -1,10 +1,13 @@
-/* Style général */
-body {
-    font-family: "Lora", serif;
-    background-color: #F0F0F0;
-    color: #455243;
-    margin: 0;
+/* Styles utilitaires */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
     padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 /* Section Bouton avec image de fond */
@@ -14,12 +17,12 @@ body {
     align-items: center;
     padding: 75px 0;
     width: 100%;
-    min-height: 100px; /* Hauteur minimale pour que l'image de fond soit visible */
-    background-image: url('https://i.imgur.com/kcQS5gY.jpeg'); /* Remplace par l'URL de ton image */
-    background-size: cover; /* L'image couvre toute la section */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Évite la répétition */
-    position: relative; /* Pour permettre un overlay si nécessaire */
+    min-height: 100px;
+    background-image: url('https://i.imgur.com/kcQS5gY.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 /* Ajouter un léger overlay pour améliorer la lisibilité du bouton */
@@ -30,7 +33,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Overlay semi-transparent */
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
 
@@ -44,7 +47,7 @@ body {
     font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    position: relative; /* Pour que le bouton soit au-dessus de l'overlay */
+    position: relative;
     z-index: 2;
 }
 
@@ -57,17 +60,17 @@ body {
 .estimation-section {
     background-color: #F0F0F0;
     width: 100%;
-    min-height: 500px; /* Réduire la hauteur minimale */
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .estimation-content {
-    max-width: 1100px; /* Réduire la largeur maximale pour un meilleur centrage */
+    max-width: 1100px;
     margin: 0 100px;
     padding: 40px 0;
-    text-align: center; /* Centrer le texte */
+    text-align: center;
 }
 
 .estimation-text {
@@ -78,6 +81,7 @@ body {
     font-size: 1.2rem;
     line-height: 1.5;
     padding: 30px 0;
+    color: #455243;
 }
 
 /* Modale */
@@ -120,7 +124,7 @@ body {
     color: #333;
 }
 
-/* Formulaire multi-étapes sans transitions */
+/* Formulaire multi-étapes */
 .step {
     display: none;
     position: absolute;
@@ -130,11 +134,6 @@ body {
 .step.active {
     display: block;
     position: relative;
-}
-
-.step.next-slide,
-.step.prev-slide {
-    display: none;
 }
 
 #multi-step-form {
@@ -175,6 +174,17 @@ body {
     background-color: #f9f9f9;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
+}
+
+#multi-step-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: "Lora", serif;
+    font-size: 1em;
+    background-color: #f9f9f9;
 }
 
 #multi-step-form input:focus,
@@ -308,12 +318,75 @@ body {
     color: #455243;
 }
 
+/* Style pour le groupe de cases à cocher */
+.form-group {
+    margin-top: 20px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 100px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+/* Style pour chaque élément (case + texte) */
+.checkbox-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    text-align: center;
+}
+
+/* Style pour la case à cocher */
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    margin-bottom: 0 !important;
+}
+
+/* Style de la coche (quand la case est cochée) */
+.checkbox-item input[type="checkbox"]:checked::after {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #333;
+}
+
+/* Style du texte (label) */
+.checkbox-item label {
+    font-family: "Lora", serif;
+    font-size: 1rem;
+    color: #455243;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/* Style au survol */
+.checkbox-item input[type="checkbox"]:hover {
+    opacity: 0.8;
+}
+
 /* Media Queries pour responsivité */
 
 /* Tablette (768px - 1024px) */
 @media (max-width: 1024px) {
     .estimation-button-section {
-        min-height: 350px; /* Réduire la hauteur */
+        min-height: 350px;
         padding: 50px 0;
     }
 
@@ -323,7 +396,7 @@ body {
     }
 
     .estimation-section {
-        min-height: 450px; /* Réduire la hauteur */
+        min-height: 450px;
     }
 
     .estimation-content {
@@ -366,12 +439,33 @@ body {
     .step {
         width: calc(100% - 30px);
     }
+
+    .checkbox-group {
+        gap: 15px;
+    }
+
+    .checkbox-item {
+        width: 90px;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    .checkbox-item input[type="checkbox"]:checked::after {
+        font-size: 12px;
+    }
+
+    .checkbox-item label {
+        font-size: 0.95rem;
+    }
 }
 
 /* Mobile large (480px - 768px) */
 @media (max-width: 768px) {
     .estimation-button-section {
-        min-height: 300px; /* Réduire la hauteur */
+        min-height: 300px;
         padding: 40px 0;
     }
 
@@ -396,7 +490,7 @@ body {
     }
 
     .estimation-text p {
-        font-size: 1.1rem; /* Légère réduction */
+        font-size: 1.1rem;
     }
 
     .form-intro {
@@ -449,12 +543,35 @@ body {
     .confirmation-message p {
         font-size: 0.9rem;
     }
+
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .checkbox-item {
+        width: 80px;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+    }
+
+    .checkbox-item input[type="checkbox"]:checked::after {
+        font-size: 10px;
+    }
+
+    .checkbox-item label {
+        font-size: 0.9rem;
+    }
 }
 
 /* Mobile petit (< 480px) */
 @media (max-width: 480px) {
     .estimation-button-section {
-        min-height: 250px; /* Réduire encore la hauteur */
+        min-height: 250px;
         padding: 30px 0;
     }
 
@@ -534,125 +651,7 @@ body {
     .confirmation-message p {
         font-size: 0.85rem;
     }
-}
 
-/* Style pour le groupe de cases à cocher */
-.form-group {
-    margin-top: 20px;
-}
-
-.checkbox-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px 100px;
-    margin-top: 30px;
-    justify-content: center;
-}
-
-/* Style pour chaque élément (case + texte) */
-.checkbox-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100px; /* Largeur fixe pour chaque élément */
-    text-align: center;
-}
-
-/* Style pour la case à cocher */
-.checkbox-item input[type="checkbox"] {
-    width: 18px; /* Taille carrée */
-    height: 18px;
-    background-color: #fff; /* Fond blanc */
-    border: 1px solid #333; /* Contour noir léger */
-    border-radius: 3px; /* Coins légèrement arrondis */
-    cursor: pointer;
-    appearance: none; /* Supprime les styles par défaut du navigateur */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    position: relative;
-    margin-bottom: 0 !important; /* Surcharge le margin-bottom à 0 */
-}
-
-/* Style de la coche (quand la case est cochée) */
-.checkbox-item input[type="checkbox"]:checked::after {
-    content: "✔"; /* Symbole de coche */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centre la coche */
-    font-size: 14px;
-    color: #333; /* Couleur de la coche */
-}
-
-/* Style du texte (label) */
-.checkbox-item label {
-    font-family: "Lora", serif;
-    font-size: 1rem;
-    color: #455243;
-    margin-top: 5px; /* Espacement entre la case et le texte */
-    cursor: pointer;
-}
-
-/* Style au survol */
-.checkbox-item input[type="checkbox"]:hover {
-    opacity: 0.8;
-}
-
-/* Media Queries pour responsivité */
-
-/* Tablettes (jusqu’à 1024px) */
-@media (max-width: 1024px) {
-    .checkbox-group {
-        gap: 15px;
-    }
-
-    .checkbox-item {
-        width: 90px;
-    }
-
-    .checkbox-item input[type="checkbox"] {
-        width: 16px;
-        height: 16px;
-    }
-
-    .checkbox-item input[type="checkbox"]:checked::after {
-        font-size: 12px;
-    }
-
-    .checkbox-item label {
-        font-size: 0.95rem;
-    }
-}
-
-/* Petites tablettes/téléphones (jusqu’à 768px) */
-@media (max-width: 768px) {
-    .checkbox-group {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .checkbox-item {
-        width: 80px;
-    }
-
-    .checkbox-item input[type="checkbox"] {
-        width: 14px;
-        height: 14px;
-    }
-
-    .checkbox-item input[type="checkbox"]:checked::after {
-        font-size: 10px;
-    }
-
-    .checkbox-item label {
-        font-size: 0.9rem;
-    }
-}
-
-/* Très petits téléphones (jusqu’à 480px) */
-@media (max-width: 480px) {
     .checkbox-group {
         gap: 8px;
     }
