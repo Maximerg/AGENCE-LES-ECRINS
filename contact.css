@@ -162,9 +162,8 @@
 }
 
 .contact-info .social-title {
-    font-family: "Poppins", sans-serif; /* Harmonisé avec les autres pages */
     font-weight: 500;
-    color: #455243; /* Harmonisé avec les autres pages */
+    color: #000; /* Harmonisé avec les autres pages */
     margin: 30px 0; /* Restauré comme dans le code initial */
     font-size: 1rem;
 }
