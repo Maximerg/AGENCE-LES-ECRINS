@@ -41,7 +41,6 @@
 
 .contact-form h2,
 .contact-info h2 {
-    font-family: "Poppins", sans-serif; /* Harmonisé avec les autres pages */
     font-weight: 500;
     font-size: 1.8rem;
     color: #455243; /* Harmonisé avec les autres pages */
@@ -51,7 +50,6 @@
 .contact-form form label {
     display: block;
     margin-bottom: 8px; /* Restauré comme dans le code initial */
-    font-family: "Poppins", sans-serif; /* Harmonisé avec les autres pages */
     font-weight: 500;
     color: #455243; /* Harmonisé avec les autres pages */
 }
