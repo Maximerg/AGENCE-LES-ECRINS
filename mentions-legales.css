@@ -52,13 +52,13 @@ h3 {
 
 .mentions-section p {
     font-size: 1rem;
-    color: #455243;
+    color: #000;
     line-height: 1.8;
     margin-bottom: 15px;
 }
 
 a {
-    color: #455243;
+    color: #000;
     text-decoration: none;
 }
 
