@@ -207,15 +207,34 @@
         document.querySelector('.burger-menu').addEventListener('click', () => {
             document.querySelector('.header-bottom nav ul').classList.toggle('active');
         });
-
+        
         // Gestion du formulaire multi-étapes
         const openForm = document.getElementById('open-form');
         const modal = document.getElementById('form-modal');
         const closeModal = document.querySelector('.close');
         const steps = document.querySelectorAll('.step');
+        const modalContent = document.querySelector('.modal-content');
         let currentStep = 0;
         let formData = {};
-
+        
+        function adjustModalHeight() {
+            // Réinitialiser la hauteur pour permettre un recalcul
+            modalContent.style.height = 'auto';
+            
+            // Calculer la hauteur réelle du contenu de l'étape active
+            const activeStep = steps[currentStep];
+            const stepHeight = activeStep.offsetHeight + 60; // Ajouter 60px pour le padding (30px en haut + 30px en bas)
+            
+            // Appliquer la hauteur calculée
+            modalContent.style.height = `${stepHeight}px`;
+            
+            // S'assurer que la hauteur ne dépasse pas 80vh
+            const maxHeight = window.innerHeight * 0.8;
+            if (stepHeight > maxHeight) {
+                modalContent.style.height = `${maxHeight}px`;
+            }
+        }
+        
         function saveData() {
             const inputs = steps[currentStep].querySelectorAll('input, select, textarea');
             inputs.forEach(input => {
@@ -223,7 +242,7 @@
             });
             console.log('Données sauvegardées pour l’étape', currentStep, formData);
         }
-
+        
         function restoreData() {
             const inputs = steps[currentStep].querySelectorAll('input, select, textarea');
             inputs.forEach(input => {
@@ -232,14 +251,14 @@
                 }
             });
         }
-
+        
         function generateDynamicFields() {
             const dynamicFieldsContainer = document.getElementById('dynamic-fields');
             dynamicFieldsContainer.innerHTML = ''; // Vider le conteneur
-
+        
             const typeBien = formData['type_bien'] || '';
             let fieldsHTML = '';
-
+        
             if (typeBien === 'maison' || typeBien === 'mas') {
                 fieldsHTML = `
                     <label for="annee_construction">Année de construction :</label>
@@ -387,16 +406,18 @@
                     <input type="number" name="surface" id="surface" min="0">
                 `;
             }
-
+        
             dynamicFieldsContainer.innerHTML = fieldsHTML;
             restoreData(); // Restaurer les données si elles existent
+            adjustModalHeight(); // Recalculer la hauteur après la génération des champs
         }
-
+        
         openForm.addEventListener('click', () => {
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
+            adjustModalHeight(); // Ajuster la hauteur à l'ouverture
         });
-
+        
         closeModal.addEventListener('click', () => {
             modal.style.display = 'none';
             currentStep = 0;
@@ -404,8 +425,9 @@
             steps[currentStep].classList.add('active');
             formData = {};
             document.body.style.overflow = 'auto';
+            adjustModalHeight(); // Ajuster la hauteur après la fermeture
         });
-
+        
         // Écouteur pour le changement de "Typologie du bien"
         const typeBienSelect = document.getElementById('type_bien_select');
         typeBienSelect.addEventListener('change', () => {
@@ -414,11 +436,11 @@
                 generateDynamicFields();
             }
         });
-
+        
         modal.addEventListener('click', (event) => {
             const button = event.target.closest('button');
             if (!button) return;
-
+        
             console.log('Bouton cliqué :', button.className || button.id, 'sur l’étape', currentStep);
             if (button.classList.contains('next') || button.classList.contains('start-form')) {
                 if (currentStep < steps.length - 2) {
@@ -430,6 +452,7 @@
                         generateDynamicFields();
                     }
                     restoreData();
+                    adjustModalHeight(); // Ajuster la hauteur après le changement d'étape
                     console.log('Passage à l’étape', currentStep);
                 }
             } else if (button.classList.contains('prev')) {
@@ -442,6 +465,7 @@
                         generateDynamicFields();
                     }
                     restoreData();
+                    adjustModalHeight(); // Ajuster la hauteur après le changement d'étape
                     console.log('Retour à l’étape', currentStep);
                 }
             } else if (button.id === 'submit-form') {
@@ -450,10 +474,11 @@
                 steps[currentStep].classList.remove('active');
                 currentStep++;
                 steps[currentStep].classList.add('active');
+                adjustModalHeight(); // Ajuster la hauteur après la soumission
                 console.log('Passage à l’étape de confirmation', currentStep);
             }
         });
-
+        
         window.addEventListener('click', (event) => {
             if (event.target === modal) {
                 modal.style.display = 'none';
@@ -462,8 +487,12 @@
                 steps[currentStep].classList.add('active');
                 formData = {};
                 document.body.style.overflow = 'auto';
+                adjustModalHeight(); // Ajuster la hauteur après la fermeture
             }
         });
+        
+        // Ajuster la hauteur lors du redimensionnement de la fenêtre
+        window.addEventListener('resize', adjustModalHeight);
     </script>
 </body>
 </html>
