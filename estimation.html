@@ -38,550 +38,432 @@
 </head>
 
 <body>
+    <header>
+        <div class="header-top">
+            <a href="index.html">
+                <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins - Immobilier Haut de Gamme à Gordes" class="founder-logo">
+            </a>
+        </div>
+        <div class="header-divider"></div>
+        <div class="header-bottom">
+            <button class="burger-menu" aria-label="Ouvrir le menu">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">L'AGENCE</a></li>
+                    <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="estimation.html" class="active">ESTIMATION</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="loader">
-        <img src="https://i.imgur.com/1j9PvN8.jpeg" alt="Loader - Clé" class="loader-key">
-    </div>
-    <div class="page-content">
-        <header>
-            <div class="header-top">
-                <a href="index.html">
-                    <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins" class="founder-logo">
-                </a>
-            </div>
-            <div class="header-divider">
-            </div>
-            <div class="header-bottom">
-                <button class="burger-menu">☰</button>
-                <nav>
-                    <ul>
-                        <li><a href="index.html" class="active">L'AGENCE</a></li>
-                        <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
-                        <li><a href="services.html">SERVICES</a></li>
-                        <li><a href="estimation.html">ESTIMATION</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        
-        <main>
-            <section class="estimation-button-section">
-                <button id="open-form">Démarrer l'estimation</button>
-            </section>
-        
-            <div id="form-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close">×</span>
-                    <div id="form-container">
-                        <form id="multi-step-form" action="traitement_estimation.php" method="POST">
-                            <!-- Étape 0 : Introduction -->
-                            <div class="step active">
-                                <div class="form-intro">
-                                    <p class="form-note">Chaque information demandée est utile pour affiner notre analyse, mais si certaines manquent, nous pourrons tout de même établir une première estimation. Nous vous recontacterons ensuite pour valider les détails et vous fournir une évaluation précise accompagnée d'un dossier complet.</p>
-                                    <button type="button" class="next start-form">Commencer le formulaire</button>
-                                    <p class="form-duration">Durée estimative : 3 minutes</p>
-                                </div>
+    <main>
+        <h1 class="visually-hidden">Estimation Immobilière - Agence Les Écrins</h1>
+        <section class="estimation-button-section">
+            <button id="open-form" aria-label="Ouvrir le formulaire d'estimation">Démarrer l'estimation</button>
+        </section>
+
+        <div id="form-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <div id="form-container">
+                    <form id="multi-step-form" action="traitement_estimation.php" method="POST">
+                        <!-- Étape 0 : Introduction -->
+                        <div class="step active">
+                            <div class="form-intro">
+                                <p class="form-note">Chaque information demandée est utile pour affiner notre analyse, mais si certaines manquent, nous pourrons tout de même établir une première estimation. Nous vous recontacterons ensuite pour valider les détails et vous fournir une évaluation précise accompagnée d'un dossier complet.</p>
+                                <button type="button" class="next start-form">Commencer le formulaire</button>
+                                <p class="form-duration">Durée estimative : 3 minutes</p>
                             </div>
-                        
-                            <!-- Étape 1 : Informations personnelles -->
-                            <div class="step">
-                                <h2>Informations personnelles</h2>
-                                <label for="nom_prenom">Nom et prénom :</label>
-                                <input type="text" name="nom_prenom" id="nom_prenom" required>
-                                <label for="telephone">Numéro de téléphone :</label>
-                                <input type="tel" name="telephone" id="telephone" required>
-                                <label for="email">Adresse e-mail :</label>
-                                <input type="email" name="email" id="email" required>
-                                <div class="button-container">
-                                    <button type="button" class="next">Suivant</button>
-                                </div>
+                        </div>
+
+                        <!-- Étape 1 : Informations personnelles -->
+                        <div class="step">
+                            <h2>Informations personnelles</h2>
+                            <label for="nom_prenom">Nom et prénom :</label>
+                            <input type="text" name="nom_prenom" id="nom_prenom" required>
+                            <label for="telephone">Numéro de téléphone :</label>
+                            <input type="tel" name="telephone" id="telephone" required>
+                            <label for="email">Adresse e-mail :</label>
+                            <input type="email" name="email" id="email" required>
+                            <div class="button-container">
+                                <button type="button" class="next">Suivant</button>
                             </div>
-                        
-                            <!-- Étape 2 : Informations sur le bien -->
-                            <div class="step">
-                                <h2>Informations sur le bien</h2>
-                                <label for="adresse_bien">Adresse du bien :</label>
-                                <input type="text" name="adresse_bien" id="adresse_bien" required>
-                                <label for="code_postal">Code postal :</label>
-                                <input type="text" name="code_postal" id="code_postal" required>
-                                <label for="ville">Ville :</label>
-                                <input type="text" name="ville" id="ville" required>
-                                <label for="type_bien">Typologie du bien :</label>
-                                <select name="type_bien" id="type_bien_select" required>
-                                    <option value="">Sélectionnez une option</option>
-                                    <option value="maison">Maison</option>
-                                    <option value="mas">Mas</option>
-                                    <option value="appartement">Appartement</option>
-                                    <option value="immeuble">Immeuble</option>
-                                    <option value="local_commercial">Local Commercial</option>
-                                    <option value="terrain">Terrain</option>
-                                    <option value="autre">Autres</option>
-                                </select>
-                                <div class="button-container">
-                                    <button type="button" class="prev">Précédent</button>
-                                    <button type="button" class="next">Suivant</button>
-                                </div>
+                        </div>
+
+                        <!-- Étape 2 : Informations sur le bien -->
+                        <div class="step">
+                            <h2>Informations sur le bien</h2>
+                            <label for="adresse_bien">Adresse du bien :</label>
+                            <input type="text" name="adresse_bien" id="adresse_bien" required>
+                            <label for="code_postal">Code postal :</label>
+                            <input type="text" name="code_postal" id="code_postal" required>
+                            <label for="ville">Ville :</label>
+                            <input type="text" name="ville" id="ville" required>
+                            <label for="type_bien">Typologie du bien :</label>
+                            <select name="type_bien" id="type_bien_select" required>
+                                <option value="">Sélectionnez une option</option>
+                                <option value="maison">Maison</option>
+                                <option value="mas">Mas</option>
+                                <option value="appartement">Appartement</option>
+                                <option value="immeuble">Immeuble</option>
+                                <option value="local_commercial">Local Commercial</option>
+                                <option value="terrain">Terrain</option>
+                                <option value="autre">Autres</option>
+                            </select>
+                            <div class="button-container">
+                                <button type="button" class="prev">Précédent</button>
+                                <button type="button" class="next">Suivant</button>
                             </div>
-                        
-                          <!-- Étape 3 : Détails du bien -->
-                            <div class="step">
-                                <h2>Détails du bien</h2>
-                                <div id="dynamic-fields"></div>
-                                <!-- Ajout des cases à cocher pour les annexes -->
-                                <div class="form-group">
-                                    <label>Annexes présentes (cochez les cases correspondantes) :</label>
-                                    <div class="checkbox-group">
-                                        <div class="checkbox-item">
-                                            <input type="checkbox" name="annexes[]" id="annexe-piscine" value="Piscine">
-                                            <label for="annexe-piscine">Piscine</label>
-                                        </div>
-                                        <div class="checkbox-item">
-                                            <input type="checkbox" name="annexes[]" id="annexe-garage" value="Garage">
-                                            <label for="annexe-garage">Garage</label>
-                                        </div>
-                                        <div class="checkbox-item">
-                                            <input type="checkbox" name="annexes[]" id="annexe-poolhouse" value="Pool House">
-                                            <label for="annexe-poolhouse">Pool House</label>
-                                        </div>
-                                        <div class="checkbox-item">
-                                            <input type="checkbox" name="annexes[]" id="annexe-grange" value="Grange">
-                                            <label for="annexe-grange">Grange</label>
-                                        </div>
-                                        <div class="checkbox-item">
-                                            <input type="checkbox" name="annexes[]" id="annexe-abri-voiture" value="Abri voiture">
-                                            <label for="annexe-abri-voiture">Abri voiture</label>
-                                        </div>
-                                        <div class="checkbox-item">
-                                            <input type="checkbox" name="annexes[]" id="annexe-borie" value="Borie">
-                                            <label for="annexe-borie">Borie</label>
-                                        </div>
+                        </div>
+
+                        <!-- Étape 3 : Détails du bien -->
+                        <div class="step">
+                            <h2>Détails du bien</h2>
+                            <div id="dynamic-fields"></div>
+                            <!-- Ajout des cases à cocher pour les annexes -->
+                            <div class="form-group">
+                                <label>Annexes présentes (cochez les cases correspondantes) :</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" name="annexes[]" id="annexe-piscine" value="Piscine">
+                                        <label for="annexe-piscine">Piscine</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" name="annexes[]" id="annexe-garage" value="Garage">
+                                        <label for="annexe-garage">Garage</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" name="annexes[]" id="annexe-poolhouse" value="Pool House">
+                                        <label for="annexe-poolhouse">Pool House</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" name="annexes[]" id="annexe-grange" value="Grange">
+                                        <label for="annexe-grange">Grange</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" name="annexes[]" id="annexe-abri-voiture" value="Abri voiture">
+                                        <label for="annexe-abri-voiture">Abri voiture</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" name="annexes[]" id="annexe-borie" value="Borie">
+                                        <label for="annexe-borie">Borie</label>
                                     </div>
                                 </div>
-                                <div class="button-container">
-                                    <button type="button" class="prev">Précédent</button>
-                                    <button type="button" class="next">Suivant</button>
-                                </div>
                             </div>
-                        
-                            <!-- Étape 4 : Remarques -->
-                            <div class="step">
-                                <h2>Remarques</h2>
-                                <label for="remarques">Remarques supplémentaires :</label>
-                                <textarea name="remarques" id="remarques" rows="6" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Lora', serif; font-size: 1em; background-color: #f9f9f9;" required></textarea>
-                                <div class="button-container submit-container">
-                                    <button type="submit" id="submit-form">Envoyer le formulaire</button>
-                                </div>
+                            <div class="button-container">
+                                <button type="button" class="prev">Précédent</button>
+                                <button type="button" class="next">Suivant</button>
                             </div>
-                        
-                            <!-- Étape 5 : Confirmation -->
-                            <div class="step">
-                                <div class="confirmation-message">
-                                    <h2>Merci pour votre message.</h2>
-                                    <p>L’équipe Les Écrins en a bien pris connaissance et reviendra vers vous dans les plus brefs délais. Nous restons à votre disposition et vous remercions de votre confiance.</p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        
-            <section class="estimation-section">
-                <div class="estimation-content">
-                    <div class="estimation-text">
-                        <p>"Une estimation juste et précise est essentielle pour bien démarrer tout projet immobilier. Elle permet de définir la <strong>juste valeur de votre bien</strong>, en tenant compte de nombreux critères, tels que l’état du marché, l’emplacement, les caractéristiques spécifiques de votre propriété et son potentiel.</p>
-                        <p>En effet, un prix de vente adéquat vous permet de <strong>vous positionner de manière stratégique</strong> face aux acheteurs et contribue également à optimiser la durée de commercialisation de votre bien, en vous assurant que la vente se fasse dans les <strong>meilleures conditions et dans un délai optimal</strong>.</p>
-                        <p>En tant qu’expert du secteur, je m’engage à vous fournir <strong>une analyse complète et objective</strong> afin de vous aider à atteindre vos objectifs dans les meilleures conditions."</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    
-        <footer class="footer">
-            <div class="footer-container">
-                <p class="footer-text">© 2025 Agence Les Écrins. Tous droits réservés.</p>
-                <div class="footer-links">
-                    <a href="documents/honoraires.pdf" target="_blank">Barème des honoraires</a>
-                    <a href="mentions-legales.html">Mentions légales</a>
-                </div>
-            </div>
-        </footer>
-    </div>
+                        </div>
 
-<script>
-    document.querySelector('.burger-menu').addEventListener('click', function() {
-        document.querySelector('.header-bottom nav ul').classList.toggle('active');
-    });
-    
-    const openForm = document.getElementById('open-form');
-    const modal = document.getElementById('form-modal');
-    const closeModal = document.querySelector('.close');
-    const steps = document.querySelectorAll('.step');
-    let currentStep = 0;
-    let formData = {};
-    
-    function saveData() {
-        const inputs = steps[currentStep].querySelectorAll('input, select, textarea');
-        inputs.forEach(input => {
-            formData[input.name] = input.value;
+                        <!-- Étape 4 : Remarques -->
+                        <div class="step">
+                            <h2>Remarques</h2>
+                            <label for="remarques">Remarques supplémentaires :</label>
+                            <textarea name="remarques" id="remarques" rows="6" required></textarea>
+                            <div class="button-container submit-container">
+                                <button type="submit" id="submit-form">Envoyer le formulaire</button>
+                            </div>
+                        </div>
+
+                        <!-- Étape 5 : Confirmation -->
+                        <div class="step">
+                            <div class="confirmation-message">
+                                <h2>Merci pour votre message.</h2>
+                                <p>L’équipe Les Écrins en a bien pris connaissance et reviendra vers vous dans les plus brefs délais. Nous restons à votre disposition et vous remercions de votre confiance.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <section class="estimation-section">
+            <div class="estimation-content">
+                <div class="estimation-text">
+                    <p>"Une estimation juste et précise est essentielle pour bien démarrer tout projet immobilier. Elle permet de définir la <strong>juste valeur de votre bien</strong>, en tenant compte de nombreux critères, tels que l’état du marché, l’emplacement, les caractéristiques spécifiques de votre propriété et son potentiel.</p>
+                    <p>En effet, un prix de vente adéquat vous permet de <strong>vous positionner de manière stratégique</strong> face aux acheteurs et contribue également à optimiser la durée de commercialisation de votre bien, en vous assurant que la vente se fasse dans les <strong>meilleures conditions et dans un délai optimal</strong>.</p>
+                    <p>En tant qu’expert du secteur, je m’engage à vous fournir <strong>une analyse complète et objective</strong> afin de vous aider à atteindre vos objectifs dans les meilleures conditions."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">© 2025 Agence Les Écrins. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="documents/honoraires.pdf" target="_blank">Barème des honoraires</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion du menu burger
+        document.querySelector('.burger-menu').addEventListener('click', () => {
+            document.querySelector('.header-bottom nav ul').classList.toggle('active');
         });
-        console.log('Données sauvegardées pour l’étape', currentStep, formData);
-    }
-    
-    function restoreData() {
-        const inputs = steps[currentStep].querySelectorAll('input, select, textarea');
-        inputs.forEach(input => {
-            if (formData[input.name]) {
-                input.value = formData[input.name];
+
+        // Gestion du formulaire multi-étapes
+        const openForm = document.getElementById('open-form');
+        const modal = document.getElementById('form-modal');
+        const closeModal = document.querySelector('.close');
+        const steps = document.querySelectorAll('.step');
+        let currentStep = 0;
+        let formData = {};
+
+        function saveData() {
+            const inputs = steps[currentStep].querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                formData[input.name] = input.value;
+            });
+            console.log('Données sauvegardées pour l’étape', currentStep, formData);
+        }
+
+        function restoreData() {
+            const inputs = steps[currentStep].querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                if (formData[input.name]) {
+                    input.value = formData[input.name];
+                }
+            });
+        }
+
+        function generateDynamicFields() {
+            const dynamicFieldsContainer = document.getElementById('dynamic-fields');
+            dynamicFieldsContainer.innerHTML = ''; // Vider le conteneur
+
+            const typeBien = formData['type_bien'] || '';
+            let fieldsHTML = '';
+
+            if (typeBien === 'maison' || typeBien === 'mas') {
+                fieldsHTML = `
+                    <label for="annee_construction">Année de construction :</label>
+                    <input type="number" name="annee_construction" id="annee_construction" min="1900" max="2025">
+                    <label for="nombre_pieces">Nombre de pièces :</label>
+                    <input type="number" name="nombre_pieces" id="nombre_pieces" min="1">
+                    <label for="surface_habitable">Surface habitable (m²) :</label>
+                    <input type="number" name="surface_habitable" id="surface_habitable" min="0">
+                    <label for="surface_exterieure">Surface extérieure (m²) :</label>
+                    <input type="number" name="surface_exterieure" id="surface_exterieure" min="0">
+                    <label for="etat_general">État général :</label>
+                    <select name="etat_general" id="etat_general">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="neuf">Neuf</option>
+                        <option value="excellent">Excellent état</option>
+                        <option value="bon">Bon état</option>
+                        <option value="rafraichir">À rafraîchir</option>
+                        <option value="renover">À rénover</option>
+                    </select>
+                `;
+            } else if (typeBien === 'appartement') {
+                fieldsHTML = `
+                    <label for="annee_construction">Année de construction :</label>
+                    <input type="number" name="annee_construction" id="annee_construction" min="1900" max="2025">
+                    <label for="nombre_pieces">Nombre de pièces :</label>
+                    <input type="number" name="nombre_pieces" id="nombre_pieces" min="1">
+                    <label for="surface_carrez">Surface Carrez (m²) :</label>
+                    <input type="number" name="surface_carrez" id="surface_carrez" min="0">
+                    <label for="etage">Étage :</label>
+                    <input type="number" name="etage" id="etage" min="0">
+                    <label for="ascenseur">Ascenseur :</label>
+                    <select name="ascenseur" id="ascenseur">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                    <label for="exposition">Exposition :</label>
+                    <select name="exposition" id="exposition">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="nord">Nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="est">Est</option>
+                        <option value="ouest">Ouest</option>
+                        <option value="traversant">Traversant</option>
+                    </select>
+                    <label for="balcon">Balcon :</label>
+                    <select name="balcon" id="balcon">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                    <label for="terrasse">Terrasse :</label>
+                    <select name="terrasse" id="terrasse">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                    <label for="etat_general">État général :</label>
+                    <select name="etat_general" id="etat_general">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="neuf">Neuf</option>
+                        <option value="excellent">Excellent état</option>
+                        <option value="bon">Bon état</option>
+                        <option value="rafraichir">À rafraîchir</option>
+                        <option value="renover">À rénover</option>
+                    </select>
+                `;
+            } else if (typeBien === 'immeuble') {
+                fieldsHTML = `
+                    <label for="annee_construction">Année de construction :</label>
+                    <input type="number" name="annee_construction" id="annee_construction" min="1900" max="2025">
+                    <label for="lots_habitation">Nombre de lots d'habitation :</label>
+                    <input type="number" name="lots_habitation" id="lots_habitation" min="0">
+                    <label for="lots_commerciaux">Nombre de lots local commercial :</label>
+                    <input type="number" name="lots_commerciaux" id="lots_commerciaux" min="0">
+                    <label for="nombre_etages">Nombre d'étages :</label>
+                    <input type="number" name="nombre_etages" id="nombre_etages" min="0">
+                    <label for="ascenseur">Ascenseur :</label>
+                    <select name="ascenseur" id="ascenseur">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                    <label for="surface_habitable">Surface habitable (m²) :</label>
+                    <input type="number" name="surface_habitable" id="surface_habitable" min="0">
+                    <label for="etat_general">État général :</label>
+                    <select name="etat_general" id="etat_general">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="neuf">Neuf</option>
+                        <option value="excellent">Excellent état</option>
+                        <option value="bon">Bon état</option>
+                        <option value="rafraichir">À rafraîchir</option>
+                        <option value="renover">À rénover</option>
+                    </select>
+                `;
+            } else if (typeBien === 'local_commercial') {
+                fieldsHTML = `
+                    <label for="type_estimation">Type d'estimation :</label>
+                    <select name="type_estimation" id="type_estimation">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="murs_commerciaux">Murs commerciaux</option>
+                        <option value="droit_au_bail">Droit au bail</option>
+                        <option value="cession_fonds_commerce">Cession de fonds de commerce</option>
+                    </select>
+                    <label for="nombre_pieces">Nombre de pièces :</label>
+                    <input type="number" name="nombre_pieces" id="nombre_pieces" min="1">
+                    <label for="surface">Surface (m²) :</label>
+                    <input type="number" name="surface" id="surface" min="0">
+                `;
+            } else if (typeBien === 'terrain') {
+                fieldsHTML = `
+                    <label for="superficie">Superficie (m²) :</label>
+                    <input type="number" name="superficie" id="superficie" min="0">
+                    <label for="constructible">Terrain constructible :</label>
+                    <select name="constructible" id="constructible">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                    <label for="viabilise">Viabilisé :</label>
+                    <select name="viabilise" id="viabilise">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                    <label for="servitude">Servitude :</label>
+                    <select name="servitude" id="servitude">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                    <label for="permis_construire">Permis de construire :</label>
+                    <select name="permis_construire" id="permis_construire">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="non">Non</option>
+                        <option value="en_cours">En cours</option>
+                        <option value="accepte">Accepté</option>
+                    </select>
+                `;
+            } else {
+                fieldsHTML = `
+                    <label for="description">Description du bien :</label>
+                    <input type="text" name="description" id="description">
+                    <label for="surface">Surface (m²) :</label>
+                    <input type="number" name="surface" id="surface" min="0">
+                `;
             }
+
+            dynamicFieldsContainer.innerHTML = fieldsHTML;
+            restoreData(); // Restaurer les données si elles existent
+        }
+
+        openForm.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         });
-    }
-    
-    function generateDynamicFields() {
-        const dynamicFieldsContainer = document.getElementById('dynamic-fields');
-        dynamicFieldsContainer.innerHTML = ''; // Vider le conteneur
-    
-        const typeBien = formData['type_bien'] || '';
-        let fieldsHTML = '';
-    
-        if (typeBien === 'maison' || typeBien === 'mas') {
-            fieldsHTML = `
-                <label for="annee_construction">Année de construction :</label>
-                <input type="number" name="annee_construction" id="annee_construction" min="1900" max="2025">
-                <label for="nombre_pieces">Nombre de pièces :</label>
-                <input type="number" name="nombre_pieces" id="nombre_pieces" min="1">
-                <label for="surface_habitable">Surface habitable (m²) :</label>
-                <input type="number" name="surface_habitable" id="surface_habitable" min="0">
-                <label for="surface_exterieure">Surface extérieure (m²) :</label>
-                <input type="number" name="surface_exterieure" id="surface_exterieure" min="0">
-                <label for="etat_general">État général :</label>
-                <select name="etat_general" id="etat_general">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="neuf">Neuf</option>
-                    <option value="excellent">Excellent état</option>
-                    <option value="bon">Bon état</option>
-                    <option value="rafraichir">À rafraîchir</option>
-                    <option value="renover">À rénover</option>
-                </select>
-            `;
-        } else if (typeBien === 'appartement') {
-            fieldsHTML = `
-                <label for="annee_construction">Année de construction :</label>
-                <input type="number" name="annee_construction" id="annee_construction" min="1900" max="2025">
-                <label for="nombre_pieces">Nombre de pièces :</label>
-                <input type="number" name="nombre_pieces" id="nombre_pieces" min="1">
-                <label for="surface_carrez">Surface Carrez (m²) :</label>
-                <input type="number" name="surface_carrez" id="surface_carrez" min="0">
-                <label for="etage">Étage :</label>
-                <input type="number" name="etage" id="etage" min="0">
-                <label for="ascenseur">Ascenseur :</label>
-                <select name="ascenseur" id="ascenseur">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="exposition">Exposition :</label>
-                <select name="exposition" id="exposition">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="nord">Nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="est">Est</option>
-                    <option value="ouest">Ouest</option>
-                    <option value="traversant">Traversant</option>
-                </select>
-                <label for="balcon">Balcon :</label>
-                <select name="balcon" id="balcon">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="terrasse">Terrasse :</label>
-                <select name="terrasse" id="terrasse">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="etat_general">État général :</label>
-                <select name="etat_general" id="etat_general">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="neuf">Neuf</option>
-                    <option value="excellent">Excellent état</option>
-                    <option value="bon">Bon état</option>
-                    <option value="rafraichir">À rafraîchir</option>
-                    <option value="renover">À rénover</option>
-                </select>
-            `;
-        } else if (typeBien === 'immeuble') {
-            fieldsHTML = `
-                <label for="annee_construction">Année de construction :</label>
-                <input type="number" name="annee_construction" id="annee_construction" min="1900" max="2025">
-                <label for="lots_habitation">Nombre de lots d'habitation :</label>
-                <input type="number" name="lots_habitation" id="lots_habitation" min="0">
-                <label for="lots_commerciaux">Nombre de lots local commercial :</label>
-                <input type="number" name="lots_commerciaux" id="lots_commerciaux" min="0">
-                <label for="nombre_etages">Nombre d'étages :</label>
-                <input type="number" name="nombre_etages" id="nombre_etages" min="0">
-                <label for="ascenseur">Ascenseur :</label>
-                <select name="ascenseur" id="ascenseur">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="surface_habitable">Surface habitable (m²) :</label>
-                <input type="number" name="surface_habitable" id="surface_habitable" min="0">
-                <label for="etat_general">État général :</label>
-                <select name="etat_general" id="etat_general">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="neuf">Neuf</option>
-                    <option value="excellent">Excellent état</option>
-                    <option value="bon">Bon état</option>
-                    <option value="rafraichir">À rafraîchir</option>
-                    <option value="renover">À rénover</option>
-                </select>
-            `;
-        } else if (typeBien === 'local_commercial') {
-            fieldsHTML = `
-                <label for="type_estimation">Type d'estimation :</label>
-                <select name="type_estimation" id="type_estimation">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="murs_commerciaux">Murs commerciaux</option>
-                    <option value="droit_au_bail">Droit au bail</option>
-                    <option value="cession_fonds_commerce">Cession de fonds de commerce</option>
-                </select>
-                <label for="nombre_pieces">Nombre de pièces :</label>
-                <input type="number" name="nombre_pieces" id="nombre_pieces" min="1">
-                <label for="surface">Surface (m²) :</label>
-                <input type="number" name="surface" id="surface" min="0">
-            `;
-        } else if (typeBien === 'terrain') {
-            fieldsHTML = `
-                <label for="superficie">Superficie (m²) :</label>
-                <input type="number" name="superficie" id="superficie" min="0">
-                <label for="constructible">Terrain constructible :</label>
-                <select name="constructible" id="constructible">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="viabilise">Viabilisé :</label>
-                <select name="viabilise" id="viabilise">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="servitude">Servitude :</label>
-                <select name="servitude" id="servitude">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
-                <label for="permis_construire">Permis de construire :</label>
-                <select name="permis_construire" id="permis_construire">
-                    <option value="">Sélectionnez une option</option>
-                    <option value="non">Non</option>
-                    <option value="en_cours">En cours</option>
-                    <option value="accepte">Accepté</option>
-                </select>
-            `;
-        } else {
-            fieldsHTML = `
-                <label for="description">Description du bien :</label>
-                <input type="text" name="description" id="description">
-                <label for="surface">Surface (m²) :</label>
-                <input type="number" name="surface" id="surface" min="0">
-            `;
-        }
-    
-        dynamicFieldsContainer.innerHTML = fieldsHTML;
-        restoreData(); // Restaurer les données si elles existent
-    }
-    
-    openForm.addEventListener('click', () => {
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    });
-    
-    closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
-        currentStep = 0;
-        steps.forEach(step => step.classList.remove('active'));
-        steps[currentStep].classList.add('active');
-        formData = {};
-        document.body.style.overflow = 'auto';
-    });
-    
-    // Écouteur pour le changement de "Typologie du bien"
-    const typeBienSelect = document.getElementById('type_bien_select');
-    typeBienSelect.addEventListener('change', () => {
-        saveData(); // Sauvegarder le nouveau type de bien
-        if (currentStep === 2) { // Si on est à l’étape 3
-            generateDynamicFields();
-        }
-    });
-    
-    modal.addEventListener('click', (event) => {
-        const button = event.target.closest('button');
-        if (!button) return;
-    
-        console.log('Bouton cliqué :', button.className || button.id, 'sur l’étape', currentStep);
-        if (button.classList.contains('next') || button.classList.contains('start-form')) {
-            if (currentStep < steps.length - 2) {
-                saveData();
-                steps[currentStep].classList.remove('active');
-                currentStep++;
-                steps[currentStep].classList.add('active');
-                if (currentStep === 2) { // Étape 3 (Détails du bien)
-                    generateDynamicFields();
-                }
-                restoreData();
-                console.log('Passage à l’étape', currentStep);
-            }
-        } else if (button.classList.contains('prev')) {
-            if (currentStep > 0) {
-                saveData();
-                steps[currentStep].classList.remove('active');
-                currentStep--;
-                steps[currentStep].classList.add('active');
-                if (currentStep === 2) { // Étape 3 (Détails du bien)
-                    generateDynamicFields();
-                }
-                restoreData();
-                console.log('Retour à l’étape', currentStep);
-            }
-        } else if (button.id === 'submit-form') {
-            saveData();
-            console.log('Formulaire envoyé :', formData);
-            steps[currentStep].classList.remove('active');
-            currentStep++;
-            steps[currentStep].classList.add('active');
-            console.log('Passage à l’étape de confirmation', currentStep);
-        }
-    });
-    
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
+
+        closeModal.addEventListener('click', () => {
             modal.style.display = 'none';
             currentStep = 0;
             steps.forEach(step => step.classList.remove('active'));
             steps[currentStep].classList.add('active');
             formData = {};
             document.body.style.overflow = 'auto';
-        }
-    });
-</script>
-
-<script>
-    const startTime = Date.now();
-    let isLoaded = false;
-    let loaderTimeout = null;
-    let hasLoaderBeenShown = false;
-
-    // Afficher le loader si le chargement prend plus de 500ms
-    loaderTimeout = setTimeout(() => {
-        if (!isLoaded) {
-            const loader = document.querySelector('.loader');
-            if (loader && !loader.classList.contains('hidden')) {
-                console.log('Chargement > 500ms, affichage du loader...');
-                loader.classList.add('visible');
-                hasLoaderBeenShown = true;
-            }
-        }
-    }, 500);
-
-    const handleLoadComplete = () => {
-        const loader = document.querySelector('.loader');
-        const pageContent = document.querySelector('.page-content');
-        if (!loader || !pageContent) {
-            console.error('Erreur : .loader ou .page-content non trouvé.');
-            return;
-        }
-
-        // Annuler le setTimeout pour afficher le loader
-        if (loaderTimeout) {
-            clearTimeout(loaderTimeout);
-            loaderTimeout = null;
-        }
-
-        // Si le loader a été affiché, on le masque après la durée minimale
-        if (hasLoaderBeenShown) {
-            console.log('Loader affiché, masquage après un minimum de 2 secondes...');
-            const elapsedTime = Date.now() - startTime;
-            const remainingTime = Math.max(0, 2000 - elapsedTime);
-            setTimeout(() => {
-                loader.classList.add('hidden');
-                setTimeout(() => {
-                    pageContent.classList.add('loaded');
-                }, 1200);
-            }, remainingTime);
-        } else {
-            // Si le loader n'a pas été affiché, on affiche la page immédiatement
-            console.log('Loader non affiché, affichage direct de la page.');
-            loader.classList.add('hidden');
-            pageContent.classList.add('loaded');
-        }
-    };
-
-    window.addEventListener('load', () => {
-        console.log('window.onload déclenché');
-        isLoaded = true;
-        handleLoadComplete();
-    });
-
-    // Sécurité : forcer la fin du chargement après 10 secondes
-    setTimeout(() => {
-        if (!isLoaded) {
-            console.log('Forcer la fin du chargement après 10 secondes');
-            isLoaded = true;
-            handleLoadComplete();
-        }
-    }, 10000);
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.getElementById("form-modal");
-    const openBtn = document.getElementById("open-form");
-    const closeBtn = document.querySelector(".close");
-    const steps = document.querySelectorAll(".step");
-    const nextBtns = document.querySelectorAll(".next");
-    const prevBtns = document.querySelectorAll(".prev");
-
-    let currentStep = 0;
-
-    // Ouvrir la modale
-    openBtn.addEventListener("click", function() {
-        modal.style.display = "flex";
-    });
-
-    // Fermer la modale
-    closeBtn.addEventListener("click", function() {
-        modal.style.display = "none";
-    });
-
-    // Gérer les étapes du formulaire
-    function showStep(stepIndex) {
-        steps.forEach((step, index) => {
-            step.classList.toggle("active", index === stepIndex);
         });
-    }
 
-    nextBtns.forEach(btn => {
-        btn.addEventListener("click", function() {
-            if (currentStep < steps.length - 1) {
+        // Écouteur pour le changement de "Typologie du bien"
+        const typeBienSelect = document.getElementById('type_bien_select');
+        typeBienSelect.addEventListener('change', () => {
+            saveData(); // Sauvegarder le nouveau type de bien
+            if (currentStep === 2) { // Si on est à l’étape 3
+                generateDynamicFields();
+            }
+        });
+
+        modal.addEventListener('click', (event) => {
+            const button = event.target.closest('button');
+            if (!button) return;
+
+            console.log('Bouton cliqué :', button.className || button.id, 'sur l’étape', currentStep);
+            if (button.classList.contains('next') || button.classList.contains('start-form')) {
+                if (currentStep < steps.length - 2) {
+                    saveData();
+                    steps[currentStep].classList.remove('active');
+                    currentStep++;
+                    steps[currentStep].classList.add('active');
+                    if (currentStep === 2) { // Étape 3 (Détails du bien)
+                        generateDynamicFields();
+                    }
+                    restoreData();
+                    console.log('Passage à l’étape', currentStep);
+                }
+            } else if (button.classList.contains('prev')) {
+                if (currentStep > 0) {
+                    saveData();
+                    steps[currentStep].classList.remove('active');
+                    currentStep--;
+                    steps[currentStep].classList.add('active');
+                    if (currentStep === 2) { // Étape 3 (Détails du bien)
+                        generateDynamicFields();
+                    }
+                    restoreData();
+                    console.log('Retour à l’étape', currentStep);
+                }
+            } else if (button.id === 'submit-form') {
+                saveData();
+                console.log('Formulaire envoyé :', formData);
+                steps[currentStep].classList.remove('active');
                 currentStep++;
-                showStep(currentStep);
+                steps[currentStep].classList.add('active');
+                console.log('Passage à l’étape de confirmation', currentStep);
             }
         });
-    });
 
-    prevBtns.forEach(btn => {
-        btn.addEventListener("click", function() {
-            if (currentStep > 0) {
-                currentStep--;
-                showStep(currentStep);
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                currentStep = 0;
+                steps.forEach(step => step.classList.remove('active'));
+                steps[currentStep].classList.add('active');
+                formData = {};
+                document.body.style.overflow = 'auto';
             }
         });
-    });  
-</script>
+    </script>
 </body>
 </html>
