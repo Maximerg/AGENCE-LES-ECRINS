@@ -165,6 +165,7 @@
     color: #000; /* Harmonisé avec les autres pages */
     margin: 30px 0; /* Restauré comme dans le code initial */
     font-size: 1.25rem;
+    font-family: "Playfair Display", serif;
 }
 
 .contact-info .contact-link {
