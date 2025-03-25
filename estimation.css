@@ -107,10 +107,9 @@
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     height: auto; /* S'adapte à la hauteur du contenu */
-    min-height: 150px; /* Hauteur minimale réduite pour mieux s'adapter */
+    min-height: 150px; /* Hauteur minimale pour éviter que la modale soit trop petite */
     max-height: 80vh; /* Hauteur maximale avec défilement */
     overflow-y: auto;
-    overflow-x: visible;
     box-sizing: border-box;
 }
 
@@ -128,26 +127,28 @@
 }
 
 /* Formulaire multi-étapes */
-.step {
-    display: none; /* Masquer les étapes non actives */
-    width: 100%; /* Prendre toute la largeur disponible */
-    /* Supprimé position: absolute pour permettre un calcul correct de la hauteur */
-}
-
-.step.active {
-    display: block; /* Afficher l'étape active */
-    /* Supprimé position: relative, car inutile ici */
+#form-container {
+    width: 100%;
+    height: auto; /* S'assurer que le conteneur s'adapte */
 }
 
 #multi-step-form {
     position: relative;
-    overflow: visible;
-    height: auto;
     width: 100%;
+    height: auto; /* S'assurer que le formulaire s'adapte */
+}
+
+.step {
+    display: none; /* Masquer les étapes non actives */
+    width: 100%; /* Prendre toute la largeur disponible */
+}
+
+.step.active {
+    display: block; /* Afficher l'étape active */
 }
 
 #multi-step-form .step {
-    padding: 20px 20px;
+    padding: 20px 0; /* Réduit le padding pour éviter un espace excessif */
 }
 
 #multi-step-form h2 {
@@ -303,7 +304,6 @@
 .confirmation-message {
     text-align: center;
     padding: 40px 20px;
-    min-height: 200px; /* Réduit pour s'adapter au contenu */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -439,11 +439,10 @@
 
     .confirmation-message {
         padding: 30px 15px;
-        min-height: 150px; /* Réduit pour s'adapter au contenu */
     }
 
     .step {
-        width: 100%; /* Ajusté pour prendre toute la largeur */
+        width: 100%;
     }
 
     .checkbox-group {
@@ -510,7 +509,7 @@
     }
 
     #multi-step-form .step {
-        padding: 15px 15px;
+        padding: 15px 0;
         width: 100%;
     }
 
@@ -539,7 +538,6 @@
 
     .confirmation-message {
         padding: 20px 10px;
-        min-height: 120px; /* Réduit pour s'adapter au contenu */
     }
 
     .confirmation-message p {
@@ -612,7 +610,7 @@
     }
 
     #multi-step-form .step {
-        padding: 10px 10px;
+        padding: 10px 0;
         width: 100%;
     }
 
@@ -643,7 +641,6 @@
 
     .confirmation-message {
         padding: 15px 5px;
-        min-height: 100px; /* Réduit pour s'adapter au contenu */
     }
 
     .confirmation-message p {
