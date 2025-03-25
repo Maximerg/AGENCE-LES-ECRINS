@@ -106,7 +106,9 @@
     border-radius: 10px;
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    max-height: 80vh;
+    height: auto; /* S'adapte à la hauteur du contenu */
+    min-height: 200px; /* Hauteur minimale pour éviter que la modale soit trop petite */
+    max-height: 80vh; /* Hauteur maximale avec défilement */
     overflow-y: auto;
     overflow-x: visible;
     box-sizing: border-box;
@@ -141,7 +143,6 @@
     position: relative;
     overflow: visible;
     height: auto;
-    min-height: 100%;
     width: 100%;
 }
 
@@ -150,7 +151,8 @@
 }
 
 #multi-step-form h2 {
-    font-family: "Cinzel", serif;
+    font-family: "Poppins", sans-serif; /* Même police que les labels */
+    font-weight: 500;
     color: #455243;
     margin-bottom: 20px;
 }
@@ -160,6 +162,7 @@
     margin: 15px 0 5px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+    color: #455243; /* Couleur verte pour les sous-titres */
 }
 
 #multi-step-form input,
@@ -173,6 +176,7 @@
     font-family: "Lora", serif;
     font-size: 1em;
     background-color: #f9f9f9;
+    color: #455243; /* Couleur verte pour les champs de saisie */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
 }
@@ -186,6 +190,7 @@
     font-family: "Lora", serif;
     font-size: 1em;
     background-color: #f9f9f9;
+    color: #455243; /* Couleur verte pour le textarea */
 }
 
 #multi-step-form input:focus,
@@ -259,14 +264,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 300px;
+    /* min-height: 300px; supprimé pour s'adapter au contenu */
 }
 
 .form-note {
     font-size: 0.9rem;
     font-style: italic;
     text-align: center;
-    color: #455243;
+    color: #455243; /* Couleur verte pour le texte */
     margin-bottom: 40px;
     line-height: 1.4;
 }
@@ -291,7 +296,7 @@
     font-size: 0.9rem;
     font-style: italic;
     text-align: center;
-    color: #455243;
+    color: #455243; /* Couleur verte pour le texte */
     margin-top: 10px;
     line-height: 1.4;
 }
@@ -307,7 +312,8 @@
 }
 
 .confirmation-message h2 {
-    font-family: "Cinzel", serif;
+    font-family: "Poppins", sans-serif; /* Même police que les labels */
+    font-weight: 500;
     color: #455243;
     margin-bottom: 20px;
 }
@@ -316,7 +322,7 @@
     font-size: 1rem;
     line-height: 1.5;
     margin: 10px 0;
-    color: #455243;
+    color: #455243; /* Couleur verte pour le texte */
 }
 
 /* Style pour le groupe de cases à cocher */
@@ -372,7 +378,7 @@
 .checkbox-item label {
     font-family: "Lora", serif;
     font-size: 1rem;
-    color: #455243;
+    color: #455243; /* Couleur verte pour les labels des cases à cocher */
     margin-top: 5px;
     cursor: pointer;
 }
@@ -495,7 +501,7 @@
     }
 
     .form-intro {
-        min-height: 250px;
+        /* min-height: 250px; supprimé pour s'adapter au contenu */
     }
 
     .form-note,
@@ -601,7 +607,7 @@
     }
 
     .form-intro {
-        min-height: 200px;
+        /* min-height: 200px; supprimé pour s'adapter au contenu */
     }
 
     .form-note,
