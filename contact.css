@@ -15,11 +15,10 @@
 .contact-section {
     padding: 50px 0;
     background-color: #F0F0F0;
-    width: 100%;
-    min-height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .contact-container {
@@ -27,49 +26,49 @@
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 30px auto; /* Restauré comme dans le code initial */
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 40px;
+    padding: 30px; /* Restauré comme dans le code initial */
     position: relative;
 }
 
 .contact-form, .contact-info {
     width: 45%;
+    font-family: "Lora", serif;
 }
 
 .contact-form h2,
 .contact-info h2 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif; /* Harmonisé avec les autres pages */
     font-weight: 500;
     font-size: 1.8rem;
-    color: #455243;
-    margin-bottom: 40px;
+    color: #455243; /* Harmonisé avec les autres pages */
+    margin-bottom: 50px; /* Restauré comme dans le code initial */
 }
 
 .contact-form form label {
     display: block;
-    margin: 15px 0 5px;
-    font-family: "Poppins", sans-serif;
+    margin-bottom: 8px; /* Restauré comme dans le code initial */
+    font-family: "Poppins", sans-serif; /* Harmonisé avec les autres pages */
     font-weight: 500;
-    color: #455243;
+    color: #455243; /* Harmonisé avec les autres pages */
 }
 
 .contact-form form input,
 .contact-form form textarea,
 .contact-form form select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
+    width: 96%; /* Restauré comme dans le code initial */
+    padding: 10px; /* Restauré comme dans le code initial */
+    margin-bottom: 20px; /* Restauré comme dans le code initial */
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
+    font-size: 1rem;
     font-family: "Lora", serif;
-    font-size: 1em;
-    background-color: #f9f9f9;
-    color: #455243;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box;
+    background-color: #f9f9f9; /* Ajouté pour cohérence avec les autres pages */
+    color: #455243; /* Harmonisé avec les autres pages */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Ajouté pour accessibilité */
 }
 
 .contact-form form select {
@@ -86,23 +85,28 @@
 .contact-form form select:focus {
     outline: none;
     border-color: #455243;
-    box-shadow: 0 0 5px rgba(69, 82, 67, 0.3);
+    box-shadow: 0 0 5px rgba(69, 82, 67, 0.3); /* Ajouté pour accessibilité */
 }
 
 .contact-form form textarea {
-    resize: vertical;
+    resize: vertical; /* Ajouté pour une meilleure UX */
 }
 
 .contact-form form button {
     background-color: #455243;
-    color: white;
-    padding: 10px 20px;
+    font-family: "Poppins", sans-serif; /* Harmonisé avec les autres pages */
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    font-family: "Poppins", sans-serif;
-    font-size: 1em;
+    padding: 12px 25px; /* Restauré comme dans le code initial */
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
+}
+
+.contact-form form select:focus {
+    outline: none;
+    border-color: #455243;
 }
 
 .contact-form form button:hover {
@@ -112,25 +116,35 @@
 .contact-info .contact-item {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Restauré comme dans le code initial */
 }
 
 .contact-info .contact-icon {
     width: 36px;
     height: 36px;
-    margin-right: 10px;
+    margin-right: 8px; /* Restauré comme dans le code initial */
     object-fit: contain;
+    vertical-align: middle;
 }
 
 .contact-info p {
     font-family: "Lora", serif;
     font-size: 1rem;
-    color: #455243;
-    margin: 0;
+    color: #455243; /* Harmonisé avec les autres pages */
+    margin-bottom: 0; /* Restauré comme dans le code initial */
+}
+
+.contact-item p {
+    margin-bottom: 5px; /* Restauré comme dans le code initial */
+}
+
+.contact-item p, .contact-item a {
+    font-size: 1rem;
+    margin-bottom: 15px; /* Restauré comme dans le code initial */
 }
 
 .contact-info a {
-    color: #455243;
+    color: #455243; /* Changé de black à #455243 pour cohérence */
     text-decoration: none;
 }
 
@@ -143,35 +157,34 @@
     position: absolute;
     height: 80%;
     width: 1px;
-    background-color: #ddd;
+    background-color: #ddd; /* Changé de #000 à #ddd pour un look plus doux */
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .contact-info .social-title {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif; /* Harmonisé avec les autres pages */
     font-weight: 500;
+    color: #455243; /* Harmonisé avec les autres pages */
+    margin: 30px 0; /* Restauré comme dans le code initial */
     font-size: 1rem;
-    color: #455243;
-    margin: 30px 0 15px;
 }
 
 .contact-info .contact-link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #455243;
+    color: #455243; /* Changé de black à #455243 pour cohérence */
     height: 50px;
 }
 
 .contact-info .contact-link p {
     font-family: "Lora", serif;
-    font-size: 1rem;
     line-height: 36px;
     display: inline-flex;
     align-items: center;
-    margin: 0;
+    margin: 0; /* Ajusté pour cohérence */
 }
 
 .contact-info .contact-link:hover {
@@ -179,111 +192,92 @@
 }
 
 /* Media Queries pour responsivité */
-
-/* Tablette (768px - 1024px) */
 @media (max-width: 1024px) {
-    .contact-section {
-        min-height: 450px;
-        padding: 40px 0;
-    }
-
     .contact-container {
         max-width: 900px;
-        padding: 30px;
+        margin: 20px auto; /* Restauré comme dans le code initial */
+        padding: 20px; /* Restauré comme dans le code initial */
     }
 
     .contact-form, .contact-info {
-        width: 48%;
-    }
-
-    .contact-form h2,
-    .contact-info h2 {
-        font-size: 1.6rem;
-        margin-bottom: 30px;
-    }
-
-    .contact-form form label {
-        margin: 12px 0 5px;
-    }
-
-    .contact-form form input,
-    .contact-form form textarea,
-    .contact-form form select {
-        padding: 10px;
-        font-size: 0.95rem;
-    }
-
-    .contact-form form button {
-        padding: 8px 16px;
-        font-size: 0.95rem;
+        width: 48%; /* Restauré comme dans le code initial */
     }
 
     .contact-info .contact-icon {
         width: 32px;
         height: 32px;
-        margin-right: 8px;
+    }
+
+    .contact-form h2,
+    .contact-info h2 {
+        font-size: 1.6rem;
+        margin-bottom: 40px; /* Restauré comme dans le code initial */
+    }
+
+    .contact-form form input,
+    .contact-form form textarea,
+    .contact-form form select {
+        padding: 8px; /* Restauré comme dans le code initial */
+        font-size: 0.95rem;
+    }
+
+    .contact-form form button {
+        padding: 10px 20px; /* Restauré comme dans le code initial */
+        font-size: 0.95rem;
     }
 
     .contact-info p,
-    .contact-info .contact-link p {
+    .contact-item p,
+    .contact-item a {
         font-size: 0.95rem;
-    }
-
-    .contact-info .social-title {
-        font-size: 0.95rem;
-        margin: 25px 0 10px;
     }
 }
 
-/* Mobile large (480px - 768px) */
 @media (max-width: 768px) {
-    .contact-section {
-        min-height: auto;
-        padding: 30px 0;
-    }
-
     .contact-container {
         flex-direction: column;
-        padding: 20px;
+        padding: 15px; /* Restauré comme dans le code initial */
         max-width: 100%;
-        margin: 0 15px;
+        margin: 15px; /* Restauré comme dans le code initial */
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        margin-bottom: 30px; /* Restauré comme dans le code initial */
     }
 
     .contact-container::before {
         display: none;
     }
 
-    .contact-form,
-    .contact-info {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
     .contact-form h2,
     .contact-info h2 {
         font-size: 1.5rem;
-        margin-bottom: 25px;
+        margin-bottom: 30px; /* Restauré comme dans le code initial */
         text-align: center;
     }
 
     .contact-form form label {
         text-align: center;
-        margin: 10px 0 5px;
     }
 
     .contact-form form input,
     .contact-form form textarea,
     .contact-form form select {
-        width: 100%;
-        padding: 10px;
+        width: 80%; /* Restauré comme dans le code initial */
+        margin: 0 auto 20px auto; /* Restauré comme dans le code initial */
+        padding: 8px; /* Restauré comme dans le code initial */
         font-size: 0.9rem;
-        margin: 0 auto 15px;
+        display: block;
     }
 
     .contact-form form button {
-        width: 100%;
-        padding: 10px;
+        width: 80%; /* Restauré comme dans le code initial */
+        margin: 0 auto; /* Restauré comme dans the code initial */
+        padding: 10px; /* Restauré comme dans le code initial */
         font-size: 0.9rem;
+        display: block;
     }
 
     .contact-info .contact-item {
@@ -293,11 +287,11 @@
     .contact-info .contact-icon {
         width: 28px;
         height: 28px;
-        margin-right: 8px;
     }
 
     .contact-info p,
-    .contact-info .contact-link p {
+    .contact-item p,
+    .contact-item a {
         font-size: 0.9rem;
         text-align: center;
     }
@@ -307,60 +301,46 @@
     }
 
     .contact-info .social-title {
-        font-size: 0.9rem;
-        margin: 20px 0 10px;
         text-align: center;
     }
 }
 
-/* Mobile petit (< 480px) */
 @media (max-width: 480px) {
-    .contact-section {
-        padding: 20px 0;
-    }
-
     .contact-container {
-        margin: 0 10px;
-        padding: 15px;
+        margin: 10px; /* Restauré comme dans le code initial */
+        padding: 10px; /* Restauré comme dans le code initial */
     }
 
     .contact-form h2,
     .contact-info h2 {
         font-size: 1.3rem;
-        margin-bottom: 20px;
-    }
-
-    .contact-form form label {
-        font-size: 0.9rem;
-        margin: 8px 0 5px;
+        margin-bottom: 20px; /* Restauré comme dans le code initial */
     }
 
     .contact-form form input,
     .contact-form form textarea,
     .contact-form form select {
-        padding: 8px;
+        padding: 6px; /* Restauré comme dans le code initial */
         font-size: 0.85rem;
-        margin-bottom: 10px;
     }
 
     .contact-form form button {
-        padding: 8px;
+        padding: 8px; /* Restauré comme dans le code initial */
         font-size: 0.85rem;
     }
 
     .contact-info .contact-icon {
         width: 24px;
         height: 24px;
-        margin-right: 6px;
     }
 
     .contact-info p,
-    .contact-info .contact-link p {
+    .contact-item p,
+    .contact-item a {
         font-size: 0.85rem;
     }
 
-    .contact-info .social-title {
-        font-size: 0.85rem;
-        margin: 15px 0 8px;
+    .contact-form form label {
+        font-size: 0.9rem;
     }
 }
