@@ -107,7 +107,7 @@
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     height: auto; /* S'adapte à la hauteur du contenu */
-    min-height: 200px; /* Hauteur minimale pour éviter que la modale soit trop petite */
+    min-height: 150px; /* Hauteur minimale réduite pour mieux s'adapter */
     max-height: 80vh; /* Hauteur maximale avec défilement */
     overflow-y: auto;
     overflow-x: visible;
@@ -129,14 +129,14 @@
 
 /* Formulaire multi-étapes */
 .step {
-    display: none;
-    position: absolute;
-    width: calc(100% - 40px);
+    display: none; /* Masquer les étapes non actives */
+    width: 100%; /* Prendre toute la largeur disponible */
+    /* Supprimé position: absolute pour permettre un calcul correct de la hauteur */
 }
 
 .step.active {
-    display: block;
-    position: relative;
+    display: block; /* Afficher l'étape active */
+    /* Supprimé position: relative, car inutile ici */
 }
 
 #multi-step-form {
@@ -151,7 +151,7 @@
 }
 
 #multi-step-form h2 {
-    font-family: "Poppins", sans-serif; /* Même police que les labels */
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     color: #455243;
     margin-bottom: 20px;
@@ -162,7 +162,7 @@
     margin: 15px 0 5px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    color: #455243; /* Couleur verte pour les sous-titres */
+    color: #455243;
 }
 
 #multi-step-form input,
@@ -176,7 +176,7 @@
     font-family: "Lora", serif;
     font-size: 1em;
     background-color: #f9f9f9;
-    color: #455243; /* Couleur verte pour les champs de saisie */
+    color: #455243;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
 }
@@ -190,7 +190,7 @@
     font-family: "Lora", serif;
     font-size: 1em;
     background-color: #f9f9f9;
-    color: #455243; /* Couleur verte pour le textarea */
+    color: #455243;
 }
 
 #multi-step-form input:focus,
@@ -264,14 +264,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* min-height: 300px; supprimé pour s'adapter au contenu */
 }
 
 .form-note {
     font-size: 0.9rem;
     font-style: italic;
     text-align: center;
-    color: #455243; /* Couleur verte pour le texte */
+    color: #455243;
     margin-bottom: 40px;
     line-height: 1.4;
 }
@@ -296,7 +295,7 @@
     font-size: 0.9rem;
     font-style: italic;
     text-align: center;
-    color: #455243; /* Couleur verte pour le texte */
+    color: #455243;
     margin-top: 10px;
     line-height: 1.4;
 }
@@ -304,7 +303,7 @@
 .confirmation-message {
     text-align: center;
     padding: 40px 20px;
-    min-height: 300px;
+    min-height: 200px; /* Réduit pour s'adapter au contenu */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -312,7 +311,7 @@
 }
 
 .confirmation-message h2 {
-    font-family: "Poppins", sans-serif; /* Même police que les labels */
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     color: #455243;
     margin-bottom: 20px;
@@ -322,7 +321,7 @@
     font-size: 1rem;
     line-height: 1.5;
     margin: 10px 0;
-    color: #455243; /* Couleur verte pour le texte */
+    color: #455243;
 }
 
 /* Style pour le groupe de cases à cocher */
@@ -378,7 +377,7 @@
 .checkbox-item label {
     font-family: "Lora", serif;
     font-size: 1rem;
-    color: #455243; /* Couleur verte pour les labels des cases à cocher */
+    color: #455243;
     margin-top: 5px;
     cursor: pointer;
 }
@@ -440,11 +439,11 @@
 
     .confirmation-message {
         padding: 30px 15px;
-        min-height: 250px;
+        min-height: 150px; /* Réduit pour s'adapter au contenu */
     }
 
     .step {
-        width: calc(100% - 30px);
+        width: 100%; /* Ajusté pour prendre toute la largeur */
     }
 
     .checkbox-group {
@@ -500,10 +499,6 @@
         font-size: 1.1rem;
     }
 
-    .form-intro {
-        /* min-height: 250px; supprimé pour s'adapter au contenu */
-    }
-
     .form-note,
     .form-duration {
         font-size: 0.8rem;
@@ -516,7 +511,7 @@
 
     #multi-step-form .step {
         padding: 15px 15px;
-        width: calc(100% - 30px);
+        width: 100%;
     }
 
     #multi-step-form label {
@@ -544,7 +539,7 @@
 
     .confirmation-message {
         padding: 20px 10px;
-        min-height: 200px;
+        min-height: 120px; /* Réduit pour s'adapter au contenu */
     }
 
     .confirmation-message p {
@@ -606,10 +601,6 @@
         padding: 15px 0;
     }
 
-    .form-intro {
-        /* min-height: 200px; supprimé pour s'adapter au contenu */
-    }
-
     .form-note,
     .form-duration {
         font-size: 0.75rem;
@@ -622,7 +613,7 @@
 
     #multi-step-form .step {
         padding: 10px 10px;
-        width: calc(100% - 20px);
+        width: 100%;
     }
 
     #multi-step-form label {
@@ -652,7 +643,7 @@
 
     .confirmation-message {
         padding: 15px 5px;
-        min-height: 150px;
+        min-height: 100px; /* Réduit pour s'adapter au contenu */
     }
 
     .confirmation-message p {
