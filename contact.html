@@ -38,10 +38,6 @@
 </head>
 
 <body>
-
-    <div class="loader">
-        <img src="https://i.imgur.com/1j9PvN8.jpeg" alt="Loader - Clé" class="loader-key">
-    </div>
     <div class="page-content">
         <header>
             <div class="header-top">
@@ -49,28 +45,28 @@
                     <img src="https://i.imgur.com/xD59nhu.jpeg" alt="Logo Agence Les Écrins" class="founder-logo">
                 </a>
             </div>
-            <div class="header-divider">
-            </div>
+            <div class="header-divider"></div>
             <div class="header-bottom">
-                <button class="burger-menu">☰</button>
+                <button class="burger-menu" aria-label="Ouvrir le menu de navigation">☰</button>
                 <nav>
                     <ul>
-                        <li><a href="index.html" class="active">L'AGENCE</a></li>
+                        <li><a href="index.html">L'AGENCE</a></li>
                         <li><a href="biens-en-vente.html">BIENS EN VENTE</a></li>
                         <li><a href="services.html">SERVICES</a></li>
                         <li><a href="estimation.html">ESTIMATION</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="contact.html" class="active">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-    
+
         <main>
+            <h1 class="visually-hidden">Contactez l'Agence Les Écrins</h1>
             <section class="contact-section">
                 <div class="contact-container">
                     <!-- Formulaire de contact -->
                     <div class="contact-form">
-                        <h2>CONTACTEZ-NOUS</h2>
+                        <h2>Contactez-nous</h2>
                         <form action="traitement_contact.php" method="POST">
                             <label for="nature_demande">Nature de la demande :</label>
                             <select id="nature_demande" name="nature_demande" required>
@@ -81,7 +77,7 @@
                                 <option value="autre">Autres</option>
                             </select>
                             
-                            <label for="nom_prenom">NOM et prénom :</label>
+                            <label for="nom_prenom">Nom et prénom :</label>
                             <input type="text" id="nom_prenom" name="nom_prenom" required>
                             
                             <label for="email">Email :</label>
@@ -98,10 +94,10 @@
                     </div>
         
                     <div class="contact-info">
-                        <h2>RETROUVEZ L'AGENCE</h2>
+                        <h2>Retrouvez l'agence</h2>
                         <div class="contact-item">
                             <img src="https://i.imgur.com/G8XaEZm.jpeg" alt="Icône téléphone" class="contact-icon">
-                            <p><a href="tel:06 52 98 85 17">06 52 98 85 17</a></p>
+                            <p><a href="tel:0652988517">06 52 98 85 17</a></p>
                         </div>
                         <div class="contact-item">
                             <img src="https://i.imgur.com/JXiiAfJ.jpeg" alt="Icône email" class="contact-icon">
@@ -111,21 +107,21 @@
                             <img src="https://i.imgur.com/tW2pU3X.jpeg" alt="Icône localisation" class="contact-icon">
                             <p>Luberon - Provence</p>
                         </div>
-                        <h2 class="social-title">NOS RÉSEAUX SOCIAUX :</h2> <!-- Ajout de la classe -->
+                        <h2 class="social-title">Nos réseaux sociaux :</h2>
                         <div class="contact-item">
-                            <a href="" target="_blank" class="contact-link">
+                            <a href="https://www.instagram.com/agencelesecrins" target="_blank" rel="noopener noreferrer" class="contact-link">
                                 <img src="https://i.imgur.com/VAmFzwT.jpeg" alt="Icône Instagram" class="contact-icon">
                                 <p>Agencelesecrins</p>
                             </a>
                         </div>
                         <div class="contact-item">
-                            <a href="" target="_blank" class="contact-link">
+                            <a href="https://www.facebook.com/agencelesecrins" target="_blank" rel="noopener noreferrer" class="contact-link">
                                 <img src="https://i.imgur.com/mHYa3cL.jpeg" alt="Icône Facebook" class="contact-icon">
                                 <p>Agencelesecrins</p>
                             </a>
                         </div>
                         <div class="contact-item">
-                            <a href="http://www.tiktok.com/@lesecrins" target="_blank" class="contact-link">
+                            <a href="https://www.tiktok.com/@lesecrins" target="_blank" rel="noopener noreferrer" class="contact-link">
                                 <img src="https://i.imgur.com/deMtfqV.jpeg" alt="Icône TikTok" class="contact-icon">
                                 <p>Agencelesecrins</p>
                             </a>
@@ -137,86 +133,19 @@
         
         <footer class="footer">
             <div class="footer-container">
-                <p class="footer-text">&copy; 2025 Agence Les Écrins. Tous droits réservés.</p>
+                <p class="footer-text">© 2025 Agence Les Écrins. Tous droits réservés.</p>
                 <div class="footer-links">
-                    <a href="documents/honoraires.pdf" target="_blank">Barème des honoraires</a>
+                    <a href="documents/honoraires.pdf" target="_blank" rel="noopener noreferrer">Barème des honoraires</a>
                     <a href="mentions-legales.html">Mentions légales</a>
                 </div>
             </div>
         </footer>
     </div>
 
-<script>
-    document.querySelector('.burger-menu').addEventListener('click', function() {
-        document.querySelector('.header-bottom nav ul').classList.toggle('active');
-    });
-</script>
-    
-<script>
-    const startTime = Date.now();
-    let isLoaded = false;
-    let loaderTimeout = null;
-    let hasLoaderBeenShown = false;
-
-    // Afficher le loader si le chargement prend plus de 500ms
-    loaderTimeout = setTimeout(() => {
-        if (!isLoaded) {
-            const loader = document.querySelector('.loader');
-            if (loader && !loader.classList.contains('hidden')) {
-                console.log('Chargement > 500ms, affichage du loader...');
-                loader.classList.add('visible');
-                hasLoaderBeenShown = true;
-            }
-        }
-    }, 500);
-
-    const handleLoadComplete = () => {
-        const loader = document.querySelector('.loader');
-        const pageContent = document.querySelector('.page-content');
-        if (!loader || !pageContent) {
-            console.error('Erreur : .loader ou .page-content non trouvé.');
-            return;
-        }
-
-        // Annuler le setTimeout pour afficher le loader
-        if (loaderTimeout) {
-            clearTimeout(loaderTimeout);
-            loaderTimeout = null;
-        }
-
-        // Si le loader a été affiché, on le masque après la durée minimale
-        if (hasLoaderBeenShown) {
-            console.log('Loader affiché, masquage après un minimum de 2 secondes...');
-            const elapsedTime = Date.now() - startTime;
-            const remainingTime = Math.max(0, 2000 - elapsedTime);
-            setTimeout(() => {
-                loader.classList.add('hidden');
-                setTimeout(() => {
-                    pageContent.classList.add('loaded');
-                }, 1200);
-            }, remainingTime);
-        } else {
-            // Si le loader n'a pas été affiché, on affiche la page immédiatement
-            console.log('Loader non affiché, affichage direct de la page.');
-            loader.classList.add('hidden');
-            pageContent.classList.add('loaded');
-        }
-    };
-
-    window.addEventListener('load', () => {
-        console.log('window.onload déclenché');
-        isLoaded = true;
-        handleLoadComplete();
-    });
-
-    // Sécurité : forcer la fin du chargement après 10 secondes
-    setTimeout(() => {
-        if (!isLoaded) {
-            console.log('Forcer la fin du chargement après 10 secondes');
-            isLoaded = true;
-            handleLoadComplete();
-        }
-    }, 10000);
-</script>
-    
+    <script>
+        document.querySelector('.burger-menu').addEventListener('click', function() {
+            document.querySelector('.header-bottom nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
 </html>
