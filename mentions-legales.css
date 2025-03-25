@@ -1,7 +1,20 @@
+/* Styles utilitaires */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    border: 0 !important;
+    white-space: nowrap !important;
+}
+
 /* Styles pour la page mentions légales */
 .mentions-section {
-    padding: 70px 0; /* Augmenté pour plus d'espace global */
-    background-color: white; /* Fond vert */
+    padding: 70px 0;
+    background-color: white;
     font-family: "Lora", serif;
 }
 
@@ -15,28 +28,37 @@ h1 {
     font-family: "Playfair Display", serif;
     font-size: 2rem;
     font-weight: 300;
-    color: #455243; /* Titre principal en blanc */
+    color: #455243;
     text-align: center;
-    margin-bottom: 80px; /* Plus d'espace sous le titre principal */
+    margin-bottom: 80px;
 }
 
 h2 {
     font-family: "Playfair Display", serif;
-    font-size: 1.5rem;
-    color: #455243; /* Sous-titres en blanc */
-    margin-top: 40px; /* Plus d'espace au-dessus */
-    margin-bottom: 20px; /* Plus d'espace en dessous */
+    font-size: 2rem; /* Ajusté pour correspondre à l'ancien h1 */
+    font-weight: 300; /* Ajusté pour correspondre à l'ancien h1 */
+    color: #455243;
+    text-align: center;
+    margin-bottom: 80px;
 }
 
-.section p {
+h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: #455243;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.mentions-section p {
     font-size: 1rem;
-    color: #455243; /* Texte en blanc */
-    line-height: 1.8; /* Augmenté pour plus de lisibilité */
-    margin-bottom: 15px; /* Plus d'espace entre les paragraphes */
+    color: #455243;
+    line-height: 1.8;
+    margin-bottom: 15px;
 }
 
 a {
-    color: #455243; /* Liens en blanc */
+    color: #455243;
     text-decoration: none;
 }
 
@@ -44,28 +66,33 @@ a:hover {
     text-decoration: underline;
 }
 
+a:focus {
+    outline: 2px solid #455243;
+    outline-offset: 2px;
+}
+
 .mentions-section section {
-    margin-bottom: 80px; /* Espace entre chaque section */
+    margin-bottom: 80px;
 }
 
 /* Media Queries pour responsivité */
 @media (max-width: 768px) {
     .mentions-section {
-        padding: 50px 0; /* Réduit pour tablettes */
+        padding: 50px 0;
     }
 
-    h1 {
+    h2 {
         font-size: 1.8rem;
         margin-bottom: 40px;
     }
 
-    h2 {
+    h3 {
         font-size: 1.3rem;
         margin-top: 30px;
         margin-bottom: 15px;
     }
 
-    p {
+    .mentions-section p {
         font-size: 0.95rem;
         line-height: 1.7;
         margin-bottom: 12px;
@@ -82,21 +109,21 @@ a:hover {
 
 @media (max-width: 480px) {
     .mentions-section {
-        padding: 40px 0; /* Réduit pour petits écrans */
+        padding: 40px 0;
     }
 
-    h1 {
+    h2 {
         font-size: 1.6rem;
         margin-bottom: 30px;
     }
 
-    h2 {
+    h3 {
         font-size: 1.2rem;
         margin-top: 25px;
         margin-bottom: 12px;
     }
 
-    p {
+    .mentions-section p {
         font-size: 0.9rem;
         line-height: 1.6;
         margin-bottom: 10px;
