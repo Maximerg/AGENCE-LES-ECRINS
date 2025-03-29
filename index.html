@@ -134,19 +134,46 @@
         // Gestion du carrousel
         const carouselInner = document.querySelector('.carousel-inner');
         const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length; // 2 images
         let currentIndex = 0;
         
-        function updateCarousel() {
-            carouselInner.style.transform = `translateX(${-currentIndex * (100 / items.length)}%)`;
-            items.forEach((item, index) => item.classList.toggle('active', index === currentIndex));
+        // Cloner les images pour créer une boucle infinie
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            carouselInner.appendChild(clone);
+        });
+        
+        // Ajuster la largeur de .carousel-inner pour inclure les clones
+        carouselInner.style.width = `${(totalItems * 2) * 100}%`; // 400% (2 images + 2 clones)
+        
+        function updateCarousel(transition = true) {
+            if (!transition) {
+                carouselInner.style.transition = 'none'; // Désactiver la transition pour le repositionnement
+            } else {
+                carouselInner.style.transition = 'transform 0.5s ease';
+            }
+            carouselInner.style.transform = `translateX(${-currentIndex * (100 / totalItems)}%)`;
+        
+            // Mettre à jour la classe active
+            const allItems = document.querySelectorAll('.carousel-item'); // Inclut les clones
+            allItems.forEach((item, index) => {
+                item.classList.toggle('active', index === currentIndex);
+            });
         }
         
         setInterval(() => {
-            currentIndex = (currentIndex + 1) % items.length;
-            updateCarousel();
+            currentIndex++;
+            if (currentIndex >= totalItems * 2) {
+                // Quand on atteint la fin des clones, on revient au début sans transition
+                currentIndex = 0;
+                updateCarousel(false); // Repositionnement instantané
+                currentIndex++; // On avance immédiatement à la première image
+            }
+            updateCarousel(true); // Défilement avec transition
         }, 5000);
         
-        updateCarousel();
+        // Initialisation
+        updateCarousel(true);
     </script>
 </body>
 </html>
