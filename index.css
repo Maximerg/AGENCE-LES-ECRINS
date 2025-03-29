@@ -29,17 +29,18 @@
 
 .carousel-inner {
     display: flex;
-    width: 300%; /* Pour 3 images */
     height: 100%;
+    position: relative;
     transition: transform 0.5s ease;
 }
 
 .carousel-item {
-    width: 33.33%; /* 100% / 3 images */
+    width: 100%; /* Chaque image prend toute la largeur, mais on gère le défilement via JavaScript */
     height: 100%;
     object-fit: cover;
     filter: brightness(50%);
     transition: filter 0.5s ease;
+    flex-shrink: 0; /* Empêche les images de se déformer */
 }
 
 .carousel-item.active {
