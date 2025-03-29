@@ -229,6 +229,7 @@
     font-size: 1.2rem;
     line-height: 1.5;
     padding: 20px 0 0 75px;
+    text-align: justify;
 }
 
 /* Section Luberon */
@@ -265,6 +266,7 @@
     font-size: 1.2rem;
     line-height: 1.5;
     padding: 20px 75px 0 0; /* Inversé par rapport à .founder-text */
+    text-align: justify;
 }
 
 .luberon-image {
