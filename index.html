@@ -145,11 +145,13 @@
             document.querySelector('.header-bottom nav ul').classList.toggle('active');
         });
         
-        // Gestion du carrousel (uniquement pour la classe active)
+        // Gestion du carrousel
+        const carouselInner = document.querySelector('.carousel-inner');
         const items = document.querySelectorAll('.carousel-item');
         let currentIndex = 0;
         
         function updateCarousel() {
+            carouselInner.style.transform = `translateX(${-currentIndex * (100 / items.length)}%)`;
             items.forEach((item, index) => item.classList.toggle('active', index === currentIndex));
         }
         
