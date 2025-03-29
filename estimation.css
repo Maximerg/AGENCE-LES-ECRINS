@@ -19,7 +19,7 @@
     padding: 75px 0;
     width: 100%;
     min-height: 100px;
-    background-image: url('https://res.cloudinary.com/dj30q7yec/image/upload/v1743262627/pexels-axp-photography-500641970-29837811_keytft.webp');
+    background-image: url('https://res.cloudinary.com/dj30q7yec/image/upload/v1743263260/Lavande_Grand_qbp3ic.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -467,6 +467,7 @@
     .estimation-button-section {
         min-height: 300px;
         padding: 40px 0;
+        background-image: url('https://res.cloudinary.com/dj30q7yec/image/upload/v1743263263/Lavande_Petit_vuwccf.webp');
     }
 
     #open-form {
@@ -568,6 +569,7 @@
     .estimation-button-section {
         min-height: 250px;
         padding: 30px 0;
+        background-image: url('https://res.cloudinary.com/dj30q7yec/image/upload/v1743263263/Lavande_Petit_vuwccf.webp');
     }
 
     #open-form {
