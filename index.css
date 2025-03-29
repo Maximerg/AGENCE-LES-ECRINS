@@ -231,6 +231,55 @@
     padding: 20px 0 0 75px;
 }
 
+/* Section Luberon */
+.luberon-section {
+    background-color: #fff;
+    color: #455243;
+    width: 100%;
+    min-height: 800px;
+    font-family: "Lora", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.luberon-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 100px;
+    padding: 20px;
+}
+
+.luberon-text {
+    flex: 1;
+    padding-right: 40px; /* Inversé par rapport à .founder-text */
+    text-align: left;
+}
+
+.luberon-text h2 {
+    margin: 20px 0 30px;
+    padding: 0 75px 20px 0; /* Inversé par rapport à .founder-text */
+}
+
+.luberon-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 20px 75px 0 0; /* Inversé par rapport à .founder-text */
+}
+
+.luberon-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.luberon-image img {
+    width: 300px;
+    height: auto;
+}
+
 /* Media Queries pour responsivité */
 
 /* Tablettes (jusqu’à 1024px) */
@@ -299,6 +348,27 @@
     .founder-text p {
         font-size: 1.1rem;
         padding: 15px 0 0 50px;
+    }
+
+    .luberon-section {
+        min-height: 600px;
+    }
+
+    .luberon-container {
+        margin: 0 50px;
+    }
+
+    .luberon-image img {
+        width: 250px;
+    }
+
+    .luberon-text h2 {
+        padding: 0 50px 15px 0;
+    }
+
+    .luberon-text p {
+        font-size: 1.1rem;
+        padding: 15px 50px 0 0;
     }
 }
 
@@ -401,6 +471,43 @@
         font-size: 1rem;
         padding: 15px 0;
     }
+
+    .luberon-section {
+        min-height: auto;
+        padding: 50px 0;
+    }
+
+    .luberon-container {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 100%;
+    }
+
+    .luberon-text {
+        padding: 0 40px;
+        text-align: center;
+    }
+
+    .luberon-text h2 {
+        padding: 0;
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+
+    .luberon-text p {
+        font-size: 1rem;
+        padding: 15px 0;
+    }
+
+    .luberon-image {
+        width: 100%;
+        margin-top: 40px; /* Inversé par rapport à .founder-image */
+    }
+
+    .luberon-image img {
+        width: 200px;
+    }
 }
 
 /* Très petits téléphones (jusqu’à 480px) */
@@ -469,5 +576,30 @@
 
     .founder-text p {
         padding: 12px 0;
+    }
+
+    .luberon-section {
+        padding: 50px 0;
+    }
+
+    .luberon-container {
+        padding: 0 10px;
+    }
+
+    .luberon-text {
+        padding: 0 30px;
+    }
+
+    .luberon-text h2 {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .luberon-text p {
+        padding: 12px 0;
+    }
+
+    .luberon-image img {
+        width: 180px;
     }
 }
