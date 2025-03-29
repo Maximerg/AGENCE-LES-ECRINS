@@ -162,7 +162,10 @@
         
         function updateCarousel(transition = true) {
             if (!transition) {
-                carouselInner.style.transition = 'none'; // Désactiver la transition pour le repositionnement
+                carouselInner.style.transition = 'none'; // Désactiver la transition pour le reposi
+                carouselInner.style.transform = `translateX(${-currentIndex * (100 / totalItems)}%)`;
+                // Forcer un reflow pour éviter les problèmes d'affichage
+                void carouselInner.offsetWidth;
             } else {
                 carouselInner.style.transition = 'transform 0.5s ease';
             }
@@ -177,11 +180,9 @@
         
         setInterval(() => {
             currentIndex++;
-            if (currentIndex >= totalItems * 2) {
-                // Quand on atteint la fin des clones, on revient au début sans transition
+            if (currentIndex >= totalItems) { // Quand on atteint la fin des images originales
                 currentIndex = 0;
                 updateCarousel(false); // Repositionnement instantané
-                currentIndex++; // On avance immédiatement à la première image
             }
             updateCarousel(true); // Défilement avec transition
         }, 5000);
