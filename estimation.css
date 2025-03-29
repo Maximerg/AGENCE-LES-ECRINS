@@ -383,6 +383,11 @@
     opacity: 0.8;
 }
 
+/* Classe pour masquer un élément */
+.hidden {
+    display: none;
+}
+
 /* Media Queries pour responsivité */
 
 /* Tablette (768px - 1024px) */
