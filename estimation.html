@@ -238,7 +238,19 @@
         function saveData() {
             const inputs = steps[currentStep].querySelectorAll('input, select, textarea');
             inputs.forEach(input => {
-                formData[input.name] = input.value;
+                if (input.type === 'checkbox') {
+                    // Pour les cases à cocher, sauvegarder les valeurs cochées
+                    if (input.checked) {
+                        if (!formData[input.name]) {
+                            formData[input.name] = [];
+                        }
+                        if (!formData[input.name].includes(input.value)) {
+                            formData[input.name].push(input.value);
+                        }
+                    }
+                } else {
+                    formData[input.name] = input.value;
+                }
             });
             console.log('Données sauvegardées pour l’étape', currentStep, formData);
         }
@@ -246,18 +258,35 @@
         function restoreData() {
             const inputs = steps[currentStep].querySelectorAll('input, select, textarea');
             inputs.forEach(input => {
-                if (formData[input.name]) {
-                    input.value = formData[input.name];
+                if (input.type === 'checkbox') {
+                    // Restaurer les cases à cocher
+                    if (formData[input.name] && formData[input.name].includes(input.value)) {
+                        input.checked = true;
+                    } else {
+                        input.checked = false;
+                    }
+                } else {
+                    if (formData[input.name]) {
+                        input.value = formData[input.name];
+                    }
                 }
             });
         }
         
         function generateDynamicFields() {
             const dynamicFieldsContainer = document.getElementById('dynamic-fields');
+            const annexesSection = document.getElementById('annexes-section'); // Sélectionner la section Annexes
             dynamicFieldsContainer.innerHTML = ''; // Vider le conteneur
         
             const typeBien = formData['type_bien'] || '';
             let fieldsHTML = '';
+        
+            // Masquer ou afficher la section Annexes en fonction du type de bien
+            if (typeBien === 'terrain' || typeBien === 'autre') {
+                annexesSection.classList.add('hidden'); // Masquer pour Terrain et Autres
+            } else {
+                annexesSection.classList.remove('hidden'); // Afficher pour les autres types
+            }
         
             if (typeBien === 'maison' || typeBien === 'mas') {
                 fieldsHTML = `
