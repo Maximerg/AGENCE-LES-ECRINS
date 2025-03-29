@@ -39,12 +39,6 @@
     height: 100%;
     object-fit: cover; /* Dézoome pour afficher l'image entière */
     object-position: top center; /* Part du haut et centre horizontalement */
-    filter: brightness(50%);
-    transition: filter 0.5s ease;
-}
-
-.carousel-item.active {
-    filter: brightness(100%);
 }
 
 /* Section À propos */
