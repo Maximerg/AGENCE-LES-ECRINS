@@ -31,7 +31,7 @@
     display: flex;
     width: 200%; /* Pour 2 images */
     height: 100%;
-    animation: slide 10s infinite ease; /* 10s pour 2 images (5s par image) */
+    transition: transform 0.5s ease;
 }
 
 .carousel-item {
@@ -47,23 +47,6 @@
     filter: brightness(100%);
 }
 
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    45% {
-        transform: translateX(-50%); /* Défilement vers la deuxième image */
-    }
-    50% {
-        transform: translateX(-50%); /* Pause sur la deuxième image */
-    }
-    95% {
-        transform: translateX(-100%); /* Défilement vers la fin */
-    }
-    100% {
-        transform: translateX(0); /* Retour instantané au début */
-    }
-}
 /* Section À propos */
 .about-section {
     background-color: #F0F0F0;
