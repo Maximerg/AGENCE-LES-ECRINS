@@ -29,19 +29,18 @@
 
 .carousel-inner {
     display: flex;
+    width: 200%; /* Pour 2 images */
     height: 100%;
-    position: relative;
     transition: transform 0.5s ease;
 }
 
 .carousel-item {
-    width: 100%;
+    width: 50%; /* 100% / 2 images */
     height: 100%;
-    object-fit: contain; /* Remplace "cover" pour dézoomer et afficher l'image entière */
+    object-fit: contain; /* Dézoome pour afficher l'image entière */
     object-position: top center; /* Part du haut et centre horizontalement */
     filter: brightness(50%);
     transition: filter 0.5s ease;
-    flex-shrink: 0;
 }
 
 .carousel-item.active {
