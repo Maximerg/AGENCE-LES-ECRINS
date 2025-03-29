@@ -152,7 +152,7 @@
     background-color: #fff;
     color: #455243;
     width: 100%;
-    min-height: 800px;
+    min-height: 900px;
     font-family: "Lora", serif;
     display: flex;
     justify-content: center;
@@ -231,7 +231,7 @@
     background-color: #F0F0F0;
     color: #455243;
     width: 100%;
-    min-height: 800px;
+    min-height: 900px;
     font-family: "Lora", serif;
     display: flex;
     justify-content: center;
@@ -272,7 +272,7 @@
 }
 
 .luberon-image img {
-    width: 300px;
+    width: 350px;
     height: auto;
 }
 
