@@ -35,12 +35,13 @@
 }
 
 .carousel-item {
-    width: 100%; /* Chaque image prend toute la largeur, mais on gère le défilement via JavaScript */
+    width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Remplace "cover" pour dézoomer et afficher l'image entière */
+    object-position: top center; /* Part du haut et centre horizontalement */
     filter: brightness(50%);
     transition: filter 0.5s ease;
-    flex-shrink: 0; /* Empêche les images de se déformer */
+    flex-shrink: 0;
 }
 
 .carousel-item.active {
