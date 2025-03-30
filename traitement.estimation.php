@@ -3,54 +3,81 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$servername = "agencrk633.mysql.db"; // Remplace par l'hôte exact d'OVH
-$username = "agencrk633"; // Remplace par ton utilisateur OVH
-$password = "cUdkut2caxkymehwuz"; // Remplace par ton mot de passe OVH
-$dbname = "agencrk633"; // Nom de la base OVH
+// On définit le type de réponse en JSON
+header('Content-Type: application/json');
+
+// Fonction pour renvoyer une réponse JSON et arrêter le script
+function sendResponse($success, $message) {
+    echo json_encode(['success' => $success, 'message' => $message]);
+    exit;
+}
+
+// Vérification des champs obligatoires
+$required_fields = ['nom_prenom', 'telephone', 'email', 'adresse_bien', 'code_postal', 'ville', 'type_bien', 'remarques'];
+foreach ($required_fields as $field) {
+    if (!isset($_POST[$field]) || empty($_POST[$field])) {
+        sendResponse(false, "Tous les champs du formulaire sont requis.");
+    }
+}
+
+// Nettoyage des données
+$nom_prenom   = filter_var($_POST['nom_prenom'], FILTER_SANITIZE_STRING);
+$telephone    = filter_var($_POST['telephone'], FILTER_SANITIZE_STRING);
+$email        = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$adresse_bien = filter_var($_POST['adresse_bien'], FILTER_SANITIZE_STRING);
+$code_postal  = filter_var($_POST['code_postal'], FILTER_SANITIZE_STRING);
+$ville        = filter_var($_POST['ville'], FILTER_SANITIZE_STRING);
+$type_bien    = filter_var($_POST['type_bien'], FILTER_SANITIZE_STRING);
+$remarques    = filter_var($_POST['remarques'], FILTER_SANITIZE_STRING);
+$date         = date('Y-m-d H:i:s');
+
+// Validation de l'email
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    sendResponse(false, "L'adresse email n'est pas valide.");
+}
+
+// Connexion à la base de données
+$servername = "agencrk633.mysql.db";
+$username   = "agencrk633";
+$password   = "cUdkut2caxkymehwuz";
+$dbname     = "agencrk633";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
+    sendResponse(false, "Erreur de connexion à la base de données : " . $e->getMessage());
 }
 
-// Champs principaux
-$nom_prenom = $_POST['nom_prenom'] ?? '';
-$telephone = $_POST['telephone'] ?? '';
-$email = $_POST['email'] ?? '';
-$adresse_bien = $_POST['adresse_bien'] ?? '';
-$code_postal = $_POST['code_postal'] ?? '';
-$ville = $_POST['ville'] ?? '';
-$type_bien = $_POST['type_bien'] ?? '';
-$remarques = $_POST['remarques'] ?? '';
-$date = date('Y-m-d H:i:s');
-
-// Champs dynamiques (optionnels)
+// Récupération des champs optionnels et conversion si nécessaire
 $annee_construction = isset($_POST['annee_construction']) ? (int)$_POST['annee_construction'] : null;
-$nombre_pieces = isset($_POST['nombre_pieces']) ? (int)$_POST['nombre_pieces'] : null;
-$surface_habitable = isset($_POST['surface_habitable']) ? (float)$_POST['surface_habitable'] : null;
+$nombre_pieces      = isset($_POST['nombre_pieces']) ? (int)$_POST['nombre_pieces'] : null;
+$surface_habitable  = isset($_POST['surface_habitable']) ? (float)$_POST['surface_habitable'] : null;
 $surface_exterieure = isset($_POST['surface_exterieure']) ? (float)$_POST['surface_exterieure'] : null;
-$annexes = $_POST['annexes'] ?? null;
-$etat_general = $_POST['etat_general'] ?? null;
+$annexes            = $_POST['annexes'] ?? null;
+if (is_array($annexes)) {
+    $annexes = implode(', ', $annexes);
+}
+$etat_general   = $_POST['etat_general'] ?? null;
 $surface_carrez = isset($_POST['surface_carrez']) ? (float)$_POST['surface_carrez'] : null;
-$etage = isset($_POST['etage']) ? (int)$_POST['etage'] : null;
-$ascenseur = $_POST['ascenseur'] ?? null;
-$exposition = $_POST['exposition'] ?? null;
-$balcon = $_POST['balcon'] ?? null;
-$terrasse = $_POST['terrasse'] ?? null;
-$lots_habitation = isset($_POST['lots_habitation']) ? (int)$_POST['lots_habitation'] : null;
-$lots_commerciaux = isset($_POST['lots_commerciaux']) ? (int)$_POST['lots_commerciaux'] : null;
-$nombre_etages = isset($_POST['nombre_etages']) ? (int)$_POST['nombre_etages'] : null;
-$surface = isset($_POST['surface']) ? (float)$_POST['surface'] : null;
-$superficie = isset($_POST['superficie']) ? (float)$_POST['superficie'] : null;
-$constructible = $_POST['constructible'] ?? null;
-$viabilise = $_POST['viabilise'] ?? null;
-$servitude = $_POST['servitude'] ?? null;
+$etage          = isset($_POST['etage']) ? (int)$_POST['etage'] : null;
+$ascenseur      = $_POST['ascenseur'] ?? null;
+$exposition     = $_POST['exposition'] ?? null;
+$balcon         = $_POST['balcon'] ?? null;
+$terrasse       = $_POST['terrasse'] ?? null;
+$lots_habitation= isset($_POST['lots_habitation']) ? (int)$_POST['lots_habitation'] : null;
+$lots_commerciaux= isset($_POST['lots_commerciaux']) ? (int)$_POST['lots_commerciaux'] : null;
+$nombre_etages  = isset($_POST['nombre_etages']) ? (int)$_POST['nombre_etages'] : null;
+$surface        = isset($_POST['surface']) ? (float)$_POST['surface'] : null;
+$superficie     = isset($_POST['superficie']) ? (float)$_POST['superficie'] : null;
+$constructible  = $_POST['constructible'] ?? null;
+$viabilise      = $_POST['viabilise'] ?? null;
+$servitude      = $_POST['servitude'] ?? null;
 $permis_construire = $_POST['permis_construire'] ?? null;
-$description = $_POST['description'] ?? null;
-$type_estimation = $_POST['type_estimation'] ?? null;
+$description    = $_POST['description'] ?? null;
+$type_estimation= $_POST['type_estimation'] ?? null;
 
+// Préparation et exécution de l'insertion dans la table "estimations"
 $sql = "INSERT INTO estimations (
     nom_prenom, telephone, email, adresse_bien, code_postal, ville, type_bien, remarques, date,
     annee_construction, nombre_pieces, surface_habitable, surface_exterieure, annexes, etat_general,
@@ -99,7 +126,9 @@ $stmt->bindParam(':type_estimation', $type_estimation);
 
 try {
     $stmt->execute();
-    $to = "maxime.renoudgrappin@gmail.com"; // Remplace par l’email de l’entreprise
+
+    // Envoi de l'email de notification
+    $to = "maxime.renoudgrappin@gmail.com";
     $subject = "Nouvelle demande d'estimation";
     $body = "Nom et prénom : $nom_prenom\n" .
             "Téléphone : $telephone\n" .
@@ -108,7 +137,6 @@ try {
             "Type de bien : $type_bien\n" .
             "Remarques : $remarques\n" .
             "Date : $date\n" .
-            // Ajoute les champs dynamiques s’ils existent
             (isset($annee_construction) ? "Année de construction : $annee_construction\n" : "") .
             (isset($nombre_pieces) ? "Nombre de pièces : $nombre_pieces\n" : "") .
             (isset($surface_habitable) ? "Surface habitable : $surface_habitable m²\n" : "") .
@@ -132,12 +160,14 @@ try {
             (isset($permis_construire) ? "Permis de construire : $permis_construire\n" : "") .
             (isset($description) ? "Description : $description\n" : "") .
             (isset($type_estimation) ? "Type d'estimation : $type_estimation\n" : "");
-    $headers = "From: noreply@agencelesecrins.com\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $headers = "From: noreply@agencelesecrins.com\r\n" .
+               "Content-Type: text/plain; charset=UTF-8\r\n";
     mail($to, $subject, $body, $headers);
-    echo "Demande d'estimation envoyée avec succès !";
+
+    // On renvoie la réponse JSON
+    sendResponse(true, "Demande d'estimation envoyée avec succès !");
 } catch(PDOException $e) {
-    echo "Erreur lors de l'insertion : " . $e->getMessage();
+    sendResponse(false, "Erreur lors de l'insertion : " . $e->getMessage());
 }
 
 $conn = null;
