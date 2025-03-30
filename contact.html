@@ -91,6 +91,10 @@
                             
                             <button type="submit">Envoyer</button>
                         </form>
+                        <div class="confirmation-message" style="display: none;">
+                            <h2>Merci pour votre message.</h2>
+                            <p>L’équipe Les Écrins en a bien pris connaissance et reviendra vers vous dans les plus brefs délais. Nous restons à votre disposition et vous remercions de votre confiance.</p>
+                        </div>
                     </div>
         
                     <div class="contact-info">
@@ -145,6 +149,40 @@
     <script>
         document.querySelector('.burger-menu').addEventListener('click', function() {
             document.querySelector('.header-bottom nav ul').classList.toggle('active');
+        });
+    
+        // Gestion de la soumission du formulaire de contact
+        document.querySelector('.contact-form form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêcher la soumission par défaut (redirection)
+    
+            // Récupérer les données du formulaire
+            const form = event.target;
+            const formData = new FormData(form);
+    
+            // Envoyer les données au serveur via fetch (AJAX)
+            fetch('traitement_contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json()) // On suppose que traitement_contact.php renvoie une réponse JSON
+            .then(data => {
+                // Si la soumission est réussie
+                if (data.success) {
+                    // Masquer le formulaire
+                    form.style.display = 'none';
+                    // Afficher le message de confirmation
+                    document.querySelector('.confirmation-message').style.display = 'flex';
+                    // Réinitialiser le formulaire
+                    form.reset();
+                } else {
+                    // Gérer les erreurs (par exemple, afficher un message d'erreur)
+                    alert('Une erreur s’est produite lors de l’envoi du message. Veuillez réessayer.');
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors de la soumission du formulaire :', error);
+                alert('Une erreur s’est produite lors de l’envoi du message. Veuillez réessayer.');
+            });
         });
     </script>
 </body>
