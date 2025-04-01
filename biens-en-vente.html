@@ -60,11 +60,65 @@
     </header>
 
     <main>
-        <h1 class="visually-hidden">Biens en Vente - Agence Les Écrins</h1>
         <section class="properties-section">
-            <div class="construction-overlay">
-                <h2>En cours de préparation...</h2>
-                <p>Nos biens seront bientôt en ligne. Revenez prochainement pour les découvrir !</p>
+            <h1>Biens en vente</h1>
+            <div class="filters">
+                <!-- Placeholder pour les filtres, à dynamiser plus tard -->
+                <select>
+                    <option>Type de bien</option>
+                    <option>Maison</option>
+                    <option>Appartement</option>
+                    <option>Terrain</option>
+                </select>
+                <input type="number" placeholder="Prix min (€)">
+                <input type="number" placeholder="Prix max (€)">
+                <input type="text" placeholder="Localisation">
+                <input type="number" placeholder="Surface min (m²)">
+                <button>Filtrer</button>
+            </div>
+            <div class="properties-grid">
+                <!-- Exemple de bien (à dupliquer pour 10 max par page) -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Maison à vendre">
+                    </div>
+                    <div class="property-details">
+                        <h2>Maison 4 pièces – Bordeaux</h2>
+                        <p class="price">350 000 €</p>
+                        <ul>
+                            <li>120 m²</li>
+                            <li>4 pièces</li>
+                            <li>3 chambres</li>
+                            <li>Jardin 200 m²</li>
+                        </ul>
+                        <p class="description">Maison lumineuse avec vue dégagée, proche commodités.</p>
+                        <button class="cta">Voir plus</button>
+                    </div>
+                </div>
+                <!-- Deuxième exemple -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Appartement à vendre">
+                    </div>
+                    <div class="property-details">
+                        <h2>Appartement 3 pièces – Paris</h2>
+                        <p class="price">450 000 €</p>
+                        <ul>
+                            <li>80 m²</li>
+                            <li>3 pièces</li>
+                            <li>2 chambres</li>
+                            <li>Balcon</li>
+                        </ul>
+                        <p class="description">Appartement moderne au cœur de la ville.</p>
+                        <button class="cta">Voir plus</button>
+                    </div>
+                </div>
+                <!-- Ajouter jusqu'à 10 biens max ici -->
+            </div>
+            <div class="pagination">
+                <button>Précédent</button>
+                <span>Page 1</span>
+                <button>Suivant</button>
             </div>
         </section>
     </main>
