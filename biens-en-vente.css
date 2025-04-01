@@ -10,99 +10,171 @@
     border: 0;
 }
 
-/* Layout global */
+/* Section Propriétés */
 body {
+    background-color: #F0F0F0;
+}
+
+.properties-section {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.properties-section h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #455243;
+}
+
+/* Filtres */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.filters select, .filters input {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #455243;
+    border-radius: 5px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    background-color: #455243;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filters button:hover {
+    background-color: #5a6b57;
+}
+
+/* Grille des biens */
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.property-card {
+    border: 2px solid #455243;
+    border-radius: 10px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 600px; /* Hauteur fixe pour uniformité */
 }
 
-main {
-    flex: 1;
+.property-image {
+    height: 50%;
 }
 
-footer {
-    flex-shrink: 0;
-}
-
-/* Section Propriétés */
-.properties-section {
-    position: relative;
+.property-image img {
     width: 100%;
-    min-height: 500px;
-    background-image: url('https://res.cloudinary.com/dj30q7yec/image/upload/v1743269686/TEMP_BIENS_EN_VENTE_nvbaox.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 100%;
+    object-fit: cover;
 }
 
-.construction-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+.property-details {
+    background-color: #fff;
     padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.construction-overlay h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+.property-details h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    color: #455243;
 }
 
-.construction-overlay p {
-    font-size: 1.2em;
+.property-details .price {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    margin: 0 0 10px;
 }
 
-/* Media Queries pour responsivité */
-@media (max-width: 1024px) {
-    .properties-section {
-        min-height: 400px;
-    }
-
-    .construction-overlay h2 {
-        font-size: 2.2em;
-    }
-
-    .construction-overlay p {
-        font-size: 1.1em;
-    }
+.property-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
 }
 
+.property-details .description {
+    font-family: 'Lora', serif;
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0 0 15px;
+}
+
+.property-details .cta {
+    padding: 10px 20px;
+    background-color: #455243;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.property-details .cta:hover {
+    background-color: #5a6b57;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    background-color: #455243;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #5a6b57;
+}
+
+/* Responsivité */
 @media (max-width: 768px) {
-    .properties-section {
-        min-height: 350px;
+    .properties-grid {
+        grid-template-columns: 1fr;
     }
 
-    .construction-overlay {
-        padding: 15px;
+    .property-card {
+        height: auto;
     }
 
-    .construction-overlay h2 {
-        font-size: 1.8em;
-    }
-
-    .construction-overlay p {
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    .properties-section {
-        min-height: 300px;
-    }
-
-    .construction-overlay {
-        padding: 10px;
-    }
-
-    .construction-overlay h2 {
-        font-size: 1.5em;
-    }
-
-    .construction-overlay p {
-        font-size: 0.9em;
+    .filters {
+        flex-direction: column;
+        align-items: center;
     }
 }
